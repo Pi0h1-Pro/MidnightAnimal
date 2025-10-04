@@ -12,7 +12,7 @@ lastammo = ammo
 with _WEAPON {
     if global.state = 0 {
         if point_distance(x, y, objPlayer.x, objPlayer.y) < 32 {
-            scrGetWeapon(image_index)
+            scrGetWeapon()
             instance_destroy()
             objPlayer.ammo = ammo
             global.state = 1 

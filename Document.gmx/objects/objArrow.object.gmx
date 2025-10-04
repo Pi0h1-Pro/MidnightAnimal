@@ -59,70 +59,6 @@ if speed &lt;= 0 {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objDoorV">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Impact.
-speed = 0
-dir = direction
-move_contact_solid(image_angle, speed * 5)
-
-if hit = 0 {
-    hit = 1
-    sound_ps(sndWallImpact)
-}
-
-mask_index = sprite_index
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objPlayer">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Pick up arrows.
-if place_meeting(x, y, other) or place_meeting(x + lengthdir_x(8, image_angle), y + lengthdir_y(8, image_angle), other) {
-    if scrCurrentWeaponExt(other.sprite_index) = 73 {
-        with other ammo += 1
-        sound_ps(sndPickUpGeneric)
-        sound_ps(sndPickUpWeapon)
-        instance_destroy()
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="objWindow">
       <action>
         <libid>1</libid>
@@ -259,6 +195,70 @@ if hit = 0 {
 }
 
 mask_index = sprite_index
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objDoorV">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Impact.
+speed = 0
+dir = direction
+move_contact_solid(image_angle, speed * 5)
+
+if hit = 0 {
+    hit = 1
+    sound_ps(sndWallImpact)
+}
+
+mask_index = sprite_index
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objPlayer">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Pick up arrows.
+if place_meeting(x, y, other) or place_meeting(x + lengthdir_x(8, image_angle), y + lengthdir_y(8, image_angle), other) {
+    if scrCurrentWeaponExt(other.sprite_index) = 73 {
+        with other ammo += 1
+        sound_ps(sndPickUpGeneric)
+        sound_ps(sndPickUpWeapon)
+        instance_destroy()
+    }
+}
 </string>
           </argument>
         </arguments>

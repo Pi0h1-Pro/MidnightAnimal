@@ -16,6 +16,6 @@ if image_index = 2 {
     or mouse_check_button_pressed(mb_middle) {
         image_index = 1
         sound_ps(sndPickUpWeapon)
-        scrGetWeapon(argument0)
+        scrGetWeapon()
     }
 }
