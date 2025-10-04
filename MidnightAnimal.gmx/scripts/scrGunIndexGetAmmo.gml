@@ -1,0 +1,9 @@
+if argument0=0 ammo=48
+if argument0=1 ammo=24
+if argument0=6 ammo=4
+if argument0=7 ammo=39
+if argument0=9 ammo=60
+if argument0=11 ammo=40
+if argument0=12 ammo=70
+if argument0=25 ammo=60
+if argument0=26 ammo=60
