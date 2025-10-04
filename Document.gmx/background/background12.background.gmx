@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>128</width>
-  <height>128</height>
-  <data>images\tlSandBunker.png</data>
+  <width>200</width>
+  <height>140</height>
+  <data>images\background12.png</data>
 </background>
