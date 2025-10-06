@@ -29,6 +29,7 @@
 energie = 2
 direction = image_angle
 angle = direction 
+alertwait = 0;
 
 </string>
           </argument>

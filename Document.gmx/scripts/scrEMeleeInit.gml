@@ -1,3 +1,4 @@
+scrEnemyInitPatch();
 reload=0
 alert=0
 checkreload=random(30)

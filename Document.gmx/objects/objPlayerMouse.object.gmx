@@ -25,22 +25,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerlight = 0
+            <string>instance_create(x,y,objPlayer);
+instance_destroy();
+exit;
+event_inherited();
+playerlight = 0
 global.cocked=0
 active = 1
 save = 0
 alarm[0]=10
 alarm[3] = 0
-
+state_next=0;
 scrPlayerSpecialCase()
 flashlight = 0
 spot = 0
 muzzle = 0
-
+state = 0;
 //Initiate Parker's berserk.
 kills = 0
 berserk = 0
-
+state_timer = 0;
 if global.xbox = 1 scrInitXboxButtons()
 if room = rmTutorial {
     global.maskindex = 0 global.maskon = 1 global.done = 1
@@ -546,7 +550,7 @@ if sprite_index = sprPAttackPunch or sprite_index = sprPAttackUnarmed1 or sprite
 if sprite_index = sprPRoll {
     global.maskon = 0
     scrMoveSolidOn()
-    scrUpdateMaskPos(0)
+    scrUpdateMaskPos(sprite_index)
     scrMoveGlide(rollx, rolly)
     scrCameraPan(x, y)
     scrCameraPan(x, y)

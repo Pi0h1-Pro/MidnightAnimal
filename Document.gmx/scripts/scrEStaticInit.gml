@@ -1,4 +1,4 @@
-
+scrEnemyInitPatch();
 
 diradd=0
 alertwait=-1
@@ -11,3 +11,4 @@ angle=direction
 seen=1
 ammo=0
 flash = false
+

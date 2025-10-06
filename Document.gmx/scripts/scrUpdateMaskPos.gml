@@ -19,6 +19,8 @@ maskx[12]=7                 masky[12]=-3
 
 }
 */
+nothing = argument0
+exit;
 if argument0 = sprPPipeKill or argument0 = sprPKillCrowbar or argument0 = sprPTrophyKill or argument0 = sprPClubKill or argument0 = sprPBatKill or argument0 = sprPPoolKill or argument0 = sprPKillPan or argument0 = sprPKillPot or argument = sprPAxeKill or argument = sprPKillSkateboard2 or argument = sprPKillBust or argument0 = sprPKillArm or argument0 = sprPKillGuitar {
     maskaddx[0] = 0 maskaddy[0] = 0
     maskaddx[1] = 0 maskaddy[1] = 0

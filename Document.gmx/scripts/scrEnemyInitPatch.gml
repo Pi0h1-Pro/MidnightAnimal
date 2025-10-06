@@ -1,0 +1,13 @@
+starty          = y
+startx          = x
+alertwait       = 100;
+returning       = 0;
+path            = 0;
+accuracy        = 1;
+diradd          = 1;
+killscore       = 0;
+hp              = 1;
+startdir        = 0;
+hit_enemy       = 0;
+dropped         = 0;
+hit             = 0;

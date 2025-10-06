@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = rmPhoneHomEntrance scrPlaySong(working_directory + "\Bridal.mp3")
+            <string>instance_destroy(); exit;
+if room = rmPhoneHomEntrance scrPlaySong(working_directory + "\Bridal.mp3")
 global.barehanded = 1
 current = 0
 dir = 0
@@ -150,7 +151,7 @@ alarm[0] = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>surface_free(surf)
+            <string>//surface_free(surf)
 </string>
           </argument>
         </arguments>

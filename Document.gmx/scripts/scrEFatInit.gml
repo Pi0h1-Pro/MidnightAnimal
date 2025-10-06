@@ -1,3 +1,4 @@
+scrEnemyInitPatch();
 ammo=0
 reload=0
 alert=0

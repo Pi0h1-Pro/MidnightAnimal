@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//L3S_system_init(ambient,mod level,spec highlights,glow,light bloom)
+            <string>instance_destroy();
+exit;
+//L3S_system_init(ambient,mod level,spec highlights,glow,light bloom)
 L3S_system_init(make_color_rgb(20,20,20),2,1,1,1)
 
 //L3S_define_objects(light master,overall shadow master,Dynamic shadow master,static shadows Spec lights, Spec objects)
@@ -63,7 +65,9 @@ global.LS_glow=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>L3S_system_destroy()</string>
+            <string>exit;
+L3S_system_destroy()
+</string>
           </argument>
         </arguments>
       </action>

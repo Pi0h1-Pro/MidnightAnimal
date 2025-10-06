@@ -1,0 +1,13 @@
+global.maskindex        = 0;
+global.xbox             = 0;
+global.factor           = 0;
+global.locked           = 0;
+global.killscore        = 0;
+global.boldscore        = 0;
+global.gunkill          = 0;
+global.timeMultiplier   = 1;
+global.upkey            = "W";
+global.leftkey          = "A";
+global.downkey          = "S";
+global.rightkey         = "D";
+global.steamon          = 0;

@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>surf1 = surface_create(room_width, room_height)
+            <string>instance_destroy();
+exit;
+surf1 = surface_create(room_width, room_height)
 surf2 = surface_create(room_width, room_height)
 i = 0
 repeat(16) {
@@ -70,7 +72,8 @@ if instance_exists(objRainGenerator) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>surface_free(surf1)
+            <string>exit;
+surface_free(surf1)
 surface_free(surf2)
 </string>
           </argument>
