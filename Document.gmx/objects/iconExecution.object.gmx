@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i = 0
-ifloat = 0
-ialpha = 0
+            <string>i = 0;
+ifloat = 0;
+ialpha = 0;
 </string>
           </argument>
         </arguments>
@@ -50,9 +50,11 @@ ialpha = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, i, x, y - ifloat, 0.5, 0.5, 0, c_white, ialpha)
-if ifloat &lt; 20 ifloat += 20
-if ialpha &lt; 1 ialpha += 0.05
+            <string>draw_sprite_ext(sprite_index, i, x, y - ifloat, 0.5, 0.5, 0, c_white, ialpha);
+if (ifloat &lt; 20)
+	ifloat += 20;
+if (ialpha &lt; 1)
+	ialpha += 0.05;
 </string>
           </argument>
         </arguments>

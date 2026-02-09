@@ -1,1 +1,2 @@
-if global.alienware=1 external_call(global.iAlienRotatePink);
+if (global.alienware == 1)
+	external_call(global.iAlienRotatePink);

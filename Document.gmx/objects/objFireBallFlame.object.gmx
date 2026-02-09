@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=random(360)
-image_xscale=0.9+random(0.2)
-image_yscale=0.9+random(0.2)
-image_speed=0.25+random(0.25)
-friction=0.1
-diradd=-4+random(8)
+            <string>image_angle = random(360);
+image_xscale = 0.9 + random(0.2);
+image_yscale = 0.9 + random(0.2);
+image_speed = 0.25 + random(0.25);
+friction = 0.1;
+diradd = -4 + random(8);
 </string>
           </argument>
         </arguments>
@@ -53,16 +53,18 @@ diradd=-4+random(8)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=diradd
+            <string>image_angle += diradd;
 
-if round(random(7)) = 2 {
-    dir = random(360)
-    dist = random(20)
-    repeat (5) {
-        my_id = instance_create(x + lengthdir_x(dist, dir), y + lengthdir_y(dist, dir), objFlameParticle)
-        my_id.direction = dir
-        my_id.speed = dist * 0.025 + random(1)
-    }
+if (round(random(7)) == 2)
+{
+	dir = random(360);
+	dist = random(20);
+	repeat (5)
+	{
+		my_id = instance_create(x + lengthdir_x(dist, dir), y + lengthdir_y(dist, dir), objFlameParticle);
+		my_id.direction = dir;
+		my_id.speed = dist * 0.025 + random(1);
+	}
 }
 </string>
           </argument>
@@ -86,7 +88,7 @@ if round(random(7)) = 2 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -109,9 +111,9 @@ if round(random(7)) = 2 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add)
-draw_self()
-draw_reset()
+            <string>draw_set_blend_mode(bm_add);
+draw_self();
+draw_reset();
 </string>
           </argument>
         </arguments>

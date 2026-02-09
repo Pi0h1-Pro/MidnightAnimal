@@ -25,29 +25,29 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.2
-path=path_add()
-reload=random(5)
-bangs=0
-current=0
-scrInitDodger() 
-scrDPatrolInit()
-points=current-1
-current=0
-legindex=0
-objPlayer.active=0
-objPlayer.aimon=0
-objPlayer.dir=90
-wait=160
-image_angle=90
+            <string>image_speed = 0.2;
+path = path_add();
+reload = random(5);
+bangs = 0;
+current = 0;
+scrInitDodger();
+scrDPatrolInit();
+points = current - 1;
+current = 0;
+legindex = 0;
+objPlayer.active = 0;
+objPlayer.aimon = 0;
+objPlayer.dir = 90;
+wait = 160;
+image_angle = 90;
 
-previousx=x
-previousy=y
-movex=0
-movey=0
-rollreload=0
-rollx=0
-rolly=0
+previousx = x;
+previousy = y;
+movex = 0;
+movey = 0;
+rollreload = 0;
+rollx = 0;
+rolly = 0;
 </string>
           </argument>
         </arguments>
@@ -70,7 +70,7 @@ rolly=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.25
+            <string>image_speed = 0.25;
 </string>
           </argument>
         </arguments>
@@ -93,24 +93,34 @@ rolly=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objPlayer) exit
+            <string>if (!instance_exists(objPlayer))
+	exit;
 
-if scrIsDodging(sprite_index) {
-    if !place_meeting(x, y, objBullet) and !place_meeting(x, y, objNail) and !place_meeting(x, y, objWeaponThrow) {
-        if image_index &lt; 15 image_index += 0.25
-        else {
-            if object_index = objEnemyRadio sprite_index = sprERadioWalk
-            legindex = 0
-        }
-    } else {
-        if image_index &lt; 3 image_index += 0.5
-    }
-    exit
+if (scrIsDodging(sprite_index))
+{
+	if (!place_meeting(x, y, objBullet) &amp;&amp; !place_meeting(x, y, objNail) &amp;&amp; !place_meeting(x, y, objWeaponThrow))
+	{
+		if (image_index &lt; 15)
+			image_index += 0.25;
+		else
+		{
+			if (object_index == objEnemyRadio)
+				sprite_index = sprERadioWalk;
+			legindex = 0;
+		}
+	}
+	else
+	{
+		if (image_index &lt; 3)
+			image_index += 0.5;
+	}
+	exit;
 }
 
-angle = direction
+angle = direction;
 
-scrRadioStep()
+scrRadioStep();
+
 /*
 if reload &gt; 0 reload -= 1
 else {
@@ -128,10 +138,13 @@ else {
     }
 }
 */
-if path_speed &gt; 0 image_index += path_speed * 0.125
-else image_index += speed * 0.125
-legindex += speed * 0.25
-image_angle = direction
+if (path_speed &gt; 0)
+	image_index += path_speed * 0.125;
+else
+	image_index += speed * 0.125;
+legindex += speed * 0.25;
+image_angle = direction;
+
 /*
 if point_distance(x, y, point[current].x, point[current].y) &lt; 12 {
     if current &lt; points current += 1
@@ -140,26 +153,31 @@ if point_distance(x, y, point[current].x, point[current].y) &lt; 12 {
 }
 */
 
-//Roll.
-if sprite_index = sprERadioRoll {
-    scrMoveGlide(rollx, rolly)
-    if !place_free(x + rollx, y + rolly) and image_index &lt; 12 image_index = 12
-    scrMoveSolidOff()
-    if image_index &lt; 16 image_index += 0.25
-    else {
-        sprite_index = weapon
-        active = 1
-        aimon = 1
-        image_index = 0
-    }
-    exit
-} else {
-    if rollreload &gt; 0 rollreload -= 1
+// Roll.
+if (sprite_index == sprERadioRoll)
+{
+	scrMoveGlide(rollx, rolly);
+	if (!place_free(x + rollx, y + rolly) &amp;&amp; image_index &lt; 12)
+		image_index = 12;
+	scrMoveSolidOff();
+	if (image_index &lt; 16)
+		image_index += 0.25;
+	else
+	{
+		sprite_index = weapon;
+		active = 1;
+		aimon = 1;
+		image_index = 0;
+	}
+	exit;
 }
-previousx = x
-previousy = y
-
-
+else
+{
+	if (rollreload &gt; 0)
+		rollreload -= 1;
+}
+previousx = x;
+previousy = y;
 </string>
           </argument>
         </arguments>
@@ -182,11 +200,16 @@ previousy = y
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrIsDodging(sprite_index) {if image_index&gt;3 image_index=3 exit}
-sprite_index=sprERadioRoll
-image_index=0
-speed=0
-path_end()
+            <string>if (scrIsDodging(sprite_index))
+{
+	if (image_index &gt; 3)
+		image_index = 3;
+	exit;
+}
+sprite_index = sprERadioRoll;
+image_index = 0;
+speed = 0;
+path_end();
 </string>
           </argument>
         </arguments>
@@ -209,11 +232,16 @@ path_end()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrIsDodging(sprite_index) {if image_index&gt;3 image_index=3 exit}
-sprite_index=sprERadioRoll
-image_index=0
-speed=0
-path_end()
+            <string>if (scrIsDodging(sprite_index))
+{
+	if (image_index &gt; 3)
+		image_index = 3;
+	exit;
+}
+sprite_index = sprERadioRoll;
+image_index = 0;
+speed = 0;
+path_end();
 </string>
           </argument>
         </arguments>
@@ -236,11 +264,16 @@ path_end()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrIsDodging(sprite_index) {if image_index&gt;3 image_index=3 exit}
-sprite_index=sprERadioRoll
-image_index=0
-speed=0
-path_end()
+            <string>if (scrIsDodging(sprite_index))
+{
+	if (image_index &gt; 3)
+		image_index = 3;
+	exit;
+}
+sprite_index = sprERadioRoll;
+image_index = 0;
+speed = 0;
+path_end();
 </string>
           </argument>
         </arguments>
@@ -263,11 +296,16 @@ path_end()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrIsDodging(sprite_index) {if image_index&gt;3 image_index=3 exit}
-sprite_index=sprERadioRoll
-image_index=0
-speed=0
-path_end()
+            <string>if (scrIsDodging(sprite_index))
+{
+	if (image_index &gt; 3)
+		image_index = 3;
+	exit;
+}
+sprite_index = sprERadioRoll;
+image_index = 0;
+speed = 0;
+path_end();
 </string>
           </argument>
         </arguments>
@@ -290,11 +328,16 @@ path_end()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrIsDodging(sprite_index) {if image_index&gt;3 image_index=3 exit}
-sprite_index=sprERadioRoll
-image_index=0
-speed=0
-path_end()
+            <string>if (scrIsDodging(sprite_index))
+{
+	if (image_index &gt; 3)
+		image_index = 3;
+	exit;
+}
+sprite_index = sprERadioRoll;
+image_index = 0;
+speed = 0;
+path_end();
 </string>
           </argument>
         </arguments>
@@ -317,16 +360,21 @@ path_end()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>update = 0
-if sprite_index = sprERadioTalk {
-    sprite_index = sprERadioWalk update = 1
+            <string>update = 0;
+if (sprite_index == sprERadioTalk)
+{
+	sprite_index = sprERadioWalk;
+	update = 1;
 }
-if sprite_index = sprERadioRoll {
-    sprite_index = sprERadioWalk update = 1
+if (sprite_index == sprERadioRoll)
+{
+	sprite_index = sprERadioWalk;
+	update = 1;
 }
-if update = 1 {
-    image_speed = 0
-    image_yscale = -image_yscale
+if (update == 1)
+{
+	image_speed = 0;
+	image_yscale = -image_yscale;
 }
 </string>
           </argument>
@@ -350,8 +398,8 @@ if update = 1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index=sprERadioWalk
-ammo=0
+            <string>sprite_index = sprERadioWalk;
+ammo = 0;
 </string>
           </argument>
         </arguments>
@@ -374,25 +422,29 @@ ammo=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*if alert=0 image_blend=c_white
+            <string>/* if alert=0 image_blend=c_white
 if alert=1 image_blend=c_red
 if alert=2 image_blend=c_aqua
 if alert=3 image_blend=c_green
 if speed&gt;0 or path_speed&gt;0 draw_sprite_ext(sprEGangLegs,image_index,x,y,image_xscale,image_yscale,direction,image_blend,1)
 draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,left,direction,c_black,0.5)
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,left,direction,image_blend,image_alpha)
-draw_path(path,0,0,1)*/
+draw_path(path,0,0,1 )*/
 
-if x &gt; view_xview[0] - sprite_width - 10 and x &lt; view_xview[0] + view_wview[0] + sprite_width + 10 and y &gt; view_yview[0] - sprite_height - 10 and y &lt; view_yview[0] + view_hview[0] + sprite_height + 10 {
-    if speed &gt; 0 or path_index &gt;= 0 {
-        if sprite_index = sprERadioRoll nothing = 1
-        else draw_sprite_ext(sprCommandoLegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, 1)
-    }
-    draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, left, direction, c_black, 0.5)
-    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, left, direction, image_blend, image_alpha)
-    //if path_index&gt;=0 draw_path(path,0,0,1)
+if (x &gt; view_xview[0] - sprite_width - 10 &amp;&amp; x &lt; view_xview[0] + view_wview[0] + sprite_width + 10 &amp;&amp; y &gt; view_yview[0] - sprite_height - 10 &amp;&amp; y &lt; view_yview[0] + view_hview[0] + sprite_height + 10)
+{
+	if (speed &gt; 0 || path_index &gt;= 0)
+	{
+		if (sprite_index == sprERadioRoll)
+			nothing = 1;
+		else
+			draw_sprite_ext(sprCommandoLegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, 1);
+	}
+	draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, left, direction, c_black, 0.5);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, left, direction, image_blend, image_alpha);
+	
+	// if path_index&gt;=0 draw_path(path,0,0,1)
 }
-
 </string>
           </argument>
         </arguments>

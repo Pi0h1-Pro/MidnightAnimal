@@ -1,8 +1,8 @@
-if argument0 = pierretteWalkShield
-or argument0 = pierretteBashShield
-or argument0 = pierrettePlantShield
-or argument0 = pierretteThrowShield
-or argument0 = pierretteReloadShield
-or argument0 = pierretteAimShield
-or argument0 = pierretteAttackShield
-return true
+if (argument0 == pierretteWalkShield
+	|| argument0 == pierretteBashShield
+	|| argument0 == pierrettePlantShield
+	|| argument0 == pierretteThrowShield
+	|| argument0 == pierretteReloadShield
+	|| argument0 == pierretteAimShield
+	|| argument0 == pierretteAttackShield)
+	return true;

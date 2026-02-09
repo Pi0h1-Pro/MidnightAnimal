@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
+            <string>image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -49,7 +49,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Create firefly.
-if random(100) &gt; 90 instance_create(x + irandom_range(-95, 95), y + irandom_range(-72, 72), objFirefly)
+if (random(100) &gt; 90)
+	instance_create(x + irandom_range(-95, 95), y + irandom_range(-72, 72), objFirefly);
 </string>
           </argument>
         </arguments>

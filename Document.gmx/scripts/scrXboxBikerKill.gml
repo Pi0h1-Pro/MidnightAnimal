@@ -1,1 +1,1 @@
-scrMCKill()
+scrMCKill();

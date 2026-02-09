@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_angle=random(360)
+            <string>image_speed = 0;
+image_angle = random(360);
 </string>
           </argument>
         </arguments>
@@ -49,10 +49,11 @@ image_angle=random(360)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrContactDetonator() {
-    instance_create(x, y, objGrenadeExplosion)
-    instance_create(x, y, objTinyFire)
-    instance_destroy()
+            <string>if (scrContactDetonator())
+{
+	instance_create(x, y, objGrenadeExplosion);
+	instance_create(x, y, objTinyFire);
+	instance_destroy();
 }
 </string>
           </argument>

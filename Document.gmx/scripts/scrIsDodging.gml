@@ -1,2 +1,3 @@
-if argument0=sprEDodgerDodge return true
+if (argument0 == sprEDodgerDodge)
+	return true;
 return false;

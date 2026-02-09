@@ -25,21 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//L3S_define_shadow(shadow type,relative z,overlay sprite)
+            <string>// L3S_define_shadow(shadow type,relative z,overlay sprite)
 
-//relative polygon caster, medium z 
-L3S_define_shadow(3,50,0)
-L3S_define_material(sprite_index,-1,-1,1,2,2)
+// relative polygon caster, medium z
+L3S_define_shadow(3, 50, 0);
+L3S_define_material(sprite_index, -1, -1, 1, 2, 2);
 
-//making polygon
-L3S_vertex_add(44.5,225,25)
-L3S_vertex_add(44.5,135,25)
-L3S_vertex_add(44.5,45,25)
-L3S_vertex_add(44.5,315,25)
-L3S_vertex_add(44.5,225,25)
+// making polygon
+L3S_vertex_add(44.5, 225, 25);
+L3S_vertex_add(44.5, 135, 25);
+L3S_vertex_add(44.5, 45, 25);
+L3S_vertex_add(44.5, 315, 25);
+L3S_vertex_add(44.5, 225, 25);
 
-image_speed=0
-image_index=0
+image_speed = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -62,7 +62,11 @@ image_index=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.mouse!=id if fps {image_angle+=30/fps}
+            <string>if (global.mouse != id)
+	if (fps)
+	{
+		image_angle += 30 / fps;
+	}
 </string>
           </argument>
         </arguments>

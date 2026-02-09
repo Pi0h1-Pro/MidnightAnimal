@@ -1,2 +1,2 @@
-lastdir=0
-turnwait=0
+lastdir = 0;
+turnwait = 0;

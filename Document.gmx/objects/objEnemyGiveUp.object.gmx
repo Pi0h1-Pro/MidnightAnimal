@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-c = 0
+            <string>image_speed = 0;
+c = 0;
 </string>
           </argument>
         </arguments>
@@ -50,9 +50,11 @@ c = 0
           <argument>
             <kind>1</kind>
             <string>/// Destroy icon.
-icon = instance_nearest(x, y, iconExecution)
-if instance_exists(icon) {
-    with icon instance_destroy()
+icon = instance_nearest(x, y, iconExecution);
+if (instance_exists(icon))
+{
+	with (icon)
+		instance_destroy();
 }
 </string>
           </argument>
@@ -77,16 +79,22 @@ if instance_exists(icon) {
           <argument>
             <kind>1</kind>
             <string>/// Create execution icon.
-if c = 0 {
-    instance_create(x, y, iconExecution)
-    c = 1
+if (c == 0)
+{
+	instance_create(x, y, iconExecution);
+	c = 1;
 }
 
-if scrMovingPlayerExists() {
-    icon = instance_nearest(x, y, iconExecution)
-    if instance_exists(icon) {
-        if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32 icon = 1 else icon = 0
-    }
+if (scrMovingPlayerExists())
+{
+	icon = instance_nearest(x, y, iconExecution);
+	if (instance_exists(icon))
+	{
+		if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32)
+			icon = 1;
+		else
+			icon = 0;
+	}
 }
 </string>
           </argument>
@@ -109,7 +117,8 @@ if scrMovingPlayerExists() {
           <argument>
             <kind>1</kind>
             <string>/// Animate.
-if image_index &lt; 5 image_index += 0.15
+if (image_index &lt; 5)
+	image_index += 0.15;
 </string>
           </argument>
         </arguments>
@@ -133,8 +142,10 @@ if image_index &lt; 5 image_index += 0.15
           <argument>
             <kind>1</kind>
             <string>/// Die.
-if other.sprite_index = sprShockRound exit
-else scrEnemyDieShot(objBullet)
+if (other.sprite_index == sprShockRound)
+	exit;
+else
+	scrEnemyDieShot(objBullet);
 </string>
           </argument>
         </arguments>
@@ -157,7 +168,7 @@ else scrEnemyDieShot(objBullet)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self_shadow(1)
+            <string>draw_self_shadow(1);
 </string>
           </argument>
         </arguments>

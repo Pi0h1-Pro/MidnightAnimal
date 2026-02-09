@@ -1,76 +1,107 @@
 // JOHN
-if global.character = 0 {
-    if instance_exists(_WEAPON) {
-        weapon = instance_nearest(objPlayer.x, objPlayer.y, _WEAPON)
-        if point_distance(objPlayer.x, objPlayer.y, weapon.x, weapon.y) < 32 {
-            text_interact = "[MMB] " + scrGetWeaponName(weapon.image_index)
-        } else exit
-    }
-    
-    if instance_exists(objKnockedOut) {
-        ko = instance_nearest(objPlayer.x, objPlayer.y, objKnockedOut)
-        if point_distance(objPlayer.x, objPlayer.y, ko.x, ko.y) < 32 {
-            text_interact = "[SPACE] Execute"
-        } else exit
-    }
-    
-    if instance_exists(objVendingMachine) {
-        vend = instance_nearest(objPlayer.x, objPlayer.y, objVendingMachine)
-        if point_distance(objPlayer.x, objPlayer.y, vend.x, vend.y) < 32 text_interact = "[E] Thirsty?"
-    } else exit
-    
-    if instance_exists(objDoorV) {
-        door = instance_nearest(objPlayer.x, objPlayer.y, objDoorV)
-        if point_distance(objPlayer.x, objPlayer.y, door.x, door.y) < 32 text_interact = "[E] Open door"
-    }
+if (global.character == 0)
+{
+	if (instance_exists(_WEAPON))
+	{
+		weapon = instance_nearest(objPlayer.x, objPlayer.y, _WEAPON);
+		if (point_distance(objPlayer.x, objPlayer.y, weapon.x, weapon.y) < 32)
+		{
+			text_interact = "[MMB] " + scrGetWeaponName(weapon.image_index);
+		}
+		else
+			exit;
+	}
+	
+	if (instance_exists(objKnockedOut))
+	{
+		ko = instance_nearest(objPlayer.x, objPlayer.y, objKnockedOut);
+		if (point_distance(objPlayer.x, objPlayer.y, ko.x, ko.y) < 32)
+		{
+			text_interact = "[SPACE] Execute";
+		}
+		else
+			exit;
+	}
+	
+	if (instance_exists(objVendingMachine))
+	{
+		vend = instance_nearest(objPlayer.x, objPlayer.y, objVendingMachine);
+		if (point_distance(objPlayer.x, objPlayer.y, vend.x, vend.y) < 32)
+			text_interact = "[E] Thirsty?";
+	}
+	else
+		exit;
+	
+	if (instance_exists(objDoorV))
+	{
+		door = instance_nearest(objPlayer.x, objPlayer.y, objDoorV);
+		if (point_distance(objPlayer.x, objPlayer.y, door.x, door.y) < 32)
+			text_interact = "[E] Open door";
+	}
 }
 
 // PIERRETTE
-if global.character = 2 {
-    if objPlayer.sprite_index = pierretteWalkUnarmed and global.done = 0 {
-        text_interact = "'LMB': Ready up"
-    }
-    
-    if pierretteHasShield(objPlayer.sprite_index) {
-        text_interact = "'F': Plant shield#'G': Throw flashbang"
-    }
-    
-    if pierretteIsUnshielded(objPlayer.sprite_index) {
-        text_interact = "'F': Retract shield#'G': Throw flashbang#'RMB': Concussive blast"
-    }
-    
-    if instance_exists(objPierretteShield) {
-        shield = instance_nearest(objPlayer.x, objPlayer.y, objPierretteShield)
-        if point_distance(objPlayer.x, objPlayer.y, shield.x, shield.y) < 32 text_interact = "'E': Pick up shield" 
-    }
-    
-    if instance_exists(objDoorV) {
-        door = instance_nearest(objPlayer.x, objPlayer.y, objDoorV)
-        if point_distance(objPlayer.x, objPlayer.y, door.x, door.y) < 32 text_interact = "'E': Open door" 
-    }
+if (global.character == 2)
+{
+	if (objPlayer.sprite_index == pierretteWalkUnarmed && global.done == 0)
+	{
+		text_interact = "'LMB': Ready up";
+	}
+	
+	if (pierretteHasShield(objPlayer.sprite_index))
+	{
+		text_interact = "'F': Plant shield#'G': Throw flashbang";
+	}
+	
+	if (pierretteIsUnshielded(objPlayer.sprite_index))
+	{
+		text_interact = "'F': Retract shield#'G': Throw flashbang#'RMB': Concussive blast";
+	}
+	
+	if (instance_exists(objPierretteShield))
+	{
+		shield = instance_nearest(objPlayer.x, objPlayer.y, objPierretteShield);
+		if (point_distance(objPlayer.x, objPlayer.y, shield.x, shield.y) < 32)
+			text_interact = "'E': Pick up shield";
+	}
+	
+	if (instance_exists(objDoorV))
+	{
+		door = instance_nearest(objPlayer.x, objPlayer.y, objDoorV);
+		if (point_distance(objPlayer.x, objPlayer.y, door.x, door.y) < 32)
+			text_interact = "'E': Open door";
+	}
 }
 
 // SIMONE
-if global.character = 3 {
-    if instance_exists(objEnemyGiveUp) {
-        submit = instance_nearest(objPlayer.x, objPlayer.y, objEnemyGiveUp)
-        if point_distance(objPlayer.x, objPlayer.y, submit.x, submit.y) < 32 {
-            text_interact = "[SPACE] Take human shield"
-        } else text_interact = ""
-    }
-
-    if objPlayer.sprite_index = simoneWalkShield
-    or objPlayer.sprite_index = simoneAttackShield
-    text_interact = "[MMB] Execute"
-    else text_interact = ""
-    
-    if instance_exists(objDoorV) {
-        door = instance_nearest(objPlayer.x, objPlayer.y, objDoorV)
-        if point_distance(objPlayer.x, objPlayer.y, door.x, door.y) < 32 text_interact = "[E] Open door" 
-    }
+if (global.character == 3)
+{
+	if (instance_exists(objEnemyGiveUp))
+	{
+		submit = instance_nearest(objPlayer.x, objPlayer.y, objEnemyGiveUp);
+		if (point_distance(objPlayer.x, objPlayer.y, submit.x, submit.y) < 32)
+		{
+			text_interact = "[SPACE] Take human shield";
+		}
+		else
+			text_interact = "";
+	}
+	
+	if (objPlayer.sprite_index == simoneWalkShield
+		|| objPlayer.sprite_index == simoneAttackShield)
+		text_interact = "[MMB] Execute";
+	else
+		text_interact = "";
+	
+	if (instance_exists(objDoorV))
+	{
+		door = instance_nearest(objPlayer.x, objPlayer.y, objDoorV);
+		if (point_distance(objPlayer.x, objPlayer.y, door.x, door.y) < 32)
+			text_interact = "[E] Open door";
+	}
 }
 
-/*if room = rmTutorialFloor1 {
+/* if room = rmTutorialFloor1 {
     if instance_exists(objVictim3) {
         if point_distance(objPlayer.x, objPlayer.y, objVictim3.x, objVictim3.y) > 72 text_interact = "WALK WITH [WASD]"
         else text_interact = "USE THE DOOR TO KNOCK HIM OUT"
@@ -127,30 +158,32 @@ if instance_exists(objPlayerSwanChainsaw) {
     if tutorialtime < 80 text_interact = "2ND SWAN PICKS UP GUNS WHEN OUT OF AMMO"
 }*/
 
-if string_length(text_interact) > 0 {
-
-    if global.character = 0 {
-        draw_set_font(fntHUD)
-        draw_set_halign(fa_center)
-    
-        draw_set_alpha(0.8)
-        draw_set_color(global.nigredo)
-        draw_rectangle(view_wview[0] / 2 - string_width(text_interact) * 0.1,
-            222 - 8, //view_hview[0] * 0.9 - 6, 
-            view_wview[0] / 2 + string_width(text_interact) * 0.1,
-            222 + 8, //view_hview[0] * 0.9 + 6, 
-            0)
-        draw_set_alpha(1)
-    
-        draw_set_color(global.albedo)
-        draw_text_transformed(view_wview[0] / 2, 222, text_interact, 0.125, 0.125, 0)
-    }
-    
-    if global.character = 2 {
-        draw_set_font(fntDamage)
-        draw_set_halign(fa_left)
-    
-        draw_set_color(global.albedo)
-        draw_text_transformed(24 + gunx, 172, text_interact, 0.125, 0.125, 0)
-    }
+if (string_length(text_interact) > 0)
+{
+	if (global.character == 0)
+	{
+		draw_set_font(fntHUD);
+		draw_set_halign(fa_center);
+		
+		draw_set_alpha(0.8);
+		draw_set_color(global.nigredo);
+		draw_rectangle(view_wview[0] / 2 - string_width(text_interact) * 0.1,
+			222 - 8, // view_hview[0] * 0.9 - 6,
+		view_wview[0] / 2 + string_width(text_interact) * 0.1,
+			222 + 8, // view_hview[0] * 0.9 + 6,
+		0);
+		draw_set_alpha(1);
+		
+		draw_set_color(global.albedo);
+		draw_text_transformed(view_wview[0] / 2, 222, text_interact, 0.125, 0.125, 0);
+	}
+	
+	if (global.character == 2)
+	{
+		draw_set_font(fntDamage);
+		draw_set_halign(fa_left);
+		
+		draw_set_color(global.albedo);
+		draw_text_transformed(24 + gunx, 172, text_interact, 0.125, 0.125, 0);
+	}
 }

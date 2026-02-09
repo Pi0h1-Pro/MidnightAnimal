@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-anispeed=0
-image_alpha=0.45
+            <string>image_speed = 0;
+anispeed = 0;
+image_alpha = 0.45;
 </string>
           </argument>
         </arguments>
@@ -50,26 +50,38 @@ image_alpha=0.45
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if anispeed&gt;0.4 anispeed-=0.1
-image_speed=anispeed
-if scrMovingPlayerExists() {
-objPlayer.mask_index=objPlayer.sprite_index
-objPlayer.image_angle=objPlayer.dir
-if place_meeting(x,y,objPlayer) {
-if round(image_index)=5 image_speed=0
-if anispeed&gt;0.1 exit
-if image_angle=0 {
-if objPlayer.myyspeed&gt;0 image_yscale=1
-if objPlayer.myyspeed&lt;0 image_yscale=-1
-} else {
-if objPlayer.myxspeed&gt;0 image_yscale=1
-if objPlayer.myxspeed&lt;0 image_yscale=-1
-}
-anispeed=1
-image_index=0
-}
-objPlayer.mask_index=sprMask
-objPlayer.image_angle=0
+            <string>if (anispeed &gt; 0.4)
+	anispeed -= 0.1;
+image_speed = anispeed;
+if (scrMovingPlayerExists())
+{
+	objPlayer.mask_index = objPlayer.sprite_index;
+	objPlayer.image_angle = objPlayer.dir;
+	if (place_meeting(x, y, objPlayer))
+	{
+		if (round(image_index) == 5)
+			image_speed = 0;
+		if (anispeed &gt; 0.1)
+			exit;
+		if (image_angle == 0)
+		{
+			if (objPlayer.myyspeed &gt; 0)
+				image_yscale = 1;
+			if (objPlayer.myyspeed &lt; 0)
+				image_yscale = -1;
+		}
+		else
+		{
+			if (objPlayer.myxspeed &gt; 0)
+				image_yscale = 1;
+			if (objPlayer.myxspeed &lt; 0)
+				image_yscale = -1;
+		}
+		anispeed = 1;
+		image_index = 0;
+	}
+	objPlayer.mask_index = sprMask;
+	objPlayer.image_angle = 0;
 }
 </string>
           </argument>
@@ -93,8 +105,8 @@ objPlayer.image_angle=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>anispeed=0
-image_speed=0
+            <string>anispeed = 0;
+image_speed = 0;
 </string>
           </argument>
         </arguments>

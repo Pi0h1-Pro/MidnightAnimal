@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0</string>
+            <string>image_speed = 0;
+</string>
           </argument>
         </arguments>
       </action>
@@ -47,20 +48,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>open=0
-if instance_exists(objPlayer) {
-if point_distance(x+32,y,objPlayer.x,objPlayer.y)&lt;64 open=1
-target=instance_nearest(x,y,objEnemy)
-if target&gt;0 {
-if point_distance(x+32,y,target.x,target.y)&lt;64 open=1 
+            <string>open = 0;
+if (instance_exists(objPlayer))
+{
+	if (point_distance(x + 32, y, objPlayer.x, objPlayer.y) &lt; 64)
+		open = 1;
+	target = instance_nearest(x, y, objEnemy);
+	if (target &gt; 0)
+	{
+		if (point_distance(x + 32, y, target.x, target.y) &lt; 64)
+			open = 1;
+	}
+	if (open == 1)
+	{
+		if (image_index &lt; 9)
+			image_index += 0.5;
+	}
+	else
+	{
+		if (image_index &gt; 0)
+			image_index -= 0.5;
+	}
 }
-if open=1 {
-if image_index&lt;9 image_index+=0.5
-} else {
-if image_index&gt;0 image_index-=0.5
-}
-}
-/*if instance_exists(objPlayer) {
+
+/* if instance_exists(objPlayer) {
 if point_distance(x,y+32,objPlayer.x,objPlayer.y)&lt;80 {
 if place_meeting(x,y,objPlayer) exit
 if image_index&lt;9 image_index+=0.5
@@ -91,8 +102,8 @@ if image_index&gt;0 image_index-=0.5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

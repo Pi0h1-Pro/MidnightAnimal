@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-punch=0
+            <string>image_speed = 0;
+punch = 0;
 </string>
           </argument>
         </arguments>
@@ -49,20 +49,26 @@ punch=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrMovingPlayerExists() {
-    if scrIsSwinging(objPlayer.sprite_index) or objPlayer.sprite_index = sprPAttackPunch or objPlayer.sprite_index = sprPAttackUnarmed1 {
-        if punch = 0 {
-            if place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlayer.dir), objPlayer) {
-                image_speed = 0.2
-                image_angle = point_direction(objPlayer.x, objPlayer.y, x, y)
-                if image_index &gt; 2 image_index = 2
-                sound_play(sndBoxingBag)
-                punch = 1
-            }
-        }
-    } else punch = 0
+            <string>if (scrMovingPlayerExists())
+{
+	if (scrIsSwinging(objPlayer.sprite_index) || objPlayer.sprite_index == sprPAttackPunch || objPlayer.sprite_index == sprPAttackUnarmed1)
+	{
+		if (punch == 0)
+		{
+			if (place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlayer.dir), objPlayer))
+			{
+				image_speed = 0.2;
+				image_angle = point_direction(objPlayer.x, objPlayer.y, x, y);
+				if (image_index &gt; 2)
+					image_index = 2;
+				sound_play(sndBoxingBag);
+				punch = 1;
+			}
+		}
+	}
+	else
+		punch = 0;
 }
-
 </string>
           </argument>
         </arguments>
@@ -85,7 +91,7 @@ punch=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
+            <string>image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -108,8 +114,8 @@ punch=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+2,y+2,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 2, y + 2, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

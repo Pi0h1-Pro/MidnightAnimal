@@ -1,2 +1,4 @@
-if instance_exists(objPlayer) and !instance_exists(objExecution) return true
-else return false
+if (instance_exists(objPlayer) && !instance_exists(objExecution))
+	return true;
+else
+	return false;

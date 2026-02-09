@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.75
-friction=0.15
-broke=0
+            <string>image_speed = 0.75;
+friction = 0.15;
+broke = 0;
 </string>
           </argument>
         </arguments>
@@ -50,8 +50,8 @@ broke=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
-image_index = 8
+            <string>image_speed = 0;
+image_index = 8;
 </string>
           </argument>
         </arguments>

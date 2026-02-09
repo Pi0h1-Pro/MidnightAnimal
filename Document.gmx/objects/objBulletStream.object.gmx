@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>life = 50
-image_blend = c_white
+            <string>life = 50;
+image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -49,15 +49,18 @@ image_blend = c_white
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Regulate life cycle of bullet stream.
+            <string>/// Regulate life cycle of bullet stream.
 
 // If the bullet stream still exists, gradually depreciate its life.
-if life &gt; 0 life -= 1.5
+if (life &gt; 0)
+	life -= 1.5;
 
 // If the bullet stream's life falls below 0, destroy it.
-if life &lt;= 0 instance_destroy()
+if (life &lt;= 0)
+	instance_destroy();
 
-if place_meeting(x,y,objWall) or place_meeting(x,y,objSolid) speed=0;
+if (place_meeting(x, y, objWall) || place_meeting(x, y, objSolid))
+	speed = 0;
 </string>
           </argument>
         </arguments>
@@ -80,9 +83,9 @@ if place_meeting(x,y,objWall) or place_meeting(x,y,objSolid) speed=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(life / 100)
-draw_line_width_color(xstart, ystart, x, y, 1.5, image_blend, image_blend)
-draw_set_alpha(1)
+            <string>draw_set_alpha(life / 100);
+draw_line_width_color(xstart, ystart, x, y, 1.5, image_blend, image_blend);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

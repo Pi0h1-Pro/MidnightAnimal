@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>init_projectile()
+            <string>init_projectile();
 </string>
           </argument>
         </arguments>
@@ -48,12 +48,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if x &gt; room_width + 100 or x &lt; -100 or y &lt; -100 or y &gt; room_height + 100 instance_destroy()
-if speed &lt;= 0 {
-    direction = dir
-    image_angle = direction
+            <string>if (x &gt; room_width + 100 || x &lt; -100 || y &lt; -100 || y &gt; room_height + 100)
+	instance_destroy();
+if (speed &lt;= 0)
+{
+	direction = dir;
+	image_angle = direction;
 }
-
 </string>
           </argument>
         </arguments>
@@ -77,124 +78,113 @@ if speed &lt;= 0 {
           <argument>
             <kind>1</kind>
             <string>/// Break window.
-if other.object_index = objGlassPanelH {
-    if vspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x + i * 1.5, y, objShard)
-            my_id.speed = random(5)
-            my_id.direction = add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objGlassPanelHBroken)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objGlassPanelH)
+{
+	if (vspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x + i * 1.5, y, objShard);
+			my_id.speed = random(5);
+			my_id.direction = add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objGlassPanelHBroken);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
-if other.object_index = objWindowV {
-    if hspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x, y + i * 1.5, objShard)
-            my_id.speed = random(5)
-            my_id.direction = 90 + add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objBrokenWindowV)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objWindowV)
+{
+	if (hspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x, y + i * 1.5, objShard);
+			my_id.speed = random(5);
+			my_id.direction = 90 + add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objBrokenWindowV);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
-if other.object_index = objWindowH {
-    if vspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x + i * 1.5, y, objShard)
-            my_id.speed = random(5)
-            my_id.direction = add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objBrokenWindowH)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objWindowH)
+{
+	if (vspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x + i * 1.5, y, objShard);
+			my_id.speed = random(5);
+			my_id.direction = add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objBrokenWindowH);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
-if other.object_index = objGlassPanelV {
-    if hspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x, y + i * 1.5, objShard)
-            my_id.speed = random(5)
-            my_id.direction = 90 + add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objGlassPanelVBroken)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objGlassPanelV)
+{
+	if (hspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x, y + i * 1.5, objShard);
+			my_id.speed = random(5);
+			my_id.direction = 90 + add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objGlassPanelVBroken);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objWall">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Impact.
-speed = 0
-dir = direction
-move_contact_solid(image_angle, speed * 5)
-
-if hit = 0 {
-    hit = 1
-    sound_ps(sndWallImpact)
-}
-
-mask_index = sprite_index
 </string>
           </argument>
         </arguments>
@@ -218,16 +208,17 @@ mask_index = sprite_index
           <argument>
             <kind>1</kind>
             <string>/// Impact.
-speed = 0
-dir = direction
-move_contact_solid(image_angle, speed * 5)
+speed = 0;
+dir = direction;
+move_contact_solid(image_angle, speed * 5);
 
-if hit = 0 {
-    hit = 1
-    sound_ps(sndWallImpact)
+if (hit == 0)
+{
+	hit = 1;
+	sound_ps(sndWallImpact);
 }
 
-mask_index = sprite_index
+mask_index = sprite_index;
 </string>
           </argument>
         </arguments>
@@ -251,14 +242,51 @@ mask_index = sprite_index
           <argument>
             <kind>1</kind>
             <string>/// Pick up arrows.
-if place_meeting(x, y, other) or place_meeting(x + lengthdir_x(8, image_angle), y + lengthdir_y(8, image_angle), other) {
-    if scrCurrentWeaponExt(other.sprite_index) = 73 {
-        with other ammo += 1
-        sound_ps(sndPickUpGeneric)
-        sound_ps(sndPickUpWeapon)
-        instance_destroy()
-    }
+if (place_meeting(x, y, other) || place_meeting(x + lengthdir_x(8, image_angle), y + lengthdir_y(8, image_angle), other))
+{
+	if (scrCurrentWeaponExt(other.sprite_index) == 73)
+	{
+		with (other)
+			ammo += 1;
+		sound_ps(sndPickUpGeneric);
+		sound_ps(sndPickUpWeapon);
+		instance_destroy();
+	}
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objWall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Impact.
+speed = 0;
+dir = direction;
+move_contact_solid(image_angle, speed * 5);
+
+if (hit == 0)
+{
+	hit = 1;
+	sound_ps(sndWallImpact);
+}
+
+mask_index = sprite_index;
 </string>
           </argument>
         </arguments>
@@ -282,16 +310,17 @@ if place_meeting(x, y, other) or place_meeting(x + lengthdir_x(8, image_angle), 
           <argument>
             <kind>1</kind>
             <string>/// Impact.
-speed = 0
-dir = direction
-move_contact_solid(image_angle, speed * 5)
+speed = 0;
+dir = direction;
+move_contact_solid(image_angle, speed * 5);
 
-if hit = 0 {
-    hit = 1
-    sound_ps(sndWallImpact)
+if (hit == 0)
+{
+	hit = 1;
+	sound_ps(sndWallImpact);
 }
 
-mask_index = sprite_index
+mask_index = sprite_index;
 </string>
           </argument>
         </arguments>
@@ -314,9 +343,8 @@ mask_index = sprite_index
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw the projectile.
-scrMotionBlur(speed,direction,x,y)
-
+            <string>/// Draw the projectile.
+scrMotionBlur(speed, direction, x, y);
 </string>
           </argument>
         </arguments>

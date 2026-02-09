@@ -25,13 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_angle=random(360)
-//image_alpha=random(1)
-image_xscale=0.5+random(0.5)
-image_yscale=image_xscale
-indexspeed=1-random(0.2)
-color=image_blend
+            <string>image_speed = 0;
+image_angle = random(360);
+
+// image_alpha=random(1)
+image_xscale = 0.5 + random(0.5);
+image_yscale = image_xscale;
+indexspeed = 1 - random(0.2);
+color = image_blend;
 </string>
           </argument>
         </arguments>
@@ -54,9 +55,13 @@ color=image_blend
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index&lt;8 image_index+=indexspeed else instance_destroy()
-//image_blend=merge_color(c_white,c_aqua,image_index*(1/9))
-image_alpha=random(1)
+            <string>if (image_index &lt; 8)
+	image_index += indexspeed;
+else
+	instance_destroy();
+
+// image_blend=merge_color(c_white,c_aqua,image_index*(1/9))
+image_alpha = random(1);
 </string>
           </argument>
         </arguments>

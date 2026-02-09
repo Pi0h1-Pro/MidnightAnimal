@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
-image_index = 0
+            <string>image_speed = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -49,29 +49,32 @@ image_index = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1
-shotdir = other.direction 
-sound_ps(choose(sndGlass1, sndGlass2))
+            <string>image_index = 1;
+shotdir = other.direction;
+sound_ps(choose(sndGlass1, sndGlass2));
 
-shotx = other.x - other.hspeed * 0.5
-i = shotx - 1 + random(2)
-    repeat(32) {
-        my_id = instance_create(x + i, y + 4, objShard)
-        if frac(i) &gt; 0 my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (1 + random(3))
-        else my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (0.5 + random(1)) + lengthdir_y(1, 45 + i * 0.71) * sign(lengthdir_y(1, shotdir))
-        my_id.image_index = ceil(random(8)) * random(1)
-        my_id.i = i
-        my_id.shotx = shotx
-        my_id.shotdir = shotdir
-        with my_id {
-            dist = point_distance(x + i, y + 4, shotx, y + 4) * 0.5
-            if dist &lt; 1 dist = 1
-            motion_add(shotdir, 2 / dist)
-        }
-        i += 0.5
-    }
-   
-
+shotx = other.x - other.hspeed * 0.5;
+i = shotx - 1 + random(2);
+repeat (32)
+{
+	my_id = instance_create(x + i, y + 4, objShard);
+	if (frac(i) &gt; 0)
+		my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (1 + random(3));
+	else
+		my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (0.5 + random(1)) + lengthdir_y(1, 45 + i * 0.71) * sign(lengthdir_y(1, shotdir));
+	my_id.image_index = ceil(random(8)) * random(1);
+	my_id.i = i;
+	my_id.shotx = shotx;
+	my_id.shotdir = shotdir;
+	with (my_id)
+	{
+		dist = point_distance(x + i, y + 4, shotx, y + 4) * 0.5;
+		if (dist &lt; 1)
+			dist = 1;
+		motion_add(shotdir, 2 / dist);
+	}
+	i += 0.5;
+}
 </string>
           </argument>
         </arguments>
@@ -94,29 +97,32 @@ i = shotx - 1 + random(2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1
-shotdir = other.direction 
-sound_ps(choose(sndGlass1, sndGlass2))
+            <string>image_index = 1;
+shotdir = other.direction;
+sound_ps(choose(sndGlass1, sndGlass2));
 
-shotx = other.x - other.hspeed * 0.5
-i = shotx - 1 + random(2)
-    repeat(32) {
-        my_id = instance_create(x + i, y + 4, objShard)
-        if frac(i) &gt; 0 my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (1 + random(3))
-        else my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (0.5 + random(1)) + lengthdir_y(1, 45 + i * 0.71) * sign(lengthdir_y(1, shotdir))
-        my_id.image_index = ceil(random(8)) * random(1)
-        my_id.i = i
-        my_id.shotx = shotx
-        my_id.shotdir = shotdir
-        with my_id {
-            dist = point_distance(x + i, y + 4, shotx, y + 4) * 0.5
-            if dist &lt; 1 dist = 1
-            motion_add(shotdir, 2 / dist)
-        }
-        i += 0.5
-    }
-   
-
+shotx = other.x - other.hspeed * 0.5;
+i = shotx - 1 + random(2);
+repeat (32)
+{
+	my_id = instance_create(x + i, y + 4, objShard);
+	if (frac(i) &gt; 0)
+		my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (1 + random(3));
+	else
+		my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (0.5 + random(1)) + lengthdir_y(1, 45 + i * 0.71) * sign(lengthdir_y(1, shotdir));
+	my_id.image_index = ceil(random(8)) * random(1);
+	my_id.i = i;
+	my_id.shotx = shotx;
+	my_id.shotdir = shotdir;
+	with (my_id)
+	{
+		dist = point_distance(x + i, y + 4, shotx, y + 4) * 0.5;
+		if (dist &lt; 1)
+			dist = 1;
+		motion_add(shotdir, 2 / dist);
+	}
+	i += 0.5;
+}
 </string>
           </argument>
         </arguments>
@@ -139,29 +145,32 @@ i = shotx - 1 + random(2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1
-shotdir = other.direction 
-sound_ps(choose(sndGlass1, sndGlass2))
+            <string>image_index = 1;
+shotdir = other.direction;
+sound_ps(choose(sndGlass1, sndGlass2));
 
-shotx = other.x - other.hspeed * 0.5
-i = shotx - 1 + random(2)
-    repeat(32) {
-        my_id = instance_create(x + i, y + 4, objShard)
-        if frac(i) &gt; 0 my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (1 + random(3))
-        else my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (0.5 + random(1)) + lengthdir_y(1, 45 + i * 0.71) * sign(lengthdir_y(1, shotdir))
-        my_id.image_index = ceil(random(8)) * random(1)
-        my_id.i = i
-        my_id.shotx = shotx
-        my_id.shotdir = shotdir
-        with my_id {
-            dist = point_distance(x + i, y + 4, shotx, y + 4) * 0.5
-            if dist &lt; 1 dist = 1
-            motion_add(shotdir, 2 / dist)
-        }
-        i += 0.5
-    }
-   
-
+shotx = other.x - other.hspeed * 0.5;
+i = shotx - 1 + random(2);
+repeat (32)
+{
+	my_id = instance_create(x + i, y + 4, objShard);
+	if (frac(i) &gt; 0)
+		my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (1 + random(3));
+	else
+		my_id.vspeed = sign(lengthdir_y(1, shotdir)) * (0.5 + random(1)) + lengthdir_y(1, 45 + i * 0.71) * sign(lengthdir_y(1, shotdir));
+	my_id.image_index = ceil(random(8)) * random(1);
+	my_id.i = i;
+	my_id.shotx = shotx;
+	my_id.shotdir = shotdir;
+	with (my_id)
+	{
+		dist = point_distance(x + i, y + 4, shotx, y + 4) * 0.5;
+		if (dist &lt; 1)
+			dist = 1;
+		motion_add(shotdir, 2 / dist);
+	}
+	i += 0.5;
+}
 </string>
           </argument>
         </arguments>
@@ -184,8 +193,8 @@ i = shotx - 1 + random(2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

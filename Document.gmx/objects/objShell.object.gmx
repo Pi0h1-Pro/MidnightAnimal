@@ -25,10 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=random(360)
-friction=0.2
-
-
+            <string>image_angle = random(360);
+friction = 0.2;
 </string>
           </argument>
         </arguments>
@@ -51,7 +49,7 @@ friction=0.2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=sign(vspeed)*speed
+            <string>image_angle += sign(vspeed) * speed;
 </string>
           </argument>
         </arguments>
@@ -74,9 +72,8 @@ friction=0.2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw the bullet.
-scrMotionBlur(speed,direction,x,y)
-
+            <string>/// Draw the bullet.
+scrMotionBlur(speed, direction, x, y);
 </string>
           </argument>
         </arguments>

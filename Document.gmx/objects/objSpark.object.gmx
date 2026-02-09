@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction=0.5
+            <string>friction = 0.5;
 </string>
           </argument>
         </arguments>
@@ -48,8 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=speed
-if speed&lt;1 instance_destroy()
+            <string>image_index = speed;
+if (speed &lt; 1)
+	instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -72,10 +73,10 @@ if speed&lt;1 instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_blend=merge_color(c_white,c_yellow,random(0.5))
-draw_set_blend_mode(bm_add)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_set_blend_mode(bm_normal)
+            <string>image_blend = merge_color(c_white, c_yellow, random(0.5));
+draw_set_blend_mode(bm_add);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>

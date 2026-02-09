@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.6
-image_xscale = 1
-image_yscale = image_xscale 
-image_blend = c_white
+            <string>image_speed = 0.6;
+image_xscale = 1;
+image_yscale = image_xscale;
+image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -52,9 +52,10 @@ image_blend = c_white
           <argument>
             <kind>1</kind>
             <string>/// Update coordinates to player's position.
-if scrMovingPlayerExists() {
-    x = objPlayer.x
-    y = objPlayer.y
+if (scrMovingPlayerExists())
+{
+	x = objPlayer.x;
+	y = objPlayer.y;
 }
 </string>
           </argument>
@@ -79,7 +80,7 @@ if scrMovingPlayerExists() {
           <argument>
             <kind>1</kind>
             <string>/// Destroy.
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>

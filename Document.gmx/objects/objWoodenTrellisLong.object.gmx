@@ -25,11 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set properties.
-image_speed = 0
-
-
-
+            <string>/// Set properties.
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -52,11 +49,10 @@ image_speed = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw trellis.
+            <string>/// Draw trellis.
 
 // The shadow is drawn relative to the size of the trellis, which is dictated by the scaling.
-draw_self_shadow(4)
-
+draw_self_shadow(4);
 </string>
           </argument>
         </arguments>

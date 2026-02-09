@@ -25,24 +25,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i=0
-repeat (room_height/4) {
-oceandir[i]=i*10
-oceandiradd[i]=2
-oceanlength[i]=2+random(2)+random(1)
-oceanindex[i]=random(7)
-i+=1
+            <string>i = 0;
+repeat (room_height / 4)
+{
+	oceandir[i] = i * 10;
+	oceandiradd[i] = 2;
+	oceanlength[i] = 2 + random(2) + random(1);
+	oceanindex[i] = random(7);
+	i += 1;
 }
-oceanx=-16
-index=0
+oceanx = -16;
+index = 0;
+
 /*
 surf=surface_create(200,room_height)
 surface_set_target(surf)
 draw_clear_alpha(c_black,0)
 surface_reset_target()
 */
-limit=190-random(30)
-c_turquoise=make_color_rgb(0,94,160)
+limit = 190 - random(30);
+c_turquoise = make_color_rgb(0, 94, 160);
 </string>
           </argument>
         </arguments>
@@ -65,21 +67,27 @@ c_turquoise=make_color_rgb(0,94,160)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//surface_set_target(surf)
+            <string>// surface_set_target(surf)
 
-///draw_clear_alpha(c_dkgray,0)
+/// draw_clear_alpha(c_dkgray,0)
 
-texture_set_interpolation(true)
-//draw_surface_ext(surf,0,0,0.99,1,0,c_white,0.99)
-///draw_rectangle(0,0,200,room_height,0)
-i=0 
-repeat (room_height/4) {
-if oceanx&gt;(limit-30) scale=1+((limit-30)-oceanx)*0.02 else scale=1
-draw_sprite_ext(sprOceanFoam,oceanindex[i]+index,oceanx+lengthdir_x(oceanlength[i],oceandir[i]),i*4,scale,1,0,merge_color(c_white,c_ltgray,(0.5+lengthdir_x(0.5,oceandir[i]*0.2))*(0.9+random(0.1))),scale)
-i+=1
+texture_set_interpolation(true);
+
+// draw_surface_ext(surf,0,0,0.99,1,0,c_white,0.99)
+/// draw_rectangle(0,0,200,room_height,0)
+i = 0;
+repeat (room_height / 4)
+{
+	if (oceanx &gt; (limit - 30))
+		scale = 1 + ((limit - 30) - oceanx) * 0.02;
+	else
+		scale = 1;
+	draw_sprite_ext(sprOceanFoam, oceanindex[i] + index, oceanx + lengthdir_x(oceanlength[i], oceandir[i]), i * 4, scale, 1, 0, merge_color(c_white, c_ltgray, (0.5 + lengthdir_x(0.5, oceandir[i] * 0.2)) * (0.9 + random(0.1))), scale);
+	i += 1;
 }
-texture_set_interpolation(false)
-//surface_reset_target()
+texture_set_interpolation(false);
+
+// surface_reset_target()
 </string>
           </argument>
         </arguments>
@@ -102,22 +110,33 @@ texture_set_interpolation(false)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-color=merge_color(c_aqua,c_fuchsia,0.5+lengthdir_x(0.5,index*5))
-color2=merge_color(c_aqua,c_fuchsia,0.5-lengthdir_x(0.5,index*5))
-//draw_surface_ext(surf,0,0,1,1,0,color,1)
-i=0 
-repeat (room_height/4) {
-if oceanx&gt;(limit-30) scale=1+((limit-30)-oceanx)*0.0333 else scale=1
-draw_sprite_ext(sprOceanFoam,oceanindex[i]+index,oceanx+lengthdir_x(oceanlength[i],oceandir[i]),i*4,scale,1,0,merge_color(c_white,color,0.2+(1-scale)*0.5),1)
-oceandir[i]+=oceandiradd[i]
-i+=1
+            <string>color = merge_color(c_aqua, c_fuchsia, 0.5 + lengthdir_x(0.5, index * 5));
+color2 = merge_color(c_aqua, c_fuchsia, 0.5 - lengthdir_x(0.5, index * 5));
+
+// draw_surface_ext(surf,0,0,1,1,0,color,1)
+i = 0;
+repeat (room_height / 4)
+{
+	if (oceanx &gt; (limit - 30))
+		scale = 1 + ((limit - 30) - oceanx) * 0.0333;
+	else
+		scale = 1;
+	draw_sprite_ext(sprOceanFoam, oceanindex[i] + index, oceanx + lengthdir_x(oceanlength[i], oceandir[i]), i * 4, scale, 1, 0, merge_color(c_white, color, 0.2 + (1 - scale) * 0.5), 1);
+	oceandir[i] += oceandiradd[i];
+	i += 1;
 }
 
-oceanspeed=((limit+20)-oceanx)*0.025
-if oceanspeed&gt;2 oceanspeed=2
-if oceanx&lt;limit oceanx+=oceanspeed else {oceanx=-16 limit=190-random(30)}
-index+=0.2
+oceanspeed = ((limit + 20) - oceanx) * 0.025;
+if (oceanspeed &gt; 2)
+	oceanspeed = 2;
+if (oceanx &lt; limit)
+	oceanx += oceanspeed;
+else
+{
+	oceanx = -16;
+	limit = 190 - random(30);
+}
+index += 0.2;
 </string>
           </argument>
         </arguments>

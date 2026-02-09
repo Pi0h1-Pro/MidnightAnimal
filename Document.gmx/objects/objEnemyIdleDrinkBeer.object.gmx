@@ -25,19 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-image_speed=0.15
-wait=random(15)
-ammo=6
-energie=1
-alert=0
-path=path_add()
-nothing = 0
-dropped = 0
-direction = image_angle
-reload=floor(random(10))
-on=0
-
+            <string>event_inherited();
+image_speed = 0.15;
+wait = random(15);
+ammo = 6;
+energie = 1;
+alert = 0;
+path = path_add();
+nothing = 0;
+dropped = 0;
+direction = image_angle;
+reload = floor(random(10));
+on = 0;
 </string>
           </argument>
         </arguments>
@@ -60,7 +59,7 @@ on=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.3
+            <string>image_speed = 0.3;
 </string>
           </argument>
         </arguments>
@@ -83,24 +82,29 @@ on=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objPlayer) exit
-if reload &gt; 0 reload -= 1
-else {
-
-    //If the player is farther than 120 units,
-    if point_distance(x, y, objPlayer.x, objPlayer.y) &gt; 120
-
-    //or back is to the player, 
-    and scrCheckBack(point_direction(objPlayer.x, objPlayer.y, x, y), direction) = 1 {
-        nothing = 0
-    } else {
-        if !scrCollisionLineExt(x, y, objPlayer.x, objPlayer.y, 3) {
-            create_enemy(enemyStatic, sprEWalkShotgun, 1, 6)
-        }
-    }
-    reload = 15
+            <string>if (!instance_exists(objPlayer))
+	exit;
+if (reload &gt; 0)
+	reload -= 1;
+else
+{
+	// If the player is farther than 120 units,
+	if (point_distance(x, y, objPlayer.x, objPlayer.y) &gt; 120
+	
+	// or back is to the player,
+	&amp;&amp; scrCheckBack(point_direction(objPlayer.x, objPlayer.y, x, y), direction) == 1)
+	{
+		nothing = 0;
+	}
+	else
+	{
+		if (!scrCollisionLineExt(x, y, objPlayer.x, objPlayer.y, 3))
+		{
+			create_enemy(enemyStatic, sprEWalkShotgun, 1, 6);
+		}
+	}
+	reload = 15;
 }
-
 </string>
           </argument>
         </arguments>
@@ -123,8 +127,8 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-alarm[0]=random(240)
+            <string>image_speed = 0;
+alarm[0] = random(240);
 </string>
           </argument>
         </arguments>
@@ -148,7 +152,7 @@ alarm[0]=random(240)
           <argument>
             <kind>1</kind>
             <string>/// Draw enemy.
-scrDrawEnemyIdle(sprELegs)
+scrDrawEnemyIdle(sprELegs);
 </string>
           </argument>
         </arguments>

@@ -25,18 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-image_speed=0.15
-image_index=0
-reload=floor(random(10))
-alert=0
-ammo=0
-path=path_add()
-on=0
-alarm[0]=random(250)
-nothing = 0
-dropped = 0
-energie = 1
+            <string>event_inherited();
+image_speed = 0.15;
+image_index = 0;
+reload = floor(random(10));
+alert = 0;
+ammo = 0;
+path = path_add();
+on = 0;
+alarm[0] = random(250);
+nothing = 0;
+dropped = 0;
+energie = 1;
 </string>
           </argument>
         </arguments>
@@ -59,25 +59,32 @@ energie = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objPlayer) exit
-if reload &gt; 0 reload -= 1
-else {
-
-    //If the player is farther than 120 units,
-    if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 120
-
-    //or back is to the player, 
-    and scrCheckBack(point_direction(objPlayer.x, objPlayer.y, x, y), direction) = 1 {
-        nothing = 0
-    } else {
-        if !scrCollisionLineExt(x, y, objPlayer.x, objPlayer.y, 3) {
-           create_enemy(enemyRandom, sprEWalkUzi, 1, 30)
-        }
-    }
-    reload = 5
+            <string>if (!instance_exists(objPlayer))
+	exit;
+if (reload &gt; 0)
+	reload -= 1;
+else
+{
+	// If the player is farther than 120 units,
+	if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 120
+	
+	// or back is to the player,
+	&amp;&amp; scrCheckBack(point_direction(objPlayer.x, objPlayer.y, x, y), direction) == 1)
+	{
+		nothing = 0;
+	}
+	else
+	{
+		if (!scrCollisionLineExt(x, y, objPlayer.x, objPlayer.y, 3))
+		{
+			create_enemy(enemyRandom, sprEWalkUzi, 1, 30);
+		}
+	}
+	reload = 5;
 }
 
-if alert = 1 create_enemy(enemyRandom, sprEWalkUzi, 1, 30)
+if (alert == 1)
+	create_enemy(enemyRandom, sprEWalkUzi, 1, 30);
 </string>
           </argument>
         </arguments>
@@ -100,11 +107,14 @@ if alert = 1 create_enemy(enemyRandom, sprEWalkUzi, 1, 30)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if sprite_index=sprEIdlePee {
-    if round(random(5))=2 sprite_index=sprEIdlePeeStop
+            <string>if (sprite_index == sprEIdlePee)
+{
+	if (round(random(5)) == 2)
+		sprite_index = sprEIdlePeeStop;
 }
-if sprite_index=sprEIdlePeeStop {
-    sprite_index=sprEIdlePee
+if (sprite_index == sprEIdlePeeStop)
+{
+	sprite_index = sprEIdlePee;
 }
 </string>
           </argument>
@@ -129,7 +139,7 @@ if sprite_index=sprEIdlePeeStop {
           <argument>
             <kind>1</kind>
             <string>/// Draw enemy.
-scrDrawEnemyIdle(sprELegs)
+scrDrawEnemyIdle(sprELegs);
 </string>
           </argument>
         </arguments>

@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_index = 0
-image_angle=random(360)
+            <string>image_speed = 0;
+image_index = 0;
+image_angle = random(360);
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ image_angle=random(360)
           <argument>
             <kind>1</kind>
             <string>/// Create firefly.
-//if random(100) &gt; 95 instance_create(x + irandom_range(-10, 10), y + irandom_range(-10, -10), objFirefly)
+// if random(100) &gt; 95 instance_create(x + irandom_range(-10, 10), y + irandom_range(-10, -10), objFirefly)
 </string>
           </argument>
         </arguments>
@@ -74,8 +74,8 @@ image_angle=random(360)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

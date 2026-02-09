@@ -27,29 +27,29 @@
             <kind>1</kind>
             <string>instance_destroy();
 exit;
-surf1 = surface_create(room_width, room_height)
-surf2 = surface_create(room_width, room_height)
-i = 0
-repeat(16) {
-    dir = random(360)
-    xspeed[i] = lengthdir_x(0.15, dir)
-    yspeed[i] = lengthdir_y(0.15, dir)
-    spreadx[i] = random(192)
-    spready[i] = random(104)
-    spreadangle[i] = random(360)
-    spreadscale[i] = 1 + random(1)
-    spreadindex[i] = random(28)
-    i += 1
+surf1 = surface_create(room_width, room_height);
+surf2 = surface_create(room_width, room_height);
+i = 0;
+repeat (16)
+{
+	dir = random(360);
+	xspeed[i] = lengthdir_x(0.15, dir);
+	yspeed[i] = lengthdir_y(0.15, dir);
+	spreadx[i] = random(192);
+	spready[i] = random(104);
+	spreadangle[i] = random(360);
+	spreadscale[i] = 1 + random(1);
+	spreadindex[i] = random(28);
+	i += 1;
 }
-cdir = 0
-global.blink = 0
+cdir = 0;
+global.blink = 0;
 
 /*
 if instance_exists(objRainGenerator) {
     instance_create(0, 0, objBGStorm)
     instance_destroy()
 }
-
 </string>
           </argument>
         </arguments>
@@ -73,8 +73,8 @@ if instance_exists(objRainGenerator) {
           <argument>
             <kind>1</kind>
             <string>exit;
-surface_free(surf1)
-surface_free(surf2)
+surface_free(surf1);
+surface_free(surf2);
 </string>
           </argument>
         </arguments>
@@ -97,34 +97,39 @@ surface_free(surf2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !surface_exists(surf1) surf1 = surface_create(room_width, room_height)
-if !surface_exists(surf2) surf2 = surface_create(room_width, room_height)
+            <string>if (!surface_exists(surf1))
+	surf1 = surface_create(room_width, room_height);
+if (!surface_exists(surf2))
+	surf2 = surface_create(room_width, room_height);
 
-surface_copy(surf2, 0, 0, surf1)
-surface_set_target(surf1)
-draw_surface_ext(surf2, 0, 0, 1, 1, 0, c_white, 0.99)
-i = 0
-repeat(16) {
-    draw_sprite_ext(sprSpread, spreadindex[i], spreadx[i], spready[i], spreadscale[i], spreadscale[i], spreadangle[i], c_white, 1)
-    if global.blink &gt; 0 addspeed = 1
-    else addspeed = 0
-    spreadindex[i] += 0.15 + addspeed * 0.5
-    spreadx[i] += xspeed[i] * (1 + addspeed * 4)
-    spready[i] += yspeed[i] * (1 + addspeed * 4)
-    if spreadindex[i] &gt; 28 {
-        spreadindex[i] = 0
-        dir = random(360)
-        xspeed[i] = lengthdir_x(0.15, dir)
-        yspeed[i] = lengthdir_y(0.15, dir)
-        spreadx[i] = random(192)
-        spready[i] = random(102)
-        spreadangle[i] = random(360)
-        spreadscale[i] = 1 + random(1)
-    }
-    i += 1
+surface_copy(surf2, 0, 0, surf1);
+surface_set_target(surf1);
+draw_surface_ext(surf2, 0, 0, 1, 1, 0, c_white, 0.99);
+i = 0;
+repeat (16)
+{
+	draw_sprite_ext(sprSpread, spreadindex[i], spreadx[i], spready[i], spreadscale[i], spreadscale[i], spreadangle[i], c_white, 1);
+	if (global.blink &gt; 0)
+		addspeed = 1;
+	else
+		addspeed = 0;
+	spreadindex[i] += 0.15 + addspeed * 0.5;
+	spreadx[i] += xspeed[i] * (1 + addspeed * 4);
+	spready[i] += yspeed[i] * (1 + addspeed * 4);
+	if (spreadindex[i] &gt; 28)
+	{
+		spreadindex[i] = 0;
+		dir = random(360);
+		xspeed[i] = lengthdir_x(0.15, dir);
+		yspeed[i] = lengthdir_y(0.15, dir);
+		spreadx[i] = random(192);
+		spready[i] = random(102);
+		spreadangle[i] = random(360);
+		spreadscale[i] = 1 + random(1);
+	}
+	i += 1;
 }
-surface_reset_target()
-
+surface_reset_target();
 </string>
           </argument>
         </arguments>
@@ -147,9 +152,9 @@ surface_reset_target()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>surface_free(surf1)
-surface_free(surf2)
-instance_destroy()
+            <string>surface_free(surf1);
+surface_free(surf2);
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -172,19 +177,20 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//bgcolor = merge_color(merge_color(c_fuchsia, c_aqua, 0.5 + lengthdir_x(0.5, cdir)), c_black, 0.3)
-//color = merge_color(c_fuchsia, c_aqua, 0.5 + lengthdir_x(0.5, cdir))
-bgcolor = merge_color(merge_color(c_navy, c_black, 0.5 + lengthdir_x(0.5, cdir)), c_black, 0.3)
-color = merge_color(c_navy, c_black, 0.5 + lengthdir_x(0.5, cdir))
-draw_rectangle_color(view_xview[0] - 60, view_yview[0] - 60, view_xview[0] + view_wview[0] + 60, view_yview[0] + view_hview[0] + 60, bgcolor, bgcolor, c_black, c_black, 0)
-draw_set_blend_mode(bm_add)
-texture_set_interpolation(true)
-if surface_exists(surf1) draw_surface_ext(surf1, view_xview[0] - 60, view_yview[0] - 60, 3, 3, 0, merge_color(merge_color(color, c_black, 0.95 - random(global.blink * 0.35) + lengthdir_x(0.05, cdir * 0.5)), c_red, random(global.blink)), 1)
-texture_set_interpolation(false)
-draw_set_blend_mode(bm_normal)
-cdir += 1
-if global.blink &gt; 0 global.blink -= 0.02
-
+            <string>// bgcolor = merge_color(merge_color(c_fuchsia, c_aqua, 0.5 + lengthdir_x(0.5, cdir)), c_black, 0.3)
+// color = merge_color(c_fuchsia, c_aqua, 0.5 + lengthdir_x(0.5, cdir))
+bgcolor = merge_color(merge_color(c_navy, c_black, 0.5 + lengthdir_x(0.5, cdir)), c_black, 0.3);
+color = merge_color(c_navy, c_black, 0.5 + lengthdir_x(0.5, cdir));
+draw_rectangle_color(view_xview[0] - 60, view_yview[0] - 60, view_xview[0] + view_wview[0] + 60, view_yview[0] + view_hview[0] + 60, bgcolor, bgcolor, c_black, c_black, 0);
+draw_set_blend_mode(bm_add);
+texture_set_interpolation(true);
+if (surface_exists(surf1))
+	draw_surface_ext(surf1, view_xview[0] - 60, view_yview[0] - 60, 3, 3, 0, merge_color(merge_color(color, c_black, 0.95 - random(global.blink * 0.35) + lengthdir_x(0.05, cdir * 0.5)), c_red, random(global.blink)), 1);
+texture_set_interpolation(false);
+draw_set_blend_mode(bm_normal);
+cdir += 1;
+if (global.blink &gt; 0)
+	global.blink -= 0.02;
 </string>
           </argument>
         </arguments>

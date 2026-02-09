@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_angle=random(360)
-image_alpha = 0.7
+            <string>image_speed = 0;
+image_angle = random(360);
+image_alpha = 0.7;
 </string>
           </argument>
         </arguments>
@@ -50,9 +50,12 @@ image_alpha = 0.7
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index&lt;7 image_index+=0.4 else instance_destroy()
-image_blend=merge_color(c_ltgray,c_white,random(0.25))
-image_alpha -= 0.015
+            <string>if (image_index &lt; 7)
+	image_index += 0.4;
+else
+	instance_destroy();
+image_blend = merge_color(c_ltgray, c_white, random(0.25));
+image_alpha -= 0.015;
 </string>
           </argument>
         </arguments>
@@ -75,8 +78,8 @@ image_alpha -= 0.015
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha-(image_index*0.17))
-draw_sprite_ext(sprWaterRing,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha-(image_index*0.17))
+            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha - (image_index * 0.17));
+draw_sprite_ext(sprWaterRing, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha - (image_index * 0.17));
 </string>
           </argument>
         </arguments>

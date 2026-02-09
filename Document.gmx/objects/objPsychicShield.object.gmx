@@ -26,14 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise some variables.
-life = 32
-image_angle = random(360)
-image_alpha = 0.4
-image_speed = 0.5
-image_xscale = 0.6
-image_yscale = 0.6
-hit = false
-alarm[0] = 5
+life = 32;
+image_angle = random(360);
+image_alpha = 0.4;
+image_speed = 0.5;
+image_xscale = 0.6;
+image_yscale = 0.6;
+hit = false;
+alarm[0] = 5;
 </string>
           </argument>
         </arguments>
@@ -57,7 +57,7 @@ alarm[0] = 5
           <argument>
             <kind>1</kind>
             <string>/// Create burst.
-instance_create(x, y, objPsychicShieldBurst)
+instance_create(x, y, objPsychicShieldBurst);
 </string>
           </argument>
         </arguments>
@@ -81,8 +81,9 @@ instance_create(x, y, objPsychicShieldBurst)
           <argument>
             <kind>1</kind>
             <string>/// Reset hit.
-if hit = true hit = false
-alarm[0] = 5
+if (hit == true)
+	hit = false;
+alarm[0] = 5;
 </string>
           </argument>
         </arguments>
@@ -106,16 +107,18 @@ alarm[0] = 5
           <argument>
             <kind>1</kind>
             <string>/// Rotate.
-image_angle += 1
+image_angle += 1;
 
 // Set coordinates to player.
-if scrMovingPlayerExists() {
-    x = objPlayer.x
-    y = objPlayer.y
+if (scrMovingPlayerExists())
+{
+	x = objPlayer.x;
+	y = objPlayer.y;
 }
 
 // If the life of the shield is depreciated, destroy it.
-if life &lt;= 0 instance_destroy()
+if (life &lt;= 0)
+	instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -140,11 +143,14 @@ if life &lt;= 0 instance_destroy()
             <kind>1</kind>
             <string>/// Draw shield.
 
-if hit = true {
-    d3d_set_fog(true, c_white, 0, 0)
-    draw_self()
-    d3d_set_fog(false, c_black, 0, 0)
-} else draw_self()
+if (hit == true)
+{
+	d3d_set_fog(true, c_white, 0, 0);
+	draw_self();
+	d3d_set_fog(false, c_black, 0, 0);
+}
+else
+	draw_self();
 </string>
           </argument>
         </arguments>

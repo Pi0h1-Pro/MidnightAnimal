@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise properties.
-x = view_wview / 2 - 80
-y = 0
-image_speed = 0.7
-image_xscale = 0.82
-image_yscale = 0.6
+x = view_wview / 2 - 80;
+y = 0;
+image_speed = 0.7;
+image_xscale = 0.82;
+image_yscale = 0.6;
 </string>
           </argument>
         </arguments>
@@ -54,9 +54,8 @@ image_yscale = 0.6
           <argument>
             <kind>1</kind>
             <string>/// Halt animation.
-image_index = 11
-image_speed = 0
-
+image_index = 11;
+image_speed = 0;
 </string>
           </argument>
         </arguments>

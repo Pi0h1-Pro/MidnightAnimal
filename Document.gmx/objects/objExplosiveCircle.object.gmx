@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>radius = 5
+            <string>radius = 5;
 </string>
           </argument>
         </arguments>
@@ -49,8 +49,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Set radius to mine's wait time.
-if instance_exists(objMine) radius = objMine.wait
-if radius &lt; 0 instance_destroy()
+if (instance_exists(objMine))
+	radius = objMine.wait;
+if (radius &lt; 0)
+	instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -73,8 +75,7 @@ if radius &lt; 0 instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_circle_width(x, y, radius, 4, 32)
-
+            <string>draw_circle_width(x, y, radius, 4, 32);
 </string>
           </argument>
         </arguments>

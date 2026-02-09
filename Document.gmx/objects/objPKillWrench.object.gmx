@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-image_speed=0
-ammo=0
-index=0
-targetindex=0
-bottom=sprEDieStick
+            <string>event_inherited();
+image_speed = 0;
+ammo = 0;
+index = 0;
+targetindex = 0;
+bottom = sprEDieStick;
 </string>
           </argument>
         </arguments>
@@ -53,41 +53,52 @@ bottom=sprEDieStick
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if index &lt; targetindex index += 0.5
-if image_index &gt; 0 {
-    if image_index &lt; 8 image_index += 0.5
-    else {
-        if targetindex &lt; 25 image_index = 0
-        else {
-            blood = instance_create(x + lengthdir_x(22, image_angle) - 1 + random(2), y + lengthdir_y(22, image_angle) - 1 + random(2), objBloodPool)
-            my_id = instance_create(x, y, objDeadBody)
-            my_id.sprite_index = bottom
-            my_id.image_index = 25
-            my_id.image_angle = image_angle
-            scrFinishExecution(sprPWalkWrench)
-        }
-    }
-
-    if image_index &gt;= 5 and image_index - 0.2 &lt; 5 {
-        sound_ps(sndHit)
-        sound_ps(sndPunch)
-        sound_ps(sndHitMarker)
-        objEffector.hitalpha = 1
-        objEffector.hudflash = 10
-        global.shake = 11
-        myx = x + lengthdir_x(20, image_angle)
-        myy = y + lengthdir_y(20, image_angle)
-        if targetindex &gt; 18 {
-            repeat(2 + random(3)) {
-                my_id = instance_create(x + lengthdir_x(22, image_angle) - 1 + random(2), y + lengthdir_y(22, image_angle) - 1 + random(2), objBloodSquirt)
-                my_id.image_angle = image_angle + 120 - random(60)
-                my_id.depth = 3
-            }
-        }
-        if targetindex &gt; 16 {
-            repeat(2) instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood)
-        }
-    }
+            <string>if (index &lt; targetindex)
+	index += 0.5;
+if (image_index &gt; 0)
+{
+	if (image_index &lt; 8)
+		image_index += 0.5;
+	else
+	{
+		if (targetindex &lt; 25)
+			image_index = 0;
+		else
+		{
+			blood = instance_create(x + lengthdir_x(22, image_angle) - 1 + random(2), y + lengthdir_y(22, image_angle) - 1 + random(2), objBloodPool);
+			my_id = instance_create(x, y, objDeadBody);
+			my_id.sprite_index = bottom;
+			my_id.image_index = 25;
+			my_id.image_angle = image_angle;
+			scrFinishExecution(sprPWalkWrench);
+		}
+	}
+	
+	if (image_index &gt;= 5 &amp;&amp; image_index - 0.2 &lt; 5)
+	{
+		sound_ps(sndHit);
+		sound_ps(sndPunch);
+		sound_ps(sndHitMarker);
+		objEffector.hitalpha = 1;
+		objEffector.hudflash = 10;
+		global.shake = 11;
+		myx = x + lengthdir_x(20, image_angle);
+		myy = y + lengthdir_y(20, image_angle);
+		if (targetindex &gt; 18)
+		{
+			repeat (2 + random(3))
+			{
+				my_id = instance_create(x + lengthdir_x(22, image_angle) - 1 + random(2), y + lengthdir_y(22, image_angle) - 1 + random(2), objBloodSquirt);
+				my_id.image_angle = image_angle + 120 - random(60);
+				my_id.depth = 3;
+			}
+		}
+		if (targetindex &gt; 16)
+		{
+			repeat (2)
+				instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood);
+		}
+	}
 }
 </string>
           </argument>
@@ -111,17 +122,24 @@ if image_index &gt; 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &gt; 0 exit
-image_index += 0.5
-index += 0.5
-if targetindex = 0 {
-    targetindex = 9 exit
+            <string>if (image_index &gt; 0)
+	exit;
+image_index += 0.5;
+index += 0.5;
+if (targetindex == 0)
+{
+	targetindex = 9;
+	exit;
 }
-if targetindex = 9 {
-    targetindex = 18 exit
+if (targetindex == 9)
+{
+	targetindex = 18;
+	exit;
 }
-if targetindex = 18 {
-    targetindex = 25 exit
+if (targetindex == 18)
+{
+	targetindex = 25;
+	exit;
 }
 </string>
           </argument>
@@ -145,8 +163,8 @@ if targetindex = 18 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(bottom,index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(bottom, index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

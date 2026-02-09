@@ -26,14 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>/// Effects.
-with objPlayer scrPlayerDropWeapon()
-global.combo = 0
-global.var_greyscale_fade = 0.7
-sound_ps(sndPlayerDead)
-sound_ps(sndLevelComplete)
-objEffector.whitealpha = 1
-if audio_is_playing(global.song) audio_stop_sound(global.song)
-save_data()
+with (objPlayer)
+	scrPlayerDropWeapon();
+global.combo = 0;
+global.var_greyscale_fade = 0.7;
+sound_ps(sndPlayerDead);
+sound_ps(sndLevelComplete);
+objEffector.whitealpha = 1;
+if (audio_is_playing(global.song))
+	audio_stop_sound(global.song);
+save_data();
 </string>
           </argument>
         </arguments>
@@ -56,18 +58,17 @@ save_data()
             <kind>1</kind>
             <string>/// Set animation states/coordinates.
 
-state = 0
-alarm[0] = 24
-alarm[1] = 80
-cut = 0
-alpha = 0
+state = 0;
+alarm[0] = 24;
+alarm[1] = 80;
+cut = 0;
+alpha = 0;
 
-blot = 1280
-character = 640
-text1 = -240
-text2 = -240
-text3 = -240
-
+blot = 1280;
+character = 640;
+text1 = -240;
+text2 = -240;
+text3 = -240;
 </string>
           </argument>
         </arguments>
@@ -91,7 +92,7 @@ text3 = -240
           <argument>
             <kind>1</kind>
             <string>/// Cut out.
-cut = !cut
+cut = !cut;
 </string>
           </argument>
         </arguments>
@@ -114,9 +115,12 @@ cut = !cut
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Advance state. 
-if cut = 0 state += 1 else state -= 1
-alarm[0] = 8
+            <string>/// Advance state.
+if (cut == 0)
+	state += 1;
+else
+	state -= 1;
+alarm[0] = 8;
 </string>
           </argument>
         </arguments>
@@ -140,8 +144,10 @@ alarm[0] = 8
           <argument>
             <kind>1</kind>
             <string>/// Animation behaviour.
-if state &gt; 3 state = 3
-if state &lt; 0 state = 0
+if (state &gt; 3)
+	state = 3;
+if (state &lt; 0)
+	state = 0;
 </string>
           </argument>
         </arguments>
@@ -165,96 +171,123 @@ if state &lt; 0 state = 0
           <argument>
             <kind>1</kind>
             <string>/// Draw level clear.
-d3d_set_projection_ortho(0, 0, view_wview[0], view_hview[0], 0)
+d3d_set_projection_ortho(0, 0, view_wview[0], view_hview[0], 0);
 
 // Draw background with yellow tint.
-draw_set_alpha(alpha)
-draw_rectangle_color(0, 0, view_wview, view_hview, global.rubedo, global.rubedo, global.rubedo, global.rubedo, 0)
-draw_set_alpha(1)
+draw_set_alpha(alpha);
+draw_rectangle_color(0, 0, view_wview, view_hview, global.rubedo, global.rubedo, global.rubedo, global.rubedo, 0);
+draw_set_alpha(1);
 
-if cut = 0 {
-    if alpha &lt; 0.8 alpha += 0.05
-} else {
-    if alpha &gt; 0 alpha -= 0.05
+if (cut == 0)
+{
+	if (alpha &lt; 0.8)
+		alpha += 0.05;
+}
+else
+{
+	if (alpha &gt; 0)
+		alpha -= 0.05;
 }
 
-if state = 0 {
-
-    // Draw ink blot.
-    draw_sprite_ext(sprite_index, 4, blot, 0, 1, 1, 0, c_white, 1)
-
-    // Draw character.
-    draw_sprite_ext(sprite_index, 0, character, 0, 1, 1, 0, c_white, 1)
-
-    if cut = 0 {
-        if blot &gt; 0 blot -= 80
-        if character &gt; 0 character -= 80
-    } else {
-        if blot &lt; 1280 blot += 80
-        if character &lt; 640 character += 80
-    }
+if (state == 0)
+{
+	// Draw ink blot.
+	draw_sprite_ext(sprite_index, 4, blot, 0, 1, 1, 0, c_white, 1);
+	
+	// Draw character.
+	draw_sprite_ext(sprite_index, 0, character, 0, 1, 1, 0, c_white, 1);
+	
+	if (cut == 0)
+	{
+		if (blot &gt; 0)
+			blot -= 80;
+		if (character &gt; 0)
+			character -= 80;
+	}
+	else
+	{
+		if (blot &lt; 1280)
+			blot += 80;
+		if (character &lt; 640)
+			character += 80;
+	}
 }
 
 // Draw text:
 
 // 'WE'RE':
-if state = 1 {
-
-    // Draw ink blot.
-    draw_sprite_ext(sprite_index, 4, 0, 0, 1, 1, 0, c_white, 1)
-
-    // Draw character.
-    draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 1)
-
-    // Draw text.
-    draw_sprite_ext(sprite_index, 1, text1, 0, 1, 1, 0, c_white, 1)
-    if cut = 0 {
-        if text1 &lt; 0 text1 += 40
-    } else {
-        if text1 &gt; -240 text1 -= 40
-    }
+if (state == 1)
+{
+	// Draw ink blot.
+	draw_sprite_ext(sprite_index, 4, 0, 0, 1, 1, 0, c_white, 1);
+	
+	// Draw character.
+	draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 1);
+	
+	// Draw text.
+	draw_sprite_ext(sprite_index, 1, text1, 0, 1, 1, 0, c_white, 1);
+	if (cut == 0)
+	{
+		if (text1 &lt; 0)
+			text1 += 40;
+	}
+	else
+	{
+		if (text1 &gt; -240)
+			text1 -= 40;
+	}
 }
 
 // 'DONE':
-if state = 2 {
-
-    // Draw ink blot.
-    draw_sprite_ext(sprite_index, 4, 0, 0, 1, 1, 0, c_white, 1)
-
-    // Draw character.
-    draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 1)
-
-    // Draw text.
-    draw_sprite_ext(sprite_index, 1, 0, 0, 1, 1, 0, c_white, 1)
-    draw_sprite_ext(sprite_index, 2, text2, 0, 1, 1, 0, c_white, 1)
-    if cut = 0 {
-        if text2 &lt; 0 text2 += 40
-    } else {
-        if text2 &gt; -240 text2 -= 40
-    }
+if (state == 2)
+{
+	// Draw ink blot.
+	draw_sprite_ext(sprite_index, 4, 0, 0, 1, 1, 0, c_white, 1);
+	
+	// Draw character.
+	draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 1);
+	
+	// Draw text.
+	draw_sprite_ext(sprite_index, 1, 0, 0, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(sprite_index, 2, text2, 0, 1, 1, 0, c_white, 1);
+	if (cut == 0)
+	{
+		if (text2 &lt; 0)
+			text2 += 40;
+	}
+	else
+	{
+		if (text2 &gt; -240)
+			text2 -= 40;
+	}
 }
 
 // 'HERE':
-if state = 3 {
-
-    // Draw ink blot.
-    draw_sprite_ext(sprite_index, 4, 0, 0, 1, 1, 0, c_white, 1)
-
-    // Draw character.
-    draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 1)
-
-    // Draw text.
-    draw_sprite_ext(sprite_index, 1, 0, 0, 1, 1, 0, c_white, 1)
-    draw_sprite_ext(sprite_index, 2, 0, 0, 1, 1, 0, c_white, 1)
-    draw_sprite_ext(sprite_index, 3, text3, 0, 1, 1, 0, c_white, 1)
-    if cut = 0 {
-        if text3 &lt; 0 text3 += 40
-    } else {
-        if text3 &gt; -240 text3 -= 40
-    }
+if (state == 3)
+{
+	// Draw ink blot.
+	draw_sprite_ext(sprite_index, 4, 0, 0, 1, 1, 0, c_white, 1);
+	
+	// Draw character.
+	draw_sprite_ext(sprite_index, 0, 0, 0, 1, 1, 0, c_white, 1);
+	
+	// Draw text.
+	draw_sprite_ext(sprite_index, 1, 0, 0, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(sprite_index, 2, 0, 0, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(sprite_index, 3, text3, 0, 1, 1, 0, c_white, 1);
+	if (cut == 0)
+	{
+		if (text3 &lt; 0)
+			text3 += 40;
+	}
+	else
+	{
+		if (text3 &gt; -240)
+			text3 -= 40;
+	}
 }
 
-//draw_sprite_ext(sprHUDBars, 0, 0, -5, 0.8, 0.7, 0, c_black, 1)
+// draw_sprite_ext(sprHUDBars, 0, 0, -5, 0.8, 0.7, 0, c_black, 1)
 </string>
           </argument>
         </arguments>

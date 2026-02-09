@@ -25,18 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Properties.
-image_speed = 0.4
-image_angle = random(360)
+            <string>/// Properties.
+image_speed = 0.4;
+image_angle = random(360);
 
-shock = instance_create(x, y, objPulseRipple)
-shock.image_xscale = 0.5
-shock.image_yscale = shock.image_xscale
+shock = instance_create(x, y, objPulseRipple);
+shock.image_xscale = 0.5;
+shock.image_yscale = shock.image_xscale;
 
-//scrHearExplosion(x, y)
-sound_ps(sndShockGrenade)
-global.shake = 10
-global.blur = 20
+// scrHearExplosion(x, y)
+sound_ps(sndShockGrenade);
+global.shake = 10;
+global.blur = 20;
 </string>
           </argument>
         </arguments>
@@ -60,12 +60,14 @@ global.blur = 20
           <argument>
             <kind>1</kind>
             <string>/// Status effects.
-with other {
-    if shocked = 0 {
-        affected = true
-        shocked = 1
-        create_damage_general(random(3), global.c_shock, "SHOCKED!", 1, x + choose(-random(24), random(24)), y - 5)
-    }
+with (other)
+{
+	if (shocked == 0)
+	{
+		affected = true;
+		shocked = 1;
+		create_damage_general(random(3), global.c_shock, "SHOCKED!", 1, x + choose(-random(24), random(24)), y - 5);
+	}
 }
 </string>
           </argument>
@@ -89,8 +91,8 @@ with other {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy the explosion.
-instance_destroy()
+            <string>/// Destroy the explosion.
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -113,10 +115,9 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add)
-draw_self()
-draw_reset()
-
+            <string>draw_set_blend_mode(bm_add);
+draw_self();
+draw_reset();
 </string>
           </argument>
         </arguments>

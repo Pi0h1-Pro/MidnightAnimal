@@ -1,8 +1,14 @@
-if instance_exists(global.enemy) { global.enemy=-1234 exit}
+if (instance_exists(global.enemy))
+{
+	global.enemy = -1234;
+	exit;
+}
 
-global.enemy=scrInstanceNearestExt(global.mousex,global.mousey,objEnemy,objEnemyIdle) //instance_nearest(global.mousex,global.mousey,objEnemy)
-if !instance_exists(global.enemy) global.enemy=-1234
-/*lastx=x
+global.enemy = scrInstanceNearestExt(global.mousex, global.mousey, objEnemy, objEnemyIdle); // instance_nearest(global.mousex,global.mousey,objEnemy)
+if (!instance_exists(global.enemy))
+	global.enemy = -1234;
+
+/* lastx=x
 lasty=y
 x=global.mousex
 y=global.mousey

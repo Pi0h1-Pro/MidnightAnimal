@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=random(360)
-image_blend=merge_color(c_white,c_aqua,0.5)</string>
+            <string>image_angle = random(360);
+image_blend = merge_color(c_white, c_aqua, 0.5);
+</string>
           </argument>
         </arguments>
       </action>
@@ -48,7 +49,8 @@ image_blend=merge_color(c_white,c_aqua,0.5)</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>
+</string>
           </argument>
         </arguments>
       </action>

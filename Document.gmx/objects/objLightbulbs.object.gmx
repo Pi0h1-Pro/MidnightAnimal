@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=-11+random(4)</string>
+            <string>image_angle = -11 + random(4);
+</string>
           </argument>
         </arguments>
       </action>

@@ -1,4 +1,4 @@
-/*var i;
+/* var i;
 i=0;
 
 if (fp[0]=true)
@@ -28,4 +28,3 @@ fp[0]=false;
 alarm[0]=6-(move-3);
 
 }
-

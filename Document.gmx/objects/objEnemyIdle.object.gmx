@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise enemy.
-init_enemy(75)
-ammo = scrGetAmmoEnemy(sprite_index)
+init_enemy(75);
+ammo = scrGetAmmoEnemy(sprite_index);
 </string>
           </argument>
         </arguments>

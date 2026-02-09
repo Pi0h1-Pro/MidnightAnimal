@@ -25,9 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//alph = 1 , alarm [0] set to 1/30 of a second
+            <string>// alph = 1 , alarm [0] set to 1/30 of a second
 alph = 1;
-alarm[0] = 1</string>
+alarm[0] = 1;
+</string>
           </argument>
         </arguments>
       </action>
@@ -49,8 +50,9 @@ alarm[0] = 1</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Play a thunder sound
-sound_play(choose(sndLightning1,sndLightning2,sndLightning3))</string>
+            <string>// Play a thunder sound
+sound_play(choose(sndLightning1, sndLightning2, sndLightning3));
+</string>
           </argument>
         </arguments>
       </action>
@@ -72,15 +74,14 @@ sound_play(choose(sndLightning1,sndLightning2,sndLightning3))</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Set Colour White 
-//Draw rectangle(quick flash)
-//Draw alpha
-//alph -=.09
+            <string>// Set Colour White
+// Draw rectangle(quick flash)
+// Draw alpha
+// alph -=.09
 draw_set_color(c_white);
-draw_rectangle(0,0,room_width,room_height,false);
+draw_rectangle(0, 0, room_width, room_height, false);
 draw_set_alpha(alph);
 alph -= .09;
-
 </string>
           </argument>
         </arguments>

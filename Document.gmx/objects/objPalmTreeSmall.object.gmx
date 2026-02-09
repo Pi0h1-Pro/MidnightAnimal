@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_angle = random(360)
-fadeIn = false
-fadeOut = false
-stopped = false
+            <string>image_speed = 0;
+image_angle = random(360);
+fadeIn = false;
+fadeOut = false;
+stopped = false;
 </string>
           </argument>
         </arguments>
@@ -52,20 +52,25 @@ stopped = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if fadeOut and image_alpha &gt; 0.3 {
-    image_alpha -= 0.1
-    if image_alpha &lt;= 0.3 {
-        fadeOut = false
-        stopped = false
-        image_alpha = 0.3
-    }
-} else if fadeIn and image_alpha &lt; 1 {
-    image_alpha += 0.1
-    if image_alpha &gt;= 1 {
-        fadeIn = false
-        stopped = false
-        image_alpha = 1
-    }
+            <string>if (fadeOut &amp;&amp; image_alpha &gt; 0.3)
+{
+	image_alpha -= 0.1;
+	if (image_alpha &lt;= 0.3)
+	{
+		fadeOut = false;
+		stopped = false;
+		image_alpha = 0.3;
+	}
+}
+else if (fadeIn &amp;&amp; image_alpha &lt; 1)
+{
+	image_alpha += 0.1;
+	if (image_alpha &gt;= 1)
+	{
+		fadeIn = false;
+		stopped = false;
+		image_alpha = 1;
+	}
 }
 </string>
           </argument>
@@ -89,8 +94,8 @@ stopped = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+2,y+3,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 2, y + 3, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

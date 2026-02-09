@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//properties
-rot_offset=30;
-radius=200;
+            <string>// properties
+rot_offset = 30;
+radius = 200;
 
 
-path=path_add();
-texture=surface_get_texture(application_surface);
+path = path_add();
+texture = surface_get_texture(application_surface);
 </string>
           </argument>
         </arguments>
@@ -54,8 +54,8 @@ texture=surface_get_texture(application_surface);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///delete paths to prevent memory leak
-path_delete(path)
+            <string>/// delete paths to prevent memory leak
+path_delete(path);
 </string>
           </argument>
         </arguments>
@@ -78,9 +78,9 @@ path_delete(path)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x=mouse_x;
-y=mouse_y;
-texture=surface_get_texture(application_surface);
+            <string>x = mouse_x;
+y = mouse_y;
+texture = surface_get_texture(application_surface);
 </string>
           </argument>
         </arguments>
@@ -103,7 +103,7 @@ texture=surface_get_texture(application_surface);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>path_random_circle(path,0,0,radius,radius-100,image_angle+rot_offset,radius);
+            <string>path_random_circle(path, 0, 0, radius, radius - 100, image_angle + rot_offset, radius);
 </string>
           </argument>
         </arguments>
@@ -126,7 +126,7 @@ texture=surface_get_texture(application_surface);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_magnify_path_circle(x-view_xview,y-view_yview,path,0,1,sqrt(radius),texture,view_wview,view_hview,10,image_angle+rot_offset,image_blend,1)
+            <string>draw_magnify_path_circle(x - view_xview, y - view_yview, path, 0, 1, sqrt(radius), texture, view_wview, view_hview, 10, image_angle + rot_offset, image_blend, 1);
 </string>
           </argument>
         </arguments>

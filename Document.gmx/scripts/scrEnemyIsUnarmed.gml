@@ -1,3 +1,3 @@
-if argument0 = sprEWalkUnarmed
-or argument0 = sprEGiveUp
-return true
+if (argument0 == sprEWalkUnarmed
+	|| argument0 == sprEGiveUp)
+	return true;

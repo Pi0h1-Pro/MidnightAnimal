@@ -25,15 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=random(360)
-image_speed=0
-friction=0.15+random(0.1)
-diradd=-1+round(random(1))*2
-maxspeed=1
-life=3+round(random(4))
-wait=0
-bled = 0
-
+            <string>image_angle = random(360);
+image_speed = 0;
+friction = 0.15 + random(0.1);
+diradd = -1 + round(random(1)) * 2;
+maxspeed = 1;
+life = 3 + round(random(4));
+wait = 0;
+bled = 0;
 </string>
           </argument>
         </arguments>
@@ -57,7 +56,7 @@ bled = 0
           <argument>
             <kind>1</kind>
             <string>/// Create blood trail.
-scrCreateBloodTrail()
+scrCreateBloodTrail();
 </string>
           </argument>
         </arguments>
@@ -80,7 +79,7 @@ scrCreateBloodTrail()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

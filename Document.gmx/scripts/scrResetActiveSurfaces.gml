@@ -1,1 +1,2 @@
-with objSurfacer surface_free(surf) 
+with (objSurfacer)
+	surface_free(surf);

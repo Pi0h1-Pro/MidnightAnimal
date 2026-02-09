@@ -26,14 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise variables.
-image_alpha = 0
-image_xscale = 1.5
-image_yscale = image_xscale
-image_blend = c_white
+image_alpha = 0;
+image_xscale = 1.5;
+image_yscale = image_xscale;
+image_blend = c_white;
 
 // Create the grid of the trail effect.
-trail_init()
-
+trail_init();
 </string>
           </argument>
         </arguments>
@@ -57,7 +56,7 @@ trail_init()
           <argument>
             <kind>1</kind>
             <string>/// Calculate the trail pathing.
-trail_calculate(16)
+trail_calculate(16);
 </string>
           </argument>
         </arguments>
@@ -81,9 +80,10 @@ trail_calculate(16)
           <argument>
             <kind>1</kind>
             <string>/// Set transparency.
-if image_alpha &lt; 1 image_alpha += 0.15
+if (image_alpha &lt; 1)
+	image_alpha += 0.15;
 
-/*direction = point_direction(x, y, global.mousex, global.mousey)
+/* direction = point_direction(x, y, global.mousex, global.mousey)
 image_angle = direction
 
 if scrMovingPlayerExists() {
@@ -115,7 +115,7 @@ if fire = 1 speed += 10
           <argument>
             <kind>1</kind>
             <string>/// Destroy.
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -141,8 +141,8 @@ instance_destroy()
             <string>/// Draw self.
 
 // Draw trail.
-draw_trail_ext(4,image_blend,-1,1,1)
-draw_self()
+draw_trail_ext(4, image_blend, -1, 1, 1);
+draw_self();
 </string>
           </argument>
         </arguments>

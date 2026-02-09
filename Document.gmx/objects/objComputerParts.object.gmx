@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction=0.2
-image_speed=0
-diradd=-1+round(random(1))*2
-image_angle=random(360)
-image_index=floor(random(sprite_get_number(sprite_index)))
+            <string>friction = 0.2;
+image_speed = 0;
+diradd = -1 + round(random(1)) * 2;
+image_angle = random(360);
+image_index = floor(random(sprite_get_number(sprite_index)));
 </string>
           </argument>
         </arguments>
@@ -52,7 +52,7 @@ image_index=floor(random(sprite_get_number(sprite_index)))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=diradd*speed*6
+            <string>image_angle += diradd * speed * 6;
 </string>
           </argument>
         </arguments>

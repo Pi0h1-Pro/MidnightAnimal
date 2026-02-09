@@ -25,11 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-image_speed=0.35
-ammo=0
-bled=0
-
+            <string>event_inherited();
+image_speed = 0.35;
+ammo = 0;
+bled = 0;
 </string>
           </argument>
         </arguments>
@@ -52,24 +51,25 @@ bled=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &gt;= 5 and bled = 0 {
-    sound_ps(choose(sndPunch, sndPunch1, sndPunch2, sndPunch3))
-    sound_ps(sndDoorHit)
-    sound_ps(sndBonesBreak)
-    
-    create_money()
-    global.shake = 12
-    
-    sound_ps(sndHitMarker)
-    objEffector.hitalpha = 1
-    objEffector.hudflash = 10
-    
-    my_id = instance_create(x, y, objKnockedOut)
-    my_id.image_angle = image_angle
-    my_id.speed = 1.5
-    my_id.direction = image_angle
-    my_id.friction = 0.1
-    bled = 1
+            <string>if (image_index &gt;= 5 &amp;&amp; bled == 0)
+{
+	sound_ps(choose(sndPunch, sndPunch1, sndPunch2, sndPunch3));
+	sound_ps(sndDoorHit);
+	sound_ps(sndBonesBreak);
+	
+	create_money();
+	global.shake = 12;
+	
+	sound_ps(sndHitMarker);
+	objEffector.hitalpha = 1;
+	objEffector.hudflash = 10;
+	
+	my_id = instance_create(x, y, objKnockedOut);
+	my_id.image_angle = image_angle;
+	my_id.speed = 1.5;
+	my_id.direction = image_angle;
+	my_id.friction = 0.1;
+	bled = 1;
 }
 </string>
           </argument>
@@ -93,18 +93,18 @@ bled=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
-image_index = 0
+            <string>image_speed = 0;
+image_index = 0;
 
-my_id = instance_create(x, y, objPlayer)
-my_id.ammo = ammo
-my_id.hp += my_id.max_hp
+my_id = instance_create(x, y, objPlayer);
+my_id.ammo = ammo;
+my_id.hp += my_id.max_hp;
 
-create_points("FACE BUSTER +200")
-global.myscore += 200
-global.combo += 1
-global.combotime = 240
-instance_destroy()
+create_points("FACE BUSTER +200");
+global.myscore += 200;
+global.combo += 1;
+global.combotime = 240;
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -127,8 +127,9 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index&lt;=5 draw_sprite_ext(sprEKnockedOutKneed,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>if (image_index &lt;= 5)
+	draw_sprite_ext(sprEKnockedOutKneed, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

@@ -26,9 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>dis_u = shader_get_uniform(shdChroma, 'u_Distance');
-dis = 2
+dis = 2;
 shader = 1;
-
 </string>
           </argument>
         </arguments>
@@ -51,8 +50,9 @@ shader = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_released(vk_control)) {
-  shader = !shader;
+            <string>if (keyboard_check_released(vk_control))
+{
+	shader = !shader;
 }
 </string>
           </argument>
@@ -76,15 +76,15 @@ shader = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (shader = 1) {
-  shader_set(shdChroma);
-  shader_set_uniform_f(dis_u, dis);
+            <string>if (shader == 1)
+{
+	shader_set(shdChroma);
+	shader_set_uniform_f(dis_u, dis);
 }
 
-draw_surface_stretched(application_surface, 0, 0, view_wview,view_hview);
+draw_surface_stretched(application_surface, 0, 0, view_wview, view_hview);
 
 shader_reset();
-
 </string>
           </argument>
         </arguments>

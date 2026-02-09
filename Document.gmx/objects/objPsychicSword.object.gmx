@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>/// Desired rotation speed.
-vel = 4
-image_yscale = -1
-image_xscale = -1
+vel = 4;
+image_yscale = -1;
+image_xscale = -1;
 </string>
           </argument>
         </arguments>
@@ -52,34 +52,34 @@ image_xscale = -1
           <argument>
             <kind>1</kind>
             <string>/// Control orbit.
-if !instance_exists(objPlayer) or !instance_exists(objPlayer) exit
+if (!instance_exists(objPlayer) || !instance_exists(objPlayer))
+	exit;
 
 var cx, cy, crad, clen, cdir, cnext, nx, ny;
 
-cx = objPlayer.x
-cy = objPlayer.y
-crad = point_distance(cx, cy, x, y)
+cx = objPlayer.x;
+cy = objPlayer.y;
+crad = point_distance(cx, cy, x, y);
 
 // Find "length" of circle.
-clen = crad * pi * 2
+clen = crad * pi * 2;
 
 // Find current angle on circle.
-cdir = point_direction(cx, cy, x, y)
+cdir = point_direction(cx, cy, x, y);
 
 // Find next angle on circle.
-cnext = cdir + vel * 360 / clen
+cnext = cdir + vel * 360 / clen;
 
 // Find coordinates of next point.
-nx = cx + lengthdir_x(24, cnext - 180)
-ny = cy + lengthdir_y(24, cnext - 180)
+nx = cx + lengthdir_x(24, cnext - 180);
+ny = cy + lengthdir_y(24, cnext - 180);
 
 // Set speed vector to reach that point in next step.
-hspeed = nx - x
-vspeed = ny - y
+hspeed = nx - x;
+vspeed = ny - y;
 
 // Set image angle relative to player.
-image_angle = point_direction(x, y, objPlayer.x, objPlayer.y)
-
+image_angle = point_direction(x, y, objPlayer.x, objPlayer.y);
 </string>
           </argument>
         </arguments>
@@ -103,7 +103,7 @@ image_angle = point_direction(x, y, objPlayer.x, objPlayer.y)
           <argument>
             <kind>1</kind>
             <string>/// Draw orbit.
-draw_self()
+draw_self();
 </string>
           </argument>
         </arguments>

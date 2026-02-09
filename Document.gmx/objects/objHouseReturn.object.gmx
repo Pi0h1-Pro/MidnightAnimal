@@ -25,18 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed=-0.25-random(0.25)
-image_speed=0
-scale=0.75+random(0.25)
-speed=(scale*scale*scale)*3
-index=0
-//image_blend=c_black
-speed=(scale*scale*scale)*3
-if room=rmHospitalTransition speed*=0.2
-image_xscale=scale
-y=80-scale*32
+            <string>hspeed = -0.25 - random(0.25);
+image_speed = 0;
+scale = 0.75 + random(0.25);
+speed = (scale * scale * scale) * 3;
+index = 0;
 
-
+// image_blend=c_black
+speed = (scale * scale * scale) * 3;
+if (room == rmHospitalTransition)
+	speed *= 0.2;
+image_xscale = scale;
+y = 80 - scale * 32;
 </string>
           </argument>
         </arguments>
@@ -59,16 +59,18 @@ y=80-scale*32
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//index=7.5-(x-174)*(1/8)
-//if index&gt;15 index=15
-//if index&lt;0 index=0
+            <string>// index=7.5-(x-174)*(1/8)
+// if index&gt;15 index=15
+// if index&lt;0 index=0
 
-//if x&lt;-120 instance_destroy()
+// if x&lt;-120 instance_destroy()
 
-if x&gt;room_width+300 {
-instance_destroy() 
-instance_create(-100-random(60),y,objHouseReturn)
+if (x &gt; room_width + 300)
+{
+	instance_destroy();
+	instance_create(-100 - random(60), y, objHouseReturn);
 }
+
 /*
 index=9-(x*(1/(room_width/9)))
 image_index=round(index)

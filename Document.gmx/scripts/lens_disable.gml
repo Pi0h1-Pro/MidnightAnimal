@@ -1,1 +1,2 @@
-with efDirtyLens instance_destroy()
+with (efDirtyLens)
+	instance_destroy();

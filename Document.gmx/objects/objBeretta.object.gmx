@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=random(360)
-friction=0.15
-speed=random(2)
+            <string>image_angle = random(360);
+friction = 0.15;
+speed = random(2);
 </string>
           </argument>
         </arguments>
@@ -50,7 +50,8 @@ speed=random(2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if speed&gt;0 image_angle+=sign(vspeed)*speed*3
+            <string>if (speed &gt; 0)
+	image_angle += sign(vspeed) * speed * 3;
 </string>
           </argument>
         </arguments>
@@ -73,8 +74,8 @@ speed=random(2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

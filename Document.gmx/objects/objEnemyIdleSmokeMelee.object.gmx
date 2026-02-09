@@ -25,18 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-image_speed=0
-image_index=0
-wait=random(10)
-energie=1
-reload=floor(random(10))
-alert=0
-alarm[0]=10+random(100)
-ammo=13
-path=path_add()
-nothing = 0
-dropped = 0
+            <string>event_inherited();
+image_speed = 0;
+image_index = 0;
+wait = random(10);
+energie = 1;
+reload = floor(random(10));
+alert = 0;
+alarm[0] = 10 + random(100);
+ammo = 13;
+path = path_add();
+nothing = 0;
+dropped = 0;
 </string>
           </argument>
         </arguments>
@@ -59,7 +59,8 @@ dropped = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.2</string>
+            <string>image_speed = 0.2;
+</string>
           </argument>
         </arguments>
       </action>
@@ -81,16 +82,18 @@ dropped = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objPlayer) exit 
+            <string>if (!instance_exists(objPlayer))
+	exit;
 
-if wait &gt; 0 wait -= 1
-else {
-    seen = scrLook(objPlayer.x, objPlayer.y, 4)
-    if seen = 0 or seen = 2 create_enemy(enemyRandom, sprEWalkUzi, 1, 30)
-    wait = 15
+if (wait &gt; 0)
+	wait -= 1;
+else
+{
+	seen = scrLook(objPlayer.x, objPlayer.y, 4);
+	if (seen == 0 || seen == 2)
+		create_enemy(enemyRandom, sprEWalkUzi, 1, 30);
+	wait = 15;
 }
-
-
 </string>
           </argument>
         </arguments>
@@ -113,12 +116,12 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>my_id=instance_create(x+lengthdir_x(4,direction),y+lengthdir_y(4,direction),objSmokeExhale)
-my_id.direction=direction
-my_id.image_angle=direction-4+random(8)
-my_id.speed=0.25
-image_speed=0
-alarm[0]=120+random(100)
+            <string>my_id = instance_create(x + lengthdir_x(4, direction), y + lengthdir_y(4, direction), objSmokeExhale);
+my_id.direction = direction;
+my_id.image_angle = direction - 4 + random(8);
+my_id.speed = 0.25;
+image_speed = 0;
+alarm[0] = 120 + random(100);
 </string>
           </argument>
         </arguments>
@@ -142,7 +145,7 @@ alarm[0]=120+random(100)
           <argument>
             <kind>1</kind>
             <string>/// Draw enemy.
-scrDrawEnemyIdle(sprELegs)
+scrDrawEnemyIdle(sprELegs);
 </string>
           </argument>
         </arguments>

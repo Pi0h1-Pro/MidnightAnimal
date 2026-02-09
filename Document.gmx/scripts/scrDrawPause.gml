@@ -1,19 +1,21 @@
-myy = -0.5 + random(1)
-i = 0
-texture_set_interpolation(true)
-repeat(dists) {
-    ii = 0
-    repeat(distheight[i]) {
-        draw_surface_general(surf3, 0, disty[i] - 1 + random(2) + ii, surface_get_width(surf3), 1, (ii * (ii * 0.1) - 3 + random(6)) * factor, myy + disty[i] + ii, 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), random(255), 255), factor), merge_color(c_white, make_color_hsv(random(255), random(255), 255), factor), merge_color(c_white, make_color_hsv(random(255), random(255), 255), factor), merge_color(c_white, make_color_hsv(random(255), random(255), 255), factor), 1)
-        ii += 1
-    }
-    i += 1
+myy = -0.5 + random(1);
+i = 0;
+texture_set_interpolation(true);
+repeat (dists)
+{
+	ii = 0;
+	repeat (distheight[i])
+	{
+		draw_surface_general(surf3, 0, disty[i] - 1 + random(2) + ii, surface_get_width(surf3), 1, (ii * (ii * 0.1) - 3 + random(6)) * factor, myy + disty[i] + ii, 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), random(255), 255), factor), merge_color(c_white, make_color_hsv(random(255), random(255), 255), factor), merge_color(c_white, make_color_hsv(random(255), random(255), 255), factor), merge_color(c_white, make_color_hsv(random(255), random(255), 255), factor), 1);
+		ii += 1;
+	}
+	i += 1;
 }
 
-draw_surface_general(surf3, 0, 0, surface_get_width(surf3), disty[0], 0, myy, 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), 1 - random(0.2))
-draw_surface_general(surf3, 0, disty[0] + distheight[0], surface_get_width(surf3), disty[1] - (disty[0] + distheight[0]), 0, myy + disty[0] + distheight[0], 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), 1 - random(0.2) * factor)
-draw_surface_general(surf3, 0, disty[1] + distheight[1], surface_get_width(surf3), disty[2] - (disty[1] + distheight[1]), 0, myy + disty[1] + distheight[1], 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), 1 - random(0.2) * factor)
-draw_surface_general(surf3, 0, disty[2] + distheight[2], surface_get_width(surf3), room_height - (disty[2] + distheight[2]), 0, myy + disty[2] + distheight[2], 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), 1 - random(0.2) * factor)
+draw_surface_general(surf3, 0, 0, surface_get_width(surf3), disty[0], 0, myy, 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), 1 - random(0.2));
+draw_surface_general(surf3, 0, disty[0] + distheight[0], surface_get_width(surf3), disty[1] - (disty[0] + distheight[0]), 0, myy + disty[0] + distheight[0], 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), 1 - random(0.2) * factor);
+draw_surface_general(surf3, 0, disty[1] + distheight[1], surface_get_width(surf3), disty[2] - (disty[1] + distheight[1]), 0, myy + disty[1] + distheight[1], 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), 1 - random(0.2) * factor);
+draw_surface_general(surf3, 0, disty[2] + distheight[2], surface_get_width(surf3), room_height - (disty[2] + distheight[2]), 0, myy + disty[2] + distheight[2], 1, 1, 0, merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), merge_color(c_white, make_color_hsv(random(255), 100, 255), factor), 1 - random(0.2) * factor);
 
 
 /*
@@ -45,4 +47,3 @@ repeat(lines) {
 }
 
 texture_set_interpolation(false)
-

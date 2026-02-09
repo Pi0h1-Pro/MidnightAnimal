@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = choose(sprEBurn, sprEBurnExtreme)
-diradd=8-random(16)
-alarm[0]=100+random(100)
-image_speed=0.25
+            <string>sprite_index = choose(sprEBurn, sprEBurnExtreme);
+diradd = 8 - random(16);
+alarm[0] = 100 + random(100);
+image_speed = 0.25;
 </string>
           </argument>
         </arguments>
@@ -51,19 +51,23 @@ image_speed=0.25
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if sprite_index = sprEBurnExtreme {
-    my_id=instance_create(x,y,objEDieBurn)
-    my_id.image_angle=direction
-} else {
-    body=instance_create(x,y,objBurningBody)
-    body.sprite_index=choose(sprEDeadBurn1,sprEDeadBurn2,sprEDeadBurn3, sprEDeadBurn4, sprEDeadBurn5)
-    body.image_angle=direction
+            <string>if (sprite_index == sprEBurnExtreme)
+{
+	my_id = instance_create(x, y, objEDieBurn);
+	my_id.image_angle = direction;
+}
+else
+{
+	body = instance_create(x, y, objBurningBody);
+	body.sprite_index = choose(sprEDeadBurn1, sprEDeadBurn2, sprEDeadBurn3, sprEDeadBurn4, sprEDeadBurn5);
+	body.image_angle = direction;
 }
 
-instance_destroy()
+instance_destroy();
 
-repeat(2 + random(2)) {
-    flames = instance_create(x - sprite_width / 2 + random(sprite_width), y - sprite_height / 2 + random(sprite_height), objTinyFire)
+repeat (2 + random(2))
+{
+	flames = instance_create(x - sprite_width / 2 + random(sprite_width), y - sprite_height / 2 + random(sprite_height), objTinyFire);
 }
 </string>
           </argument>
@@ -87,22 +91,27 @@ repeat(2 + random(2)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction += diradd
-if round(random(20)) = 2 diradd = 8 - random(16)
-if round(random(4)) = 2 {
-    my_id = instance_create(x - 8 + random(16), y - 8 + random(16), objFireBall)
-    my_id.direction = random(360)
-    my_id.speed = 1 + random(1)
+            <string>direction += diradd;
+if (round(random(20)) == 2)
+	diradd = 8 - random(16);
+if (round(random(4)) == 2)
+{
+	my_id = instance_create(x - 8 + random(16), y - 8 + random(16), objFireBall);
+	my_id.direction = random(360);
+	my_id.speed = 1 + random(1);
 }
-if round(random(3)) = 2 {
-    my_id = instance_create(x - 8 + random(16), y - 8 + random(16), objFlameSmoke)
-    my_id.direction = random(360)
-    my_id.speed = 0.5 + random(1)
+if (round(random(3)) == 2)
+{
+	my_id = instance_create(x - 8 + random(16), y - 8 + random(16), objFlameSmoke);
+	my_id.direction = random(360);
+	my_id.speed = 0.5 + random(1);
 }
-if !place_free(x + hspeed, y) hspeed = -hspeed
-if !place_free(x, y + vspeed) vspeed = -vspeed
+if (!place_free(x + hspeed, y))
+	hspeed = -hspeed;
+if (!place_free(x, y + vspeed))
+	vspeed = -vspeed;
 
-effect_create_below(ef_smoke,x,y,0.2,make_colour_rgb(244, 203, 66))
+effect_create_below(ef_smoke, x, y, 0.2, make_colour_rgb(244, 203, 66));
 </string>
           </argument>
         </arguments>
@@ -125,14 +134,17 @@ effect_create_below(ef_smoke,x,y,0.2,make_colour_rgb(244, 203, 66))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if sprite_index = sprEBurnExtreme {
-    draw_set_blend_mode(bm_add)
-    draw_sprite_ext(sprEBurningLegs,image_index,x,y,image_xscale,image_yscale,direction,image_blend,image_alpha)
-    draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,direction,image_blend,image_alpha)
-    draw_reset()
-} else {
-    draw_sprite_ext(sprELegs,image_index*2,x,y,image_xscale,image_yscale,direction,image_blend,image_alpha)
-    draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,direction,image_blend,image_alpha)
+            <string>if (sprite_index == sprEBurnExtreme)
+{
+	draw_set_blend_mode(bm_add);
+	draw_sprite_ext(sprEBurningLegs, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
+	draw_reset();
+}
+else
+{
+	draw_sprite_ext(sprELegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
 }
 </string>
           </argument>

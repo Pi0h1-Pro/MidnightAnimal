@@ -25,9 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-dir=0
-enter=0</string>
+            <string>image_speed = 0;
+dir = 0;
+enter = 0;
+</string>
           </argument>
         </arguments>
       </action>
@@ -49,16 +50,20 @@ enter=0</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.done = 1 exit
-if place_meeting(x + 4, y, objPlayerMouse) {
-    if objPlayerMouse.y &gt; y + 74 and objPlayerMouse.y &lt; y + 82 {
-        enter = 1
-        with objPlayerMouse {
-            my_id = instance_create(objManhole.x + 95, objManhole.y + 78, objBikerClimbDown)
-            my_id.image_angle = dir
-            instance_destroy()
-        }
-    }
+            <string>if (global.done == 1)
+	exit;
+if (place_meeting(x + 4, y, objPlayerMouse))
+{
+	if (objPlayerMouse.y &gt; y + 74 &amp;&amp; objPlayerMouse.y &lt; y + 82)
+	{
+		enter = 1;
+		with (objPlayerMouse)
+		{
+			my_id = instance_create(objManhole.x + 95, objManhole.y + 78, objBikerClimbDown);
+			my_id.image_angle = dir;
+			instance_destroy();
+		}
+	}
 }
 </string>
           </argument>
@@ -82,9 +87,11 @@ if place_meeting(x + 4, y, objPlayerMouse) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objPlayer) {
-instance_create(288,400,objPlayerBikerHouse)
-}</string>
+            <string>if (!instance_exists(objPlayer))
+{
+	instance_create(288, 400, objPlayerBikerHouse);
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -106,11 +113,13 @@ instance_create(288,400,objPlayerBikerHouse)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-if enter=0 {
-draw_sprite_ext(sprArrow,0,x+100+lengthdir_x(3,dir),y+77,image_xscale,image_yscale,270,image_blend,image_alpha)
-dir+=4
-}</string>
+            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+if (enter == 0)
+{
+	draw_sprite_ext(sprArrow, 0, x + 100 + lengthdir_x(3, dir), y + 77, image_xscale, image_yscale, 270, image_blend, image_alpha);
+	dir += 4;
+}
+</string>
           </argument>
         </arguments>
       </action>

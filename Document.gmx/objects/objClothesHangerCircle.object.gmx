@@ -25,13 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i=0 
-repeat (40) {
-shirtdir[i]=i*(360/40)-4+random(8)
-shirtindex[i]=floor(random(4))
-i+=1
+            <string>i = 0;
+repeat (40)
+{
+	shirtdir[i] = i * (360 / 40) - 4 + random(8);
+	shirtindex[i] = floor(random(4));
+	i += 1;
 }
-diradd=0
+diradd = 0;
 </string>
           </argument>
         </arguments>
@@ -54,30 +55,46 @@ diradd=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=diradd
-if diradd&gt;0 diradd-=0.02 else {
-if diradd&lt;-0.02 diradd+=0.02 else diradd=0
+            <string>image_angle += diradd;
+if (diradd &gt; 0)
+	diradd -= 0.02;
+else
+{
+	if (diradd &lt; -0.02)
+		diradd += 0.02;
+	else
+		diradd = 0;
 }
-if instance_exists(objPlayerDead) exit
-image_xscale=1.2
-image_yscale=1.2
-if place_meeting(x,y,objPlayer) and scrMovingPlayerExists() {
-if objPlayer.y&lt;y {
-if abs(objPlayer.myxspeed)&gt;0 diradd=-objPlayer.myxspeed*0.5
+if (instance_exists(objPlayerDead))
+	exit;
+image_xscale = 1.2;
+image_yscale = 1.2;
+if (place_meeting(x, y, objPlayer) &amp;&amp; scrMovingPlayerExists())
+{
+	if (objPlayer.y &lt; y)
+	{
+		if (abs(objPlayer.myxspeed) &gt; 0)
+			diradd = -objPlayer.myxspeed * 0.5;
+	}
+	if (objPlayer.y &gt; y)
+	{
+		if (abs(objPlayer.myxspeed) &gt; 0)
+			diradd = objPlayer.myxspeed * 0.5;
+	}
+	
+	if (objPlayer.x &gt; x)
+	{
+		if (abs(objPlayer.myyspeed) &gt; 0)
+			diradd = -objPlayer.myyspeed * 0.5;
+	}
+	if (objPlayer.x &lt; x)
+	{
+		if (abs(objPlayer.myyspeed) &gt; 0)
+			diradd = objPlayer.myyspeed * 0.5;
+	}
 }
-if objPlayer.y&gt;y {
-if abs(objPlayer.myxspeed)&gt;0 diradd=objPlayer.myxspeed*0.5
-}
-
-if objPlayer.x&gt;x {
-if abs(objPlayer.myyspeed)&gt;0 diradd=-objPlayer.myyspeed*0.5
-}
-if objPlayer.x&lt;x {
-if abs(objPlayer.myyspeed)&gt;0diradd=objPlayer.myyspeed*0.5
-}
-}
-image_xscale=1
-image_yscale=1
+image_xscale = 1;
+image_yscale = 1;
 </string>
           </argument>
         </arguments>
@@ -100,14 +117,15 @@ image_yscale=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i=0
-repeat (40) {
-draw_sprite_ext(sprShirtsHanger,shirtindex[i],x+lengthdir_x(24,shirtdir[i]+image_angle)+1,y+lengthdir_y(24,shirtdir[i]+image_angle)+1,1,1,image_angle+shirtdir[i]-diradd*10,c_black,0.5)
-draw_sprite_ext(sprShirtsHanger,shirtindex[i],x+lengthdir_x(24,shirtdir[i]+image_angle),y+lengthdir_y(24,shirtdir[i]+image_angle),1,1,image_angle+shirtdir[i]-diradd*10,c_white,1)
-i+=1
+            <string>i = 0;
+repeat (40)
+{
+	draw_sprite_ext(sprShirtsHanger, shirtindex[i], x + lengthdir_x(24, shirtdir[i] + image_angle) + 1, y + lengthdir_y(24, shirtdir[i] + image_angle) + 1, 1, 1, image_angle + shirtdir[i] - diradd * 10, c_black, 0.5);
+	draw_sprite_ext(sprShirtsHanger, shirtindex[i], x + lengthdir_x(24, shirtdir[i] + image_angle), y + lengthdir_y(24, shirtdir[i] + image_angle), 1, 1, image_angle + shirtdir[i] - diradd * 10, c_white, 1);
+	i += 1;
 }
-draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

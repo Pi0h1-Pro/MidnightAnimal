@@ -1,13 +1,13 @@
-if argument0 = pierretteReloadShield
-or argument0 = pierretteDeployShield
-or argument0 = pierretteAttackShotgun
-or argument0 = pierretteAttackSMG
-or argument0 = pierrettePackUp
-or argument0 = pierretteReadyUp
-or argument0 = pierretteReloadShotgun
-or argument0 = pierretteThrow
-or argument0 = pierretteReload
-or argument0 = pierretteWalkShotgun
-or argument0 = pierretteWalkSMG
-or argument0 = pierretteWalkUnarmed
-return true
+if (argument0 == pierretteReloadShield
+	|| argument0 == pierretteDeployShield
+	|| argument0 == pierretteAttackShotgun
+	|| argument0 == pierretteAttackSMG
+	|| argument0 == pierrettePackUp
+	|| argument0 == pierretteReadyUp
+	|| argument0 == pierretteReloadShotgun
+	|| argument0 == pierretteThrow
+	|| argument0 == pierretteReload
+	|| argument0 == pierretteWalkShotgun
+	|| argument0 == pierretteWalkSMG
+	|| argument0 == pierretteWalkUnarmed)
+	return true;

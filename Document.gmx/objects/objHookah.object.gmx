@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-index=0
-alpha=0.75
-angle=random(360)
+            <string>image_speed = 0;
+index = 0;
+alpha = 0.75;
+angle = random(360);
 </string>
           </argument>
         </arguments>
@@ -51,26 +51,33 @@ angle=random(360)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index = 0 {
-    if scrMovingPlayerExists() {
-        if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32 {
-            if instance_exists(objLSD) sound_play(choose(sndGlassBreakLSD, sndGlassReverse))
-            else sound_play(choose(sndGlass1, sndGlass2))
-            image_index = 1
-            solid = 0
-            image_angle = point_direction(objPlayer.x, objPlayer.y, x, y)
-            speed = 1.5
-            direction = image_angle
-            friction = 0.1
-        }
-    }
+            <string>if (image_index == 0)
+{
+	if (scrMovingPlayerExists())
+	{
+		if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32)
+		{
+			if (instance_exists(objLSD))
+				sound_play(choose(sndGlassBreakLSD, sndGlassReverse));
+			else
+				sound_play(choose(sndGlass1, sndGlass2));
+			image_index = 1;
+			solid = 0;
+			image_angle = point_direction(objPlayer.x, objPlayer.y, x, y);
+			speed = 1.5;
+			direction = image_angle;
+			friction = 0.1;
+		}
+	}
 }
 
-if image_index &gt;= 1 {
-    if index &lt; 23 index += 0.25
-    if alpha &gt; 0.25 alpha -= 0.01
+if (image_index &gt;= 1)
+{
+	if (index &lt; 23)
+		index += 0.25;
+	if (alpha &gt; 0.25)
+		alpha -= 0.01;
 }
-
 </string>
           </argument>
         </arguments>
@@ -93,9 +100,10 @@ if image_index &gt;= 1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if index&gt;0 draw_sprite_ext(sprWaterPool,index,x,y,image_xscale,image_yscale,angle,c_white,alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>if (index &gt; 0)
+	draw_sprite_ext(sprWaterPool, index, x, y, image_xscale, image_yscale, angle, c_white, alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

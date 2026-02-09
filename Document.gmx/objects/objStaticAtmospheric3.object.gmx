@@ -25,17 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//light sprite properties: 
-image_xscale=1
-image_yscale=1
-image_angle=0
-image_blend=c_white
-image_alpha=0.5
+            <string>// light sprite properties:
+image_xscale = 1;
+image_yscale = 1;
+image_angle = 0;
+image_blend = c_white;
+image_alpha = 0.5;
 
-//L3S_define_light(z,shadows,soft_amount,soft_inc,static,switch)
-L3S_define_light(1,150,10,18,1,1)
+// L3S_define_light(z,shadows,soft_amount,soft_inc,static,switch)
+L3S_define_light(1, 150, 10, 18, 1, 1);
 
-alarm[0]=1
+alarm[0] = 1;
 </string>
           </argument>
         </arguments>
@@ -58,12 +58,13 @@ alarm[0]=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//L3S_dsurface_update(shadow master)
-instance_activate_object(objLSStaticShadow)
-//if room=High_spec {L3S_mesh_update_soft()}
-//else{L3S_mesh_update()}
+            <string>// L3S_dsurface_update(shadow master)
+instance_activate_object(objLSStaticShadow);
 
-L3S_mesh_update_soft()
+// if room=High_spec {L3S_mesh_update_soft()}
+// else{L3S_mesh_update()}
+
+L3S_mesh_update_soft();
 </string>
           </argument>
         </arguments>
@@ -86,7 +87,7 @@ L3S_mesh_update_soft()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*draw_set_color(make_color_rgb(255,255,255))
+            <string>/* draw_set_color(make_color_rgb(255,255,255))
 draw_text(x-string_width("Static Mesh"),y,"Static Mesh")
 </string>
           </argument>

@@ -1,5 +1,7 @@
-if object_get_parent(objEnemyIdle)
-or object_index = objEnemyDodger 
-or object_index = enemyStatic
-or object_index = enemyCover
-return true else return false
+if (object_get_parent(objEnemyIdle)
+	|| object_index == objEnemyDodger
+	|| object_index == enemyStatic
+	|| object_index == enemyCover)
+	return true;
+else
+	return false;

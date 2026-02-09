@@ -25,10 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>activated=0;
-image_blend=merge_color(merge_color(c_teal,c_orange,0.4),c_white,0.4)
-refresh=0;
-
+            <string>activated = 0;
+image_blend = merge_color(merge_color(c_teal, c_orange, 0.4), c_white, 0.4);
+refresh = 0;
 </string>
           </argument>
         </arguments>

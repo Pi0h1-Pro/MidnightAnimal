@@ -1,1 +1,1 @@
-scrGoGetWeapon()
+scrGoGetWeapon();

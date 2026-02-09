@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-image_speed=0.15
-wait=random(15)
-ammo=0
-energie=1
-alert=0
-path=path_add()
-nothing = 0
-dropped = 0
-direction = image_angle
+            <string>event_inherited();
+image_speed = 0.15;
+wait = random(15);
+ammo = 0;
+energie = 1;
+alert = 0;
+path = path_add();
+nothing = 0;
+dropped = 0;
+direction = image_angle;
 </string>
           </argument>
         </arguments>
@@ -57,7 +57,7 @@ direction = image_angle
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.3
+            <string>image_speed = 0.3;
 </string>
           </argument>
         </arguments>
@@ -80,20 +80,24 @@ direction = image_angle
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objPlayer) exit 
-if wait &gt; 0 wait -= 1
-else {
-
-if point_distance(x,y,objPlayer.x,objPlayer.y) &lt; 220 {
-        if !scrCollisionLineExt(x, y, objPlayer.x, objPlayer.y, 3) {
-            my_id = instance_create(x, y, enemyRandom)
-            my_id.direction = direction
-            my_id.sprite_index = sprEWalkKnife
-            my_id.alert = 1
-            instance_destroy()
-        }
-        wait = 15
-    }
+            <string>if (!instance_exists(objPlayer))
+	exit;
+if (wait &gt; 0)
+	wait -= 1;
+else
+{
+	if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 220)
+	{
+		if (!scrCollisionLineExt(x, y, objPlayer.x, objPlayer.y, 3))
+		{
+			my_id = instance_create(x, y, enemyRandom);
+			my_id.direction = direction;
+			my_id.sprite_index = sprEWalkKnife;
+			my_id.alert = 1;
+			instance_destroy();
+		}
+		wait = 15;
+	}
 }
 </string>
           </argument>
@@ -117,8 +121,8 @@ if point_distance(x,y,objPlayer.x,objPlayer.y) &lt; 220 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-alarm[0]=random(240)
+            <string>image_speed = 0;
+alarm[0] = random(240);
 </string>
           </argument>
         </arguments>
@@ -142,7 +146,7 @@ alarm[0]=random(240)
           <argument>
             <kind>1</kind>
             <string>/// Draw enemy.
-scrDrawEnemyIdle(sprELegs)
+scrDrawEnemyIdle(sprELegs);
 </string>
           </argument>
         </arguments>

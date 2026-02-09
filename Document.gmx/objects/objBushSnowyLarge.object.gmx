@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
+            <string>image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -49,8 +49,9 @@
           <argument>
             <kind>1</kind>
             <string>/// Draw self and shadow.
-draw_self()
-//draw_self_shadow(1)
+draw_self();
+
+// draw_self_shadow(1)
 </string>
           </argument>
         </arguments>

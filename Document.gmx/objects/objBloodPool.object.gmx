@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-target=sprite_get_number(sprite_index)
-image_angle=random(360)
-blood_properties()
-destroy=0
+            <string>image_speed = 0;
+target = sprite_get_number(sprite_index);
+image_angle = random(360);
+blood_properties();
+destroy = 0;
 </string>
           </argument>
         </arguments>
@@ -52,9 +52,11 @@ destroy=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if destroy = 1 instance_destroy()
-if image_index &lt; target-1 image_index+=0.1
-blood_step()
+            <string>if (destroy == 1)
+	instance_destroy();
+if (image_index &lt; target - 1)
+	image_index += 0.1;
+blood_step();
 </string>
           </argument>
         </arguments>
@@ -77,8 +79,8 @@ blood_step()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw blood.
-draw_self()
+            <string>/// Draw blood.
+draw_self();
 </string>
           </argument>
         </arguments>

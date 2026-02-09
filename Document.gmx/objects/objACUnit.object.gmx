@@ -25,12 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Randomise whether the AC unit is on or off.
-sprite_index = choose(sprACUnitOn, sprACUnitOff)
+            <string>/// Randomise whether the AC unit is on or off.
+sprite_index = choose(sprACUnitOn, sprACUnitOff);
 
-if sprite_index = sprACUnitOn image_speed = 0.5 else {
-    image_speed = 0
-    image_index = choose(0, 1)
+if (sprite_index == sprACUnitOn)
+	image_speed = 0.5;
+else
+{
+	image_speed = 0;
+	image_index = choose(0, 1);
 }
 </string>
           </argument>
@@ -54,8 +57,8 @@ if sprite_index = sprACUnitOn image_speed = 0.5 else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+2,y+2,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 2, y + 2, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

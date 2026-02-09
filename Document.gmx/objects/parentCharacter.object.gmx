@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise variables.
-mouseOver = 0
-image_speed = 0
-image_index = 0
-unlocked = 0
+mouseOver = 0;
+image_speed = 0;
+image_index = 0;
+unlocked = 0;
 </string>
           </argument>
         </arguments>
@@ -53,8 +53,9 @@ unlocked = 0
           <argument>
             <kind>1</kind>
             <string>/// Disable hover effect.
-if unlocked = 0 exit
-mouseOver = 0
+if (unlocked == 0)
+	exit;
+mouseOver = 0;
 </string>
           </argument>
         </arguments>
@@ -78,8 +79,9 @@ mouseOver = 0
           <argument>
             <kind>1</kind>
             <string>/// Enable hover effect.
-if unlocked = 0 exit
-mouseOver = 1
+if (unlocked == 0)
+	exit;
+mouseOver = 1;
 </string>
           </argument>
         </arguments>

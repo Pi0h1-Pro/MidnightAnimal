@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=0
-image_speed=0
-on=0
-wait=0
-alarmsound=0
+            <string>image_index = 0;
+image_speed = 0;
+on = 0;
+wait = 0;
+alarmsound = 0;
 </string>
           </argument>
         </arguments>
@@ -52,23 +52,32 @@ alarmsound=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if wait &gt; 0 {
-    wait -= 1
-    if wait = 0 {
-        on = 0
-        audio_stop_sound(sndMetalDetector) alarmsound = 0
-    }
+            <string>if (wait &gt; 0)
+{
+	wait -= 1;
+	if (wait == 0)
+	{
+		on = 0;
+		audio_stop_sound(sndMetalDetector);
+		alarmsound = 0;
+	}
 }
-if place_meeting(x, y, objPlayer) {
-    if scrPlayerHasGun() {
-        if on = 0 {
-            if alarmsound = 0 {
-                sound_ps(sndMetalDetector) alarmsound = 1
-            }
-            on = 1 scrHearPlayer()
-        }
-        wait = 50
-    }
+if (place_meeting(x, y, objPlayer))
+{
+	if (scrPlayerHasGun())
+	{
+		if (on == 0)
+		{
+			if (alarmsound == 0)
+			{
+				sound_ps(sndMetalDetector);
+				alarmsound = 1;
+			}
+			on = 1;
+			scrHearPlayer();
+		}
+		wait = 50;
+	}
 }
 </string>
           </argument>
@@ -92,11 +101,14 @@ if place_meeting(x, y, objPlayer) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if on = 1 image_speed = 0.25 else {
-    image_index = 0
-    image_speed = 0
+            <string>if (on == 1)
+	image_speed = 0.25;
+else
+{
+	image_index = 0;
+	image_speed = 0;
 }
-draw_self_shadow(2)
+draw_self_shadow(2);
 </string>
           </argument>
         </arguments>

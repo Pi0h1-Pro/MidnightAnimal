@@ -25,11 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrInitGangRandom()
-light = 0
-sprite_index=choose(sprEWalkM16,sprEWalkShotgun,sprEWalkDoubleBarrel,sprEWalkAK,sprEWalkBat,sprEWalkClub,sprEWalkKnife,sprEWalkSilencer,sprEWalkThompson)
-scrGetAmmo()
-
+            <string>scrInitGangRandom();
+light = 0;
+sprite_index = choose(sprEWalkM16, sprEWalkShotgun, sprEWalkDoubleBarrel, sprEWalkAK, sprEWalkBat, sprEWalkClub, sprEWalkKnife, sprEWalkSilencer, sprEWalkThompson);
+scrGetAmmo();
 </string>
           </argument>
         </arguments>
@@ -52,7 +51,7 @@ scrGetAmmo()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.125
+            <string>image_speed = 0.125;
 </string>
           </argument>
         </arguments>
@@ -75,7 +74,7 @@ scrGetAmmo()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrERandomTurn()
+            <string>scrERandomTurn();
 </string>
           </argument>
         </arguments>
@@ -98,31 +97,48 @@ scrGetAmmo()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if x &lt; 0 hspeed = abs(hspeed)
-if x &gt; room_width hspeed = -abs(hspeed)
-if y &lt; 0 vspeed = abs(vspeed)
-if y &gt; room_height vspeed = -abs(vspeed)
-if sprite_index = sprEWalkUnarmed nothing = 0
-else global.factor += sign(alert)
-scrMoveSolidOn()
-    //if sprite_index=sprEGangWalkUnarmed scrGoGetWeapon()
-if !place_free(x + hspeed * 3, y + vspeed * 3) {
-    if !place_free(x + hspeed * 3, y) hspeed = -hspeed
-    if !place_free(x, y + vspeed * 3) vspeed = -vspeed
+            <string>if (x &lt; 0)
+	hspeed = abs(hspeed);
+if (x &gt; room_width)
+	hspeed = -abs(hspeed);
+if (y &lt; 0)
+	vspeed = abs(vspeed);
+if (y &gt; room_height)
+	vspeed = -abs(vspeed);
+if (sprite_index == sprEWalkUnarmed)
+	nothing = 0;
+else
+	global.factor += sign(alert);
+scrMoveSolidOn();
+
+// if sprite_index=sprEGangWalkUnarmed scrGoGetWeapon()
+if (!place_free(x + hspeed * 3, y + vspeed * 3))
+{
+	if (!place_free(x + hspeed * 3, y))
+		hspeed = -hspeed;
+	if (!place_free(x, y + vspeed * 3))
+		vspeed = -vspeed;
 }
-if path_index &gt; 0 {
-    image_speed = 0.2
-    if path_position = 1 path_end()
-} else {
-    if killed = 0 image_speed = speed * 0.1
+if (path_index &gt; 0)
+{
+	image_speed = 0.2;
+	if (path_position == 1)
+		path_end();
 }
-scrMoveSolidOff()
-if !instance_exists(objPlayer) {
-    alert = 0 speed = 0 exit
+else
+{
+	if (killed == 0)
+		image_speed = speed * 0.1;
+}
+scrMoveSolidOff();
+if (!instance_exists(objPlayer))
+{
+	alert = 0;
+	speed = 0;
+	exit;
 }
 
-scrGangRandomStep()
-
+scrGangRandomStep();
 </string>
           </argument>
         </arguments>
@@ -145,35 +161,49 @@ scrGangRandomStep()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>update = 0
-if sprite_index = sprEAttackHandgun {
-    sprite_index = sprEWalkHandgun update = 1
+            <string>update = 0;
+if (sprite_index == sprEAttackHandgun)
+{
+	sprite_index = sprEWalkHandgun;
+	update = 1;
 }
-if sprite_index = sprEAttackShotgun {
-    sprite_index = sprEWalkShotgun update = 1
+if (sprite_index == sprEAttackShotgun)
+{
+	sprite_index = sprEWalkShotgun;
+	update = 1;
 }
-if sprite_index = sprEAttackM16 {
-    sprite_index = sprEWalkM16 update = 1
+if (sprite_index == sprEAttackM16)
+{
+	sprite_index = sprEWalkM16;
+	update = 1;
 }
-if sprite_index = sprEAttackDoubleBarrel1 or sprite_index = sprEAttackDoubleBarrel2 {
-    sprite_index = sprEWalkDoubleBarrel update = 1
+if (sprite_index == sprEAttackDoubleBarrel1 || sprite_index == sprEAttackDoubleBarrel2)
+{
+	sprite_index = sprEWalkDoubleBarrel;
+	update = 1;
 }
-if sprite_index = sprEAttackAK {
-    sprite_index = sprEWalkAK update = 1
+if (sprite_index == sprEAttackAK)
+{
+	sprite_index = sprEWalkAK;
+	update = 1;
 }
-if sprite_index = sprEAttackThompson {
-    sprite_index = sprEWalkThompson update = 1
+if (sprite_index == sprEAttackThompson)
+{
+	sprite_index = sprEWalkThompson;
+	update = 1;
 }
 
-if update = 1 {
-    image_speed = 0
-    image_yscale = -image_yscale
+if (update == 1)
+{
+	image_speed = 0;
+	image_yscale = -image_yscale;
 }
 
-if sprite_index = sprEIdleSmoke {
-    image_speed = 0 alarm[1] = 160
+if (sprite_index == sprEIdleSmoke)
+{
+	image_speed = 0;
+	alarm[1] = 160;
 }
-
 </string>
           </argument>
         </arguments>
@@ -196,19 +226,22 @@ if sprite_index = sprEIdleSmoke {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if light &gt; 0 light -= 1
-//draw_set_blend_mode(bm_add)
-//draw_circle_color(x, y, 48 + random(6) + light, make_color_hsv(0, 0, 30), c_black, 0)
-//draw_set_blend_mode(bm_normal)
-if scrIsSearching(sprite_index) nothing = 1
-else {
-    draw_sprite_ext(sprELegs, image_index * 2, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5)
-    draw_sprite_ext(sprELegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha)
+            <string>// if light &gt; 0 light -= 1
+// draw_set_blend_mode(bm_add)
+// draw_circle_color(x, y, 48 + random(6) + light, make_color_hsv(0, 0, 30), c_black, 0)
+// draw_set_blend_mode(bm_normal)
+if (scrIsSearching(sprite_index))
+	nothing = 1;
+else
+{
+	draw_sprite_ext(sprELegs, image_index * 2, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5);
+	draw_sprite_ext(sprELegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
 }
-draw_sprite_ext(sprite_index, image_index, x + 1 - shake + random(shake * 0.5), y + 1 - shake + random(shake * 0.5), image_xscale, image_yscale, direction, c_black, 0.5)
-draw_sprite_ext(sprite_index, image_index, x - shake + random(shake * 0.5), y - shake + random(shake * 0.5), image_xscale, image_yscale, direction, image_blend, image_alpha)
-draw_set_color(c_white)
-//draw_path(my_path,0,0,1)
+draw_sprite_ext(sprite_index, image_index, x + 1 - shake + random(shake * 0.5), y + 1 - shake + random(shake * 0.5), image_xscale, image_yscale, direction, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x - shake + random(shake * 0.5), y - shake + random(shake * 0.5), image_xscale, image_yscale, direction, image_blend, image_alpha);
+draw_set_color(c_white);
+
+// draw_path(my_path,0,0,1)
 </string>
           </argument>
         </arguments>

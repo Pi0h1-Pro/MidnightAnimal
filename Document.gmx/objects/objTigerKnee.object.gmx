@@ -25,12 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//image_index=0
-//image_speed=0
-image_speed=0.2
-ammo=0
-bled=0
-
+            <string>// image_index=0
+// image_speed=0
+image_speed = 0.2;
+ammo = 0;
+bled = 0;
 </string>
           </argument>
         </arguments>
@@ -53,22 +52,22 @@ bled=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    if image_index &gt;= 5 and bled = 0 {
-        sound_play(sndPunch)
-        sound_play(sndHit)
-        global.shake = 5
-        repeat(2) scrMeleeBlood(x + lengthdir_x(4, image_angle), y + lengthdir_y(4, image_angle))
-        my_id = instance_create(x, y, objDeadBody)
-        my_id.sprite_index = sprFatKneed
-        my_id.image_index = image_index
-        my_id.image_angle = image_angle
-        my_id.speed = 1.5
-        my_id.direction = image_angle
-        my_id.friction = 0.1
-        bled = 1
-    }
-
-
+            <string>if (image_index &gt;= 5 &amp;&amp; bled == 0)
+{
+	sound_play(sndPunch);
+	sound_play(sndHit);
+	global.shake = 5;
+	repeat (2)
+		scrMeleeBlood(x + lengthdir_x(4, image_angle), y + lengthdir_y(4, image_angle));
+	my_id = instance_create(x, y, objDeadBody);
+	my_id.sprite_index = sprFatKneed;
+	my_id.image_index = image_index;
+	my_id.image_angle = image_angle;
+	my_id.speed = 1.5;
+	my_id.direction = image_angle;
+	my_id.friction = 0.1;
+	bled = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -91,40 +90,40 @@ bled=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_index=0
- if global.maskindex = 4 global.factor += 4
-    myx = x + lengthdir_x(5, image_angle)
-    myy = y + lengthdir_y(5, image_angle)
-    //my_id = instance_create(x, y - 12, objScore)
-    //my_id.text = "+" + string((1200) + 400 * (global.factor)) + "pts"
-    global.myscore += (1200) + 400 * (global.factor)
-    global.killscore += 1200
-    global.boldscore += 1400 * global.factor
-    global.combotime = 240
-    global.combo += 1
-    global.killx[global.kills] = x
-    global.killy[global.kills] = y
-    global.kills += 1
-    ds_list_add(global.bonuslist, "Execution")
-    if global.combotime &lt; 12 global.combotime = 12
-    
-    my_id = instance_create(x, y, objDeadBody)
-    my_id.sprite_index = sprFatKneed
-    my_id.image_angle = image_angle
-    my_id.speed = 1.5
-    my_id.direction = image_angle
-    my_id.friction = 0.1
-    global.angle = image_angle - 180
-    
-    my_id = instance_create(x, y, objPlayerMouse)
-    my_id.reload = 5
-    with my_id move_contact_solid(global.angle, 12)
-    instance_destroy()
+            <string>image_speed = 0;
+image_index = 0;
+if (global.maskindex == 4)
+	global.factor += 4;
+myx = x + lengthdir_x(5, image_angle);
+myy = y + lengthdir_y(5, image_angle);
 
-    
-    
+// my_id = instance_create(x, y - 12, objScore)
+// my_id.text = "+" + string((1200) + 400 * (global.factor)) + "pts"
+global.myscore += (1200) + 400 * (global.factor);
+global.killscore += 1200;
+global.boldscore += 1400 * global.factor;
+global.combotime = 240;
+global.combo += 1;
+global.killx[global.kills] = x;
+global.killy[global.kills] = y;
+global.kills += 1;
+ds_list_add(global.bonuslist, "Execution");
+if (global.combotime &lt; 12)
+	global.combotime = 12;
 
+my_id = instance_create(x, y, objDeadBody);
+my_id.sprite_index = sprFatKneed;
+my_id.image_angle = image_angle;
+my_id.speed = 1.5;
+my_id.direction = image_angle;
+my_id.friction = 0.1;
+global.angle = image_angle - 180;
+
+my_id = instance_create(x, y, objPlayerMouse);
+my_id.reload = 5;
+with (my_id)
+	move_contact_solid(global.angle, 12);
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -147,14 +146,13 @@ image_index=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add)
-draw_circle_color(x,y,48+random(6),make_color_hsv(0,0,30),c_black,0)
-draw_set_blend_mode(bm_normal)
+            <string>draw_set_blend_mode(bm_add);
+draw_circle_color(x, y, 48 + random(6), make_color_hsv(0, 0, 30), c_black, 0);
+draw_set_blend_mode(bm_normal);
 
-if image_index&lt;=5 draw_sprite_ext(sprEFatDieTiger,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-
-
+if (image_index &lt;= 5)
+	draw_sprite_ext(sprEFatDieTiger, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

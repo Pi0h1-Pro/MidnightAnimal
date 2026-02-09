@@ -27,29 +27,30 @@
             <kind>1</kind>
             <string>/// Set properties for blood.
 
-blood_properties()
+blood_properties();
 
 // This probably isn't necessary, but I'd like *some* randomness to the initial puddle
-image_xscale = random_range(0.33, 1)
-image_yscale = image_xscale
+image_xscale = random_range(0.33, 1);
+image_yscale = image_xscale;
 
 // Simple, move each blob in a random direction
-movDir = random(360)
-// The is a drastic range because I'm hoping for those big streaks 
+movDir = random(360);
+
+// The is a drastic range because I'm hoping for those big streaks
 // The low numbers will stay around the puddle, while the high numbers create quick streams
-movSpd = random_range(3, 12)
+movSpd = random_range(3, 12);
 
 // I want the blood to start out very fast, but also slow down incredibly fast
 // The overall splatter will last 2-8 frames
-fric = random_range(movSpd / 10, movSpd / 2)
+fric = random_range(movSpd / 10, movSpd / 2);
 
 // Set colour.
-blood_properties()
+blood_properties();
 
 // As the blood spreads, it thins out
 // This creates the *points* at the end of each stream
 // The blood will spread for 3-10 frames
-sizeChange = random_range(image_xscale / 10, image_xscale / 3)
+sizeChange = random_range(image_xscale / 10, image_xscale / 3);
 </string>
           </argument>
         </arguments>
@@ -73,8 +74,8 @@ sizeChange = random_range(image_xscale / 10, image_xscale / 3)
           <argument>
             <kind>1</kind>
             <string>/// Actual movement.
-x += lengthdir_x(movSpd, movDir)
-y += lengthdir_y(movSpd, movDir)
+x += lengthdir_x(movSpd, movDir);
+y += lengthdir_y(movSpd, movDir);
 </string>
           </argument>
         </arguments>
@@ -98,17 +99,18 @@ y += lengthdir_y(movSpd, movDir)
           <argument>
             <kind>1</kind>
             <string>/// Thin out the blood as it spreads
-image_xscale -= sizeChange
-image_yscale  = image_xscale
+image_xscale -= sizeChange;
+image_yscale = image_xscale;
 
-blood_step()
+blood_step();
 
 // I also decided to fade the blood out by a random percentage as it spreads
 // These values seemed to feel right
-if movSpd &gt; 0 image_alpha -= random_range(0.05, 0.1)
+if (movSpd &gt; 0)
+	image_alpha -= random_range(0.05, 0.1);
 
 // Slow down the blood with friction
-movSpd = approach(movSpd, 0, fric)
+movSpd = approach(movSpd, 0, fric);
 
 /* I decided to draw the blood to the surface here
 // This isn't really necessary, you could put this somewhere else
@@ -121,7 +123,8 @@ if (instance_exists(objSurfacer)) {
 
 // Once the blood thins away to nothing, destroy it
 // Destroy self
-if image_xscale &lt;= 0 instance_destroy()
+if (image_xscale &lt;= 0)
+	instance_destroy();
 </string>
           </argument>
         </arguments>

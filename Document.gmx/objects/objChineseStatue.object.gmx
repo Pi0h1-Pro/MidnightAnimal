@@ -26,13 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Set properties.
-image_speed=0
-image_index=0
-life = 18
-destroyed = 0
+image_speed = 0;
+image_index = 0;
+life = 18;
+destroyed = 0;
 
-test = 0
-mask_index=sprite_index
+test = 0;
+mask_index = sprite_index;
 </string>
           </argument>
         </arguments>
@@ -55,12 +55,14 @@ mask_index=sprite_index
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set stages of degradation based on life.
-if life &gt;= 6 image_index = 0
-if //life &gt;= 0 and 
-life &lt; 2 image_index = 1
+            <string>/// Set stages of degradation based on life.
+if (life &gt;= 6)
+	image_index = 0;
+if // life &gt;= 0 and
+(life &lt; 2)
+	image_index = 1;
 
-/*if life &lt;= 0 and destroyed = 0 {
+/* if life &lt;= 0 and destroyed = 0 {
     image_index = 2
     sound_ps(sndStoneCrumble)
     
@@ -79,7 +81,6 @@ life &lt; 2 image_index = 1
     // Create particles.
     //part_particles_create(global.dust, x, y, global.dustParticles, 200 + random(200))
 }
-
 </string>
           </argument>
         </arguments>
@@ -102,12 +103,17 @@ life &lt; 2 image_index = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create impact if the object hasn't been destroyed.
-if life &gt; 0 {
-    life -= 0.1
-    with other scrBulletImpact()
-} else {
-    with other scrBulletImpact()
+            <string>/// Create impact if the object hasn't been destroyed.
+if (life &gt; 0)
+{
+	life -= 0.1;
+	with (other)
+		scrBulletImpact();
+}
+else
+{
+	with (other)
+		scrBulletImpact();
 }
 </string>
           </argument>

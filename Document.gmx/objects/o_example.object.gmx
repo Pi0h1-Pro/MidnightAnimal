@@ -25,15 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///this object is not important. It just controls the demo.
-//You can use the individual objects separately.
-//the shockwave object is the only object that has a special creation script.
-//the other objects may be created with instance_create.
-alarm[0]=room_speed;
-//draw_set_halign(fa_left)
-image_blend=random_color();
-image_angle=beam_tolerance(30);
-image_scale(.8+random(.4))
+            <string>/// this object is not important. It just controls the demo.
+// You can use the individual objects separately.
+// the shockwave object is the only object that has a special creation script.
+// the other objects may be created with instance_create.
+alarm[0] = room_speed;
+
+// draw_set_halign(fa_left)
+image_blend = random_color();
+image_angle = beam_tolerance(30);
+image_scale(.8 + random(.4));
 </string>
           </argument>
         </arguments>
@@ -56,10 +57,10 @@ image_scale(.8+random(.4))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///this is an example for creating a shockwave.
-//syntax: x,y,starting radius, ending radius, steps between updates of the drawing,expansion rate in % of the radius, spin (degrees per step), twist (distortion, in degrees), inner color, middle color, outer color, alpha
-create_shockwave(random(room_width),random(room_height),0,100+random(400),2,.04,choose(0,beam_tolerance(60)),choose(0,beam_tolerance(90)),random_color(),random_color(),random_color(),1)
-alarm[0]=12;
+            <string>/// this is an example for creating a shockwave.
+// syntax: x,y,starting radius, ending radius, steps between updates of the drawing,expansion rate in % of the radius, spin (degrees per step), twist (distortion, in degrees), inner color, middle color, outer color, alpha
+create_shockwave(random(room_width), random(room_height), 0, 100 + random(400), 2, .04, choose(0, beam_tolerance(60)), choose(0, beam_tolerance(90)), random_color(), random_color(), random_color(), 1);
+alarm[0] = 12;
 </string>
           </argument>
         </arguments>
@@ -82,7 +83,7 @@ alarm[0]=12;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(10,20,'fps: '+string(fps)+'#Mouse wheel changes triangle count and magnification#Esc to Exit##Draw_GUI event drawings are covered up by magnifiers with normal blending.')
+            <string>draw_text(10, 20, 'fps: ' + string(fps) + '#Mouse wheel changes triangle count and magnification#Esc to Exit##Draw_GUI event drawings are covered up by magnifiers with normal blending.');
 </string>
           </argument>
         </arguments>
@@ -105,28 +106,28 @@ alarm[0]=12;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw a grid, then draw the title.
-//none of this is needed for the rest of the objects to work
-draw_self()
-draw_set_color(c_dkgray)
-for (i=0; i&lt;room_width; i+=32)
+            <string>// draw a grid, then draw the title.
+// none of this is needed for the rest of the objects to work
+draw_self();
+draw_set_color(c_dkgray);
+for (i = 0; i &lt; room_width; i += 32)
 {
-    draw_line(i,0,i,room_height)
+	draw_line(i, 0, i, room_height);
 }
 
-for (i=0; i&lt;room_height; i+=32)
+for (i = 0; i &lt; room_height; i += 32)
 {
-    draw_line(0,i,room_width,i)
+	draw_line(0, i, room_width, i);
 }
-draw_set_color(c_white)
+draw_set_color(c_white);
 
-draw_text(view_xview+10,view_yview+100,'Drawings in regular draw events are magnified in the draw gui event')
-draw_set_halign(fa_center)
-draw_text_transformed(640,360,'Shock Glass',9.9*image_xscale,9.9*image_yscale,image_angle)
-draw_set_color(image_blend)
-draw_text_transformed(view_xview+view_wview/2,view_yview+view_hview/2,'Shock Glass',10*image_xscale,10*image_yscale,image_angle)
-draw_set_halign(fa_left)
-draw_reset()
+draw_text(view_xview + 10, view_yview + 100, 'Drawings in regular draw events are magnified in the draw gui event');
+draw_set_halign(fa_center);
+draw_text_transformed(640, 360, 'Shock Glass', 9.9 * image_xscale, 9.9 * image_yscale, image_angle);
+draw_set_color(image_blend);
+draw_text_transformed(view_xview + view_wview / 2, view_yview + view_hview / 2, 'Shock Glass', 10 * image_xscale, 10 * image_yscale, image_angle);
+draw_set_halign(fa_left);
+draw_reset();
 </string>
           </argument>
         </arguments>

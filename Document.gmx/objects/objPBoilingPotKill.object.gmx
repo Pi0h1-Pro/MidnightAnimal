@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-bled=0
-hurtindex=0
-targetindex=0
-ammo=0
+            <string>image_speed = 0;
+bled = 0;
+hurtindex = 0;
+targetindex = 0;
+ammo = 0;
 </string>
           </argument>
         </arguments>
@@ -52,51 +52,61 @@ ammo=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &lt; 13 image_index += 0.5
-else {
-    my_id = instance_create(x, y, objDeadBody)
-    my_id.image_angle = image_angle
-    my_id.sprite_index = sprEDeadBoiling
-    my_id.image_index = 0
-    my_id.image_speed = 0.15
-    scrFinishExecution(sprPWalkPot)
+            <string>if (image_index &lt; 13)
+	image_index += 0.5;
+else
+{
+	my_id = instance_create(x, y, objDeadBody);
+	my_id.image_angle = image_angle;
+	my_id.sprite_index = sprEDeadBoiling;
+	my_id.image_index = 0;
+	my_id.image_speed = 0.15;
+	scrFinishExecution(sprPWalkPot);
 }
 
-if image_index &gt;= 4 and bled = 0 {
-    bled = 1
-    sound_ps(sndBoilingWater)
-
-    repeat(2 + random(3)) {
-        my_id = instance_create(x, y, objWaterSplat)
-        my_id.direction = random(360)
-        my_id.speed = 2 + random(2)
-    }
-    repeat(2 + random(3)) {
-        my_id = instance_create(x, y, objWaterSmudge)
-        my_id.direction = random(360)
-        my_id.speed = 3 + random(3)
-        my_id.image_angle = my_id.direction
-    }
-    repeat(1 + random(2)) my_id = instance_create(x - 12 + random(24), y - 12 + random(24), objBigWater)
-    
-    repeat(4) {
-        my_id = instance_create(x + lengthdir_x(20, image_angle), y + lengthdir_y(20, image_angle), objSteam)
-        my_id.image_speed = 0.15
-        my_id.image_angle = random(360)
-        my_id.image_alpha = 0.15
-    }
+if (image_index &gt;= 4 &amp;&amp; bled == 0)
+{
+	bled = 1;
+	sound_ps(sndBoilingWater);
+	
+	repeat (2 + random(3))
+	{
+		my_id = instance_create(x, y, objWaterSplat);
+		my_id.direction = random(360);
+		my_id.speed = 2 + random(2);
+	}
+	repeat (2 + random(3))
+	{
+		my_id = instance_create(x, y, objWaterSmudge);
+		my_id.direction = random(360);
+		my_id.speed = 3 + random(3);
+		my_id.image_angle = my_id.direction;
+	}
+	repeat (1 + random(2))
+		my_id = instance_create(x - 12 + random(24), y - 12 + random(24), objBigWater);
+	
+	repeat (4)
+	{
+		my_id = instance_create(x + lengthdir_x(20, image_angle), y + lengthdir_y(20, image_angle), objSteam);
+		my_id.image_speed = 0.15;
+		my_id.image_angle = random(360);
+		my_id.image_alpha = 0.15;
+	}
 }
-if image_index &gt;= 4 {
-    if round(random(3)) = 2 {
-        my_id = instance_create(x + lengthdir_x(20, image_angle), y + lengthdir_y(20, image_angle), objSteam)
-    }
-    my_id.image_speed = 0.15
-    my_id.image_angle = random(360)
-    my_id.image_alpha = 0.15
-    if hurtindex &lt; 13 hurtindex += 0.2
-    else hurtindex = 6
+if (image_index &gt;= 4)
+{
+	if (round(random(3)) == 2)
+	{
+		my_id = instance_create(x + lengthdir_x(20, image_angle), y + lengthdir_y(20, image_angle), objSteam);
+	}
+	my_id.image_speed = 0.15;
+	my_id.image_angle = random(360);
+	my_id.image_alpha = 0.15;
+	if (hurtindex &lt; 13)
+		hurtindex += 0.2;
+	else
+		hurtindex = 6;
 }
-
 </string>
           </argument>
         </arguments>
@@ -119,8 +129,8 @@ if image_index &gt;= 4 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprEGroundBoiling,hurtindex,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprEGroundBoiling, hurtindex, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

@@ -1,27 +1,26 @@
 /// scrIsUnarmed(argument0)
 
 // John.
-if argument0 = sprPWalkUnarmed 
-or argument0 = sprPAttackUnarmed1 
-or argument0 = sprPAttackUnarmed2 
-or argument0 = sprPAttackPunch
-or argument0 = sprPThrow
-or argument0 = sprPDrinkSoda
+if (argument0 == sprPWalkUnarmed
+	|| argument0 == sprPAttackUnarmed1
+	|| argument0 == sprPAttackUnarmed2
+	|| argument0 == sprPAttackPunch
+	|| argument0 == sprPThrow
+	|| argument0 == sprPDrinkSoda
 
 // Thomas.
-or argument0 = thomasWalk
-or argument0 = thomasStrikeL1
-or argument0 = thomasStrikeL2
-or argument0 = thomasStrikeL3
-or argument0 = thomasStrikeL4
-or argument0 = thomasStrikeR1
-or argument0 = thomasStrikeR2
-or argument0 = thomasStrikeR3
-or argument0 = thomasStrikeR4
+|| argument0 == thomasWalk
+	|| argument0 == thomasStrikeL1
+	|| argument0 == thomasStrikeL2
+	|| argument0 == thomasStrikeL3
+	|| argument0 == thomasStrikeL4
+	|| argument0 == thomasStrikeR1
+	|| argument0 == thomasStrikeR2
+	|| argument0 == thomasStrikeR3
+	|| argument0 == thomasStrikeR4
 
 // Miscellaneous.
-or argument0=sprJohnSmokeCigarette
-
-return true
-
-else return false
+|| argument0 == sprJohnSmokeCigarette)
+	return true;
+else
+	return false;

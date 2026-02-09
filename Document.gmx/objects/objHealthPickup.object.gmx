@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Animate
-image_index = 0
-image_speed = 0.16
-dir=random(360)
+            <string>// Animate
+image_index = 0;
+image_speed = 0.16;
+dir = random(360);
 
-//Set Movement
-speed = 3
-friction = 0.15
+// Set Movement
+speed = 3;
+friction = 0.15;
 direction = random(360);
-alarm[0] = random_range(room_speed/2,room_speed);
+alarm[0] = random_range(room_speed / 2, room_speed);
 </string>
           </argument>
         </arguments>
@@ -58,7 +58,7 @@ alarm[0] = random_range(room_speed/2,room_speed);
           <argument>
             <kind>1</kind>
             <string>/// Stop.
-speed = 0
+speed = 0;
 </string>
           </argument>
         </arguments>
@@ -82,19 +82,20 @@ speed = 0
           <argument>
             <kind>1</kind>
             <string>/// Move towards player.
-move_bounce_solid(true)
+move_bounce_solid(true);
 
 // Check to see if the player exists.
-if scrMovingPlayerExists() {
-    
-    // Collect health only if the player is low on health.
-    if objPlayer.hp &lt; objPlayer.max_hp {
-        
-        // Move the health pickup towards the player within a certain distance.
-        if distance_to_object(objPlayer) &lt; 32 {
-            move_towards_point(objPlayer.x,objPlayer.y,5);
-        }
-    }
+if (scrMovingPlayerExists())
+{
+	// Collect health only if the player is low on health.
+	if (objPlayer.hp &lt; objPlayer.max_hp)
+	{
+		// Move the health pickup towards the player within a certain distance.
+		if (distance_to_object(objPlayer) &lt; 32)
+		{
+			move_towards_point(objPlayer.x, objPlayer.y, 5);
+		}
+	}
 }
 </string>
           </argument>
@@ -121,12 +122,14 @@ if scrMovingPlayerExists() {
             <string>/// Add health.
 
 // Collect health only if the player is low on health.
-if objPlayer.hp &lt; objPlayer.max_hp {
-    with other hp += round(max_hp * health_boost)
-    create_health_number(string(round(objPlayer.max_hp * objPlayer.health_boost)), 1)
-    sound_ps(sndCollectHealth)
-    global.screeneffect = 16
-    instance_destroy()
+if (objPlayer.hp &lt; objPlayer.max_hp)
+{
+	with (other)
+		hp += round(max_hp * health_boost);
+	create_health_number(string(round(objPlayer.max_hp * objPlayer.health_boost)), 1);
+	sound_ps(sndCollectHealth);
+	global.screeneffect = 16;
+	instance_destroy();
 }
 </string>
           </argument>
@@ -150,18 +153,21 @@ if objPlayer.hp &lt; objPlayer.max_hp {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw glow.
+            <string>/// Draw glow.
 
 // Only draw glow if the level is not yet complete.
-if instance_exists(objEnemy) or instance_exists(objKnockedOut) {
-    draw_self()
-    d3d_set_fog(true,c_white,0,0)
-    draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,0.1+lengthdir_x(0.1,dir))
-    d3d_set_fog(0,0,0,0)
-    dir += 4
-} else draw_self()
+if (instance_exists(objEnemy) || instance_exists(objKnockedOut))
+{
+	draw_self();
+	d3d_set_fog(true, c_white, 0, 0);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, 0.1 + lengthdir_x(0.1, dir));
+	d3d_set_fog(0, 0, 0, 0);
+	dir += 4;
+}
+else
+	draw_self();
 
-draw_reset()
+draw_reset();
 </string>
           </argument>
         </arguments>

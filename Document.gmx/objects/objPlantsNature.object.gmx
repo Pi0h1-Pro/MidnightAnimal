@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
-image_index = random(8)
-image_angle = random(360)
-image_xscale = random_range(0.8, 1)
-image_yscale = image_xscale
+            <string>image_speed = 0;
+image_index = random(8);
+image_angle = random(360);
+image_xscale = random_range(0.8, 1);
+image_yscale = image_xscale;
 </string>
           </argument>
         </arguments>
@@ -53,7 +53,7 @@ image_yscale = image_xscale
           <argument>
             <kind>1</kind>
             <string>/// Draw self.
-draw_self_shadow(1)
+draw_self_shadow(1);
 </string>
           </argument>
         </arguments>

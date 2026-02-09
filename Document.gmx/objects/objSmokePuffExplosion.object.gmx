@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0
-image_speed = 0.5
-image_angle = random(360)
-image_xscale = 1 + random(1)
-image_yscale = image_xscale
+            <string>image_index = 0;
+image_speed = 0.5;
+image_angle = random(360);
+image_xscale = 1 + random(1);
+image_yscale = image_xscale;
 </string>
           </argument>
         </arguments>
@@ -52,7 +52,7 @@ image_yscale = image_xscale
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -76,8 +76,8 @@ image_yscale = image_xscale
           <argument>
             <kind>1</kind>
             <string>/// Draw.
-draw_sprite_ext(sprite_index, image_index,x, y, image_xscale, image_yscale, image_angle, c_white, 1)
-draw_reset()
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, 1);
+draw_reset();
 </string>
           </argument>
         </arguments>

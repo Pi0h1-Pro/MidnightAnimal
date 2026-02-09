@@ -25,20 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//hspeed=-0.25-random(0.25)
-image_speed=0
-index=0
+            <string>// hspeed=-0.25-random(0.25)
+image_speed = 0;
+index = 0;
 
 
-//image_blend=c_black
-scale=0.75+random(0.25)
-if room=rmChapter or room=rmInterlude speed=-(scale*scale*scale)*3
-if room=rmLevelSelect speed=-(scale*scale*scale)
-if room=rmHospitalTitle speed=-(scale*scale*scale)*4.5
-if room=rmMCChapter speed=-(scale*scale*scale)*7
-image_xscale=scale
-y=80-scale*32
-
+// image_blend=c_black
+scale = 0.75 + random(0.25);
+if (room == rmChapter || room == rmInterlude)
+	speed = -(scale * scale * scale) * 3;
+if (room == rmLevelSelect)
+	speed = -(scale * scale * scale);
+if (room == rmHospitalTitle)
+	speed = -(scale * scale * scale) * 4.5;
+if (room == rmMCChapter)
+	speed = -(scale * scale * scale) * 7;
+image_xscale = scale;
+y = 80 - scale * 32;
 </string>
           </argument>
         </arguments>
@@ -61,17 +64,19 @@ y=80-scale*32
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//index=7.5-(x-174)*(1/8)
-//if index&gt;15 index=15
-//if index&lt;0 index=0
+            <string>// index=7.5-(x-174)*(1/8)
+// if index&gt;15 index=15
+// if index&lt;0 index=0
 
-//if x&lt;-120 instance_destroy()
+// if x&lt;-120 instance_destroy()
 
 //
-if x&lt;-800 {
-instance_destroy() 
-instance_create(room_width+100,y,objHouse)
+if (x &lt; -800)
+{
+	instance_destroy();
+	instance_create(room_width + 100, y, objHouse);
 }
+
 /*
 index=9-(x*(1/(room_width/9)))
 image_index=round(index)

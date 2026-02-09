@@ -25,24 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrEMeleeInit()
-image_speed=0
-image_index=random(1000)
-speed=1
-image_speed=0.1
-alarm[2] = 5
-my_path=path_add()
-path_set_kind(my_path,1)
-path_set_precision(my_path,2)
-checkreload=floor(random(30))
-alert=0
-reload=0
-light=0
-start_x=x
-start_y=y
-stopchase=0
-weaponfind=0
-lastsprite=sprite_index
+            <string>scrEMeleeInit();
+image_speed = 0;
+image_index = random(1000);
+speed = 1;
+image_speed = 0.1;
+alarm[2] = 5;
+my_path = path_add();
+path_set_kind(my_path, 1);
+path_set_precision(my_path, 2);
+checkreload = floor(random(30));
+alert = 0;
+reload = 0;
+light = 0;
+start_x = x;
+start_y = y;
+stopchase = 0;
+weaponfind = 0;
+lastsprite = sprite_index;
 </string>
           </argument>
         </arguments>
@@ -66,7 +66,8 @@ lastsprite=sprite_index
           <argument>
             <kind>1</kind>
             <string>/// Flash enemy.
-if flash = true flash = false
+if (flash == true)
+	flash = false;
 </string>
           </argument>
         </arguments>
@@ -89,42 +90,58 @@ if flash = true flash = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if x &lt; 0 hspeed = abs(hspeed)
-if x &gt; room_width hspeed = -abs(hspeed)
-if y &lt; 0 vspeed = abs(vspeed)
-if y &gt; room_height vspeed = -abs(vspeed)
-scrMoveSolidOn()
-if reload &gt; 0 reload -= 1
+            <string>if (x &lt; 0)
+	hspeed = abs(hspeed);
+if (x &gt; room_width)
+	hspeed = -abs(hspeed);
+if (y &lt; 0)
+	vspeed = abs(vspeed);
+if (y &gt; room_height)
+	vspeed = -abs(vspeed);
+scrMoveSolidOn();
+if (reload &gt; 0)
+	reload -= 1;
 
-if path_index &gt; 0 {
-    if image_speed &lt; 1 image_speed = 0.2
-    if alert = 0 and path_position = 1 path_end()
-} else {
-    if image_speed &lt; 1 image_speed = speed * 0.1
-    if !scrPlaceFree(x, y) {
-        tempdir = direction
-        i = 1
-        while (!scrPlaceFree(x + lengthdir_x(4 + i / 20, tempdir), y + lengthdir_y(4 + i / 20, tempdir))) and i &lt; 100 {
-            tempdir += 18
-            i += 1
-        }
-        if i &lt; 100 move_outside_solid(tempdir, 4 + i / 20)
-    }
+if (path_index &gt; 0)
+{
+	if (image_speed &lt; 1)
+		image_speed = 0.2;
+	if (alert == 0 &amp;&amp; path_position == 1)
+		path_end();
 }
-scrEMeleeStep()
-scrMoveSolidOff()
-
-angle = direction
-if alert = 1 {
-    if place_meeting(x + lengthdir_x(8, angle), y + lengthdir_y(8, angle), objPlayer) or place_meeting(x, y, objPlayer) {
-        global.my_id = id
-        if scrIsSearching(sprite_index) sprite_index = scrStopSearch(sprite_index)
-        sprite_index = scrGetAttack(sprite_index)
-        scrPlayerDieMelee()
-        speed = 0
-    }
+else
+{
+	if (image_speed &lt; 1)
+		image_speed = speed * 0.1;
+	if (!scrPlaceFree(x, y))
+	{
+		tempdir = direction;
+		i = 1;
+		while ((!scrPlaceFree(x + lengthdir_x(4 + i / 20, tempdir), y + lengthdir_y(4 + i / 20, tempdir))) &amp;&amp; i &lt; 100)
+		{
+			tempdir += 18;
+			i += 1;
+		}
+		if (i &lt; 100)
+			move_outside_solid(tempdir, 4 + i / 20);
+	}
 }
+scrEMeleeStep();
+scrMoveSolidOff();
 
+angle = direction;
+if (alert == 1)
+{
+	if (place_meeting(x + lengthdir_x(8, angle), y + lengthdir_y(8, angle), objPlayer) || place_meeting(x, y, objPlayer))
+	{
+		global.my_id = id;
+		if (scrIsSearching(sprite_index))
+			sprite_index = scrStopSearch(sprite_index);
+		sprite_index = scrGetAttack(sprite_index);
+		scrPlayerDieMelee();
+		speed = 0;
+	}
+}
 </string>
           </argument>
         </arguments>
@@ -147,7 +164,7 @@ if alert = 1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrEnemyAnimationEnd()
+            <string>scrEnemyAnimationEnd();
 </string>
           </argument>
         </arguments>
@@ -170,9 +187,9 @@ if alert = 1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Choose weapon.
-sprite_index=choose(sprEWalkClub,sprEWalkKnife,sprEWalkBat,sprEWalkMachete,sprEWalkChain)
-ammo=0
+            <string>/// Choose weapon.
+sprite_index = choose(sprEWalkClub, sprEWalkKnife, sprEWalkBat, sprEWalkMachete, sprEWalkChain);
+ammo = 0;
 </string>
           </argument>
         </arguments>
@@ -195,17 +212,19 @@ ammo=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrIsSearching(sprite_index) nothing = 1
-else {
-    draw_sprite_ext(sprELegs, image_index * 2, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5)
-    draw_sprite_ext(sprELegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha)
+            <string>if (scrIsSearching(sprite_index))
+	nothing = 1;
+else
+{
+	draw_sprite_ext(sprELegs, image_index * 2, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5);
+	draw_sprite_ext(sprELegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
 }
-draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5)
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha)
-draw_set_color(c_white)
-    //draw_path(my_path,0,0,1)
-lastsprite = sprite_index
+draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
+draw_set_color(c_white);
 
+// draw_path(my_path,0,0,1)
+lastsprite = sprite_index;
 </string>
           </argument>
         </arguments>

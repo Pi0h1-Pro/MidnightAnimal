@@ -25,15 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction=0.15
-image_speed=0
-image_index = floor(random(sprite_get_number(sprite_index)))
-image_angle=random(360)
-rotspeed=(-1+round(random(1))*2)*random(8)
-dir=180
-add_y=0
-xscale = random_range(0.25, 0.75)
-yscale = xscale
+            <string>friction = 0.15;
+image_speed = 0;
+image_index = floor(random(sprite_get_number(sprite_index)));
+image_angle = random(360);
+rotspeed = (-1 + round(random(1)) * 2) * random(8);
+dir = 180;
+add_y = 0;
+xscale = random_range(0.25, 0.75);
+yscale = xscale;
 </string>
           </argument>
         </arguments>
@@ -56,12 +56,12 @@ yscale = xscale
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Adjust scaling by speed.
-if speed &gt; 0 {
-    xscale -= 0.05
-    yscale -= 0.05
+            <string>/// Adjust scaling by speed.
+if (speed &gt; 0)
+{
+	xscale -= 0.05;
+	yscale -= 0.05;
 }
-
 </string>
           </argument>
         </arguments>
@@ -84,11 +84,10 @@ if speed &gt; 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw papers.
+            <string>/// Draw papers.
 
 // Adjust the last two arguments to adjust the height of the papers; speed * rotspeed for example is greater than speed * rotspeed / 2.
-draw_sprite_skew_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, 0.9, speed * rotspeed, speed * rotspeed)
-
+draw_sprite_skew_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, 0.9, speed * rotspeed, speed * rotspeed);
 </string>
           </argument>
         </arguments>

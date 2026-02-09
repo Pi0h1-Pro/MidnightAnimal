@@ -6,7 +6,7 @@ var i;
 
 for (i = 0; i < global._lsys_lights; i += 1)
 {
-    surface_free(global._lsys_light_surface[i]);
+	surface_free(global._lsys_light_surface[i]);
 }
 surface_free(global._lsys_surface);
 

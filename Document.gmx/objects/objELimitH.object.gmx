@@ -25,15 +25,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objEnemy) exit
-if ylimit&lt;0 {
-if objEnemy.y&lt;y and !place_meeting(x,y,objEnemy) solid=1 else solid=0
+            <string>if (!instance_exists(objEnemy))
+	exit;
+if (ylimit &lt; 0)
+{
+	if (objEnemy.y &lt; y &amp;&amp; !place_meeting(x, y, objEnemy))
+		solid = 1;
+	else
+		solid = 0;
 }
-if ylimit&gt;0 {
-if objEnemy.y&gt;y and !place_meeting(x,y,objEnemy) solid=1 else solid=0
+if (ylimit &gt; 0)
+{
+	if (objEnemy.y &gt; y &amp;&amp; !place_meeting(x, y, objEnemy))
+		solid = 1;
+	else
+		solid = 0;
 }
 
-if global.done=1 solid=0
+if (global.done == 1)
+	solid = 0;
 </string>
           </argument>
         </arguments>

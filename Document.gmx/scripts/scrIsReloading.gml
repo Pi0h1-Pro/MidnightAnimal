@@ -1,25 +1,25 @@
-if argument0 = sprPReloadSniper 
-or argument0 = sprPReloadWA2000
-or argument0 = sprPReloadSuppressedMG 
-or argument0 = sprPReloadSilencedShotgun
-or argument0 = sprPReloadDoubleBarrel
-or argument0 = sprPReloadKSG
-or argument0 = sprPReloadShotgun
-or argument0 = sprPReloadHK417
-or argument0 = sprPReloadDisruptor
-or argument0 = sprPReloadThompson
-or argument0 = sprPReloadMP5
-or argument0 = sprPReloadM16
-or argument0 = sprPReloadFMG
-or argument0 = sprPReloadUzi
-or argument0 = sprPReloadScorpion
-or argument0 = sprPReloadSilencer
-or argument0 = sprPReloadIngram
-or argument0 = sprPReloadPistol
-or argument0 = sprPReloadDesertEagle
-or argument0 = sprPReloadAK
-or argument0 = simoneReload
-or argument0 = pierretteReload
-or argument0 = pierretteReloadShield
-or argument0 = pierretteReloadShotgun
-return true
+if (argument0 == sprPReloadSniper
+	|| argument0 == sprPReloadWA2000
+	|| argument0 == sprPReloadSuppressedMG
+	|| argument0 == sprPReloadSilencedShotgun
+	|| argument0 == sprPReloadDoubleBarrel
+	|| argument0 == sprPReloadKSG
+	|| argument0 == sprPReloadShotgun
+	|| argument0 == sprPReloadHK417
+	|| argument0 == sprPReloadDisruptor
+	|| argument0 == sprPReloadThompson
+	|| argument0 == sprPReloadMP5
+	|| argument0 == sprPReloadM16
+	|| argument0 == sprPReloadFMG
+	|| argument0 == sprPReloadUzi
+	|| argument0 == sprPReloadScorpion
+	|| argument0 == sprPReloadSilencer
+	|| argument0 == sprPReloadIngram
+	|| argument0 == sprPReloadPistol
+	|| argument0 == sprPReloadDesertEagle
+	|| argument0 == sprPReloadAK
+	|| argument0 == simoneReload
+	|| argument0 == pierretteReload
+	|| argument0 == pierretteReloadShield
+	|| argument0 == pierretteReloadShotgun)
+	return true;

@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-dir=0
-ammo=0
-friction=0.1
+            <string>image_speed = 0;
+dir = 0;
+ammo = 0;
+friction = 0.1;
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,8 @@ friction=0.1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if speed&gt;0 image_angle+=sign(vspeed)*speed*3
+            <string>if (speed &gt; 0)
+	image_angle += sign(vspeed) * speed * 3;
 </string>
           </argument>
         </arguments>
@@ -74,8 +75,8 @@ friction=0.1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(0)
-speed*=0.2
+            <string>move_bounce_all(0);
+speed *= 0.2;
 </string>
           </argument>
         </arguments>
@@ -98,8 +99,8 @@ speed*=0.2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(0)
-speed*=0.2
+            <string>move_bounce_all(0);
+speed *= 0.2;
 </string>
           </argument>
         </arguments>
@@ -122,8 +123,8 @@ speed*=0.2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(0)
-speed*=0.2
+            <string>move_bounce_all(0);
+speed *= 0.2;
 </string>
           </argument>
         </arguments>
@@ -146,8 +147,8 @@ speed*=0.2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(0)
-speed*=0.2
+            <string>move_bounce_all(0);
+speed *= 0.2;
 </string>
           </argument>
         </arguments>
@@ -170,7 +171,7 @@ speed*=0.2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>draw_self();
 </string>
           </argument>
         </arguments>

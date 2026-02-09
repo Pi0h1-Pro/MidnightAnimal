@@ -1,4 +1,4 @@
-/*vcapture_save()
+/* vcapture_save()
 
 Ends all video capture operations and finalises the .avi file. 
 The video's filesize will not be visible until this function 
@@ -8,4 +8,4 @@ after calling vcapture_frame but before calling this function,
 the file will fail to save and you'll most likely be left with 
 a memory leak.
 */
-return external_call( global.fvcapture_save);
+return external_call(global.fvcapture_save);

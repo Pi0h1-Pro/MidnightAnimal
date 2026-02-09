@@ -25,78 +25,79 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lsys_init(1)
+            <string>lsys_init(1);
 
-scrGetAlpha()
+scrGetAlpha();
 
 l = lsys_light_add(96, 96, 160, c_white);
 
-//merge_walls(objWall);
+// merge_walls(objWall);
 
 with (objWall)
 {
-    c = lsys_caster_add(x, y);
-    lsys_caster_add_point(c, 0, 0);
-    lsys_caster_add_point(c, sprite_width, 0);
-    lsys_caster_add_point(c, sprite_width, sprite_height);
-    lsys_caster_add_point(c, 0, sprite_height);
+	c = lsys_caster_add(x, y);
+	lsys_caster_add_point(c, 0, 0);
+	lsys_caster_add_point(c, sprite_width, 0);
+	lsys_caster_add_point(c, sprite_width, sprite_height);
+	lsys_caster_add_point(c, 0, sprite_height);
 }
 
 with (objDoorV)
 {
-    c = lsys_caster_add(x, y);
-    lsys_caster_add_point(c, 0, 0);
-    lsys_caster_add_point(c, sprite_width, 0);
-    lsys_caster_add_point(c, sprite_width, sprite_height);
-    lsys_caster_add_point(c, 0, sprite_height);
+	c = lsys_caster_add(x, y);
+	lsys_caster_add_point(c, 0, 0);
+	lsys_caster_add_point(c, sprite_width, 0);
+	lsys_caster_add_point(c, sprite_width, sprite_height);
+	lsys_caster_add_point(c, 0, sprite_height);
 }
 
 with (objDoorV2)
 {
-    c = lsys_caster_add(x, y);
-    lsys_caster_add_point(c, 0, 0);
-    lsys_caster_add_point(c, sprite_width, 0);
-    lsys_caster_add_point(c, sprite_width, sprite_height);
-    lsys_caster_add_point(c, 0, sprite_height);
+	c = lsys_caster_add(x, y);
+	lsys_caster_add_point(c, 0, 0);
+	lsys_caster_add_point(c, sprite_width, 0);
+	lsys_caster_add_point(c, sprite_width, sprite_height);
+	lsys_caster_add_point(c, 0, sprite_height);
 }
 
 with (objDoorH)
 {
-    c = lsys_caster_add(x, y);
-    lsys_caster_add_point(c, 0, 0);
-    lsys_caster_add_point(c, sprite_width, 0);
-    lsys_caster_add_point(c, sprite_width, sprite_height);
-    lsys_caster_add_point(c, 0, sprite_height);
+	c = lsys_caster_add(x, y);
+	lsys_caster_add_point(c, 0, 0);
+	lsys_caster_add_point(c, sprite_width, 0);
+	lsys_caster_add_point(c, sprite_width, sprite_height);
+	lsys_caster_add_point(c, 0, sprite_height);
 }
 
 with (objDoorH2)
 {
-    c = lsys_caster_add(x, y);
-    lsys_caster_add_point(c, 0, 0);
-    lsys_caster_add_point(c, sprite_width, 0);
-    lsys_caster_add_point(c, sprite_width, sprite_height);
-    lsys_caster_add_point(c, 0, sprite_height);
+	c = lsys_caster_add(x, y);
+	lsys_caster_add_point(c, 0, 0);
+	lsys_caster_add_point(c, sprite_width, 0);
+	lsys_caster_add_point(c, sprite_width, sprite_height);
+	lsys_caster_add_point(c, 0, sprite_height);
 }
 
 with (objSolid)
 {
-    c = lsys_caster_add(x, y);
-    lsys_caster_add_point(c, -sprite_width/2, -sprite_height/2);
-    lsys_caster_add_point(c, sprite_width/2, -sprite_height/2);
-    lsys_caster_add_point(c, sprite_width/2, sprite_height/2);
-    lsys_caster_add_point(c, -sprite_width/2, sprite_height/2);
+	c = lsys_caster_add(x, y);
+	lsys_caster_add_point(c, -sprite_width / 2, -sprite_height / 2);
+	lsys_caster_add_point(c, sprite_width / 2, -sprite_height / 2);
+	lsys_caster_add_point(c, sprite_width / 2, sprite_height / 2);
+	lsys_caster_add_point(c, -sprite_width / 2, sprite_height / 2);
 }
 
 with (objWallCorner)
 {
-    c = lsys_caster_add(x, y);
-    lsys_caster_add_point(c, 0, 0);
-    lsys_caster_add_point(c, sprite_width, 0);
-    lsys_caster_add_point(c, sprite_width, sprite_height);
-    lsys_caster_add_point(c, 0, sprite_height);
+	c = lsys_caster_add(x, y);
+	lsys_caster_add_point(c, 0, 0);
+	lsys_caster_add_point(c, sprite_width, 0);
+	lsys_caster_add_point(c, sprite_width, sprite_height);
+	lsys_caster_add_point(c, 0, sprite_height);
 }
 
-if global.done = 1 instance_destroy()
+if (global.done == 1)
+	instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -119,17 +120,16 @@ if global.done = 1 instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !surface_exists(global._lsys_surface) {
-    lsys_init(0);
+            <string>if (!surface_exists(global._lsys_surface))
+{
+	lsys_init(0);
 }
 
-if instance_exists(objPlayer) and surface_exists(global._lsys_surface) {
-    lsys_light_set_position(l, objPlayer.x, objPlayer.y);
-    lsys_update(alpha);
+if (instance_exists(objPlayer) &amp;&amp; surface_exists(global._lsys_surface))
+{
+	lsys_light_set_position(l, objPlayer.x, objPlayer.y);
+	lsys_update(alpha);
 }
-
-
-
 </string>
           </argument>
         </arguments>
@@ -221,8 +221,9 @@ if instance_exists(objPlayer) and surface_exists(global._lsys_surface) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if surface_exists(global._lsys_surface) {
-    lsys_draw();
+            <string>if (surface_exists(global._lsys_surface))
+{
+	lsys_draw();
 }
 
 /*

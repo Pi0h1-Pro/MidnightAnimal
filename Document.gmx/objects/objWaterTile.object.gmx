@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.25
-surf = surface_create(64, 64)
+            <string>image_speed = 0.25;
+surf = surface_create(64, 64);
 
-surface_set_target(surf)
-draw_clear_alpha(c_black, 0)
-surface_reset_target()
-reset = 0
+surface_set_target(surf);
+draw_clear_alpha(c_black, 0);
+surface_reset_target();
+reset = 0;
 </string>
           </argument>
         </arguments>
@@ -54,21 +54,30 @@ reset = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if reset = 1 surface_free(surf)
+            <string>if (reset == 1)
+	surface_free(surf);
 
-if !surface_exists(surf) surf = surface_create(64, 64)
-if image_angle = 0 global.myx = x global.myy = y
+if (!surface_exists(surf))
+	surf = surface_create(64, 64);
+if (image_angle == 0)
+	global.myx = x;
+global.myy = y;
 
-surface_set_target(surf)
-texture_set_interpolation(true)
-draw_surface_ext(surf, -0.5 + random(1), -0.5 + random(1), 1, 1, 0, c_red, 0.999)
-with objSplatter draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
-with objSplat draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
-with objSmudge draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
-with objBigBlood draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
-with objTinyBlood draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
-texture_set_interpolation(false)
-surface_reset_target()
+surface_set_target(surf);
+texture_set_interpolation(true);
+draw_surface_ext(surf, -0.5 + random(1), -0.5 + random(1), 1, 1, 0, c_red, 0.999);
+with (objSplatter)
+	draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+with (objSplat)
+	draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+with (objSmudge)
+	draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+with (objBigBlood)
+	draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+with (objTinyBlood)
+	draw_sprite_ext(sprite_index, image_index, x - global.myx, y - global.myy, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+texture_set_interpolation(false);
+surface_reset_target();
 </string>
           </argument>
         </arguments>
@@ -92,7 +101,7 @@ surface_reset_target()
           <argument>
             <kind>1</kind>
             <string>/// Free the surface.
-surface_free(surf)
+surface_free(surf);
 </string>
           </argument>
         </arguments>
@@ -116,11 +125,12 @@ surface_free(surf)
           <argument>
             <kind>1</kind>
             <string>/// Draw the blood to the surface.
-draw_self()
-if surface_exists(surf) {
-    draw_set_blend_mode(bm_add)
-    draw_surface_ext(surf,x,y,1,1,0,c_white,0.8)
-    draw_set_blend_mode(bm_normal)
+draw_self();
+if (surface_exists(surf))
+{
+	draw_set_blend_mode(bm_add);
+	draw_surface_ext(surf, x, y, 1, 1, 0, c_white, 0.8);
+	draw_set_blend_mode(bm_normal);
 }
 </string>
           </argument>

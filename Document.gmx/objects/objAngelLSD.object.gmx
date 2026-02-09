@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.2
-//speed=0
+            <string>image_speed = 0.2;
+
+// speed=0
 </string>
           </argument>
         </arguments>
@@ -49,10 +50,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_angle = 0 {
-    if image_index &gt;= 4 and image_index - image_speed &lt; 4 sound_play(sndSwanFlap)
+            <string>if (image_angle == 0)
+{
+	if (image_index &gt;= 4 &amp;&amp; image_index - image_speed &lt; 4)
+		sound_play(sndSwanFlap);
 }
-
 </string>
           </argument>
         </arguments>

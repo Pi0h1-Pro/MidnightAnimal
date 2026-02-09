@@ -1,3 +1,2 @@
-if gamepad_is_connected(0) {
-
-}
+if (gamepad_is_connected(0))
+{ }

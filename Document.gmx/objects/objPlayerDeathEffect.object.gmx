@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>r = 0 // radius
+            <string>r = 0; // radius
 </string>
           </argument>
         </arguments>
@@ -48,8 +48,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_circle(x, y, r, false)
-r = lerp(0, 1200, 0)
+            <string>draw_circle(x, y, r, false);
+r = lerp(0, 1200, 0);
 </string>
           </argument>
         </arguments>

@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-bullets = 0 
-life = 8
+            <string>image_speed = 0;
+bullets = 0;
+life = 8;
 </string>
           </argument>
         </arguments>
@@ -51,27 +51,34 @@ life = 8
           <argument>
             <kind>1</kind>
             <string>// Destroy with melee.
-if !scrMovingPlayerExists() exit
-if place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlayer.dir), objPlayer) {
-    if (scrIsSwinging(objPlayer.sprite_index) and scrCurrentWeaponExt(objPlayer.sprite_index) = 19)
-        or objPlayer.sprite_index = pierretteBashShield {
-            repeat(16) {
-                my_id = instance_create(x, y, objDebrisLarge)
-                my_id.speed = random(4)
-            }
-
-            sound_ps(choose(sndWoodenBreak1, sndWoodenBreak2, sndWoodenBreak3))
-            repeat(24) {
-                my_id = instance_create(x, y + random(32), objDebrisLarge)
-                my_id.sprite_index = sprRenovationWallDebris
-                if objPlayer.y &gt; y my_id.direction = 90 - 10 + random(20)
-                else my_id.direction = 270 - 10 + random(20)
-                my_id.speed = 2 + random(3)
-            }
-            instance_destroy()
-            mp_grid_destroy(global.grid)
-            scrInitPathFinding()
-        }
+if (!scrMovingPlayerExists())
+	exit;
+if (place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlayer.dir), objPlayer))
+{
+	if ((scrIsSwinging(objPlayer.sprite_index) &amp;&amp; scrCurrentWeaponExt(objPlayer.sprite_index) == 19)
+		|| objPlayer.sprite_index == pierretteBashShield)
+	{
+		repeat (16)
+		{
+			my_id = instance_create(x, y, objDebrisLarge);
+			my_id.speed = random(4);
+		}
+		
+		sound_ps(choose(sndWoodenBreak1, sndWoodenBreak2, sndWoodenBreak3));
+		repeat (24)
+		{
+			my_id = instance_create(x, y + random(32), objDebrisLarge);
+			my_id.sprite_index = sprRenovationWallDebris;
+			if (objPlayer.y &gt; y)
+				my_id.direction = 90 - 10 + random(20);
+			else
+				my_id.direction = 270 - 10 + random(20);
+			my_id.speed = 2 + random(3);
+		}
+		instance_destroy();
+		mp_grid_destroy(global.grid);
+		scrInitPathFinding();
+	}
 }
 </string>
           </argument>
@@ -95,32 +102,44 @@ if place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlay
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>bullets = 0
-global.my_id = id
-with objBullet {
-    if place_meeting(x, y, global.my_id) { global.my_id.bullets += 1 global.my_id.life -= 1 }
-    scrBulletImpact()
-    instance_destroy()
+            <string>bullets = 0;
+global.my_id = id;
+with (objBullet)
+{
+	if (place_meeting(x, y, global.my_id))
+	{
+		global.my_id.bullets += 1;
+		global.my_id.life -= 1;
+	}
+	scrBulletImpact();
+	instance_destroy();
 }
-if global.my_id.bullets &gt; 3 {
-     sound_ps(choose(sndWoodenBreak1, sndWoodenBreak2, sndWoodenBreak3))
-    repeat(15) {
-        my_id = instance_create(x + random(32), y, objDebrisLarge)
-        my_id.sprite_index = sprRenovationWallDebris
-        if other.vspeed &gt; 0 my_id.direction = 270 - 10 + random(20)
-        else my_id.direction = 90 - 10 + random(20)
-        my_id.speed = 2 + random(3)
-    }
-    instance_destroy()
-    mp_grid_destroy(global.grid)
-    scrInitPathFinding()
-} else {
-    if round(random(4)) {
-        my_id = instance_create(other.x, y, objDebrisLarge)
-        my_id.sprite_index = sprRenovationWallDebris
-        my_id.direction = other.direction - 10 + random(20)
-        my_id.speed = 2 + random(3)
-    }
+if (global.my_id.bullets &gt; 3)
+{
+	sound_ps(choose(sndWoodenBreak1, sndWoodenBreak2, sndWoodenBreak3));
+	repeat (15)
+	{
+		my_id = instance_create(x + random(32), y, objDebrisLarge);
+		my_id.sprite_index = sprRenovationWallDebris;
+		if (other.vspeed &gt; 0)
+			my_id.direction = 270 - 10 + random(20);
+		else
+			my_id.direction = 90 - 10 + random(20);
+		my_id.speed = 2 + random(3);
+	}
+	instance_destroy();
+	mp_grid_destroy(global.grid);
+	scrInitPathFinding();
+}
+else
+{
+	if (round(random(4)))
+	{
+		my_id = instance_create(other.x, y, objDebrisLarge);
+		my_id.sprite_index = sprRenovationWallDebris;
+		my_id.direction = other.direction - 10 + random(20);
+		my_id.speed = 2 + random(3);
+	}
 }
 </string>
           </argument>

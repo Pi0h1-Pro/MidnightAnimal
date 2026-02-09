@@ -1,1 +1,1 @@
-draw_text(x,y,"Draw Mask: "+string(argument0))
+draw_text(x, y, "Draw Mask: " + string(argument0));

@@ -27,16 +27,13 @@
             <kind>1</kind>
             <string>/// Initialise variables.
 
-get_thought_damaged() //text = "" // Text.
-bg_colour = c_black // Background colour.
-text_colour = c_white // Text colour.
-scale = 1 // Scale of text.
-duration = 2 // Duration of effect.
-angle = 0 // Angle.
-alarm[0] = duration // Set effect to destroy after duration plays out.
-
-
-
+get_thought_damaged(); // text = "" // Text.
+bg_colour = c_black; // Background colour.
+text_colour = c_white; // Text colour.
+scale = 1; // Scale of text.
+duration = 2; // Duration of effect.
+angle = 0; // Angle.
+alarm[0] = duration; // Set effect to destroy after duration plays out.
 </string>
           </argument>
         </arguments>
@@ -60,7 +57,7 @@ alarm[0] = duration // Set effect to destroy after duration plays out.
           <argument>
             <kind>1</kind>
             <string>/// Destroy the effect.
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -86,15 +83,14 @@ instance_destroy()
             <string>/// Draw the effect.
 
 // Draw background.
-draw_rectangle_colour(-10, -10, view_wview + 10, view_hview + 10, bg_colour, bg_colour, bg_colour, bg_colour, false)
+draw_rectangle_colour(-10, -10, view_wview + 10, view_hview + 10, bg_colour, bg_colour, bg_colour, bg_colour, false);
 
 // Draw text.
-draw_set_font(fntRestart)
-draw_set_valign(fa_middle)
-draw_set_halign(fa_center)
-draw_set_colour(text_colour)
-draw_text_transformed(view_wview / 2, view_hview / 2, thought[text], scale, scale, angle)
-
+draw_set_font(fntRestart);
+draw_set_valign(fa_middle);
+draw_set_halign(fa_center);
+draw_set_colour(text_colour);
+draw_text_transformed(view_wview / 2, view_hview / 2, thought[text], scale, scale, angle);
 </string>
           </argument>
         </arguments>

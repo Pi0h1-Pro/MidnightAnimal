@@ -25,10 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_angle=-4+random(8)
-image_index=floor(random(sprite_get_number(sprite_index)))
-
+            <string>image_speed = 0;
+image_angle = -4 + random(8);
+image_index = floor(random(sprite_get_number(sprite_index)));
 </string>
           </argument>
         </arguments>
@@ -51,8 +50,8 @@ image_index=floor(random(sprite_get_number(sprite_index)))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

@@ -25,12 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrInitMaskPos()
-scrUpdateMaskPos(sprite_index)
-image_speed=0
-dead=0
-if scrIsGang(object_index) bottom=sprEGangDieTiger
-else bottom=sprEDieTiger
+            <string>scrInitMaskPos();
+scrUpdateMaskPos(sprite_index);
+image_speed = 0;
+dead = 0;
+if (scrIsGang(object_index))
+	bottom = sprEGangDieTiger;
+else
+	bottom = sprEDieTiger;
 </string>
           </argument>
         </arguments>
@@ -53,66 +55,73 @@ else bottom=sprEDieTiger
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &lt; 7 image_index += 0.35
-else {
-
-    //Create dead body.
-    my_id = instance_create(x, y, objDeadBody)
-    my_id.sprite_index = bottom
-    my_id.image_index = 7
-    my_id.image_angle = image_angle
-    instance_create(x + lengthdir_x(24, image_angle), y + lengthdir_y(24, image_angle), objBloodPool)
-
-    //Create player.
-    my_id = instance_create(x, y, objPlayerMouse)
-    my_id.sprite_index = sprPWalkUnarmed
-    my_id.maskon = global.maskon
-    my_id.maskindex = global.maskindex
-    global.angle = image_angle - 180
-    my_id.reload = 10
-    with my_id move_outside_solid(global.angle, 16)
-    instance_destroy()
-
-    //Create score.
-    //my_id = instance_create(x, y - 12, objScore)
-    //my_id.text = "+" + string((600) + 500 * (global.factor)) + "pts"
-    global.myscore += (600) + 500 * (global.factor)
-    global.killscore += 600
-    global.boldscore += 500 * global.factor
-    global.combotime = 600
-    global.combo += 1
-    global.killx[global.kills] = x
-    global.killy[global.kills] = y
-    global.kills += 1
-    ds_list_add(global.bonuslist, "Execution")
-    if global.combotime &lt; 12 global.combotime = 12
-    exit
+            <string>if (image_index &lt; 7)
+	image_index += 0.35;
+else
+{
+	// Create dead body.
+	my_id = instance_create(x, y, objDeadBody);
+	my_id.sprite_index = bottom;
+	my_id.image_index = 7;
+	my_id.image_angle = image_angle;
+	instance_create(x + lengthdir_x(24, image_angle), y + lengthdir_y(24, image_angle), objBloodPool);
+	
+	// Create player.
+	my_id = instance_create(x, y, objPlayerMouse);
+	my_id.sprite_index = sprPWalkUnarmed;
+	my_id.maskon = global.maskon;
+	my_id.maskindex = global.maskindex;
+	global.angle = image_angle - 180;
+	my_id.reload = 10;
+	with (my_id)
+		move_outside_solid(global.angle, 16);
+	instance_destroy();
+	
+	// Create score.
+	// my_id = instance_create(x, y - 12, objScore)
+	// my_id.text = "+" + string((600) + 500 * (global.factor)) + "pts"
+	global.myscore += (600) + 500 * (global.factor);
+	global.killscore += 600;
+	global.boldscore += 500 * global.factor;
+	global.combotime = 600;
+	global.combo += 1;
+	global.killx[global.kills] = x;
+	global.killy[global.kills] = y;
+	global.kills += 1;
+	ds_list_add(global.bonuslist, "Execution");
+	if (global.combotime &lt; 12)
+		global.combotime = 12;
+	exit;
 }
 
 
-if image_index &gt; 2 and dead = 0 {
-    sound_play(sndPunch)
-    sound_play(sndHit)
-    global.shake = 5
-    repeat(1 + random(2)) {
-        my_id = instance_create(x + lengthdir_x(17, image_angle) - 1 + random(2), y + lengthdir_y(17, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = image_angle - 120 + random(240)
-    }
-    dead = 1
+if (image_index &gt; 2 &amp;&amp; dead == 0)
+{
+	sound_play(sndPunch);
+	sound_play(sndHit);
+	global.shake = 5;
+	repeat (1 + random(2))
+	{
+		my_id = instance_create(x + lengthdir_x(17, image_angle) - 1 + random(2), y + lengthdir_y(17, image_angle) - 1 + random(2), objBloodSquirt);
+		my_id.image_angle = image_angle - 120 + random(240);
+	}
+	dead = 1;
 }
 
-if image_index &gt; 6 and dead = 1 {
-    sound_play(sndPunch)
-    sound_play(sndHit)
-    global.shake = 8
-    repeat(1 + random(2)) {
-        my_id = instance_create(x + lengthdir_x(17, image_angle) - 1 + random(2), y + lengthdir_y(17, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = image_angle - 120 + random(240)
-    }
-    dead = 2
-    repeat(3) instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood)
+if (image_index &gt; 6 &amp;&amp; dead == 1)
+{
+	sound_play(sndPunch);
+	sound_play(sndHit);
+	global.shake = 8;
+	repeat (1 + random(2))
+	{
+		my_id = instance_create(x + lengthdir_x(17, image_angle) - 1 + random(2), y + lengthdir_y(17, image_angle) - 1 + random(2), objBloodSquirt);
+		my_id.image_angle = image_angle - 120 + random(240);
+	}
+	dead = 2;
+	repeat (3)
+		instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood);
 }
-
 </string>
           </argument>
         </arguments>
@@ -135,13 +144,13 @@ if image_index &gt; 6 and dead = 1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(bottom,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(bottom, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
 /*
 draw_set_blend_mode(bm_add)
 draw_circle_color(x,y,48+random(6),make_color_hsv(0,0,30),c_black,0)
 draw_set_blend_mode(bm_normal)
-
 </string>
           </argument>
         </arguments>

@@ -25,14 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-targetindex=0
-index=0
-image_speed=0.3
-dead=0
+            <string>event_inherited();
+targetindex = 0;
+index = 0;
+image_speed = 0.3;
+dead = 0;
 
-bottom=sprEDieM16
-ammo=objPlayer.ammo
+bottom = sprEDieM16;
+ammo = objPlayer.ammo;
 </string>
           </argument>
         </arguments>
@@ -55,34 +55,38 @@ ammo=objPlayer.ammo
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &gt;= 4 and dead = 0 {
-    sound_ps(sndPunch)
-    sound_ps(choose(sndHit, sndHit1, sndHit2, sndHit3))
-    sound_ps(sndHitMarker)
-    objEffector.hitalpha = 1
-    objEffector.hudflash = 10
-    
-    global.shake = 10
-    repeat(4 + random(6)) {
-        my_id = instance_create(x + lengthdir_x(17, image_angle) - 1 + random(2), y + lengthdir_y(17, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = image_angle - 120 + random(240)
-    }
-    repeat(3) instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood)
-    targetindex = 3
-    index = 1
-    dead = 1
+            <string>if (image_index &gt;= 4 &amp;&amp; dead == 0)
+{
+	sound_ps(sndPunch);
+	sound_ps(choose(sndHit, sndHit1, sndHit2, sndHit3));
+	sound_ps(sndHitMarker);
+	objEffector.hitalpha = 1;
+	objEffector.hudflash = 10;
+	
+	global.shake = 10;
+	repeat (4 + random(6))
+	{
+		my_id = instance_create(x + lengthdir_x(17, image_angle) - 1 + random(2), y + lengthdir_y(17, image_angle) - 1 + random(2), objBloodSquirt);
+		my_id.image_angle = image_angle - 120 + random(240);
+	}
+	repeat (3)
+		instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood);
+	targetindex = 3;
+	index = 1;
+	dead = 1;
 }
 
-if index &lt; targetindex index += 0.5
-if index = 3 {
-    my_id = instance_create(x, y, objDeadBody)
-    my_id.sprite_index = bottom
-    my_id.image_index = 3
-    my_id.image_angle = image_angle
-    instance_destroy()
-    scrFinishExecution(sprPWalkShotgun)
+if (index &lt; targetindex)
+	index += 0.5;
+if (index == 3)
+{
+	my_id = instance_create(x, y, objDeadBody);
+	my_id.sprite_index = bottom;
+	my_id.image_index = 3;
+	my_id.image_angle = image_angle;
+	instance_destroy();
+	scrFinishExecution(sprPWalkShotgun);
 }
-
 </string>
           </argument>
         </arguments>
@@ -105,8 +109,8 @@ if index = 3 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_index=0
+            <string>image_speed = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -129,8 +133,8 @@ image_index=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(bottom,index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(bottom, index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

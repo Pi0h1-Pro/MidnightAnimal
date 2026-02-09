@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=random(360)
-friction=0.2
-image_speed=0
-image_index=random(100)
+            <string>image_angle = random(360);
+friction = 0.2;
+image_speed = 0;
+image_index = random(100);
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ image_index=random(100)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=sign(vspeed)*speed
+            <string>image_angle += sign(vspeed) * speed;
 </string>
           </argument>
         </arguments>

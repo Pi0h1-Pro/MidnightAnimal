@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
+            <string>image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -48,17 +48,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_speed &gt; 0 {
-    if instance_exists(target) {
-        if place_meeting(x, y, target) {
-            target.x += lengthdir_x(3, image_angle)
-            target.y += lengthdir_y(3, image_angle)
-            target.myxspeed = 0
-            target.myyspeed = 0
-        }
-    }
+            <string>if (image_speed &gt; 0)
+{
+	if (instance_exists(target))
+	{
+		if (place_meeting(x, y, target))
+		{
+			target.x += lengthdir_x(3, image_angle);
+			target.y += lengthdir_y(3, image_angle);
+			target.myxspeed = 0;
+			target.myyspeed = 0;
+		}
+	}
 }
-
 </string>
           </argument>
         </arguments>
@@ -81,8 +83,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-target=-1234
+            <string>image_speed = 0;
+target = -1234;
 </string>
           </argument>
         </arguments>

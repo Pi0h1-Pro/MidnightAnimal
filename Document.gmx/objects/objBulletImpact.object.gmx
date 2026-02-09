@@ -25,9 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = choose(sprBulletImpact1, sprBulletImpact2, sprBulletImpact3)
-image_speed = 0.4
-
+            <string>sprite_index = choose(sprBulletImpact1, sprBulletImpact2, sprBulletImpact3);
+image_speed = 0.4;
 </string>
           </argument>
         </arguments>
@@ -51,7 +50,7 @@ image_speed = 0.4
           <argument>
             <kind>1</kind>
             <string>/// Destroy.
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>

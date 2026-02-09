@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha-=.1*global.timeMultiplier
+            <string>image_alpha -= .1 * global.timeMultiplier;
 
-if (image_alpha &lt;=0)
-	instance_destroy()
+if (image_alpha &lt;= 0)
+	instance_destroy();
 </string>
           </argument>
         </arguments>

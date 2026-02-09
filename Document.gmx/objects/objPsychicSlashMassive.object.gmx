@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise variables.
-image_xscale = random_range(0.5, 0.7) 
-image_yscale = image_xscale * choose(1, -1)
-image_speed = 0.5
+image_xscale = random_range(0.5, 0.7);
+image_yscale = image_xscale * choose(1, -1);
+image_speed = 0.5;
 </string>
           </argument>
         </arguments>
@@ -52,7 +52,7 @@ image_speed = 0.5
           <argument>
             <kind>1</kind>
             <string>/// Destroy.
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -76,9 +76,9 @@ instance_destroy()
           <argument>
             <kind>1</kind>
             <string>/// Draw slash.
-draw_set_blend_mode(bm_subtract)
-draw_self()
-draw_set_blend_mode(bm_normal)
+draw_set_blend_mode(bm_subtract);
+draw_self();
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>

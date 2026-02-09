@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=random(10)
-image_speed=0.17+random(0.06)
+            <string>image_index = random(10);
+image_speed = 0.17 + random(0.06);
 
-alarm[0]=30
-scale=random_range(1,1.5)
+alarm[0] = 30;
+scale = random_range(1, 1.5);
 </string>
           </argument>
         </arguments>
@@ -52,9 +52,9 @@ scale=random_range(1,1.5)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,1)
-draw_set_color(c_orange)
-draw_lens_flare(x,y,250,2,2,1,choose(3,4,5),choose(0.5,0.6,0.7))
+            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, 1);
+draw_set_color(c_orange);
+draw_lens_flare(x, y, 250, 2, 2, 1, choose(3, 4, 5), choose(0.5, 0.6, 0.7));
 </string>
           </argument>
         </arguments>

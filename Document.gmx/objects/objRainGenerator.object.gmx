@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,objRain);
+            <string>instance_create(x, y, objRain);
 </string>
           </argument>
         </arguments>
@@ -49,12 +49,12 @@
           <argument>
             <kind>1</kind>
             <string>exit;
-edge=200;
+edge = 200;
 
-repeat(15)
+repeat (15)
 {
-    instance_create(view_xview-edge + random(view_wview + edge*2),
-          view_yview - edge + random(view_hview + edge*2), objRain);                                                    
+	instance_create(view_xview - edge + random(view_wview + edge * 2),
+		view_yview - edge + random(view_hview + edge * 2), objRain);
 }
 </string>
           </argument>

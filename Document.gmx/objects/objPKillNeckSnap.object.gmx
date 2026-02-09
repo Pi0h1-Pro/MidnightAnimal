@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-image_index = 1
-image_speed = 0
-ammo = 0
-bled = 0
-bag = 0
+            <string>event_inherited();
+image_index = 1;
+image_speed = 0;
+ammo = 0;
+bled = 0;
+bag = 0;
 </string>
           </argument>
         </arguments>
@@ -53,26 +53,27 @@ bag = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &lt; 11 image_index += 0.5
-else {
-
-    my_id = instance_create(x, y, objDeadBody)
-    my_id.sprite_index = sprEDieNeckSnap
-    my_id.image_index = 11
-    my_id.image_angle = image_angle
-    
-    scrFinishExecution(sprPWalkUnarmed)
+            <string>if (image_index &lt; 11)
+	image_index += 0.5;
+else
+{
+	my_id = instance_create(x, y, objDeadBody);
+	my_id.sprite_index = sprEDieNeckSnap;
+	my_id.image_index = 11;
+	my_id.image_angle = image_angle;
+	
+	scrFinishExecution(sprPWalkUnarmed);
 }
 
-if bled = 0 and image_index &gt;= 6 {
-    bled = 1
-    sound_ps(sndBonesBreak)
-    sound_ps(sndHitMarker)
-    objEffector.hitalpha = 1
-    objEffector.hudflash = 10
-    global.shake = 12
+if (bled == 0 &amp;&amp; image_index &gt;= 6)
+{
+	bled = 1;
+	sound_ps(sndBonesBreak);
+	sound_ps(sndHitMarker);
+	objEffector.hitalpha = 1;
+	objEffector.hudflash = 10;
+	global.shake = 12;
 }
-
 </string>
           </argument>
         </arguments>
@@ -95,8 +96,8 @@ if bled = 0 and image_index &gt;= 6 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprEDieNeckSnap,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprEDieNeckSnap, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

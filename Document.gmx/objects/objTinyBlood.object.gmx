@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=floor(random(6))
-image_speed=0
-friction=0.5+random(1)
-blood_properties()
+            <string>image_index = floor(random(6));
+image_speed = 0;
+friction = 0.5 + random(1);
+blood_properties();
 </string>
           </argument>
         </arguments>
@@ -51,15 +51,18 @@ blood_properties()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if speed = 0 {
-    instance_destroy()
-    if image_index &lt; 3 {
-        image_index = 3 + floor(random(3))
-    }
-} 
+            <string>if (speed == 0)
+{
+	instance_destroy();
+	if (image_index &lt; 3)
+	{
+		image_index = 3 + floor(random(3));
+	}
+}
 
-if round(random(10)) = 2 speed = 0
-blood_step()
+if (round(random(10)) == 2)
+	speed = 0;
+blood_step();
 </string>
           </argument>
         </arguments>

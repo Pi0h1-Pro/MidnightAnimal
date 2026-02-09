@@ -27,19 +27,18 @@
             <kind>1</kind>
             <string>/// Initialise global lighting.
 glr_init(1);
-glr_set_size(480, 256)
+glr_set_size(480, 256);
 glr_enable_directional(false);
 glr_enable_occlusion(false);
 glr_set_occlusion_intensity(0);
 glr_enable_blur(false);
-glr_enable_fxaa(false); 
+glr_enable_fxaa(false);
 glr_set_quality(1);
 
-enabled=false;
+enabled = false;
 
 // Initialise light amount.
-global.lightQuantity = 0.4
-
+global.lightQuantity = 0.4;
 </string>
           </argument>
         </arguments>
@@ -85,8 +84,8 @@ global.lightQuantity = 0.4
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if scrLightingEnabled() enabled=1 else 
-enabled=0;
+            <string>// if scrLightingEnabled() enabled=1 else
+enabled = 0;
 </string>
           </argument>
         </arguments>
@@ -109,8 +108,9 @@ enabled=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Render lights.
-if enabled glr_render();
+            <string>/// Render lights.
+if (enabled)
+	glr_render();
 </string>
           </argument>
         </arguments>
@@ -133,7 +133,7 @@ if enabled glr_render();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>glr_draw(view_xview[0],view_yview[0]);
+            <string>glr_draw(view_xview[0], view_yview[0]);
 </string>
           </argument>
         </arguments>
@@ -156,7 +156,7 @@ if enabled glr_render();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enabled=!enabled;
+            <string>enabled = !enabled;
 </string>
           </argument>
         </arguments>

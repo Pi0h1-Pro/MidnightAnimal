@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_angle = -10 + random(20)
+            <string>image_speed = 0;
+image_angle = -10 + random(20);
 </string>
           </argument>
         </arguments>
@@ -49,15 +49,16 @@ image_angle = -10 + random(20)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index = 0 {
-    if place_meeting(x - 4, y, objPlayer) {
-        image_index = 1
-        sound_play(sndPickupWeapon)
-        my_id = instance_create(x - 4, y, objWeapon)
-        my_id.image_index = 2
-    }
+            <string>if (image_index == 0)
+{
+	if (place_meeting(x - 4, y, objPlayer))
+	{
+		image_index = 1;
+		sound_play(sndPickupWeapon);
+		my_id = instance_create(x - 4, y, objWeapon);
+		my_id.image_index = 2;
+	}
 }
-
 </string>
           </argument>
         </arguments>

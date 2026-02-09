@@ -1,1 +1,2 @@
-if global.steamon external_call(iSteamStoreStats);
+if (global.steamon)
+	external_call(iSteamStoreStats);

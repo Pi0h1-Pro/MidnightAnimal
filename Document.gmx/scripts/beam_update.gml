@@ -1,4 +1,4 @@
-//beam_update(id, x1, y1, x2, y2);
+// beam_update(id, x1, y1, x2, y2);
 
 var varQueueX1, varQueueY1, varQueueX2, varQueueY2;
 

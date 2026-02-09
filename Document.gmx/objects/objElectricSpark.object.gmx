@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction=0.15
-alpha=0.5+random(0.5)
-image_yscale=0.5+random(1)
+            <string>friction = 0.15;
+alpha = 0.5 + random(0.5);
+image_yscale = 0.5 + random(1);
 </string>
           </argument>
         </arguments>
@@ -50,7 +50,10 @@ image_yscale=0.5+random(1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if alpha&gt;0 alpha-=0.05 else instance_destroy()
+            <string>if (alpha &gt; 0)
+	alpha -= 0.05;
+else
+	instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -73,11 +76,11 @@ image_yscale=0.5+random(1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add)
-image_blend=merge_color(merge_color(c_white,c_aqua,random(1)),c_teal,alpha)
-image_xscale=speed*0.5
-draw_self()
-draw_set_blend_mode(bm_normal)
+            <string>draw_set_blend_mode(bm_add);
+image_blend = merge_color(merge_color(c_white, c_aqua, random(1)), c_teal, alpha);
+image_xscale = speed * 0.5;
+draw_self();
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>

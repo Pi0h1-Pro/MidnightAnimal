@@ -1,2 +1,2 @@
-DGhosts = argument0
-DGhostDispersal = argument1
+DGhosts = argument0;
+DGhostDispersal = argument1;

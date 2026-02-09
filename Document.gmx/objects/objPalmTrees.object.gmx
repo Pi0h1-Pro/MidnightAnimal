@@ -25,10 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room=rmInterlude hspeed=-8
-image_speed=0
-image_index=random(100)
-dir=random(360)
+            <string>if (room == rmInterlude)
+	hspeed = -8;
+image_speed = 0;
+image_index = random(100);
+dir = random(360);
 </string>
           </argument>
         </arguments>
@@ -51,10 +52,12 @@ dir=random(360)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room=rmInterlude {
-if x&gt;room_width instance_destroy()
+            <string>if (room == rmInterlude)
+{
+	if (x &gt; room_width)
+		instance_destroy();
 }
-dir+=4
+dir += 4;
 </string>
           </argument>
         </arguments>

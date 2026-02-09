@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction=0.15
-image_speed=0
-image_angle=random(360)
-image_index=floor(random(10000))
+            <string>friction = 0.15;
+image_speed = 0;
+image_angle = random(360);
+image_index = floor(random(10000));
 
-rotspeed=(-1+round(random(1))*2)*random(8)
-startspeed=0
+rotspeed = (-1 + round(random(1)) * 2) * random(8);
+startspeed = 0;
 </string>
           </argument>
         </arguments>
@@ -54,11 +54,13 @@ startspeed=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if startspeed=0 startspeed=speed
+            <string>if (startspeed == 0)
+	startspeed = speed;
 
-if speed {
-    image_blend=merge_color(c_ltgray,c_white,speed*(1/startspeed))
-    image_angle+=rotspeed
+if (speed)
+{
+	image_blend = merge_color(c_ltgray, c_white, speed * (1 / startspeed));
+	image_angle += rotspeed;
 }
 </string>
           </argument>

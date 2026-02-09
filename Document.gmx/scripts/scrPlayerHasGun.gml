@@ -1,1 +1,2 @@
-if scrIsGun(scrCurrentWeaponExt(objPlayer.sprite_index)) = true return true
+if (scrIsGun(scrCurrentWeaponExt(objPlayer.sprite_index)) == true)
+	return true;

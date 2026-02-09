@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir=180
+            <string>dir = 180;
 </string>
           </argument>
         </arguments>
@@ -48,15 +48,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir+=0.25
-colorbase1=merge_color(merge_color(merge_color(c_blue,c_purple,0.5+lengthdir_y(0.5,dir*3)),merge_color(c_fuchsia,c_orange,0.5+lengthdir_y(0.5,dir*4.7)),0.25+lengthdir_y(0.25,dir*2)),c_blue,0.75)
-colorbase2=merge_color(merge_color(merge_color(c_blue,c_purple,0.5+lengthdir_x(0.5,dir*3)),merge_color(c_fuchsia,c_orange,0.5+lengthdir_x(0.5,dir*4.7)),0.25+lengthdir_x(0.25,dir*2)),c_purple,0.5)
-color1=merge_color(colorbase1,colorbase2,0.5+lengthdir_x(0.5,dir*5))
-color2=merge_color(colorbase1,colorbase2,0.5+lengthdir_x(0.5,dir*5+45))
-color3=merge_color(colorbase2,colorbase1,0.5+lengthdir_x(0.5,dir*5+90))
-color4=merge_color(colorbase2,colorbase1,0.5+lengthdir_x(0.5,dir*5+135))
+            <string>dir += 0.25;
+colorbase1 = merge_color(merge_color(merge_color(c_blue, c_purple, 0.5 + lengthdir_y(0.5, dir * 3)), merge_color(c_fuchsia, c_orange, 0.5 + lengthdir_y(0.5, dir * 4.7)), 0.25 + lengthdir_y(0.25, dir * 2)), c_blue, 0.75);
+colorbase2 = merge_color(merge_color(merge_color(c_blue, c_purple, 0.5 + lengthdir_x(0.5, dir * 3)), merge_color(c_fuchsia, c_orange, 0.5 + lengthdir_x(0.5, dir * 4.7)), 0.25 + lengthdir_x(0.25, dir * 2)), c_purple, 0.5);
+color1 = merge_color(colorbase1, colorbase2, 0.5 + lengthdir_x(0.5, dir * 5));
+color2 = merge_color(colorbase1, colorbase2, 0.5 + lengthdir_x(0.5, dir * 5 + 45));
+color3 = merge_color(colorbase2, colorbase1, 0.5 + lengthdir_x(0.5, dir * 5 + 90));
+color4 = merge_color(colorbase2, colorbase1, 0.5 + lengthdir_x(0.5, dir * 5 + 135));
 
-draw_rectangle_color(view_xview[0]-60,view_yview[0]-60,view_xview[0]+view_wview[0]+60,view_yview[0]+view_hview[0]+60,color1,color2,color3,color4,0)
+draw_rectangle_color(view_xview[0] - 60, view_yview[0] - 60, view_xview[0] + view_wview[0] + 60, view_yview[0] + view_hview[0] + 60, color1, color2, color3, color4, 0);
+
 /*
 
 if global.bonustime&gt;0 {

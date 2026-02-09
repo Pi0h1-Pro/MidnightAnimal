@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.timeMultiplier=1;
-slowDown=false;
+            <string>global.timeMultiplier = 1;
+slowDown = false;
 </string>
           </argument>
         </arguments>
@@ -49,40 +49,45 @@ slowDown=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Control bullet time.
+            <string>/// Control bullet time.
 
-//SLOW DOWN TIME
-if (slowDown == true) {
-
-    if (global.timeMultiplier &gt; 0.2)
-
-    {
-        global.timeMultiplier -= 0.05;
-    } else {
-        global.timeMultiplier = 0.2
-
-    }
-
-} else {
-    if (global.timeMultiplier &lt; 1) {
-        global.timeMultiplier += .05
-    } else {
-        global.timeMultiplier = 1
-    }
+// SLOW DOWN TIME
+if (slowDown == true)
+{
+	if (global.timeMultiplier &gt; 0.2)
+	{
+		global.timeMultiplier -= 0.05;
+	}
+	else
+	{
+		global.timeMultiplier = 0.2;
+	}
+}
+else
+{
+	if (global.timeMultiplier &lt; 1)
+	{
+		global.timeMultiplier += .05;
+	}
+	else
+	{
+		global.timeMultiplier = 1;
+	}
 }
 
 
-//PLAY HEARTBEAT
-if (global.timeMultiplier &lt;= 0.5) {
-    if (!sound_isplaying(sndHeartbeat)) {
-        sound_loop(sndHeartbeat)
-    }
-} else
-
-if (sound_isplaying(sndHeartbeat)) {
-    sound_stop(sndHeartbeat)
+// PLAY HEARTBEAT
+if (global.timeMultiplier &lt;= 0.5)
+{
+	if (!sound_isplaying(sndHeartbeat))
+	{
+		sound_loop(sndHeartbeat);
+	}
 }
-
+else if (sound_isplaying(sndHeartbeat))
+{
+	sound_stop(sndHeartbeat);
+}
 </string>
           </argument>
         </arguments>
@@ -105,7 +110,7 @@ if (sound_isplaying(sndHeartbeat)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*if global.maskindex = 19 {
+            <string>/* if global.maskindex = 19 {
 
     if (slowDown == true) {
         slowDown = false;
@@ -113,7 +118,6 @@ if (sound_isplaying(sndHeartbeat)) {
         slowDown = true;
 
 }
-
 </string>
           </argument>
         </arguments>

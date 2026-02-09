@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir=0
-mycolor=c_aqua
-surf=surface_create(x2-x1,y2-y1)
-draw_set_color(c_white)
-surface_set_target(surf) 
-draw_rectangle(0,0,x2-x1,y2-y1,0)
-surface_reset_target()
+            <string>dir = 0;
+mycolor = c_aqua;
+surf = surface_create(x2 - x1, y2 - y1);
+draw_set_color(c_white);
+surface_set_target(surf);
+draw_rectangle(0, 0, x2 - x1, y2 - y1, 0);
+surface_reset_target();
 </string>
           </argument>
         </arguments>
@@ -54,41 +54,48 @@ surface_reset_target()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !surface_exists(surf) {
-    surf = surface_create(x2 - x1, y2 - y1)
+            <string>if (!surface_exists(surf))
+{
+	surf = surface_create(x2 - x1, y2 - y1);
 }
 
-draw_set_color(c_white)
-draw_set_alpha(1)
-surface_set_target(surf)
-draw_rectangle(0, 0, x2 - x1, y2 - y1, 0)
-draw_set_blend_mode(bm_subtract)
-global.x1 = x1
-global.y1 = y1
-with objStripClubRunway {
-    draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1)
+draw_set_color(c_white);
+draw_set_alpha(1);
+surface_set_target(surf);
+draw_rectangle(0, 0, x2 - x1, y2 - y1, 0);
+draw_set_blend_mode(bm_subtract);
+global.x1 = x1;
+global.y1 = y1;
+with (objStripClubRunway)
+{
+	draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1);
 }
-with objStripClubEntryPodium {
-    draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1)
+with (objStripClubEntryPodium)
+{
+	draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1);
 }
-with objStripClubPodium {
-    draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1)
+with (objStripClubPodium)
+{
+	draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1);
 }
-with objDrumkitDisplay {
-    draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1)
+with (objDrumkitDisplay)
+{
+	draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1);
 }
-with objLightPad{
-    draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1)
+with (objLightPad)
+{
+	draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1);
 }
-with objDanceFloor {
-    draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1)
+with (objDanceFloor)
+{
+	draw_sprite_ext(sprite_index, 1, x - global.x1, y - global.y1, 1, 1, 0, c_ltgray, 1);
 }
-with objBoothLight {
-    draw_circle_color(x - global.x1, y - global.y1, size * 2, c_ltgray, c_black, 0)
+with (objBoothLight)
+{
+	draw_circle_color(x - global.x1, y - global.y1, size * 2, c_ltgray, c_black, 0);
 }
-surface_reset_target()
-draw_set_blend_mode(bm_normal)
-
+surface_reset_target();
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>
@@ -111,8 +118,8 @@ draw_set_blend_mode(bm_normal)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>surface_free(surf)
-surf=-1234
+            <string>surface_free(surf);
+surf = -1234;
 </string>
           </argument>
         </arguments>
@@ -135,29 +142,39 @@ surf=-1234
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>color = merge_color(c_ltgray, mycolor, 0.5 + lengthdir_x(0.5, dir))
-draw_set_color(color)
-draw_set_blend_mode(bm_subtract)
+            <string>color = merge_color(c_ltgray, mycolor, 0.5 + lengthdir_x(0.5, dir));
+draw_set_color(color);
+draw_set_blend_mode(bm_subtract);
 
-draw_surface_ext(surf, x1, y1, 1, 1, 0, color, 1)
-    //draw_rectangle(x1,y1,x2,y2,0)
-    //draw_rectangle_color(x1,y1,x1+32,y2,color,c_black,c_black,color,0)
-    //draw_rectangle_color(x2-32,y1,x2,y2,c_black,color,color,c_black,0)
-    //draw_rectangle_color(x1,y1,x2,y1+32,color,color,c_black,c_black,0)
-    //draw_rectangle_color(x1,y2-32,x2,y2,c_black,c_black,color,color,0)
-draw_set_blend_mode(bm_normal)
-if dir &lt; 360 dir += 1
-else dir = 0
-if dir = 180 {
-    if mycolor = c_yellow {
-        mycolor = c_orange exit
-    }
-    if mycolor = c_lime {
-        mycolor = c_yellow exit
-    }
-    if mycolor = c_orange {
-        mycolor = c_lime exit
-    }
+draw_surface_ext(surf, x1, y1, 1, 1, 0, color, 1);
+
+// draw_rectangle(x1,y1,x2,y2,0)
+// draw_rectangle_color(x1,y1,x1+32,y2,color,c_black,c_black,color,0)
+// draw_rectangle_color(x2-32,y1,x2,y2,c_black,color,color,c_black,0)
+// draw_rectangle_color(x1,y1,x2,y1+32,color,color,c_black,c_black,0)
+// draw_rectangle_color(x1,y2-32,x2,y2,c_black,c_black,color,color,0)
+draw_set_blend_mode(bm_normal);
+if (dir &lt; 360)
+	dir += 1;
+else
+	dir = 0;
+if (dir == 180)
+{
+	if (mycolor == c_yellow)
+	{
+		mycolor = c_orange;
+		exit;
+	}
+	if (mycolor == c_lime)
+	{
+		mycolor = c_yellow;
+		exit;
+	}
+	if (mycolor == c_orange)
+	{
+		mycolor = c_lime;
+		exit;
+	}
 }
 </string>
           </argument>

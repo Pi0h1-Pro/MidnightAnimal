@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_blend=merge_color(c_white,merge_color(c_yellow,c_orange,random(1)),random(1))
-image_xscale=1+random(0.1)
-image_yscale=image_xscale
-image_speed=1-random(0.3)
+            <string>image_blend = merge_color(c_white, merge_color(c_yellow, c_orange, random(1)), random(1));
+image_xscale = 1 + random(0.1);
+image_yscale = image_xscale;
+image_speed = 1 - random(0.3);
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ image_speed=1-random(0.3)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_blend=merge_color(c_white,merge_color(c_yellow,c_orange,random(1)),random(1))
+            <string>image_blend = merge_color(c_white, merge_color(c_yellow, c_orange, random(1)), random(1));
 </string>
           </argument>
         </arguments>
@@ -74,7 +74,8 @@ image_speed=1-random(0.3)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()</string>
+            <string>instance_destroy();
+</string>
           </argument>
         </arguments>
       </action>
@@ -96,9 +97,9 @@ image_speed=1-random(0.3)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_set_blend_mode(bm_normal)
+            <string>draw_set_blend_mode(bm_add);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>

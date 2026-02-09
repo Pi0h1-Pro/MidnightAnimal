@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-bled=0
-hurtindex=0
-targetindex=0
-scrInitMaskPos()
-scrUpdateMaskPos(sprite_index)
-ammo=0
-global.maskon=1
-maskon=1
-maskindex=global.maskindex
+            <string>image_speed = 0;
+bled = 0;
+hurtindex = 0;
+targetindex = 0;
+scrInitMaskPos();
+scrUpdateMaskPos(sprite_index);
+ammo = 0;
+global.maskon = 1;
+maskon = 1;
+maskindex = global.maskindex;
 </string>
           </argument>
         </arguments>
@@ -57,29 +57,32 @@ maskindex=global.maskindex
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &lt; 12 image_index += 0.25
-else {
-    my_id = instance_create(x, y, objDeadBody)
-    my_id.sprite_index = sprEDeadClubbed
-    my_id.image_index = 12
-    my_id.image_angle = image_angle
-    my_id = instance_create(x, y, objPlayerMouse)
-    my_id.sprite_index = sprPWalkClub
-    instance_destroy()
+            <string>if (image_index &lt; 12)
+	image_index += 0.25;
+else
+{
+	my_id = instance_create(x, y, objDeadBody);
+	my_id.sprite_index = sprEDeadClubbed;
+	my_id.image_index = 12;
+	my_id.image_angle = image_angle;
+	my_id = instance_create(x, y, objPlayerMouse);
+	my_id.sprite_index = sprPWalkClub;
+	instance_destroy();
 }
 
-if image_index &gt; 6 and bled = 0 {
-    sound_play(sndPunch)
-    sound_play(choose(sndHit, sndHit1, sndHit2, sndHit3))
-    global.shake = 8
-    instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood)
-    repeat(4 + random(3)) {
-        my_id = instance_create(x + lengthdir_x(18, image_angle) - 1 + random(2), y + lengthdir_y(18, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = image_angle + random(30)
-    }
-    bled = 1
+if (image_index &gt; 6 &amp;&amp; bled == 0)
+{
+	sound_play(sndPunch);
+	sound_play(choose(sndHit, sndHit1, sndHit2, sndHit3));
+	global.shake = 8;
+	instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood);
+	repeat (4 + random(3))
+	{
+		my_id = instance_create(x + lengthdir_x(18, image_angle) - 1 + random(2), y + lengthdir_y(18, image_angle) - 1 + random(2), objBloodSquirt);
+		my_id.image_angle = image_angle + random(30);
+	}
+	bled = 1;
 }
-
 </string>
           </argument>
         </arguments>
@@ -102,8 +105,8 @@ if image_index &gt; 6 and bled = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprEDeadClubbed,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprEDeadClubbed, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

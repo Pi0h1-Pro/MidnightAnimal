@@ -1,1 +1,1 @@
-bgm_vol(global.currentsong,(argument0*100)*global.mvol)
+bgm_vol(global.currentsong, (argument0 * 100) * global.mvol);

@@ -1,1 +1,2 @@
-if global.steamon return external_call(iSteamInit);
+if (global.steamon)
+	return external_call(iSteamInit);

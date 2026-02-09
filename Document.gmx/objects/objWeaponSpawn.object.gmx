@@ -25,10 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = rmGallery image_angle = 0 else image_angle=random(360)
-ammo = scrGetSpecificAmmo(image_index)
-image_speed=0
-dir=random(360)
+            <string>if (room == rmGallery)
+	image_angle = 0;
+else
+	image_angle = random(360);
+ammo = scrGetSpecificAmmo(image_index);
+image_speed = 0;
+dir = random(360);
 </string>
           </argument>
         </arguments>
@@ -52,11 +55,12 @@ dir=random(360)
           <argument>
             <kind>1</kind>
             <string>/// Weapon effects.
-ammo = scrGetSpecificAmmo(image_index)
-if image_index=23 {
-    if round(random(5))=2 instance_create(x+lengthdir_x(3,image_angle),y+lengthdir_y(3,image_angle),objSteam)
+ammo = scrGetSpecificAmmo(image_index);
+if (image_index == 23)
+{
+	if (round(random(5)) == 2)
+		instance_create(x + lengthdir_x(3, image_angle), y + lengthdir_y(3, image_angle), objSteam);
 }
-
 </string>
           </argument>
         </arguments>
@@ -79,16 +83,19 @@ if image_index=23 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw weapon and glow.
+            <string>/// Draw weapon and glow.
 
 // Only draw glow if the level is not yet complete.
-if instance_exists(objEnemy) or instance_exists(objKnockedOut) {
-    draw_self_shadow(0.2)
-    d3d_set_fog(true,c_white,0,0)
-    draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,0.1+lengthdir_x(0.1,dir))
-    d3d_set_fog(0,0,0,0)
-    dir += 4
-} else draw_self_shadow(0.2)
+if (instance_exists(objEnemy) || instance_exists(objKnockedOut))
+{
+	draw_self_shadow(0.2);
+	d3d_set_fog(true, c_white, 0, 0);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, 0.1 + lengthdir_x(0.1, dir));
+	d3d_set_fog(0, 0, 0, 0);
+	dir += 4;
+}
+else
+	draw_self_shadow(0.2);
 </string>
           </argument>
         </arguments>

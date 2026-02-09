@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Choose weapon.
-sprite_index=choose(sprEWalkClub,sprEWalkKnife,sprEWalkBat,sprEWalkMachete,sprEWalkChain)
-init_enemy(200)
-ammo = 0
+            <string>/// Choose weapon.
+sprite_index = choose(sprEWalkClub, sprEWalkKnife, sprEWalkBat, sprEWalkMachete, sprEWalkChain);
+init_enemy(200);
+ammo = 0;
 </string>
           </argument>
         </arguments>
@@ -52,8 +52,8 @@ ammo = 0
           <argument>
             <kind>1</kind>
             <string>/// Turn.
-scrERandomTurn()
-image_speed=0.125
+scrERandomTurn();
+image_speed = 0.125;
 </string>
           </argument>
         </arguments>
@@ -77,8 +77,8 @@ image_speed=0.125
           <argument>
             <kind>1</kind>
             <string>/// AI behaviour.
-step_enemy()
-aiRandomMelee()
+step_enemy();
+aiRandomMelee();
 </string>
           </argument>
         </arguments>
@@ -102,7 +102,7 @@ aiRandomMelee()
           <argument>
             <kind>1</kind>
             <string>/// End animation.
-scrEnemyAnimationEnd()
+scrEnemyAnimationEnd();
 </string>
           </argument>
         </arguments>

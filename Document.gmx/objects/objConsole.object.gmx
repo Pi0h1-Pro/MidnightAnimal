@@ -39,7 +39,7 @@ my_console = console_create();
 * the default settings for the
 * console system.
 *****************************/
-console_settings(my_console," ",false);
+console_settings(my_console, " ", false);
 
 /*****************************
 * This loads some preset commands
@@ -53,20 +53,20 @@ console_preset(my_console);
 * which will be shown as suggestions
 * whilst the user types.
 *****************************/
-//console_text_open(my_console,"commands.txt");
+// console_text_open(my_console,"commands.txt");
 
 /*****************************
 * You can also add individual
 * commands to the suggestions
 * list.
 *****************************/
-console_add(my_console,"showinfo (bool) - Toggle metainformation.");
-console_add(my_console,"weapon (id) - Spawn weapon.");
-console_add(my_console,"kill - Kill all enemies.");
-console_add(my_console,"setammo (int ammo) - Set current ammo.");
-console_add(my_console,"tgm (bool) - Toggle god mode.");
-console_add(my_console,"hud (bool) - Toggle HUD.");
-console_add(my_console,"gibfest (bool) - Toggle gibfest: chunks galore!");
+console_add(my_console, "showinfo (bool) - Toggle metainformation.");
+console_add(my_console, "weapon (id) - Spawn weapon.");
+console_add(my_console, "kill - Kill all enemies.");
+console_add(my_console, "setammo (int ammo) - Set current ammo.");
+console_add(my_console, "tgm (bool) - Toggle god mode.");
+console_add(my_console, "hud (bool) - Toggle HUD.");
+console_add(my_console, "gibfest (bool) - Toggle gibfest: chunks galore!");
 </string>
           </argument>
         </arguments>
@@ -124,81 +124,99 @@ console_destroy(my_console);
 /*****************************
  * If a command has been submitted...
  *****************************/
-if console_submit(my_console) {
-
-    /*****************************
+if (console_submit(my_console))
+{
+	/*****************************
      * Here we can put all our commands.
      *****************************/
-
-    // COMMAND: kill - kills all enemies.
-    if console_cmd(my_console, "kill") with objEnemy instance_destroy()
-
-    // COMMAND: setammo - set ammo to value.
-    if console_cmd(my_console, "setammo") {
-        if console_value_count(my_console) = 1 {
-            give_ammo = console_value(my_console, 1)
-
-            if is_real(give_ammo) objPlayer.ammo = give_ammo
-        }
-    }
-    
-    // COMMAND: weapon - create weapon.
-    if console_cmd(my_console, "weapon") {
-        if console_value_count(my_console) = 1 {
-            index = console_value(my_console, 1);
-
-            if is_real(index) {
-                weapon = instance_create(global.mousex, global.mousey, objWeaponSpawn)
-                weapon.image_index = index
-                weapon.ammo = scrGetSpecificAmmo(index)
-            }
-        }
-    }
-
-    // COMMAND: showinfo - display information
-    if console_cmd(my_console, "showinfo") {
-        if console_value_count(my_console) = 1 {
-            index = console_value(my_console, 1);
-
-            objEffector.showinfo = index
-        }
-    }
-    
-    // COMMAND: tgm - toggle god mode.
-    if console_cmd(my_console, "tgm") {
-        if console_value_count(my_console) = 1 {
-            index = console_value(my_console, 1);
-
-            global.tgm = index
-        }
-    }
-    
-    // COMMAND: hud - toggle HUD.
-    if console_cmd(my_console, "hud") {
-        if console_value_count(my_console) = 1 {
-            index = console_value(my_console, 1);
-
-            global.hud = index
-        }
-    }
-    
-    // COMMAND: gibfest - toggle gibfest.
-    if console_cmd(my_console, "gibfest") {
-        if console_value_count(my_console) = 1 {
-            index = console_value(my_console, 1);
-
-            global.gibfest = index
-        }
-    }
-    
-    // COMMAND: rainbow - toggle rainbow mode.
-    if console_cmd(my_console, "rainbow") {
-        if console_value_count(my_console) = 1 {
-            index = console_value(my_console, 1);
-
-            global.rainbow = index
-        }
-    }
+	
+	// COMMAND: kill - kills all enemies.
+	if (console_cmd(my_console, "kill"))
+		with (objEnemy)
+			instance_destroy();
+	
+	// COMMAND: setammo - set ammo to value.
+	if (console_cmd(my_console, "setammo"))
+	{
+		if (console_value_count(my_console) == 1)
+		{
+			give_ammo = console_value(my_console, 1);
+			
+			if (is_real(give_ammo))
+				objPlayer.ammo = give_ammo;
+		}
+	}
+	
+	// COMMAND: weapon - create weapon.
+	if (console_cmd(my_console, "weapon"))
+	{
+		if (console_value_count(my_console) == 1)
+		{
+			index = console_value(my_console, 1);
+			
+			if (is_real(index))
+			{
+				weapon = instance_create(global.mousex, global.mousey, objWeaponSpawn);
+				weapon.image_index = index;
+				weapon.ammo = scrGetSpecificAmmo(index);
+			}
+		}
+	}
+	
+	// COMMAND: showinfo - display information
+	if (console_cmd(my_console, "showinfo"))
+	{
+		if (console_value_count(my_console) == 1)
+		{
+			index = console_value(my_console, 1);
+			
+			objEffector.showinfo = index;
+		}
+	}
+	
+	// COMMAND: tgm - toggle god mode.
+	if (console_cmd(my_console, "tgm"))
+	{
+		if (console_value_count(my_console) == 1)
+		{
+			index = console_value(my_console, 1);
+			
+			global.tgm = index;
+		}
+	}
+	
+	// COMMAND: hud - toggle HUD.
+	if (console_cmd(my_console, "hud"))
+	{
+		if (console_value_count(my_console) == 1)
+		{
+			index = console_value(my_console, 1);
+			
+			global.hud = index;
+		}
+	}
+	
+	// COMMAND: gibfest - toggle gibfest.
+	if (console_cmd(my_console, "gibfest"))
+	{
+		if (console_value_count(my_console) == 1)
+		{
+			index = console_value(my_console, 1);
+			
+			global.gibfest = index;
+		}
+	}
+	
+	// COMMAND: rainbow - toggle rainbow mode.
+	if (console_cmd(my_console, "rainbow"))
+	{
+		if (console_value_count(my_console) == 1)
+		{
+			index = console_value(my_console, 1);
+			
+			global.rainbow = index;
+		}
+	}
 }
 </string>
           </argument>
@@ -230,7 +248,7 @@ if console_submit(my_console) {
 ***************************/
 
 draw_set_font(fntTiny);
-console_draw(my_console,200,c_black,c_black,c_white,c_white,0.75);
+console_draw(my_console, 200, c_black, c_black, c_white, c_white, 0.75);
 </string>
           </argument>
         </arguments>

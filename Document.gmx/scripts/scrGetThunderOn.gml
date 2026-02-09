@@ -1,1 +1,1 @@
-thunderon=1
+thunderon = 1;

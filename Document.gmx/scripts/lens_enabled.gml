@@ -1,1 +1,1 @@
-return instance_exists(efDirtyLens)
+return instance_exists(efDirtyLens);

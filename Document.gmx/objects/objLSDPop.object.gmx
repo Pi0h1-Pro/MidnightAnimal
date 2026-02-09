@@ -25,19 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_angle=random(360)
-h=floor(random(255))
-image_blend=make_color_hsv(h,255,255)
-dir=0
-on=1
-angle=image_angle
-sprite_index=choose(sprLSDPop1,sprLSDPop2)
-diradd=-1+round(random(1))*2
-image_speed=0.35
-image_index=random(8)
-life=40
-amount=0
+            <string>image_speed = 0;
+image_angle = random(360);
+h = floor(random(255));
+image_blend = make_color_hsv(h, 255, 255);
+dir = 0;
+on = 1;
+angle = image_angle;
+sprite_index = choose(sprLSDPop1, sprLSDPop2);
+diradd = -1 + round(random(1)) * 2;
+image_speed = 0.35;
+image_index = random(8);
+life = 40;
+amount = 0;
 </string>
           </argument>
         </arguments>
@@ -60,25 +60,38 @@ amount=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objPlayerDead) {
-    if scrMovingPlayerExists() targetamount = 5 + (abs(objPlayer.myxspeed) + abs(objPlayer.myyspeed))
-    else targetamount = 5
-} else targetamount = 5
-if amount &lt; targetamount amount += 0.025
-else amount = targetamount
-if amount &gt; targetamount amount -= 0.005
-else amount = targetamount
+            <string>if (!instance_exists(objPlayerDead))
+{
+	if (scrMovingPlayerExists())
+		targetamount = 5 + (abs(objPlayer.myxspeed) + abs(objPlayer.myyspeed));
+	else
+		targetamount = 5;
+}
+else
+	targetamount = 5;
+if (amount &lt; targetamount)
+	amount += 0.025;
+else
+	amount = targetamount;
+if (amount &gt; targetamount)
+	amount -= 0.005;
+else
+	amount = targetamount;
 
-if round(random(100))=2 instance_destroy()
-if life&gt;0 life-=1 else instance_destroy()
-image_blend=merge_color(merge_color(merge_color(c_red,c_yellow,random(1)),c_black,random(1)),make_color_hsv(h,random(255),255),amount)
-if h&lt;250 h+=5 else h=0
-image_angle=angle+dir
-image_xscale+=0.05
-image_yscale+=0.05
-
-
-
+if (round(random(100)) == 2)
+	instance_destroy();
+if (life &gt; 0)
+	life -= 1;
+else
+	instance_destroy();
+image_blend = merge_color(merge_color(merge_color(c_red, c_yellow, random(1)), c_black, random(1)), make_color_hsv(h, random(255), 255), amount);
+if (h &lt; 250)
+	h += 5;
+else
+	h = 0;
+image_angle = angle + dir;
+image_xscale += 0.05;
+image_yscale += 0.05;
 </string>
           </argument>
         </arguments>

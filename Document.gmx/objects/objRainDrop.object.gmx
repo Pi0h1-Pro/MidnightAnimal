@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set the height and speed of the rainfall.
-height = 40
-fallSpeed = 6
+            <string>/// Set the height and speed of the rainfall.
+height = 40;
+fallSpeed = 6;
 </string>
           </argument>
         </arguments>
@@ -50,29 +50,30 @@ fallSpeed = 6
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Raindrop behaviour.
+            <string>/// Raindrop behaviour.
 
 // Dictates the speed at which the raindrop falls.
-height -= fallSpeed
+height -= fallSpeed;
 
 // If the raindrop has fallen onto the ground...
-if height &lt;= 0 {
-    
-    // ...create a splash...
-    
-    //if place_meeting(x, y, objRiver) instance_create(x, y, objWaterSplash) else 
-    instance_create(x, y, objSplash)
-    if instance_exists(objWaterSurface) instance_create(x, y, objRippleLake)
-    
-    // ... and destroy the object instance of the raindrop.
-    instance_destroy()
+if (height &lt;= 0)
+{
+	// ...create a splash...
+	
+	// if place_meeting(x, y, objRiver) instance_create(x, y, objWaterSplash) else
+	instance_create(x, y, objSplash);
+	if (instance_exists(objWaterSurface))
+		instance_create(x, y, objRippleLake);
+	
+	// ... and destroy the object instance of the raindrop.
+	instance_destroy();
 }
 
 // Restrict the rain from falling indoors or in covered regions based on the layer.
-interior = tile_layer_find(1000, x, y)
-covered = tile_layer_find(1001, x, y)
-if interior or covered instance_destroy()
-
+interior = tile_layer_find(1000, x, y);
+covered = tile_layer_find(1001, x, y);
+if (interior || covered)
+	instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -96,22 +97,22 @@ if interior or covered instance_destroy()
           <argument>
             <kind>1</kind>
             <string>/// Draw the raindrop.
-draw_set_color(c_white)
-draw_set_alpha(0.6)
+draw_set_color(c_white);
+draw_set_alpha(0.6);
 
 // Creates raindrops based on perspetive.
 var length, vectorx, vectory;
-vectorx = (x - (view_xview + view_wview / 2)) / (view_wview / 2)
-vectory = (y - (view_yview + view_hview / 2)) / (view_hview / 2)
+vectorx = (x - (view_xview + view_wview / 2)) / (view_wview / 2);
+vectory = (y - (view_yview + view_hview / 2)) / (view_hview / 2);
 
 // Length of the raindrop.
-length = 1.5
+length = 1.5;
 
 // Draw the raindrop.
-draw_line_width(x + vectorx * sqr(height), y + vectory * sqr(height), x + vectorx * sqr(height + length), y + vectory * sqr(height + length), 1)
+draw_line_width(x + vectorx * sqr(height), y + vectory * sqr(height), x + vectorx * sqr(height + length), y + vectory * sqr(height + length), 1);
 
 // Reset the alpha.
-draw_set_alpha(1)
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

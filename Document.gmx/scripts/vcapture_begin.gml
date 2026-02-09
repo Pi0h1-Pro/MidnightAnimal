@@ -1,4 +1,4 @@
-/*vcapture_begin( window_handle, filename, fps)
+/* vcapture_begin( window_handle, filename, fps)
 
 Deletes any file currently occupying filename, creates an avi file in its place a
 nd prepares it for recording. The DLL can only record into one file at a time. 
@@ -11,4 +11,4 @@ If the user selects Cancel on the dialog, this function returns false (and the
 following functions will cause your game to hang). Otherwise, the function will return true.
 */
 
-return external_call( global.fvcapture_begin, argument0, argument1, argument2);
+return external_call(global.fvcapture_begin, argument0, argument1, argument2);

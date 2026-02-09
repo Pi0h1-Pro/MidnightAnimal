@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>indexspeed=0.5-random(0.2)
-image_xscale=0.75+random(0.25)
-image_yscale=(-1+round(random(1))*2)*image_xscale
-sprite_index=choose(sprFirePuff1,sprFirePuff2)
-image_speed=0
+            <string>indexspeed = 0.5 - random(0.2);
+image_xscale = 0.75 + random(0.25);
+image_yscale = (-1 + round(random(1)) * 2) * image_xscale;
+sprite_index = choose(sprFirePuff1, sprFirePuff2);
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -52,9 +52,12 @@ image_speed=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index&lt;sprite_get_number(sprite_index)-1 image_index+=indexspeed else instance_destroy()
-image_xscale+=0.005
-image_yscale+=0.005*sign(image_yscale)
+            <string>if (image_index &lt; sprite_get_number(sprite_index) - 1)
+	image_index += indexspeed;
+else
+	instance_destroy();
+image_xscale += 0.005;
+image_yscale += 0.005 * sign(image_yscale);
 </string>
           </argument>
         </arguments>
@@ -77,8 +80,8 @@ image_yscale+=0.005*sign(image_yscale)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>visible=0 
-instance_destroy()
+            <string>visible = 0;
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -101,9 +104,11 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index&gt;2 draw_sprite_ext(sprite_index,image_index-2,x,y,image_xscale,image_yscale,image_angle,merge_color(c_maroon,c_dkgray,random(0.5)),1)
-if image_index&gt;1 draw_sprite_ext(sprite_index,image_index-1,x,y,image_xscale,image_yscale,image_angle,merge_color(c_red,c_maroon,random(1)),1)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,merge_color(merge_color(c_white,c_yellow,random(1)),c_orange,random(1)),1)
+            <string>if (image_index &gt; 2)
+	draw_sprite_ext(sprite_index, image_index - 2, x, y, image_xscale, image_yscale, image_angle, merge_color(c_maroon, c_dkgray, random(0.5)), 1);
+if (image_index &gt; 1)
+	draw_sprite_ext(sprite_index, image_index - 1, x, y, image_xscale, image_yscale, image_angle, merge_color(c_red, c_maroon, random(1)), 1);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, merge_color(merge_color(c_white, c_yellow, random(1)), c_orange, random(1)), 1);
 </string>
           </argument>
         </arguments>

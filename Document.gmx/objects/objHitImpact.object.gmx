@@ -26,13 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Set variables.
-image_speed = 0.3
-image_angle = random(360)
-direction = random(360)
-image_xscale = 0.3
-image_yscale = image_xscale 
+image_speed = 0.3;
+image_angle = random(360);
+direction = random(360);
+image_xscale = 0.3;
+image_yscale = image_xscale;
 
-sound_ps(sndPunchGlassImpact)
+sound_ps(sndPunchGlassImpact);
 </string>
           </argument>
         </arguments>
@@ -56,7 +56,7 @@ sound_ps(sndPunchGlassImpact)
           <argument>
             <kind>1</kind>
             <string>/// Destroy impact.
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -80,8 +80,7 @@ instance_destroy()
           <argument>
             <kind>1</kind>
             <string>/// Draw impact.
-draw_self()
-
+draw_self();
 </string>
           </argument>
         </arguments>

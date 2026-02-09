@@ -25,11 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>smirked=0
-image_speed=0.085
-if global.revisit instance_destroy()
-vol=1
-wait=20</string>
+            <string>smirked = 0;
+image_speed = 0.085;
+if (global.revisit)
+	instance_destroy();
+vol = 1;
+wait = 20;
+</string>
           </argument>
         </arguments>
       </action>
@@ -51,22 +53,28 @@ wait=20</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if smirked=0 {
-if point_distance(x,y,objPlayer.x,objPlayer.y)&lt;40 {
-scrGetMessage(1)
-smirked=1
-}
-}
-
-if smirked=1 {
-if !instance_exists(objPhoneConversation) {
-if wait&gt;0 wait-=1 else {
-scrGetMessage(2)
-smirked=2
-}
-}
+            <string>if (smirked == 0)
+{
+	if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 40)
+	{
+		scrGetMessage(1);
+		smirked = 1;
+	}
 }
 
+if (smirked == 1)
+{
+	if (!instance_exists(objPhoneConversation))
+	{
+		if (wait &gt; 0)
+			wait -= 1;
+		else
+		{
+			scrGetMessage(2);
+			smirked = 2;
+		}
+	}
+}
 </string>
           </argument>
         </arguments>
@@ -89,8 +97,9 @@ smirked=2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)</string>
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+</string>
           </argument>
         </arguments>
       </action>

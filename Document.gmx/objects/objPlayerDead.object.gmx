@@ -25,13 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(mnPhone) {
-    if mnPhone.active = 1 mnPhone.active = 0
+            <string>if (instance_exists(mnPhone))
+{
+	if (mnPhone.active == 1)
+		mnPhone.active = 0;
 }
 
-objEffector.whitealpha = 1
-instance_create(x, y, objDrawRestart)
-save_data()
+objEffector.whitealpha = 1;
+instance_create(x, y, objDrawRestart);
+save_data();
 </string>
           </argument>
         </arguments>

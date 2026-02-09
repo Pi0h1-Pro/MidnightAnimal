@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Restart text.
-frame = 0
-xx = -480
-x2 = 0
-scrGetRestartText()
+            <string>/// Restart text.
+frame = 0;
+xx = -480;
+x2 = 0;
+scrGetRestartText();
 
-amount = 180
-fade = 0
+amount = 180;
+fade = 0;
 
-//LoadFailed = false;
+// LoadFailed = false;
 </string>
           </argument>
         </arguments>
@@ -58,20 +58,28 @@ fade = 0
           <argument>
             <kind>1</kind>
             <string>/// Slide in.
-if x2 &lt; view_wview[0] x2 += 40
-if xx &lt; 0 xx += 60
+if (x2 &lt; view_wview[0])
+	x2 += 40;
+if (xx &lt; 0)
+	xx += 60;
 
-if fade = 1 {
-    if amount &gt; 0 {
-        amount -= 20
-
-    } else {
-        if file_exists("tempsave.sav") {
-            scrLoadFloor()
-            scrResetActiveSurfaces()
-        } else game_restart()
-    };
-};
+if (fade == 1)
+{
+	if (amount &gt; 0)
+	{
+		amount -= 20;
+	}
+	else
+	{
+		if (file_exists("tempsave.sav"))
+		{
+			scrLoadFloor();
+			scrResetActiveSurfaces();
+		}
+		else
+			game_restart();
+	}
+}
 </string>
           </argument>
         </arguments>
@@ -96,8 +104,10 @@ if fade = 1 {
             <kind>1</kind>
             <string>/// Draw restart.
 
-if instance_exists(objPlayerDead) {
-    if !instance_exists(mnCharacterSelect) scrDrawRestart()
+if (instance_exists(objPlayerDead))
+{
+	if (!instance_exists(mnCharacterSelect))
+		scrDrawRestart();
 }
 </string>
           </argument>

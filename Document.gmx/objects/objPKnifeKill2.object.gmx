@@ -25,23 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-scrInitMaskPos()
-scrUpdateMaskPos(sprite_index)
+            <string>image_speed = 0;
+scrInitMaskPos();
+scrUpdateMaskPos(sprite_index);
 
-energie=2+floor(random(2))
-image_speed=0
-knives=0
-ammo=0
+energie = 2 + floor(random(2));
+image_speed = 0;
+knives = 0;
+ammo = 0;
 
-if scrIsGang(object_index) bottom=sprEGangDieKnife
-else bottom=sprEDieKnife
-
-
-
-
-
-
+if (scrIsGang(object_index))
+	bottom = sprEGangDieKnife;
+else
+	bottom = sprEDieKnife;
 </string>
           </argument>
         </arguments>
@@ -64,37 +60,39 @@ else bottom=sprEDieKnife
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if energie &lt;= 0 {
-    my_id = instance_create(x, y, objDeadBody)
-    my_id.image_angle = image_angle
-    my_id.sprite_index = bottom
-    my_id.image_index = 3
-
-    my_id = instance_create(x, y, objPlayerMouse)
-    my_id.sprite_index = sprPWalkKnife
-    my_id.maskon = global.maskon
-    my_id.maskindex = global.maskindex
-    global.angle = image_angle - 180
-    my_id.reload = 5
-    with my_id move_outside_solid(global.angle, 16)
-    instance_destroy()
-
-    //DRAW SCORE
-    //my_id=instance_create(x,y-12,objScore)
-    //my_id.text="+"+string((600)+400*(global.factor))+"pts"
-    global.myscore += (600) + 400 * (global.factor)
-    global.killscore += 600
-    global.boldscore += 400 * global.factor
-    global.combotime = 240
-    global.combo += 1
-    global.killx[global.kills] = x
-    global.killy[global.kills] = y
-    global.kills += 1
-    ds_list_add(global.bonuslist, "Execution")
-    if global.combotime &lt; 12 global.combotime = 12
-    exit
+            <string>if (energie &lt;= 0)
+{
+	my_id = instance_create(x, y, objDeadBody);
+	my_id.image_angle = image_angle;
+	my_id.sprite_index = bottom;
+	my_id.image_index = 3;
+	
+	my_id = instance_create(x, y, objPlayerMouse);
+	my_id.sprite_index = sprPWalkKnife;
+	my_id.maskon = global.maskon;
+	my_id.maskindex = global.maskindex;
+	global.angle = image_angle - 180;
+	my_id.reload = 5;
+	with (my_id)
+		move_outside_solid(global.angle, 16);
+	instance_destroy();
+	
+	// DRAW SCORE
+	// my_id=instance_create(x,y-12,objScore)
+	// my_id.text="+"+string((600)+400*(global.factor))+"pts"
+	global.myscore += (600) + 400 * (global.factor);
+	global.killscore += 600;
+	global.boldscore += 400 * global.factor;
+	global.combotime = 240;
+	global.combo += 1;
+	global.killx[global.kills] = x;
+	global.killy[global.kills] = y;
+	global.kills += 1;
+	ds_list_add(global.bonuslist, "Execution");
+	if (global.combotime &lt; 12)
+		global.combotime = 12;
+	exit;
 }
-
 </string>
           </argument>
         </arguments>
@@ -117,19 +115,21 @@ else bottom=sprEDieKnife
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index = 0 {
-    energie -= 1
-    image_speed = 0.2
-    image_index = 1
-    sound_play(sndHit)
-    sound_play(choose(sndCut1, sndCut2))
-    repeat(3 + random(2)) {
-        my_id = instance_create(x + lengthdir_x(14, image_angle) - 1 + random(2), y + lengthdir_y(14, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = image_angle - 110 + random(20)
-    }
-    repeat(3) instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood)
+            <string>if (image_index == 0)
+{
+	energie -= 1;
+	image_speed = 0.2;
+	image_index = 1;
+	sound_play(sndHit);
+	sound_play(choose(sndCut1, sndCut2));
+	repeat (3 + random(2))
+	{
+		my_id = instance_create(x + lengthdir_x(14, image_angle) - 1 + random(2), y + lengthdir_y(14, image_angle) - 1 + random(2), objBloodSquirt);
+		my_id.image_angle = image_angle - 110 + random(20);
+	}
+	repeat (3)
+		instance_create(x + lengthdir_x(17, image_angle), y + lengthdir_y(17, image_angle), objBigBlood);
 }
-
 </string>
           </argument>
         </arguments>
@@ -152,9 +152,8 @@ else bottom=sprEDieKnife
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=0
-image_speed=0
-
+            <string>image_index = 0;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -177,10 +176,10 @@ image_speed=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(bottom,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-if global.maskon=1 scrDrawMask(1)
-
+            <string>draw_sprite_ext(bottom, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+if (global.maskon == 1)
+	scrDrawMask(1);
 </string>
           </argument>
         </arguments>

@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text = ""
-spd = 0
-colour = c_white
-rot = 0
-friction = 0.35
-font_size = 0.15 + random(0.1)
+            <string>text = "";
+spd = 0;
+colour = c_white;
+rot = 0;
+friction = 0.35;
+font_size = 0.15 + random(0.1);
 </string>
           </argument>
         </arguments>
@@ -53,8 +53,9 @@ font_size = 0.15 + random(0.1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha -= 0.01
-if image_alpha &lt;= 0 instance_destroy()
+            <string>image_alpha -= 0.01;
+if (image_alpha &lt;= 0)
+	instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -78,14 +79,13 @@ if image_alpha &lt;= 0 instance_destroy()
           <argument>
             <kind>1</kind>
             <string>/// Draw the damage counter.
-//y -= spd
+// y -= spd
 
-draw_set_font(fntDamage)
-draw_set_halign(fa_center)
-draw_set_colour(colour)
-draw_set_alpha(image_alpha)
-draw_text_transformed(x, y, text, font_size, font_size, rot)
-
+draw_set_font(fntDamage);
+draw_set_halign(fa_center);
+draw_set_colour(colour);
+draw_set_alpha(image_alpha);
+draw_text_transformed(x, y, text, font_size, font_size, rot);
 </string>
           </argument>
         </arguments>

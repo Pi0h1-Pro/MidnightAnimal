@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-bled=0
-hurtindex=0
-targetindex=0
-ammo=0
-event_inherited()
+            <string>image_speed = 0;
+bled = 0;
+hurtindex = 0;
+targetindex = 0;
+ammo = 0;
+event_inherited();
 </string>
           </argument>
         </arguments>
@@ -53,26 +53,31 @@ event_inherited()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &lt; 19 image_index += 0.25
-else {
-    instance_create(x + lengthdir_x(24, image_angle), y + lengthdir_y(24, image_angle), objBloodPool)
-    my_id = instance_create(x, y, objDeadBody)
-    my_id.image_angle = image_angle
-    my_id.sprite_index = sprEBrokenPoolKill
-    my_id.image_index = 15
-    scrFinishExecution(sprPWalkUnarmed)
+            <string>if (image_index &lt; 19)
+	image_index += 0.25;
+else
+{
+	instance_create(x + lengthdir_x(24, image_angle), y + lengthdir_y(24, image_angle), objBloodPool);
+	my_id = instance_create(x, y, objDeadBody);
+	my_id.image_angle = image_angle;
+	my_id.sprite_index = sprEBrokenPoolKill;
+	my_id.image_index = 15;
+	scrFinishExecution(sprPWalkUnarmed);
 }
-if image_index &lt;= 4 hurtindex = image_index
-if image_index &gt;= 4 and bled = 0 {
-    bled = 1
-    targetindex = 3
-    sound_ps(choose(sndCut1, sndCut2))
-    sound_ps(choose(sndHit, sndHit1, sndHit2, sndHit3))
-    global.shake = 18
-    scrMeleeBlood(x, y)
-    repeat(3 + random(3)) {
-        instance_create(x + lengthdir_x(13, image_angle - 5) - 1 + random(2), y + lengthdir_y(13, image_angle - 5) - 1 + random(2), objBloodSquirt)
-    }
+if (image_index &lt;= 4)
+	hurtindex = image_index;
+if (image_index &gt;= 4 &amp;&amp; bled == 0)
+{
+	bled = 1;
+	targetindex = 3;
+	sound_ps(choose(sndCut1, sndCut2));
+	sound_ps(choose(sndHit, sndHit1, sndHit2, sndHit3));
+	global.shake = 18;
+	scrMeleeBlood(x, y);
+	repeat (3 + random(3))
+	{
+		instance_create(x + lengthdir_x(13, image_angle - 5) - 1 + random(2), y + lengthdir_y(13, image_angle - 5) - 1 + random(2), objBloodSquirt);
+	}
 }
 </string>
           </argument>
@@ -96,12 +101,13 @@ if image_index &gt;= 4 and bled = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if hurtindex&lt;targetindex hurtindex+=0.15
-image_yscale=1
-draw_sprite_ext(sprEBrokenPoolKill,hurtindex,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprEBrokenPoolKill,hurtindex,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>if (hurtindex &lt; targetindex)
+	hurtindex += 0.15;
+image_yscale = 1;
+draw_sprite_ext(sprEBrokenPoolKill, hurtindex, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprEBrokenPoolKill, hurtindex, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

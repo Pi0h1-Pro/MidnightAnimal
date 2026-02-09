@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mp_grid_add_instances(global.grid, id, 1)
-image_index = 0 
-image_speed = 0.2
-sound_ps(sndPlaceShield)
-radius = 0
-max_radius = 180
+            <string>mp_grid_add_instances(global.grid, id, 1);
+image_index = 0;
+image_speed = 0.2;
+sound_ps(sndPlaceShield);
+radius = 0;
+max_radius = 180;
 </string>
           </argument>
         </arguments>
@@ -54,54 +54,77 @@ max_radius = 180
           <argument>
             <kind>1</kind>
             <string>/// Pick up shield.
-if !scrMovingPlayerExists() exit
+if (!scrMovingPlayerExists())
+	exit;
 
-if sprite_index = pierretteShield {
-    //if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32 {
-        if image_index = 0 image_index = 1
-        if radius &lt; max_radius radius += 4 else radius = max_radius
-        if image_index = 1 {
-            if keyboard_check_pressed(global.abilitykey) {
-                sound_ps(sndShieldFold)
-                sprite_index = pierretteShieldFold
-                image_index = 0 
-                image_speed = 0.4
-            }
-        }
-    /*} else {
+if (sprite_index == pierretteShield)
+{
+	// if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32 {
+	if (image_index == 0)
+		image_index = 1;
+	if (radius &lt; max_radius)
+		radius += 4;
+	else
+		radius = max_radius;
+	if (image_index == 1)
+	{
+		if (keyboard_check_pressed(global.abilitykey))
+		{
+			sound_ps(sndShieldFold);
+			sprite_index = pierretteShieldFold;
+			image_index = 0;
+			image_speed = 0.4;
+		}
+	}
+	
+	/*} else {
         if image_index = 1 image_index = 0
     }*/
 }
 
-if sprite_index = pierretteShieldFold {
-    if radius &gt; 0 radius -= 4
+if (sprite_index == pierretteShieldFold)
+{
+	if (radius &gt; 0)
+		radius -= 4;
 }
 
-if sprite_index = pierretteShieldFolded {
-    if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32 {
-        if image_index = 0 image_index = 1
-        if image_index = 1 {
-            if keyboard_check_pressed(global.interactkey) {
-                sound_ps(sndPickUpGeneric)
-                with objPlayer {
-                    sprite_index = pierretteWalkShield
-                    image_index = 0 
-                    image_speed = 0
-                }
-                instance_destroy()
-            }
-        }
-    }
+if (sprite_index == pierretteShieldFolded)
+{
+	if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32)
+	{
+		if (image_index == 0)
+			image_index = 1;
+		if (image_index == 1)
+		{
+			if (keyboard_check_pressed(global.interactkey))
+			{
+				sound_ps(sndPickUpGeneric);
+				with (objPlayer)
+				{
+					sprite_index = pierretteWalkShield;
+					image_index = 0;
+					image_speed = 0;
+				}
+				instance_destroy();
+			}
+		}
+	}
 }
 
-if radius = max_radius {
-    if objPlayer.hp &lt; objPlayer.max_hp {
-        //if point_distance(x, y, objPlayer.x, objPlayer.y) &gt; max_radius * 1.2 objPlayer.hp += 0.01
-        if point_distance(x, y, objPlayer.x, objPlayer.y) &gt; max_radius and point_distance(x, y, objPlayer.x, objPlayer.y) &lt; max_radius * 1.2 objPlayer.hp += 0.05
-        if point_distance(x, y, objPlayer.x, objPlayer.y) &gt; max_radius * 0.8 and point_distance(x, y, objPlayer.x, objPlayer.y) &lt; max_radius objPlayer.hp += 0.1
-        if point_distance(x, y, objPlayer.x, objPlayer.y) &gt; max_radius * 0.6 and point_distance(x, y, objPlayer.x, objPlayer.y) &lt; max_radius * 0.8 objPlayer.hp += 0.15
-        if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; max_radius * 0.6 objPlayer.hp += 0.2
-    }
+if (radius == max_radius)
+{
+	if (objPlayer.hp &lt; objPlayer.max_hp)
+	{
+		// if point_distance(x, y, objPlayer.x, objPlayer.y) &gt; max_radius * 1.2 objPlayer.hp += 0.01
+		if (point_distance(x, y, objPlayer.x, objPlayer.y) &gt; max_radius &amp;&amp; point_distance(x, y, objPlayer.x, objPlayer.y) &lt; max_radius * 1.2)
+			objPlayer.hp += 0.05;
+		if (point_distance(x, y, objPlayer.x, objPlayer.y) &gt; max_radius * 0.8 &amp;&amp; point_distance(x, y, objPlayer.x, objPlayer.y) &lt; max_radius)
+			objPlayer.hp += 0.1;
+		if (point_distance(x, y, objPlayer.x, objPlayer.y) &gt; max_radius * 0.6 &amp;&amp; point_distance(x, y, objPlayer.x, objPlayer.y) &lt; max_radius * 0.8)
+			objPlayer.hp += 0.15;
+		if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; max_radius * 0.6)
+			objPlayer.hp += 0.2;
+	}
 }
 </string>
           </argument>
@@ -125,7 +148,8 @@ if radius = max_radius {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with other scrBulletImpact()
+            <string>with (other)
+	scrBulletImpact();
 </string>
           </argument>
         </arguments>
@@ -148,17 +172,20 @@ if radius = max_radius {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if sprite_index = pierretteShieldActivate {
-    sprite_index = pierretteShield
-    image_speed = 0
-    image_index = 0
-    //image_index = sprite_get_number(sprite_index) - 1
+            <string>if (sprite_index == pierretteShieldActivate)
+{
+	sprite_index = pierretteShield;
+	image_speed = 0;
+	image_index = 0;
+	
+	// image_index = sprite_get_number(sprite_index) - 1
 }
 
-if sprite_index = pierretteShieldFold {
-    sprite_index= pierretteShieldFolded
-    image_speed = 0
-    image_index = 0
+if (sprite_index == pierretteShieldFold)
+{
+	sprite_index = pierretteShieldFolded;
+	image_speed = 0;
+	image_index = 0;
 }
 </string>
           </argument>
@@ -182,19 +209,19 @@ if sprite_index = pierretteShieldFold {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(0.1)
-draw_circle_colour(x, y, radius * 1.2, global.c_health, global.c_health, false)
-draw_set_alpha(0.2)
-draw_circle_colour(x, y, radius, global.c_health, global.c_health, false)
-draw_set_alpha(0.4)
-draw_circle_colour(x, y, radius * 0.8, global.c_health, global.c_health, false)
-draw_set_alpha(0.6)
-draw_circle_colour(x, y, radius * 0.6, global.c_health, global.c_health, false)
-draw_set_alpha(0.8)
-draw_circle_colour(x, y, radius * 0.4, global.c_health, global.c_health, false)
+            <string>draw_set_alpha(0.1);
+draw_circle_colour(x, y, radius * 1.2, global.c_health, global.c_health, false);
+draw_set_alpha(0.2);
+draw_circle_colour(x, y, radius, global.c_health, global.c_health, false);
+draw_set_alpha(0.4);
+draw_circle_colour(x, y, radius * 0.8, global.c_health, global.c_health, false);
+draw_set_alpha(0.6);
+draw_circle_colour(x, y, radius * 0.6, global.c_health, global.c_health, false);
+draw_set_alpha(0.8);
+draw_circle_colour(x, y, radius * 0.4, global.c_health, global.c_health, false);
 
-draw_reset()
-draw_self()
+draw_reset();
+draw_self();
 </string>
           </argument>
         </arguments>

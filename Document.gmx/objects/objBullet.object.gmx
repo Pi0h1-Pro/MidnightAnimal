@@ -25,11 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set properties of bullet.
-init_projectile()
-alarm[1] = 240
-sprite_index = sprBullet
-if global.rainbow image_blend=random_color() else image_blend = c_white
+            <string>/// Set properties of bullet.
+init_projectile();
+alarm[1] = 240;
+sprite_index = sprBullet;
+if (global.rainbow)
+	image_blend = random_color();
+else
+	image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -51,9 +54,9 @@ if global.rainbow image_blend=random_color() else image_blend = c_white
           <argument>
             <kind>1</kind>
             <string>/// Create grid for trail.
-trail_init()
-slim = 0
-alarm[0] = 60
+trail_init();
+slim = 0;
+alarm[0] = 60;
 </string>
           </argument>
         </arguments>
@@ -77,7 +80,7 @@ alarm[0] = 60
           <argument>
             <kind>1</kind>
             <string>/// Destroy.
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -101,7 +104,7 @@ instance_destroy()
           <argument>
             <kind>1</kind>
             <string>/// Destroy trail.
-trail_destroy()
+trail_destroy();
 </string>
           </argument>
         </arguments>
@@ -125,7 +128,7 @@ trail_destroy()
           <argument>
             <kind>1</kind>
             <string>/// Calculate trail.
-trail_calculate(32)
+trail_calculate(32);
 </string>
           </argument>
         </arguments>
@@ -147,15 +150,15 @@ trail_calculate(32)
           <argument>
             <kind>1</kind>
             <string>/// Fast collision.
-if sprite_index = sprBulletRicochet exit
+if (sprite_index == sprBulletRicochet)
+	exit;
 
-if collision_line(xprevious, yprevious, x, y, objWall, 1, 0)
-or collision_line(xprevious, yprevious, x, y, objSolid, 1, 0)
-or collision_line(xprevious, yprevious, x, y, objConcreteBlock, 1, 0)
-//or collision_line(xprevious, yprevious, x, y, objDoorV, 1, 0)
-or collision_line(xprevious, yprevious, x, y, objSlidingDoorV, 1, 0) 
-scrBulletImpact()
-
+if (collision_line(xprevious, yprevious, x, y, objWall, 1, 0)
+	|| collision_line(xprevious, yprevious, x, y, objSolid, 1, 0)
+	|| collision_line(xprevious, yprevious, x, y, objConcreteBlock, 1, 0)
+// or collision_line(xprevious, yprevious, x, y, objDoorV, 1, 0)
+|| collision_line(xprevious, yprevious, x, y, objSlidingDoorV, 1, 0))
+	scrBulletImpact();
 </string>
           </argument>
         </arguments>
@@ -178,29 +181,39 @@ scrBulletImpact()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set specific properties.
+            <string>/// Set specific properties.
 
 // If the bullet leaves the boundaries of the room, destroy it.
-if x &gt; room_width + 50 or x &lt; -50 or y &lt; -50 or y &gt; room_height + 50 instance_destroy()
+if (x &gt; room_width + 50 || x &lt; -50 || y &lt; -50 || y &gt; room_height + 50)
+	instance_destroy();
 
 // Destroy bullet by alpha.
-if image_alpha &gt; 0 image_alpha -= 0.05 else instance_destroy()
+if (image_alpha &gt; 0)
+	image_alpha -= 0.05;
+else
+	instance_destroy();
 
 // Warp the bullet's direction if it's a plasma round.
-if sprite_index = sprPlasmaRound {
-    direction += -7 + random(14)
-    image_angle = direction
+if (sprite_index == sprPlasmaRound)
+{
+	direction += -7 + random(14);
+	image_angle = direction;
 }
 
-if sprite_index = sprBulletRicochet {
-    if bounces &gt;= 18 scrBulletImpact() else {
-        if place_meeting(x + hspeed, y, objWall) or place_meeting(x + hspeed, y, objConcreteBlock) direction = -direction + 180
-        if place_meeting(x, y + vspeed, objWall) or place_meeting(x, y + vspeed, objConcreteBlock) direction = -direction
-        image_angle = direction
-        bounces += 1
-    }
+if (sprite_index == sprBulletRicochet)
+{
+	if (bounces &gt;= 18)
+		scrBulletImpact();
+	else
+	{
+		if (place_meeting(x + hspeed, y, objWall) || place_meeting(x + hspeed, y, objConcreteBlock))
+			direction = -direction + 180;
+		if (place_meeting(x, y + vspeed, objWall) || place_meeting(x, y + vspeed, objConcreteBlock))
+			direction = -direction;
+		image_angle = direction;
+		bounces += 1;
+	}
 }
-
 </string>
           </argument>
         </arguments>
@@ -223,107 +236,106 @@ if sprite_index = sprBulletRicochet {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Shatter windows.
+            <string>/// Shatter windows.
 
 // Glass panels.
-if other.object_index = objGlassPanelH {
-    if vspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x + i * 1.5, y, objShard)
-            my_id.speed = random(5)
-            my_id.direction = add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objGlassPanelHBroken)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objGlassPanelH)
+{
+	if (vspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x + i * 1.5, y, objShard);
+			my_id.speed = random(5);
+			my_id.direction = add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objGlassPanelHBroken);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
-if other.object_index = objGlassPanelV {
-    if hspeed &gt; 0 other.add = -1 else other.add = 1
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x, y + i * 1.5, objShard)
-            my_id.speed = random(5)
-            my_id.direction = 90 + add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objGlassPanelVBroken)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objGlassPanelV)
+{
+	if (hspeed &gt; 0)
+		other.add = -1;
+	else
+		other.add = 1;
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x, y + i * 1.5, objShard);
+			my_id.speed = random(5);
+			my_id.direction = 90 + add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objGlassPanelVBroken);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
 // Windows.
-if other.object_index = objWindowH {
-    if vspeed &gt; 0 other.add = -1 else other.add = 1
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x + i * 1.5, y, objShard)
-            my_id.speed = random(5)
-            my_id.direction = add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objBrokenWindowH)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objWindowH)
+{
+	if (vspeed &gt; 0)
+		other.add = -1;
+	else
+		other.add = 1;
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x + i * 1.5, y, objShard);
+			my_id.speed = random(5);
+			my_id.direction = add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objBrokenWindowH);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
-if other.object_index = objWindowV {
-    if hspeed &gt; 0 other.add = -1 else other.add = 1
-    
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x, y + i * 1.5, objShard)
-            my_id.speed = random(5)
-            my_id.direction = 90 + add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objBrokenWindowV)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objWindowV)
+{
+	if (hspeed &gt; 0)
+		other.add = -1;
+	else
+		other.add = 1;
+	
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x, y + i * 1.5, objShard);
+			my_id.speed = random(5);
+			my_id.direction = 90 + add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objBrokenWindowV);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objWall">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scrBulletImpact()
-with other life -= 1
 </string>
           </argument>
         </arguments>
@@ -346,8 +358,9 @@ with other life -= 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrBulletImpact()
-with other life -= 1
+            <string>scrBulletImpact();
+with (other)
+	life -= 1;
 </string>
           </argument>
         </arguments>
@@ -370,19 +383,33 @@ with other life -= 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrBulletImpact()
+            <string>scrBulletImpact();
 
-if sprite_index = sprBreachingRound {
-    with other {
-    
-        // Open door.
-        swinger=1
-        if abs(swingspeed)&gt;3.5 exit
-        if abs(swingspeed)&lt;2 sound_ps(choose(sndDoorOpen1, sndDoorOpen2))
-        if y&gt;other.y and other.x&lt;x {swingspeed=8 exit}
-        if y&gt;other.y and other.x&gt;x {swingspeed=-8 exit}
-        if other.x&lt;x+lengthdir_x(32,image_angle+270) swingspeed=8 else swingspeed=-8
-    }
+if (sprite_index == sprBreachingRound)
+{
+	with (other)
+	{
+		// Open door.
+		swinger = 1;
+		if (abs(swingspeed) &gt; 3.5)
+			exit;
+		if (abs(swingspeed) &lt; 2)
+			sound_ps(choose(sndDoorOpen1, sndDoorOpen2));
+		if (y &gt; other.y &amp;&amp; other.x &lt; x)
+		{
+			swingspeed = 8;
+			exit;
+		}
+		if (y &gt; other.y &amp;&amp; other.x &gt; x)
+		{
+			swingspeed = -8;
+			exit;
+		}
+		if (other.x &lt; x + lengthdir_x(32, image_angle + 270))
+			swingspeed = 8;
+		else
+			swingspeed = -8;
+	}
 }
 </string>
           </argument>
@@ -406,20 +433,35 @@ if sprite_index = sprBreachingRound {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrBulletImpact()
-if other.solid = 1 exit
+            <string>scrBulletImpact();
+if (other.solid == 1)
+	exit;
 
-if sprite_index = sprBreachingRound {
-    with other {
-    
-        // Open door.
-        swinger=1
-        if abs(swingspeed)&gt;3.5 exit
-        if abs(swingspeed)&lt;2 sound_ps(choose(sndDoorOpen1, sndDoorOpen2))
-        if x&gt;other.x and other.y&lt;y {swingspeed=-7 exit}
-        if x&gt;other.x and other.y&gt;y {swingspeed=7 exit}
-        if other.y&lt;y+lengthdir_y(32,image_angle) swingspeed=-7 else swingspeed=7
-    }
+if (sprite_index == sprBreachingRound)
+{
+	with (other)
+	{
+		// Open door.
+		swinger = 1;
+		if (abs(swingspeed) &gt; 3.5)
+			exit;
+		if (abs(swingspeed) &lt; 2)
+			sound_ps(choose(sndDoorOpen1, sndDoorOpen2));
+		if (x &gt; other.x &amp;&amp; other.y &lt; y)
+		{
+			swingspeed = -7;
+			exit;
+		}
+		if (x &gt; other.x &amp;&amp; other.y &gt; y)
+		{
+			swingspeed = 7;
+			exit;
+		}
+		if (other.y &lt; y + lengthdir_y(32, image_angle))
+			swingspeed = -7;
+		else
+			swingspeed = 7;
+	}
 }
 </string>
           </argument>
@@ -444,13 +486,38 @@ if sprite_index = sprBreachingRound {
           <argument>
             <kind>1</kind>
             <string>/// Trigger mine.
-instance_destroy()
-with other {
-
-    // Create explosion.
-    instance_create(x, y, objGrenadeExplosion)
-    instance_destroy()
+instance_destroy();
+with (other)
+{
+	// Create explosion.
+	instance_create(x, y, objGrenadeExplosion);
+	instance_destroy();
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objWall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scrBulletImpact();
+with (other)
+	life -= 1;
 </string>
           </argument>
         </arguments>
@@ -474,9 +541,12 @@ with other {
           <argument>
             <kind>1</kind>
             <string>/// Draw trail.
-if sprite_index = sprBullet or sprite_index = sprBulletRicochet {
-    if global.rainbow = 1 draw_trail_ext(1.5,random_color(),-1,slim,0.3)
-    else draw_trail_ext(1.5,c_white,-1,slim,0.3)
+if (sprite_index == sprBullet || sprite_index == sprBulletRicochet)
+{
+	if (global.rainbow == 1)
+		draw_trail_ext(1.5, random_color(), -1, slim, 0.3);
+	else
+		draw_trail_ext(1.5, c_white, -1, slim, 0.3);
 }
 </string>
           </argument>
@@ -498,9 +568,8 @@ if sprite_index = sprBullet or sprite_index = sprBulletRicochet {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw the bullet.
-scrMotionBlur(speed,direction,x,y)
-
+            <string>/// Draw the bullet.
+scrMotionBlur(speed, direction, x, y);
 </string>
           </argument>
         </arguments>

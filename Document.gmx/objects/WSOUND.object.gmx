@@ -28,10 +28,10 @@
             <string>show = false;
 width = 128;
 height = 64;
-rollspeed = (room_speed/30) * 2;
+rollspeed = (room_speed / 30) * 2;
 
-x = 0
-y = display_get_gui_height() - 64
+x = 0;
+y = display_get_gui_height() - 64;
 
 currentsound = noone;
 currentname = "";
@@ -127,30 +127,36 @@ showduration = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(show &amp;&amp; y &gt; display_get_gui_height() - height) {
-    y -= (room_speed/30) * rollspeed;
+            <string>if (show &amp;&amp; y &gt; display_get_gui_height() - height)
+{
+	y -= (room_speed / 30) * rollspeed;
 }
-if(!show &amp;&amp; y &lt; display_get_gui_height() + rollspeed) {
-    y += (room_speed/30) * rollspeed;
+if (!show &amp;&amp; y &lt; display_get_gui_height() + rollspeed)
+{
+	y += (room_speed / 30) * rollspeed;
 }
 
-if(isPaused) alarm[0] += 1;
+if (isPaused)
+	alarm[0] += 1;
 
-if(keyboard_check(key_volumedown) &amp;&amp; wsound_get_volume() &gt; 0) {
-    wsound_set_volume(wsound_get_volume() - 0.025);
-    valpha = 2;
-    show = true;
-    alarm[1] = room_speed * showduration;
-}  
+if (keyboard_check(key_volumedown) &amp;&amp; wsound_get_volume() &gt; 0)
+{
+	wsound_set_volume(wsound_get_volume() - 0.025);
+	valpha = 2;
+	show = true;
+	alarm[1] = room_speed * showduration;
+}
 
-if(keyboard_check(key_volumeup) &amp;&amp; wsound_get_volume() &lt; 1) {
-    wsound_set_volume(wsound_get_volume() + 0.025);
-    valpha = 2;
-    show = true;
-    alarm[1] = room_speed * showduration;
-}  
+if (keyboard_check(key_volumeup) &amp;&amp; wsound_get_volume() &lt; 1)
+{
+	wsound_set_volume(wsound_get_volume() + 0.025);
+	valpha = 2;
+	show = true;
+	alarm[1] = room_speed * showduration;
+}
 
-if(valpha &gt; 0) valpha -= 0.05;
+if (valpha &gt; 0)
+	valpha -= 0.05;
 </string>
           </argument>
         </arguments>
@@ -199,28 +205,29 @@ ini_close();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*draw_set_color(color_fill)
+            <string>/* draw_set_color(color_fill)
 draw_set_alpha(alpha_fill)
 draw_roundrect(x, y, x+width, y+height*2, false)
 draw_set_alpha(alpha_frame)
 draw_set_color(color_frame)
 draw_roundrect(x, y, x+width, y+height*2, true)
 */
-draw_set_color(global.albedo)
-draw_set_font(fntTiny)
-draw_set_valign(fa_middle)
+draw_set_color(global.albedo);
+draw_set_font(fntTiny);
+draw_set_valign(fa_middle);
 
-draw_set_alpha(1)
-draw_set_halign(fa_left)
-draw_text(x + width/2, y + height/2 - 24, "NOW PLAYING: " + currentartist + " - " + currentname)
+draw_set_alpha(1);
+draw_set_halign(fa_left);
+draw_text(x + width / 2, y + height / 2 - 24, "NOW PLAYING: " + currentartist + " - " + currentname);
 
-if(valpha &gt; 0) {
-    draw_set_halign(fa_right)
-    draw_set_alpha(valpha)
-    draw_text(display_get_gui_width() - 240, y + height/2 - 24, "VOLUME: " + string(wsound_get_volume()*100) + "%")
+if (valpha &gt; 0)
+{
+	draw_set_halign(fa_right);
+	draw_set_alpha(valpha);
+	draw_text(display_get_gui_width() - 240, y + height / 2 - 24, "VOLUME: " + string(wsound_get_volume() * 100) + "%");
 }
 
-draw_reset()
+draw_reset();
 </string>
           </argument>
         </arguments>
@@ -243,8 +250,10 @@ draw_reset()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(isPaused) wsound_resume();
-else wsound_pause();
+            <string>if (isPaused)
+	wsound_resume();
+else
+	wsound_pause();
 </string>
           </argument>
         </arguments>

@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_blend=random_color()
-image_speed=0
-image_xscale=1+random(0.33)
-image_yscale=1+random(0.33)
+            <string>image_blend = random_color();
+image_speed = 0;
+image_xscale = 1 + random(0.33);
+image_yscale = 1 + random(0.33);
 </string>
           </argument>
         </arguments>
@@ -51,18 +51,22 @@ image_yscale=1+random(0.33)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index&lt;8 image_index+=0.25+random(0.25) else {
-    instance_destroy()
-    my_id=instance_create(x,y,objRainbowPop)
-    my_id.speed=speed
-    my_id.direction=direction-10+random(20)
-    my_id.friction=0.1
+            <string>if (image_index &lt; 8)
+	image_index += 0.25 + random(0.25);
+else
+{
+	instance_destroy();
+	my_id = instance_create(x, y, objRainbowPop);
+	my_id.speed = speed;
+	my_id.direction = direction - 10 + random(20);
+	my_id.friction = 0.1;
 }
-if round(random(12))=2 {
-    my_id=instance_create(x,y,objRainbowPop)
-    my_id.speed=speed
-    my_id.direction=direction-10+random(20)
-    my_id.friction=0.1
+if (round(random(12)) == 2)
+{
+	my_id = instance_create(x, y, objRainbowPop);
+	my_id.speed = speed;
+	my_id.direction = direction - 10 + random(20);
+	my_id.friction = 0.1;
 }
 </string>
           </argument>

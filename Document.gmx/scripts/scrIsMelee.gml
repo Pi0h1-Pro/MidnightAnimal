@@ -1,12 +1,13 @@
-if argument0 = sprPWalkUnarmed
-    or argument0 = sprPWalkBat 
-    or argument0 = sprPWalkPool 
-    or argument0 = sprPWalkPoolBroke 
-    or argument0 = sprPAttackThrow 
-    or argument0 = sprPAttackUnarmed1 
-    or argument0 = sprPAttackPunch 
-    or argument0 = sprPAttackBat 
-    or argument0 = sprPAttackPool 
-    or argument0 = sprPAttackPoolBroke 
-    or argument0 = sprPWalkNightStick 
-    or argument0 = sprPAttackNightStick return true
+if (argument0 == sprPWalkUnarmed
+	|| argument0 == sprPWalkBat
+	|| argument0 == sprPWalkPool
+	|| argument0 == sprPWalkPoolBroke
+	|| argument0 == sprPAttackThrow
+	|| argument0 == sprPAttackUnarmed1
+	|| argument0 == sprPAttackPunch
+	|| argument0 == sprPAttackBat
+	|| argument0 == sprPAttackPool
+	|| argument0 == sprPAttackPoolBroke
+	|| argument0 == sprPWalkNightStick
+	|| argument0 == sprPAttackNightStick)
+	return true;

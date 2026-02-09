@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Pause behaviour.
-factor = 0
-on = 1
+            <string>/// Pause behaviour.
+factor = 0;
+on = 1;
 
-screen_save_part("pause.png",0,0,display_get_width(),display_get_height());
-PauseSprite=sprite_add("pause.png",0,0,0,0,0);
+screen_save_part("pause.png", 0, 0, display_get_width(), display_get_height());
+PauseSprite = sprite_add("pause.png", 0, 0, 0, 0, 0);
 instance_deactivate_all(true);
 audio_pause_sound(global.CurrentSong);
-audio_play_sound(mscInbou,0,1);
-audio_sound_gain(mscInbou,global.mvol,0);
+audio_play_sound(mscInbou, 0, 1);
+audio_sound_gain(mscInbou, global.mvol, 0);
 </string>
           </argument>
         </arguments>
@@ -56,13 +56,13 @@ audio_sound_gain(mscInbou,global.mvol,0);
           <argument>
             <kind>1</kind>
             <string>/// Set options.
-option[0]="RESUME"
-option[1]="RESTART"
-option[2]="EXIT"
-select=0
-wait=20
-startx=x
-x+=4
+option[0] = "RESUME";
+option[1] = "RESTART";
+option[2] = "EXIT";
+select = 0;
+wait = 20;
+startx = x;
+x += 4;
 </string>
           </argument>
         </arguments>
@@ -84,15 +84,15 @@ x+=4
           <argument>
             <kind>1</kind>
             <string>/// Set states / coordinates.
-state = 0
-alarm[0] = 10
-cut = 0
-alpha = 0
+state = 0;
+alarm[0] = 10;
+cut = 0;
+alpha = 0;
 
 // Set animation coordinates.
-character = 640
-texty = 120
-optionsx = 396
+character = 640;
+texty = 120;
+optionsx = 396;
 </string>
           </argument>
         </arguments>
@@ -115,9 +115,10 @@ optionsx = 396
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Advance state. 
-if cut = 0 state += 1
-alarm[0] = 20
+            <string>/// Advance state.
+if (cut == 0)
+	state += 1;
+alarm[0] = 20;
 </string>
           </argument>
         </arguments>
@@ -142,22 +143,29 @@ alarm[0] = 20
             <kind>1</kind>
             <string>/// Fade
 
-if on = 1 {
-    if factor &lt; 0.75 factor += 0.05
+if (on == 1)
+{
+	if (factor &lt; 0.75)
+		factor += 0.05;
 }
 
-if on = 0 {
-    if factor &gt; 0 factor -= 0.05 else {
-        //if sprite_exists(global.sprite) sprite_delete(global.sprite)
-        //if file_exists(working_directory+"\pause.bmp") file_delete(working_directory+"\pause.bmp")
-        sound_stop(sndPause)
-        instance_activate_all();
-        with(objPauseMenuSplatter) instance_destroy();
-        with(objPauseMenuSplatterShot) instance_destroy();
-        instance_destroy();
-    }
+if (on == 0)
+{
+	if (factor &gt; 0)
+		factor -= 0.05;
+	else
+	{
+		// if sprite_exists(global.sprite) sprite_delete(global.sprite)
+		// if file_exists(working_directory+"\pause.bmp") file_delete(working_directory+"\pause.bmp")
+		sound_stop(sndPause);
+		instance_activate_all();
+		with (objPauseMenuSplatter)
+			instance_destroy();
+		with (objPauseMenuSplatterShot)
+			instance_destroy();
+		instance_destroy();
+	}
 }
-
 </string>
           </argument>
         </arguments>
@@ -179,8 +187,10 @@ if on = 0 {
           <argument>
             <kind>1</kind>
             <string>/// Animation behaviour.
-if state &gt; 2 state = 2
-if state &lt; 0 state = 0
+if (state &gt; 2)
+	state = 2;
+if (state &lt; 0)
+	state = 0;
 </string>
           </argument>
         </arguments>
@@ -204,7 +214,10 @@ if state &lt; 0 state = 0
           <argument>
             <kind>1</kind>
             <string>/// Move down in options.
-if select &lt; 2 select += 1 else select = 0
+if (select &lt; 2)
+	select += 1;
+else
+	select = 0;
 </string>
           </argument>
         </arguments>
@@ -228,7 +241,10 @@ if select &lt; 2 select += 1 else select = 0
           <argument>
             <kind>1</kind>
             <string>/// Move up in options.
-if select &gt; 0 select -= 1 else select = 2
+if (select &gt; 0)
+	select -= 1;
+else
+	select = 2;
 </string>
           </argument>
         </arguments>
@@ -251,41 +267,50 @@ if select &gt; 0 select -= 1 else select = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Select options. 
+            <string>/// Select options.
 
 // Resume the game.
-if select = 0 {
-    if on=0 exit
-    on=0
-    
-    sound_ps(sndPause)
-    audio_stop_sound(mscInbou)
-    audio_resume_sound(global.CurrentSong)
+if (select == 0)
+{
+	if (on == 0)
+		exit;
+	on = 0;
+	
+	sound_ps(sndPause);
+	audio_stop_sound(mscInbou);
+	audio_resume_sound(global.CurrentSong);
 }
 
 // Restart the level.
-if select = 1 {
-    audio_stop_sound(mscInbou)
-    if instance_exists(objSnow) with objSnow instance_destroy()
-    i = 0
-    repeat(1000) {
-        if surface_exists(i) surface_free(i)
-        i += 1
-    }
-    game_restart()
+if (select == 1)
+{
+	audio_stop_sound(mscInbou);
+	if (instance_exists(objSnow))
+		with (objSnow)
+			instance_destroy();
+	i = 0;
+	repeat (1000)
+	{
+		if (surface_exists(i))
+			surface_free(i);
+		i += 1;
+	}
+	game_restart();
 }
 
 // Return to main menu.
-if select = 2 {
-    cut = !cut
-    game_end()
-    /*audio_stop_sound(mscInbou)
+if (select == 2)
+{
+	cut = !cut;
+	game_end();
+	
+	/* audio_stop_sound(mscInbou)
     i = 0
     repeat(1000) {
         if surface_exists(i) surface_free(i)
         i += 1
     }
-    game_restart()*/
+    game_restart ()*/
 }
 </string>
           </argument>
@@ -310,96 +335,117 @@ if select = 2 {
           <argument>
             <kind>1</kind>
             <string>/// Draw pause memu.
-d3d_set_projection_ortho(0, 0, view_wview[0], view_hview[0], 0)
+d3d_set_projection_ortho(0, 0, view_wview[0], view_hview[0], 0);
 
 // Draw screen.
-//draw_sprite(PauseSprite,0,0,0);
-draw_sprite_stretched(PauseSprite,0,0,0,view_wview,view_hview);
+// draw_sprite(PauseSprite,0,0,0);
+draw_sprite_stretched(PauseSprite, 0, 0, 0, view_wview, view_hview);
 
 // Draw background with tint.
-draw_set_alpha(alpha)
-draw_rectangle_color(0, 0, view_wview, view_hview, global.rubedo, global.rubedo, global.rubedo, global.rubedo, 0)
-draw_set_alpha(1)
+draw_set_alpha(alpha);
+draw_rectangle_color(0, 0, view_wview, view_hview, global.rubedo, global.rubedo, global.rubedo, global.rubedo, 0);
+draw_set_alpha(1);
 
-if cut = 0 {
-    if alpha &lt; 0.74 alpha += 0.05
-} else {
-    if alpha &gt; 0 alpha -= 0.05
+if (cut == 0)
+{
+	if (alpha &lt; 0.74)
+		alpha += 0.05;
+}
+else
+{
+	if (alpha &gt; 0)
+		alpha -= 0.05;
 }
 
 // Draw first character.
-if state = 0 {
-    instance_create(view_wview / 2, 0, objPauseMenuSplatter)
-    instance_create(0, 0, objPauseMenuSplatterShot)
-    with objPauseMenuSplatterShot draw_self()
+if (state == 0)
+{
+	instance_create(view_wview / 2, 0, objPauseMenuSplatter);
+	instance_create(0, 0, objPauseMenuSplatterShot);
+	with (objPauseMenuSplatterShot)
+		draw_self();
 }
 
 // Draw characters.
-if state = 1 {
-    with objPauseMenuSplatterShot draw_self()
-    with objPauseMenuSplatter draw_self()
-    
-    // Draw character.
-    draw_sprite_ext(sprite_index, 1, character, 0, 0.74, 0.74, 0, c_white, 1)
-
-    if cut = 0 {
-        if character &gt; 0 character -= 40
-    }
+if (state == 1)
+{
+	with (objPauseMenuSplatterShot)
+		draw_self();
+	with (objPauseMenuSplatter)
+		draw_self();
+	
+	// Draw character.
+	draw_sprite_ext(sprite_index, 1, character, 0, 0.74, 0.74, 0, c_white, 1);
+	
+	if (cut == 0)
+	{
+		if (character &gt; 0)
+			character -= 40;
+	}
 }
 
 // Draw options.
-if state = 2 {
-
-    with objPauseMenuSplatterShot draw_self()
-    with objPauseMenuSplatter draw_self()
-    
-    // Draw text for options.
-    draw_set_halign(fa_left)
-    draw_set_font(fntPauseMenu)
-
-    i = 0
-    repeat(3) {
-
-        // If selected...
-        if i = select {
-
-            // ...draw a white bounding box around it...
-            draw_set_color(c_white)
-            draw_rectangle(optionsx, 124 + 28 + i * 16, 396, 124 + 42 + i * 16, 0)
-
-            // ...and reset the font colour to black.
-            draw_set_color(c_black)
-
-            // Otherwise, the font colour is white by default.
-        } else draw_set_color(c_white)
-        
-        // Draw the text options.
-        draw_text_transformed(optionsx + 4, 123 + 36 + i * 16, option[i], 0.2, 0.2, 0)
-        i += 1
-        
-        if cut = 0 {
-            if character &gt; 0 character -= 20
-            if optionsx &gt; 286 optionsx -= 4
-        }
-    }
-
-
-    x = startx
-
-    // Redraw UI.
-
-    // 'WAIT A SECOND':
-    draw_sprite_ext(sprite_index, 0, 0, texty, 0.74, 0.74, 0, c_white, 1) // 0.251, 0.24
-
-    // Draw character.
-    draw_sprite_ext(sprite_index, 1, character, 0, 0.74, 0.74, 0, c_white, 1) // 0.251 0.251
-
-    if cut = 0 {
-        if texty &gt; 0 texty -= 40
-    } 
+if (state == 2)
+{
+	with (objPauseMenuSplatterShot)
+		draw_self();
+	with (objPauseMenuSplatter)
+		draw_self();
+	
+	// Draw text for options.
+	draw_set_halign(fa_left);
+	draw_set_font(fntPauseMenu);
+	
+	i = 0;
+	repeat (3)
+	{
+		// If selected...
+		if (i == select)
+		{
+			// ...draw a white bounding box around it...
+			draw_set_color(c_white);
+			draw_rectangle(optionsx, 124 + 28 + i * 16, 396, 124 + 42 + i * 16, 0);
+			
+			// ...and reset the font colour to black.
+			draw_set_color(c_black);
+			
+			// Otherwise, the font colour is white by default.
+		}
+		else
+			draw_set_color(c_white);
+		
+		// Draw the text options.
+		draw_text_transformed(optionsx + 4, 123 + 36 + i * 16, option[i], 0.2, 0.2, 0);
+		i += 1;
+		
+		if (cut == 0)
+		{
+			if (character &gt; 0)
+				character -= 20;
+			if (optionsx &gt; 286)
+				optionsx -= 4;
+		}
+	}
+	
+	
+	x = startx;
+	
+	// Redraw UI.
+	
+	// 'WAIT A SECOND':
+	draw_sprite_ext(sprite_index, 0, 0, texty, 0.74, 0.74, 0, c_white, 1); // 0.251, 0.24
+	
+	// Draw character.
+	draw_sprite_ext(sprite_index, 1, character, 0, 0.74, 0.74, 0, c_white, 1); // 0.251 0.251
+	
+	if (cut == 0)
+	{
+		if (texty &gt; 0)
+			texty -= 40;
+	}
 }
 
-//draw_sprite_ext(sprHUDBars, 0, 0, -5, 0.8, 0.7, 0, c_black, 1)
+// draw_sprite_ext(sprHUDBars, 0, 0, -5, 0.8, 0.7, 0, c_black, 1)
 </string>
           </argument>
         </arguments>
@@ -423,7 +469,10 @@ if state = 2 {
           <argument>
             <kind>1</kind>
             <string>/// Move up in options.
-if select &gt; 0 select -= 1 else select = 2
+if (select &gt; 0)
+	select -= 1;
+else
+	select = 2;
 </string>
           </argument>
         </arguments>
@@ -447,7 +496,10 @@ if select &gt; 0 select -= 1 else select = 2
           <argument>
             <kind>1</kind>
             <string>/// Move down in options.
-if select &lt; 2 select += 1 else select = 0
+if (select &lt; 2)
+	select += 1;
+else
+	select = 0;
 </string>
           </argument>
         </arguments>
@@ -471,10 +523,11 @@ if select &lt; 2 select += 1 else select = 0
           <argument>
             <kind>1</kind>
             <string>/// Resume game.
-if on=0 exit
-on=0
+if (on == 0)
+	exit;
+on = 0;
 
-sound_ps(sndPause)
+sound_ps(sndPause);
 audio_stop_sound(mscInbou);
 audio_resume_sound(global.CurrentSong);
 </string>

@@ -25,11 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrEMeleeStationaryInit()
-image_speed=0
-image_index=random(1000)
-direction = image_angle
-
+            <string>scrEMeleeStationaryInit();
+image_speed = 0;
+image_index = random(1000);
+direction = image_angle;
 </string>
           </argument>
         </arguments>
@@ -52,30 +51,39 @@ direction = image_angle
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrMoveSolidOn()
+            <string>scrMoveSolidOn();
 
-if reload &gt; 0 reload -= 1
+if (reload &gt; 0)
+	reload -= 1;
 
-if path_index &gt; 0 {
-    if image_speed &lt; 0.2 image_speed = 0.2
-    if alert = 0 and path_position = 1 path_end()
-} else {
-    if image_speed &lt; 1 image_speed = speed * 0.1
+if (path_index &gt; 0)
+{
+	if (image_speed &lt; 0.2)
+		image_speed = 0.2;
+	if (alert == 0 &amp;&amp; path_position == 1)
+		path_end();
 }
-angle = direction
-if alert = 1 {
-    if place_meeting(x + lengthdir_x(8, angle), y + lengthdir_y(8, angle), objPlayer) or place_meeting(x, y, objPlayer) {
-        if scrIsSearching(sprite_index) sprite_index = scrStopSearch(sprite_index)
-        sprite_index = scrGetAttack(sprite_index)
-        global.my_id = id
-        scrPlayerDieMelee()
-        speed = 0
-    }
+else
+{
+	if (image_speed &lt; 1)
+		image_speed = speed * 0.1;
+}
+angle = direction;
+if (alert == 1)
+{
+	if (place_meeting(x + lengthdir_x(8, angle), y + lengthdir_y(8, angle), objPlayer) || place_meeting(x, y, objPlayer))
+	{
+		if (scrIsSearching(sprite_index))
+			sprite_index = scrStopSearch(sprite_index);
+		sprite_index = scrGetAttack(sprite_index);
+		global.my_id = id;
+		scrPlayerDieMelee();
+		speed = 0;
+	}
 }
 
-scrEMeleeStationaryStep()
-scrMoveSolidOff()
-
+scrEMeleeStationaryStep();
+scrMoveSolidOff();
 </string>
           </argument>
         </arguments>
@@ -98,8 +106,7 @@ scrMoveSolidOff()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrEnemyAnimationEnd()
-
+            <string>scrEnemyAnimationEnd();
 </string>
           </argument>
         </arguments>
@@ -122,8 +129,8 @@ scrMoveSolidOff()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index=choose(sprEWalkClub,sprEWalkKnife,sprEWalkBat,sprEWalkMachete)
-ammo=0
+            <string>sprite_index = choose(sprEWalkClub, sprEWalkKnife, sprEWalkBat, sprEWalkMachete);
+ammo = 0;
 </string>
           </argument>
         </arguments>
@@ -146,17 +153,19 @@ ammo=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scrIsSearching(sprite_index) nothing = 1
-else {
-    draw_sprite_ext(sprELegs, image_index * 2, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5)
-    draw_sprite_ext(sprELegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha)
+            <string>if (scrIsSearching(sprite_index))
+	nothing = 1;
+else
+{
+	draw_sprite_ext(sprELegs, image_index * 2, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5);
+	draw_sprite_ext(sprELegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
 }
-draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5)
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha)
-draw_set_color(c_white)
-    //draw_path(my_path,0,0,1)
-lastsprite = sprite_index
+draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
+draw_set_color(c_white);
 
+// draw_path(my_path,0,0,1)
+lastsprite = sprite_index;
 </string>
           </argument>
         </arguments>

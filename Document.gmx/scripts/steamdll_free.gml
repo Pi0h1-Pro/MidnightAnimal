@@ -1,2 +1,2 @@
-if global.steamon external_free("Steamworks.dll");
-
+if (global.steamon)
+	external_free("Steamworks.dll");

@@ -1,2 +1,3 @@
-if object_index=objPlayerMouse or object_index=objPlayerMouseHouse or object_index=objPlayerBiker or object_index=objPlayerBikerHouse return true
-return false
+if (object_index == objPlayerMouse || object_index == objPlayerMouseHouse || object_index == objPlayerBiker || object_index == objPlayerBikerHouse)
+	return true;
+return false;

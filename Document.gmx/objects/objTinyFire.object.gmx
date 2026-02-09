@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = choose(sprTinyFire1, sprTinyFire2, sprTinyFire3, sprTinyFire4)
-image_speed = 0.35
+            <string>sprite_index = choose(sprTinyFire1, sprTinyFire2, sprTinyFire3, sprTinyFire4);
+image_speed = 0.35;
 
-image_scale(0.5 + random(0.5))
+image_scale(0.5 + random(0.5));
 </string>
           </argument>
         </arguments>
@@ -51,11 +51,10 @@ image_scale(0.5 + random(0.5))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,merge_color(c_white,c_yellow,random(1)),image_alpha)
-draw_sprite_ext(sprLFGlow, 0, x, y, 0.75, 0.75, 0, global.c_fire, 0.5)
-draw_reset()
-
+            <string>draw_set_blend_mode(bm_add);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, merge_color(c_white, c_yellow, random(1)), image_alpha);
+draw_sprite_ext(sprLFGlow, 0, x, y, 0.75, 0.75, 0, global.c_fire, 0.5);
+draw_reset();
 </string>
           </argument>
         </arguments>

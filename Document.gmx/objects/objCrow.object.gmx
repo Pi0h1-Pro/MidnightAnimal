@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-alarm[0]=random(320)
-image_angle=30 - random(60)//random(360)
+            <string>image_speed = 0;
+alarm[0] = random(320);
+image_angle = 30 - random(60); // random(360)
 </string>
           </argument>
         </arguments>
@@ -50,10 +50,11 @@ image_angle=30 - random(60)//random(360)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if sprite_index=sprCrowFly exit
-alarm[0]=random(320)
-sprite_index=choose(sprCrow,sprCrowIdle2)
-image_speed=0.15
+            <string>if (sprite_index == sprCrowFly)
+	exit;
+alarm[0] = random(320);
+sprite_index = choose(sprCrow, sprCrowIdle2);
+image_speed = 0.15;
 </string>
           </argument>
         </arguments>
@@ -76,24 +77,28 @@ image_speed=0.15
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !scrMovingPlayerExists() exit
+            <string>if (!scrMovingPlayerExists())
+	exit;
 
-if sprite_index = sprCrow or sprite_index = sprCrowIdle2 {
-    if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 48 {
-        direction = image_angle
-        sprite_index = sprCrowFly
-        speed = 1.5
-        gravity = 0.1
-        gravity_direction = direction - 10 + random(20)
-        sound_ps(sndBirdsFly)
-    }
+if (sprite_index == sprCrow || sprite_index == sprCrowIdle2)
+{
+	if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 48)
+	{
+		direction = image_angle;
+		sprite_index = sprCrowFly;
+		speed = 1.5;
+		gravity = 0.1;
+		gravity_direction = direction - 10 + random(20);
+		sound_ps(sndBirdsFly);
+	}
 }
 
-if sprite_index = sprCrowFly {
-    if speed &gt; 4.5 speed = 4.5
-    image_index += speed * 0.075
+if (sprite_index == sprCrowFly)
+{
+	if (speed &gt; 4.5)
+		speed = 4.5;
+	image_index += speed * 0.075;
 }
-
 </string>
           </argument>
         </arguments>
@@ -116,8 +121,9 @@ if sprite_index = sprCrowFly {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if sprite_index=sprCrowFly exit
-image_speed=0
+            <string>if (sprite_index == sprCrowFly)
+	exit;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -140,7 +146,7 @@ image_speed=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -163,8 +169,8 @@ image_speed=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

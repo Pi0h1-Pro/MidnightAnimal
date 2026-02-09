@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set water properties.
-image_alpha=0.5
-image_xscale=0.8+random(0.4)
-image_yscale=image_xscale
-image_speed=0
-image_index=floor(random(5))*2
-dist=70+random(27)
+            <string>/// Set water properties.
+image_alpha = 0.5;
+image_xscale = 0.8 + random(0.4);
+image_yscale = image_xscale;
+image_speed = 0;
+image_index = floor(random(5)) * 2;
+dist = 70 + random(27);
 </string>
           </argument>
         </arguments>
@@ -54,31 +54,34 @@ dist=70+random(27)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy the water after a certain amount of time.
-dist -= speed
-if dist &lt;= 0 {
-    speed = 0
-        
-    // Create water puddle and steam upon impact.
-    instance_create(x,y,objWaterPuddle)
-    instance_create(x - 12 + random(24), y - 12 + random(24), objBigWater)
-    repeat(2) {
-        my_id = instance_create(x, y, objWaterSplat)
-        my_id.direction = random(360)
-        my_id.speed = 2 + random(2)
-    }
-    repeat(2) {
-        my_id = instance_create(x, y, objWaterSmudge)
-        my_id.direction = random(360)
-        my_id.speed = 3 + random(3)
-        my_id.image_angle = my_id.direction
-    }
-    sound_ps(sndBoilingWater)
-    instance_destroy()
+            <string>/// Destroy the water after a certain amount of time.
+dist -= speed;
+if (dist &lt;= 0)
+{
+	speed = 0;
+	
+	// Create water puddle and steam upon impact.
+	instance_create(x, y, objWaterPuddle);
+	instance_create(x - 12 + random(24), y - 12 + random(24), objBigWater);
+	repeat (2)
+	{
+		my_id = instance_create(x, y, objWaterSplat);
+		my_id.direction = random(360);
+		my_id.speed = 2 + random(2);
+	}
+	repeat (2)
+	{
+		my_id = instance_create(x, y, objWaterSmudge);
+		my_id.direction = random(360);
+		my_id.speed = 3 + random(3);
+		my_id.image_angle = my_id.direction;
+	}
+	sound_ps(sndBoilingWater);
+	instance_destroy();
 }
-    
-if round(random(6)) = 2 instance_create(x, y, objSteam)
 
+if (round(random(6)) == 2)
+	instance_create(x, y, objSteam);
 </string>
           </argument>
         </arguments>
@@ -101,23 +104,26 @@ if round(random(6)) = 2 instance_create(x, y, objSteam)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create water puddle and steam upon impact.
-instance_create(x,y,objWaterPuddle)
-instance_create(x - 12 + random(24), y - 12 + random(24), objBigWater)
-repeat (4) instance_create(x,y,objSteam)
-repeat(2) {
-    my_id = instance_create(x, y, objWaterSplat)
-    my_id.direction = random(360)
-    my_id.speed = 2 + random(2)
+            <string>/// Create water puddle and steam upon impact.
+instance_create(x, y, objWaterPuddle);
+instance_create(x - 12 + random(24), y - 12 + random(24), objBigWater);
+repeat (4)
+	instance_create(x, y, objSteam);
+repeat (2)
+{
+	my_id = instance_create(x, y, objWaterSplat);
+	my_id.direction = random(360);
+	my_id.speed = 2 + random(2);
 }
-repeat(2) {
-    my_id = instance_create(x, y, objWaterSmudge)
-    my_id.direction = random(360)
-    my_id.speed = 3 + random(3)
-    my_id.image_angle = my_id.direction
+repeat (2)
+{
+	my_id = instance_create(x, y, objWaterSmudge);
+	my_id.direction = random(360);
+	my_id.speed = 3 + random(3);
+	my_id.image_angle = my_id.direction;
 }
-sound_ps(sndBoilingWater)
-instance_destroy()
+sound_ps(sndBoilingWater);
+instance_destroy();
 </string>
           </argument>
         </arguments>

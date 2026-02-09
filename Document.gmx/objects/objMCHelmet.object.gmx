@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction=0.05
-dir=0
-sprite_index=sprMCHelmet
-bled=0
-prevdir=0
+            <string>friction = 0.05;
+dir = 0;
+sprite_index = sprMCHelmet;
+bled = 0;
+prevdir = 0;
 
-/*friction=0.1
+/* friction=0.1
 rotspeed=(-1+round(random(1))*2)*random(8)
 startspeed=0
 image_speed=0
@@ -59,15 +59,17 @@ image_index=choose(0,1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !place_free(x+hspeed*2,y) hspeed=-hspeed
-if !place_free(x,y+vspeed*2) vspeed=-vspeed
-image_speed=speed*0.5
+            <string>if (!place_free(x + hspeed * 2, y))
+	hspeed = -hspeed;
+if (!place_free(x, y + vspeed * 2))
+	vspeed = -vspeed;
+image_speed = speed * 0.5;
 
-if speed&lt;0.7 friction=0.005 else friction=0.05
-image_angle=direction
-
-
-
+if (speed &lt; 0.7)
+	friction = 0.005;
+else
+	friction = 0.05;
+image_angle = direction;
 </string>
           </argument>
         </arguments>
@@ -90,7 +92,7 @@ image_angle=direction
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -113,7 +115,7 @@ image_angle=direction
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -136,7 +138,7 @@ image_angle=direction
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -159,7 +161,7 @@ image_angle=direction
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -182,10 +184,11 @@ image_angle=direction
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if other.speed&gt;0 or other.path_index&gt;=0 {
-direction=point_direction(objEnemy.x,objEnemy.y,x,y)
-image_angle=direction
-speed=3
+            <string>if (other.speed &gt; 0 || other.path_index &gt;= 0)
+{
+	direction = point_direction(objEnemy.x, objEnemy.y, x, y);
+	image_angle = direction;
+	speed = 3;
 }
 </string>
           </argument>
@@ -209,11 +212,12 @@ speed=3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y-abs(lengthdir_x(speed*2,dir)),image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-prevdir=dir
-dir+=20-speed*5
-if dir&gt;360 dir-=360
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y - abs(lengthdir_x(speed * 2, dir)), image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+prevdir = dir;
+dir += 20 - speed * 5;
+if (dir &gt; 360)
+	dir -= 360;
 </string>
           </argument>
         </arguments>

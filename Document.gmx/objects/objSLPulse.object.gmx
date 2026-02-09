@@ -25,19 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//light properties:
-//L3S_define_light(z,shadows,soft_amount,soft_inc,static)
+            <string>// light properties:
+// L3S_define_light(z,shadows,soft_amount,soft_inc,static)
 
-//light sprite properties: 
-image_xscale=2
-image_yscale=2
-image_angle=0
-image_blend=c_white
-image_alpha=0.9
+// light sprite properties:
+image_xscale = 2;
+image_yscale = 2;
+image_angle = 0;
+image_blend = c_white;
+image_alpha = 0.9;
 
-//other:
-time=0
-
+// other:
+time = 0;
 </string>
           </argument>
         </arguments>
@@ -60,10 +59,12 @@ time=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-image_xscale=1.5+lengthdir_x(1,time)
-image_yscale=image_xscale
-if fps {time+=180/fps}
+            <string>image_xscale = 1.5 + lengthdir_x(1, time);
+image_yscale = image_xscale;
+if (fps)
+{
+	time += 180 / fps;
+}
 </string>
           </argument>
         </arguments>
@@ -86,8 +87,9 @@ if fps {time+=180/fps}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(make_color_rgb(255,255,255))
-draw_text(x-string_width("Spec Light")*0.5,y,"Spec Light")</string>
+            <string>draw_set_color(make_color_rgb(255, 255, 255));
+draw_text(x - string_width("Spec Light") * 0.5, y, "Spec Light");
+</string>
           </argument>
         </arguments>
       </action>

@@ -25,24 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialise breaking.
+            <string>/// Initialise breaking.
 
 // Inherit behaviour from objBreakableParent.
-event_inherited()
+event_inherited();
 
 // Life of the object.
-life = 3 + random(2)
-type = 1
+life = 3 + random(2);
+type = 1;
 
 // Number of fragments to spawn.
-fragments = irandom_range(50, 60)
+fragments = irandom_range(50, 60);
 
 // Do not flash if hit.
-flash = false
-color = c_red
+flash = false;
+color = c_red;
 
 // Shake if hit.
-shake = 1
+shake = 1;
 </string>
           </argument>
         </arguments>

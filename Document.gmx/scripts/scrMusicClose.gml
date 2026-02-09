@@ -1,2 +1,1 @@
-bgm_Close()
-
+bgm_Close();

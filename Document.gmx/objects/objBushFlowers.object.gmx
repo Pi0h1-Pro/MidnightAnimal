@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
-image_index = random(8)
-image_angle = random(360)
-image_xscale = random_range(0.8, 1)
-image_yscale = image_xscale
+            <string>image_speed = 0;
+image_index = random(8);
+image_angle = random(360);
+image_xscale = random_range(0.8, 1);
+image_yscale = image_xscale;
 </string>
           </argument>
         </arguments>
@@ -53,8 +53,10 @@ image_yscale = image_xscale
           <argument>
             <kind>1</kind>
             <string>/// Create firefly.
-if room = rmManour exit
-if random(100) &gt; 90 instance_create(x + irandom_range(-24, 24), y + irandom_range(-24, -24), objFirefly)
+if (room == rmManour)
+	exit;
+if (random(100) &gt; 90)
+	instance_create(x + irandom_range(-24, 24), y + irandom_range(-24, -24), objFirefly);
 </string>
           </argument>
         </arguments>

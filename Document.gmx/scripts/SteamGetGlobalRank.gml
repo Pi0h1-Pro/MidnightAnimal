@@ -1,1 +1,2 @@
-if global.steamon return external_call(iSteamGetGlobalRank, argument0);
+if (global.steamon)
+	return external_call(iSteamGetGlobalRank, argument0);

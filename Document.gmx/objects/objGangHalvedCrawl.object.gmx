@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-bled=0
-alarm[1]=15
-crawl=120
+            <string>image_speed = 0;
+bled = 0;
+alarm[1] = 15;
+crawl = 120;
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ crawl=120
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.15
+            <string>image_speed = 0.15;
 </string>
           </argument>
         </arguments>
@@ -74,20 +74,23 @@ crawl=120
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir = image_angle
-repeat(4) {
-    my_id = instance_create(x, y, objSplat)
-    my_id.direction = dir - 45 + random(90)
-    my_id.speed = 2 + random(2)
+            <string>dir = image_angle;
+repeat (4)
+{
+	my_id = instance_create(x, y, objSplat);
+	my_id.direction = dir - 45 + random(90);
+	my_id.speed = 2 + random(2);
 }
-repeat(9) {
-    my_id = instance_create(x, y, objSmudge)
-    my_id.direction = dir - 45 + random(90)
-    my_id.speed = 3 + random(3)
-    my_id.image_angle = my_id.direction
+repeat (9)
+{
+	my_id = instance_create(x, y, objSmudge);
+	my_id.direction = dir - 45 + random(90);
+	my_id.speed = 3 + random(3);
+	my_id.image_angle = my_id.direction;
 }
-repeat(3) {
-    my_id = instance_create(x - 12 + random(24), y - 12 + random(24), objBigBlood)
+repeat (3)
+{
+	my_id = instance_create(x - 12 + random(24), y - 12 + random(24), objBigBlood);
 }
 </string>
           </argument>
@@ -111,14 +114,21 @@ repeat(3) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !place_free(x + lengthdir_x(8, image_angle), y + lengthdir_y(8, image_angle)) image_angle += 10
-if (image_index &gt; 2 and image_index &lt; 4) or(image_index &gt; 7) {
-    if place_free(x + lengthdir_x(0.5, image_angle), y) x += lengthdir_x(0.5, image_angle)
-    if place_free(x, y + lengthdir_y(0.5, image_angle)) y += lengthdir_y(0.5, image_angle)
+            <string>if (!place_free(x + lengthdir_x(8, image_angle), y + lengthdir_y(8, image_angle)))
+	image_angle += 10;
+if ((image_index &gt; 2 &amp;&amp; image_index &lt; 4) || (image_index &gt; 7))
+{
+	if (place_free(x + lengthdir_x(0.5, image_angle), y))
+		x += lengthdir_x(0.5, image_angle);
+	if (place_free(x, y + lengthdir_y(0.5, image_angle)))
+		y += lengthdir_y(0.5, image_angle);
 }
-if crawl &gt; 0 crawl -= 1
-else {
-    if image_index &lt; 3 image_speed = 0
+if (crawl &gt; 0)
+	crawl -= 1;
+else
+{
+	if (image_index &lt; 3)
+		image_speed = 0;
 }
 </string>
           </argument>

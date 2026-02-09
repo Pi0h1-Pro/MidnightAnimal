@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0</string>
+            <string>image_speed = 0;
+</string>
           </argument>
         </arguments>
       </action>
@@ -47,9 +48,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle-=abs(hspeed)
-if !place_free(x+hspeed*20,y) hspeed=-hspeed
-if !place_free(x,y+vspeed*20) vspeed=-vspeed
+            <string>image_angle -= abs(hspeed);
+if (!place_free(x + hspeed * 20, y))
+	hspeed = -hspeed;
+if (!place_free(x, y + vspeed * 20))
+	vspeed = -vspeed;
 </string>
           </argument>
         </arguments>

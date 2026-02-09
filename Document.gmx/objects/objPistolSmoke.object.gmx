@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir=random(360)
-on=1
-image_speed = 0.6
-image_alpha = 0.8
-image_xscale = 1 + random(1)
-image_yscale = image_xscale
+            <string>dir = random(360);
+on = 1;
+image_speed = 0.6;
+image_alpha = 0.8;
+image_xscale = 1 + random(1);
+image_yscale = image_xscale;
 </string>
           </argument>
         </arguments>
@@ -53,7 +53,7 @@ image_yscale = image_xscale
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -76,15 +76,15 @@ image_yscale = image_xscale
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha = (1 - (image_index / 6)) * 0.75 
+            <string>image_alpha = (1 - (image_index / 6)) * 0.75;
 
-draw_set_blend_mode(bm_add)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,merge_color(c_gray,c_ltgray,0.6+lengthdir_x(0.4,dir)),image_alpha)
-//draw_sprite_ext(sprite_index,1,x,y,image_xscale,image_yscale,image_angle,merge_color(c_gray,c_ltgray,0.6+lengthdir_x(0.4,dir+120)),image_alpha)
-//draw_sprite_ext(sprite_index,2,x,y,image_xscale,image_yscale,image_angle,merge_color(c_gray,c_ltgray,0.6+lengthdir_x(0.4,dir+240)),image_alpha)
-draw_set_blend_mode(bm_normal)
-dir+=1
+draw_set_blend_mode(bm_add);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, merge_color(c_gray, c_ltgray, 0.6 + lengthdir_x(0.4, dir)), image_alpha);
 
+// draw_sprite_ext(sprite_index,1,x,y,image_xscale,image_yscale,image_angle,merge_color(c_gray,c_ltgray,0.6+lengthdir_x(0.4,dir+120)),image_alpha)
+// draw_sprite_ext(sprite_index,2,x,y,image_xscale,image_yscale,image_angle,merge_color(c_gray,c_ltgray,0.6+lengthdir_x(0.4,dir+240)),image_alpha)
+draw_set_blend_mode(bm_normal);
+dir += 1;
 </string>
           </argument>
         </arguments>

@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_index=floor(random(sprite_get_number(sprite_index)))
+            <string>image_speed = 0;
+image_index = floor(random(sprite_get_number(sprite_index)));
 </string>
           </argument>
         </arguments>
@@ -49,24 +49,34 @@ image_index=floor(random(sprite_get_number(sprite_index)))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>bullets=0
-global.my_id=id 
-with objEBullet {
-if place_meeting(x,y,global.my_id) global.my_id.bullets+=1
+            <string>bullets = 0;
+global.my_id = id;
+with (objEBullet)
+{
+	if (place_meeting(x, y, global.my_id))
+		global.my_id.bullets += 1;
 }
-if bullets&gt;3 {
-repeat (15) {
-my_id=instance_create(x+random(32),y,objWoodDebris)
-if other.vspeed&gt;0 my_id.direction=270-10+random(20) else my_id.direction=90-10+random(20)
-my_id.speed=2+random(3)
+if (bullets &gt; 3)
+{
+	repeat (15)
+	{
+		my_id = instance_create(x + random(32), y, objWoodDebris);
+		if (other.vspeed &gt; 0)
+			my_id.direction = 270 - 10 + random(20);
+		else
+			my_id.direction = 90 - 10 + random(20);
+		my_id.speed = 2 + random(3);
+	}
+	instance_destroy();
 }
-instance_destroy()
-} else {
-if round(random(4)) {
-my_id=instance_create(other.x,y,objWoodDebris)
-my_id.direction=other.direction-10+random(20)
-my_id.speed=2+random(3)
-}
+else
+{
+	if (round(random(4)))
+	{
+		my_id = instance_create(other.x, y, objWoodDebris);
+		my_id.direction = other.direction - 10 + random(20);
+		my_id.speed = 2 + random(3);
+	}
 }
 </string>
           </argument>
@@ -90,24 +100,34 @@ my_id.speed=2+random(3)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>bullets=0
-global.my_id=id 
-with objBullet {
-if place_meeting(x,y,global.my_id) global.my_id.bullets+=1
+            <string>bullets = 0;
+global.my_id = id;
+with (objBullet)
+{
+	if (place_meeting(x, y, global.my_id))
+		global.my_id.bullets += 1;
 }
-if bullets&gt;3 {
-repeat (15) {
-my_id=instance_create(x+random(32),y,objWoodDebris)
-if other.vspeed&gt;0 my_id.direction=270-10+random(20) else my_id.direction=90-10+random(20)
-my_id.speed=2+random(3)
+if (bullets &gt; 3)
+{
+	repeat (15)
+	{
+		my_id = instance_create(x + random(32), y, objWoodDebris);
+		if (other.vspeed &gt; 0)
+			my_id.direction = 270 - 10 + random(20);
+		else
+			my_id.direction = 90 - 10 + random(20);
+		my_id.speed = 2 + random(3);
+	}
+	instance_destroy();
 }
-instance_destroy()
-} else {
-if round(random(4)) {
-my_id=instance_create(other.x,y,objWoodDebris)
-my_id.direction=other.direction-10+random(20)
-my_id.speed=2+random(3)
-}
+else
+{
+	if (round(random(4)))
+	{
+		my_id = instance_create(other.x, y, objWoodDebris);
+		my_id.direction = other.direction - 10 + random(20);
+		my_id.speed = 2 + random(3);
+	}
 }
 </string>
           </argument>
@@ -131,8 +151,8 @@ my_id.speed=2+random(3)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

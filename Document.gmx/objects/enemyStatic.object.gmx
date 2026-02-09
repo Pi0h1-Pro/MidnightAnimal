@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index=scrChooseGun()
-init_enemy(150)
-ammo = scrGetAmmoEnemy(sprite_index)
+            <string>sprite_index = scrChooseGun();
+init_enemy(150);
+ammo = scrGetAmmoEnemy(sprite_index);
 </string>
           </argument>
         </arguments>
@@ -51,14 +51,18 @@ ammo = scrGetAmmoEnemy(sprite_index)
           <argument>
             <kind>1</kind>
             <string>/// Turn random direction.
-if path_index &gt; 0 {
-    alarm[0] = 5 exit
+if (path_index &gt; 0)
+{
+	alarm[0] = 5;
+	exit;
 }
-if alert = 1 {
-    alarm[0] = 5 exit
+if (alert == 1)
+{
+	alarm[0] = 5;
+	exit;
 }
-alarm[0] = 120 + random(120)
-image_angle = floor(random(4)) * 90
+alarm[0] = 120 + random(120);
+image_angle = floor(random(4)) * 90;
 </string>
           </argument>
         </arguments>
@@ -81,9 +85,9 @@ image_angle = floor(random(4)) * 90
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///AI behaviour.
-step_enemy()
-aiStatic()
+            <string>/// AI behaviour.
+step_enemy();
+aiStatic();
 </string>
           </argument>
         </arguments>
@@ -107,8 +111,7 @@ aiStatic()
           <argument>
             <kind>1</kind>
             <string>/// End animation.
-scrEnemyAnimationEnd()
-
+scrEnemyAnimationEnd();
 </string>
           </argument>
         </arguments>

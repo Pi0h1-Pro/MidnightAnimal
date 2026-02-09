@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.35
+            <string>image_speed = 0.35;
 </string>
           </argument>
         </arguments>
@@ -48,8 +48,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
-image_index = 9
+            <string>image_speed = 0;
+image_index = 9;
 </string>
           </argument>
         </arguments>

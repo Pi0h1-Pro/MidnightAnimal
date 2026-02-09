@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.4
-friction=0.1
-image_yscale=-1+round(random(1))*2
+            <string>image_speed = 0.4;
+friction = 0.1;
+image_yscale = -1 + round(random(1)) * 2;
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ image_yscale=-1+round(random(1))*2
           <argument>
             <kind>1</kind>
             <string>/// Create gore.
-dir = image_angle
+dir = image_angle;
 </string>
           </argument>
         </arguments>
@@ -75,21 +75,33 @@ dir = image_angle
           <argument>
             <kind>1</kind>
             <string>/// Animate deaths.
-scrMoveSolidOn()
-if !scrPlaceFree(x, y) speed = 0
-scrMoveSolidOff()
+scrMoveSolidOn();
+if (!scrPlaceFree(x, y))
+	speed = 0;
+scrMoveSolidOff();
 
-if scrBodyIsFlying(sprite_index) {
-    if speed &lt; 1.5 {
-        if image_index &lt; 3 image_index += 0.2
-    } else {
-        with objWindow solid = 0
-        scrFlyThroughWindow()
-    }
-    if !scrPlaceFree(x, y) speed = 0
-    with objWindow solid = 1
-} else {
-    if !scrPlaceFree(x, y) speed = 0
+if (scrBodyIsFlying(sprite_index))
+{
+	if (speed &lt; 1.5)
+	{
+		if (image_index &lt; 3)
+			image_index += 0.2;
+	}
+	else
+	{
+		with (objWindow)
+			solid = 0;
+		scrFlyThroughWindow();
+	}
+	if (!scrPlaceFree(x, y))
+		speed = 0;
+	with (objWindow)
+		solid = 1;
+}
+else
+{
+	if (!scrPlaceFree(x, y))
+		speed = 0;
 }
 </string>
           </argument>
@@ -114,7 +126,7 @@ if scrBodyIsFlying(sprite_index) {
           <argument>
             <kind>1</kind>
             <string>/// Draw shadow.
-draw_self()
+draw_self();
 </string>
           </argument>
         </arguments>

@@ -1,1 +1,1 @@
-DBEffect=argument0
+DBEffect = argument0;

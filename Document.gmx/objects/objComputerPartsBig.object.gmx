@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>friction=0.2
-image_speed=0
-diradd=-1+round(random(1))*2
-image_angle=random(360)
+            <string>friction = 0.2;
+image_speed = 0;
+diradd = -1 + round(random(1)) * 2;
+image_angle = random(360);
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ image_angle=random(360)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=diradd*speed*6
+            <string>image_angle += diradd * speed * 6;
 </string>
           </argument>
         </arguments>

@@ -26,13 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Set properties.
-image_speed=0
-image_index=0
-life = 6
-destroyed = 0
+image_speed = 0;
+image_index = 0;
+life = 6;
+destroyed = 0;
 
-test = 0
-mask_index=sprite_index
+test = 0;
+mask_index = sprite_index;
 </string>
           </argument>
         </arguments>
@@ -55,30 +55,34 @@ mask_index=sprite_index
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set stages of degradation based on life.
-if life &gt;= 6 image_index = 0
-if life &gt; 0 and life &lt; 2 image_index = 1
+            <string>/// Set stages of degradation based on life.
+if (life &gt;= 6)
+	image_index = 0;
+if (life &gt; 0 &amp;&amp; life &lt; 2)
+	image_index = 1;
 
 
-if life &lt;= 0 and destroyed = 0 {
-    image_index = 2
-    sound_ps(sndStoneCrumble)
-
-    repeat(4 + random(6)) {
-        my_id = instance_create(x + lengthdir_x(14, direction), y + lengthdir_y(14, direction), objDebris)
-        my_id.direction = objPlayer.direction - 140 - random(80)
-        my_id.speed = random(4)
-    }
-
-    repeat(16) {
-        my_id = instance_create(x + lengthdir_x(14, direction), y + lengthdir_y(14, direction), objTinyShard)
-        my_id.direction = random(360)
-        my_id.speed = 1 + random(1)
-    }
-    
-    destroyed = 1
+if (life &lt;= 0 &amp;&amp; destroyed == 0)
+{
+	image_index = 2;
+	sound_ps(sndStoneCrumble);
+	
+	repeat (4 + random(6))
+	{
+		my_id = instance_create(x + lengthdir_x(14, direction), y + lengthdir_y(14, direction), objDebris);
+		my_id.direction = objPlayer.direction - 140 - random(80);
+		my_id.speed = random(4);
+	}
+	
+	repeat (16)
+	{
+		my_id = instance_create(x + lengthdir_x(14, direction), y + lengthdir_y(14, direction), objTinyShard);
+		my_id.direction = random(360);
+		my_id.speed = 1 + random(1);
+	}
+	
+	destroyed = 1;
 }
-
 </string>
           </argument>
         </arguments>
@@ -101,11 +105,16 @@ if life &lt;= 0 and destroyed = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create impact if the object hasn't been destroyed.
-if life &gt; 0 {
-    life -= 0.1
-    with other scrBulletImpact()
-} else with other scrBulletImpact()
+            <string>/// Create impact if the object hasn't been destroyed.
+if (life &gt; 0)
+{
+	life -= 0.1;
+	with (other)
+		scrBulletImpact();
+}
+else
+	with (other)
+		scrBulletImpact();
 </string>
           </argument>
         </arguments>
@@ -128,10 +137,9 @@ if life &gt; 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw layers.
-draw_sprite_ext(sprite_index, 3, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
-
+            <string>/// Draw layers.
+draw_sprite_ext(sprite_index, 3, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

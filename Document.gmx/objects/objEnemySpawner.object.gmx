@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>wave = 1
-time = 5
-spawn_rate = 50
-alarm[0] = 60
+            <string>wave = 1;
+time = 5;
+spawn_rate = 50;
+alarm[0] = 60;
 </string>
           </argument>
         </arguments>
@@ -51,13 +51,16 @@ alarm[0] = 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if time &lt;= 0 {
-    time = 5
-    wave += 1
-    spawn_rate -= 5
-} else time -= 1
+            <string>if (time &lt;= 0)
+{
+	time = 5;
+	wave += 1;
+	spawn_rate -= 5;
+}
+else
+	time -= 1;
 
-alarm[0] = 60
+alarm[0] = 60;
 </string>
           </argument>
         </arguments>
@@ -80,7 +83,7 @@ alarm[0] = 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>check_spawn(spawn_rate)
+            <string>check_spawn(spawn_rate);
 </string>
           </argument>
         </arguments>
@@ -103,10 +106,10 @@ alarm[0] = 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_black)
-draw_set_font(fntAmmo)
-draw_text(40, 40, "WAVE: " + string(wave))
-draw_text(40, display_get_gui_height() - 40, "NEXT WAVE IN: " +string(time))
+            <string>draw_set_colour(c_black);
+draw_set_font(fntAmmo);
+draw_text(40, 40, "WAVE: " + string(wave));
+draw_text(40, display_get_gui_height() - 40, "NEXT WAVE IN: " + string(time));
 </string>
           </argument>
         </arguments>

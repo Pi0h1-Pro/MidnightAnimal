@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Set properties.
-image_xscale = 0.1
-image_yscale = image_xscale
-image_alpha = 0.6
-spd = 0.04
+image_xscale = 0.1;
+image_yscale = image_xscale;
+image_alpha = 0.6;
+spd = 0.04;
 </string>
           </argument>
         </arguments>
@@ -53,12 +53,12 @@ spd = 0.04
           <argument>
             <kind>1</kind>
             <string>/// Ripple.
-image_xscale += spd
-image_yscale = image_xscale
+image_xscale += spd;
+image_yscale = image_xscale;
 
-image_alpha -= 0.005
-if image_alpha&lt;=0 instance_destroy()
-
+image_alpha -= 0.005;
+if (image_alpha &lt;= 0)
+	instance_destroy();
 </string>
           </argument>
         </arguments>

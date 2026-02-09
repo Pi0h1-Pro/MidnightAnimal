@@ -25,14 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-sprite=sprEDieMachete
-ammo=0
-targetindex=0
-index=0
-image_speed=0.35
-dead=0
-left=1
+            <string>event_inherited();
+sprite = sprEDieMachete;
+ammo = 0;
+targetindex = 0;
+index = 0;
+image_speed = 0.35;
+dead = 0;
+left = 1;
 </string>
           </argument>
         </arguments>
@@ -55,53 +55,62 @@ left=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &gt;= 4 and dead = 0 {
-    sound_ps(sndPunch)
-    sound_ps(sndHit)
-    sound_ps(sndHitMarker)
-    objEffector.hitalpha = 1
-    objEffector.hudflash = 10
-    global.shake = 8
-    repeat(4 + random(6)) {
-        my_id = instance_create(x + lengthdir_x(13, image_angle) - 1 + random(2), y + lengthdir_y(13, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = image_angle - 120 + random(60)
-    }
-    repeat(3) instance_create(x + lengthdir_x(13, image_angle), y + lengthdir_y(13, image_angle), objBigBlood)
-    dead = 1
+            <string>if (image_index &gt;= 4 &amp;&amp; dead == 0)
+{
+	sound_ps(sndPunch);
+	sound_ps(sndHit);
+	sound_ps(sndHitMarker);
+	objEffector.hitalpha = 1;
+	objEffector.hudflash = 10;
+	global.shake = 8;
+	repeat (4 + random(6))
+	{
+		my_id = instance_create(x + lengthdir_x(13, image_angle) - 1 + random(2), y + lengthdir_y(13, image_angle) - 1 + random(2), objBloodSquirt);
+		my_id.image_angle = image_angle - 120 + random(60);
+	}
+	repeat (3)
+		instance_create(x + lengthdir_x(13, image_angle), y + lengthdir_y(13, image_angle), objBigBlood);
+	dead = 1;
 }
-if image_index &gt;= 11 and dead = 1 {
-    sound_ps(sndPunch)
-    sound_ps(sndHit)
-    sound_ps(sndHitMarker)
-    objEffector.hitalpha = 1
-    objEffector.hudflash = 10
-    
-    global.shake = 10
-    repeat(4 + random(6)) {
-        my_id = instance_create(x + lengthdir_x(13, image_angle) - 1 + random(2), y + lengthdir_y(13, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = image_angle - 120 + random(60)
-    }
-    repeat(3) instance_create(x + lengthdir_x(13, image_angle), y + lengthdir_y(13, image_angle), objBigBlood)
-    dead = 2
+if (image_index &gt;= 11 &amp;&amp; dead == 1)
+{
+	sound_ps(sndPunch);
+	sound_ps(sndHit);
+	sound_ps(sndHitMarker);
+	objEffector.hitalpha = 1;
+	objEffector.hudflash = 10;
+	
+	global.shake = 10;
+	repeat (4 + random(6))
+	{
+		my_id = instance_create(x + lengthdir_x(13, image_angle) - 1 + random(2), y + lengthdir_y(13, image_angle) - 1 + random(2), objBloodSquirt);
+		my_id.image_angle = image_angle - 120 + random(60);
+	}
+	repeat (3)
+		instance_create(x + lengthdir_x(13, image_angle), y + lengthdir_y(13, image_angle), objBigBlood);
+	dead = 2;
 }
-if image_index &gt;= 18 and dead = 2 {
-    sound_ps(sndPunch)
-    sound_ps(sndHit)
-    sound_ps(sndHitMarker)
-    objEffector.hitalpha = 1
-    objEffector.hudflash = 10
-    
-    global.shake = 16
-    repeat(4 + random(6)) {
-        my_id = instance_create(x + lengthdir_x(13, image_angle) - 1 + random(2), y + lengthdir_y(13, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = image_angle - 120 + random(240)
-    }
-    repeat(3) instance_create(x + lengthdir_x(13, image_angle), y + lengthdir_y(13, image_angle), objBigBlood)
-    my_id = instance_create(x + lengthdir_x(16, image_angle), y + lengthdir_y(16, image_angle), objSeveredHead)
-    my_id.direction = image_angle
-    my_id.speed = 2
-    my_id.image_angle = image_angle
-    dead = 3
+if (image_index &gt;= 18 &amp;&amp; dead == 2)
+{
+	sound_ps(sndPunch);
+	sound_ps(sndHit);
+	sound_ps(sndHitMarker);
+	objEffector.hitalpha = 1;
+	objEffector.hudflash = 10;
+	
+	global.shake = 16;
+	repeat (4 + random(6))
+	{
+		my_id = instance_create(x + lengthdir_x(13, image_angle) - 1 + random(2), y + lengthdir_y(13, image_angle) - 1 + random(2), objBloodSquirt);
+		my_id.image_angle = image_angle - 120 + random(240);
+	}
+	repeat (3)
+		instance_create(x + lengthdir_x(13, image_angle), y + lengthdir_y(13, image_angle), objBigBlood);
+	my_id = instance_create(x + lengthdir_x(16, image_angle), y + lengthdir_y(16, image_angle), objSeveredHead);
+	my_id.direction = image_angle;
+	my_id.speed = 2;
+	my_id.image_angle = image_angle;
+	dead = 3;
 }
 </string>
           </argument>
@@ -125,11 +134,11 @@ if image_index &gt;= 18 and dead = 2 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    my_id = instance_create(x, y, objDeadBody)
-    my_id.image_angle = image_angle
-    my_id.sprite_index = sprite
-    my_id.image_index = 21
-    scrFinishExecution(sprPWalkMachete)
+            <string>my_id = instance_create(x, y, objDeadBody);
+my_id.image_angle = image_angle;
+my_id.sprite_index = sprite;
+my_id.image_index = 21;
+scrFinishExecution(sprPWalkMachete);
 </string>
           </argument>
         </arguments>
@@ -152,8 +161,8 @@ if image_index &gt;= 18 and dead = 2 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite,index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite, index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

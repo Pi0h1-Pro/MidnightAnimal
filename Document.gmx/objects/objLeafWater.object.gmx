@@ -26,17 +26,17 @@
           <argument>
             <kind>1</kind>
             <string>/// Set properties.
-scale = random_range(0.7,1)
-image_xscale = scale
-image_yscale = scale
-image_angle = irandom(360)
-speed = random_range(0.7,1.2)
-direction = irandom(360)
-angle_direction = choose(-0.5,0.5)
+scale = random_range(0.7, 1);
+image_xscale = scale;
+image_yscale = scale;
+image_angle = irandom(360);
+speed = random_range(0.7, 1.2);
+direction = irandom(360);
+angle_direction = choose(-0.5, 0.5);
 
-alarm[0] = 1
+alarm[0] = 1;
 
-move = irandom_range(200000,300000)
+move = irandom_range(200000, 300000);
 </string>
           </argument>
         </arguments>
@@ -60,12 +60,12 @@ move = irandom_range(200000,300000)
           <argument>
             <kind>1</kind>
             <string>/// Create ripples.
-ripple = instance_create(x,y,objRippleLake)
-ripple.image_xscale = 0.3
-ripple.image_yscale = image_xscale
-ripple.image_alpha = 0.8
-ripple.spd = 0.01
-alarm[0] = irandom_range(40,60)
+ripple = instance_create(x, y, objRippleLake);
+ripple.image_xscale = 0.3;
+ripple.image_yscale = image_xscale;
+ripple.image_alpha = 0.8;
+ripple.spd = 0.01;
+alarm[0] = irandom_range(40, 60);
 </string>
           </argument>
         </arguments>
@@ -89,11 +89,11 @@ alarm[0] = irandom_range(40,60)
           <argument>
             <kind>1</kind>
             <string>/// Add motion.
-move_wrap(true,true,100)
-image_angle += angle_direction
+move_wrap(true, true, 100);
+image_angle += angle_direction;
 
-image_xscale = scale + cos(get_timer()/move) * 0.05
-image_yscale = image_xscale
+image_xscale = scale + cos(get_timer() / move) * 0.05;
+image_yscale = image_xscale;
 </string>
           </argument>
         </arguments>

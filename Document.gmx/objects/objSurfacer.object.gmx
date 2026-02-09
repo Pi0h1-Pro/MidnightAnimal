@@ -28,10 +28,10 @@
             <string>/// Create surfaces.
 
 // Stores blood and debris.
-surf=surface_create(room_width*2,room_height*2)
-surface_set_target(surf)
-draw_clear_alpha(c_black,0)
-surface_reset_target()
+surf = surface_create(room_width * 2, room_height * 2);
+surface_set_target(surf);
+draw_clear_alpha(c_black, 0);
+surface_reset_target();
 
 floorsurf = 0;
 </string>
@@ -57,7 +57,7 @@ floorsurf = 0;
           <argument>
             <kind>1</kind>
             <string>/// Free surfaces.
-surface_free(surf)
+surface_free(surf);
 </string>
           </argument>
         </arguments>
@@ -81,53 +81,66 @@ surface_free(surf)
           <argument>
             <kind>1</kind>
             <string>/// Draw things to the surface.
-if !surface_exists(surf) {
-    surf = surface_create(room_width * 2, room_height * 2)
-    surface_set_target(surf)
-    draw_clear_alpha(c_black, 0)
-    surface_reset_target()
+if (!surface_exists(surf))
+{
+	surf = surface_create(room_width * 2, room_height * 2);
+	surface_set_target(surf);
+	draw_clear_alpha(c_black, 0);
+	surface_reset_target();
 }
 
 // Draw decals to surface.
-surface_set_target(surf)
+surface_set_target(surf);
 
 // Blood.
-with objTinyBlood {
-    draw_sprite_ext(sprite_index, image_index, x * 2 - 2 + random(4), y * 2 - 2 + random(4), image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha)
-    instance_destroy()
+with (objTinyBlood)
+{
+	draw_sprite_ext(sprite_index, image_index, x * 2 - 2 + random(4), y * 2 - 2 + random(4), image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha);
+	instance_destroy();
 }
 
-with objSplat scrDrawBloodToSurface()
-with objSmudge scrDrawBloodToSurface()
-with objBigBlood scrDrawBloodToSurface()
-with objSplatter draw_sprite_ext(sprSplatter, 0, x * 2 - 2 + random(4), y * 2 - 2 + random(4), image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha)
+with (objSplat)
+	scrDrawBloodToSurface();
+with (objSmudge)
+	scrDrawBloodToSurface();
+with (objBigBlood)
+	scrDrawBloodToSurface();
+with (objSplatter)
+	draw_sprite_ext(sprSplatter, 0, x * 2 - 2 + random(4), y * 2 - 2 + random(4), image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha);
 
 // Environmental damage.
-with objEnvironmentalDebris {
-    if speed = 0 {
-        draw_sprite_ext(sprite_index, image_index, x * 2, y * 2, image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha) 
-        instance_destroy()
-    }
+with (objEnvironmentalDebris)
+{
+	if (speed == 0)
+	{
+		draw_sprite_ext(sprite_index, image_index, x * 2, y * 2, image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha);
+		instance_destroy();
+	}
 }
 
-with objBreakableFragment {
-if speed = 0 {
-        draw_sprite_general(sprite_index,image_index,left,top,width,height,x * 2, y * 2, image_xscale * 2, image_yscale * 2,image_angle,-1,-1,-1,-1,1)
-        instance_destroy()
-    }
+with (objBreakableFragment)
+{
+	if (speed == 0)
+	{
+		draw_sprite_general(sprite_index, image_index, left, top, width, height, x * 2, y * 2, image_xscale * 2, image_yscale * 2, image_angle, -1, -1, -1, -1, 1);
+		instance_destroy();
+	}
 }
-with objGib {
-    if speed &lt;= 0.1 {
-        draw_sprite_ext(sprite_index, image_index, x * 2, y * 2, image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha) 
-        instance_destroy()
-    }
+with (objGib)
+{
+	if (speed &lt;= 0.1)
+	{
+		draw_sprite_ext(sprite_index, image_index, x * 2, y * 2, image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha);
+		instance_destroy();
+	}
 }
-/*with objDeadBody {
+
+/* with objDeadBody {
         draw_sprite_ext(sprite_index, image_index, x * 2, y * 2, image_xscale * 2, image_yscale * 2, image_angle, image_blend, image_alpha)
         instance_destroy()
 }*/
 
-surface_reset_target()
+surface_reset_target();
 </string>
           </argument>
         </arguments>
@@ -151,7 +164,7 @@ surface_reset_target()
           <argument>
             <kind>1</kind>
             <string>surface_free(surf);
-surf=-1234;
+surf = -1234;
 </string>
           </argument>
         </arguments>
@@ -174,8 +187,12 @@ surf=-1234;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if surface_exists(surf) draw_surface_ext(surf,0,0,0.5,0.5,0,c_white,1) else surf = surface_create(room_width*2,room_height*2)
-with objBloodPool draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>if (surface_exists(surf))
+	draw_surface_ext(surf, 0, 0, 0.5, 0.5, 0, c_white, 1);
+else
+	surf = surface_create(room_width * 2, room_height * 2);
+with (objBloodPool)
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

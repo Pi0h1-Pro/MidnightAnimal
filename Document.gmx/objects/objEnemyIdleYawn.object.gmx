@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-image_speed=0.15
-wait=random(15)
-ammo=2
-energie=1
-alert=0
-path=path_add()
-nothing = 0
-dropped = 0
-direction = image_angle
+            <string>event_inherited();
+image_speed = 0.15;
+wait = random(15);
+ammo = 2;
+energie = 1;
+alert = 0;
+path = path_add();
+nothing = 0;
+dropped = 0;
+direction = image_angle;
 </string>
           </argument>
         </arguments>
@@ -57,7 +57,7 @@ direction = image_angle
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.3
+            <string>image_speed = 0.3;
 </string>
           </argument>
         </arguments>
@@ -80,19 +80,23 @@ direction = image_angle
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objPlayer) exit 
-if wait &gt; 0 wait -= 1
-else {
-    seen = scrLook(objPlayer.x, objPlayer.y, 4)
-    if seen = 0 or seen = 2 {
-        my_id = instance_create(x, y, enemyRandom)
-        my_id.direction = direction
-        my_id.sprite_index = sprEWalkDoubleBarrel
-        my_id.ammo = 2
-        my_id.alert = 1
-        instance_destroy()
-    }
-    wait = 15
+            <string>if (!instance_exists(objPlayer))
+	exit;
+if (wait &gt; 0)
+	wait -= 1;
+else
+{
+	seen = scrLook(objPlayer.x, objPlayer.y, 4);
+	if (seen == 0 || seen == 2)
+	{
+		my_id = instance_create(x, y, enemyRandom);
+		my_id.direction = direction;
+		my_id.sprite_index = sprEWalkDoubleBarrel;
+		my_id.ammo = 2;
+		my_id.alert = 1;
+		instance_destroy();
+	}
+	wait = 15;
 }
 </string>
           </argument>
@@ -116,8 +120,8 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-alarm[0]=random(240)
+            <string>image_speed = 0;
+alarm[0] = random(240);
 </string>
           </argument>
         </arguments>
@@ -141,7 +145,7 @@ alarm[0]=random(240)
           <argument>
             <kind>1</kind>
             <string>/// Draw enemy.
-scrDrawEnemyIdle(sprELegs)
+scrDrawEnemyIdle(sprELegs);
 </string>
           </argument>
         </arguments>

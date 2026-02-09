@@ -25,20 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//all variables for this object are initialized with a script with the same name as the object
-if (radius&lt;targetradius)
+            <string>// all variables for this object are initialized with a script with the same name as the object
+if (radius &lt; targetradius)
 {
-    //increase the radius if it is less than target radius
-    alarm[0]=update_speed;
-    //slow down the shockwave over time
-    sp*=.99;
-    image_angle+=spin;
-    radius+=targetradius*sp;
+	// increase the radius if it is less than target radius
+	alarm[0] = update_speed;
+	
+	// slow down the shockwave over time
+	sp *= .99;
+	image_angle += spin;
+	radius += targetradius * sp;
 }
 else
 {
-    //destroy when max radius is reached
-    instance_destroy()
+	// destroy when max radius is reached
+	instance_destroy();
 }
 </string>
           </argument>
@@ -62,10 +63,10 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///It is important for the texture to be updated in the end step event
-//this keeps the shockwave updated with an image of what's happening in the game.
-//if you need to, you can substitute the texture from a specific view.
-texture=surface_get_texture(application_surface);
+            <string>/// It is important for the texture to be updated in the end step event
+// this keeps the shockwave updated with an image of what's happening in the game.
+// if you need to, you can substitute the texture from a specific view.
+texture = surface_get_texture(application_surface);
 </string>
           </argument>
         </arguments>
@@ -88,11 +89,12 @@ texture=surface_get_texture(application_surface);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add)
-//uncomment if you need faster rendering at a loss in quality
-//draw_magnify(x-view_xview[0],y-view_yview[0],radius,sqrt(radius),texture,view_wview[0],view_hview[0],20,twist)
-draw_magnify_ext(x-view_xview[0],y-view_yview[0],radius,sqrt(radius),texture,view_wview[0],view_hview[0],20,twist,c1,c2,c3,0,image_alpha*(1-power(radius/targetradius,4)),0)
-draw_set_blend_mode(bm_normal)
+            <string>draw_set_blend_mode(bm_add);
+
+// uncomment if you need faster rendering at a loss in quality
+// draw_magnify(x-view_xview[0],y-view_yview[0],radius,sqrt(radius),texture,view_wview[0],view_hview[0],20,twist)
+draw_magnify_ext(x - view_xview[0], y - view_yview[0], radius, sqrt(radius), texture, view_wview[0], view_hview[0], 20, twist, c1, c2, c3, 0, image_alpha * (1 - power(radius / targetradius, 4)), 0);
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>

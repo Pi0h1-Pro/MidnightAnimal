@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.5-random(0.25)
-image_blend=c_black
-depth=choose(1,-1)
-image_angle=random(360)
-image_xscale=1+random(0.5)
-image_yscale=image_xscale
+            <string>image_speed = 0.5 - random(0.25);
+image_blend = c_black;
+depth = choose(1, -1);
+image_angle = random(360);
+image_xscale = 1 + random(0.5);
+image_yscale = image_xscale;
 </string>
           </argument>
         </arguments>
@@ -53,7 +53,7 @@ image_yscale=image_xscale
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha=1-(image_index*(1/28))
+            <string>image_alpha = 1 - (image_index * (1 / 28));
 </string>
           </argument>
         </arguments>
@@ -76,7 +76,7 @@ image_yscale=image_xscale
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>

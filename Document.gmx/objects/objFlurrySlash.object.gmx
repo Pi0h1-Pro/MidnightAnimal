@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise properties.
-image_angle = random(360)
-image_xscale = 0.3
-image_yscale = image_xscale
-image_speed = 0.5
-index = 0
+image_angle = random(360);
+image_xscale = 0.3;
+image_yscale = image_xscale;
+image_speed = 0.5;
+index = 0;
 </string>
           </argument>
         </arguments>
@@ -53,8 +53,8 @@ index = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Destroy upon animation end. 
-instance_destroy()
+            <string>/// Destroy upon animation end.
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -78,9 +78,9 @@ instance_destroy()
           <argument>
             <kind>1</kind>
             <string>/// Draw flurry cloud.
-draw_set_blend_mode(bm_subtract)
-draw_self()
-draw_set_blend_mode(bm_normal)
+draw_set_blend_mode(bm_subtract);
+draw_self();
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>

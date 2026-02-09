@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.1
-wait = 200
-countdown = 0
-ind = 0
+            <string>image_speed = 0.1;
+wait = 200;
+countdown = 0;
+ind = 0;
 </string>
           </argument>
         </arguments>
@@ -52,25 +52,30 @@ ind = 0
           <argument>
             <kind>1</kind>
             <string>/// Trigger mine.
-if global.character = 1 exit
-if global.done = 1 exit
-if !instance_exists(objPlayer) exit
-if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 36 and countdown = 0 {
-    sound_ps(sndDetonateMine)
-    countdown = 1
+if (global.character == 1)
+	exit;
+if (global.done == 1)
+	exit;
+if (!instance_exists(objPlayer))
+	exit;
+if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 36 &amp;&amp; countdown == 0)
+{
+	sound_ps(sndDetonateMine);
+	countdown = 1;
 }
 
-if countdown = 1 {
-    wait -= 5
+if (countdown == 1)
+{
+	wait -= 5;
 }
 
-if wait = 0 {
-
-    //with objExplosiveCircle instance_destroy()
-    
-    // Create explosion.
-    instance_create(x, y, objGrenadeExplosion)
-    instance_destroy()
+if (wait == 0)
+{
+	// with objExplosiveCircle instance_destroy()
+	
+	// Create explosion.
+	instance_create(x, y, objGrenadeExplosion);
+	instance_destroy();
 }
 </string>
           </argument>
@@ -95,13 +100,14 @@ if wait = 0 {
           <argument>
             <kind>1</kind>
             <string>/// Draw explosive indicator.
-draw_self()
+draw_self();
 
-if countdown = 1 {
-    draw_set_colour(global.rubedo)
-    draw_circle(x, y, 80, false)
-    draw_set_colour(c_white)
-    draw_circle_width(x, y, wait, 4, 32)
+if (countdown == 1)
+{
+	draw_set_colour(global.rubedo);
+	draw_circle(x, y, 80, false);
+	draw_set_colour(c_white);
+	draw_circle_width(x, y, wait, 4, 32);
 }
 </string>
           </argument>

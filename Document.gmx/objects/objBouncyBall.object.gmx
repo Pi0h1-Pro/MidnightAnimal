@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir=0
-damage = 10
-image_speed = 0.3
-bounce = 0
+            <string>dir = 0;
+damage = 10;
+image_speed = 0.3;
+bounce = 0;
 </string>
           </argument>
         </arguments>
@@ -52,42 +52,50 @@ bounce = 0
           <argument>
             <kind>1</kind>
             <string>/// Movement.
-if !place_free(x+hspeed*2,y) hspeed=-hspeed
-if !place_free(x,y+vspeed*2) vspeed=-vspeed
-image_speed=speed*0.5
-if speed&lt;0.7 friction=0.005 else friction=0.05
-image_angle=direction
+if (!place_free(x + hspeed * 2, y))
+	hspeed = -hspeed;
+if (!place_free(x, y + vspeed * 2))
+	vspeed = -vspeed;
+image_speed = speed * 0.5;
+if (speed &lt; 0.7)
+	friction = 0.005;
+else
+	friction = 0.05;
+image_angle = direction;
 
-if place_meeting(x + hspeed, y, objWall)
-or place_meeting(x + hspeed, y, objEnemy)
-or place_meeting(x + hspeed, y, objDoorV)
-or place_meeting(x + hspeed, y, objWindow) {
-    direction = -direction + 180
-    bounce += 1
-    sound_ps(sndBounce)
+if (place_meeting(x + hspeed, y, objWall)
+	|| place_meeting(x + hspeed, y, objEnemy)
+	|| place_meeting(x + hspeed, y, objDoorV)
+	|| place_meeting(x + hspeed, y, objWindow))
+{
+	direction = -direction + 180;
+	bounce += 1;
+	sound_ps(sndBounce);
 }
 
-if place_meeting(x, y + vspeed, objWall)
-or place_meeting(x, y + vspeed, objEnemy)
-or place_meeting(x, y + vspeed, objDoorV)
-or place_meeting(x, y + vspeed, objWindow) {
-    direction = -direction
-    bounce += 1
-    sound_ps(sndBounce)
+if (place_meeting(x, y + vspeed, objWall)
+	|| place_meeting(x, y + vspeed, objEnemy)
+	|| place_meeting(x, y + vspeed, objDoorV)
+	|| place_meeting(x, y + vspeed, objWindow))
+{
+	direction = -direction;
+	bounce += 1;
+	sound_ps(sndBounce);
 }
-        
-if bounce &gt;= 10 or speed &lt;= 2 {
-    sprite_index = sprBallBurst
-    image_speed = 0.5
-    sound_ps(sndMineDing)
-    
-    d = instance_create(x + choose(-random(24), random(24)), y - 5, objDamageCounter)
-    d.colour = random_color()
-    d.spd = random(3)
-    d.text = "Pop!"
-    d.image_alpha = 0.8
-    d.speed = 3 + random(3)
-    d.direction = other.direction - 20 + random(40)
+
+if (bounce &gt;= 10 || speed &lt;= 2)
+{
+	sprite_index = sprBallBurst;
+	image_speed = 0.5;
+	sound_ps(sndMineDing);
+	
+	d = instance_create(x + choose(-random(24), random(24)), y - 5, objDamageCounter);
+	d.colour = random_color();
+	d.spd = random(3);
+	d.text = "Pop!";
+	d.image_alpha = 0.8;
+	d.speed = 3 + random(3);
+	d.direction = other.direction - 20 + random(40);
 }
 </string>
           </argument>
@@ -111,34 +119,8 @@ if bounce &gt;= 10 or speed &lt;= 2 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Bounce off.
-/*bounce +=1 
-move_bounce_all(1)
-sound_ps(sndBounce)
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objWall">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Bounce off.
-/*bounce +=1 
+            <string>/// Bounce off.
+/* bounce +=1 
 move_bounce_all(1)
 sound_ps(sndBounce)
 </string>
@@ -163,8 +145,8 @@ sound_ps(sndBounce)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Bounce off.
-/*bounce +=1 
+            <string>/// Bounce off.
+/* bounce +=1 
 move_bounce_all(1)
 sound_ps(sndBounce)
 </string>
@@ -190,12 +172,40 @@ sound_ps(sndBounce)
           <argument>
             <kind>1</kind>
             <string>/// Pick up ball.
-if !instance_exists(objPlayer) exit
-if other.ball = 0 {
-    other.ball = 1 
-    sound_ps(sndBounceReturn)
-    instance_destroy()
+if (!instance_exists(objPlayer))
+	exit;
+if (other.ball == 0)
+{
+	other.ball = 1;
+	sound_ps(sndBounceReturn);
+	instance_destroy();
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objWall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Bounce off.
+/* bounce +=1 
+move_bounce_all(1)
+sound_ps(sndBounce)
 </string>
           </argument>
         </arguments>
@@ -218,8 +228,8 @@ if other.ball = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Bounce off.
-/*bounce +=1 
+            <string>/// Bounce off.
+/* bounce +=1 
 move_bounce_all(1)
 sound_ps(sndBounce)
 </string>
@@ -245,46 +255,47 @@ sound_ps(sndBounce)
           <argument>
             <kind>1</kind>
             <string>/// Deplete health.
-bounce += 1 
-other.hp -= 10 + random(100)
-sound_ps(sndWeaponHit)
-sound_ps(sndBoxingBag)
-instance_create(x, y, objHitImpact)
-instance_create(x, y, objMuzzleSmoke)
+bounce += 1;
+other.hp -= 10 + random(100);
+sound_ps(sndWeaponHit);
+sound_ps(sndBoxingBag);
+instance_create(x, y, objHitImpact);
+instance_create(x, y, objMuzzleSmoke);
 
-d = instance_create(x + choose(-random(24), random(24)), y - 5, objDamageCounter)
-d.colour = random_color()
-d.spd = random(3)
-d.text = ":)"
-d.image_alpha = 1
-d.speed = 3 + random(3)
-d.direction = other.direction - 20 + random(40)
+d = instance_create(x + choose(-random(24), random(24)), y - 5, objDamageCounter);
+d.colour = random_color();
+d.spd = random(3);
+d.text = ":)";
+d.image_alpha = 1;
+d.speed = 3 + random(3);
+d.direction = other.direction - 20 + random(40);
 
 // Create knockout.
-if other.hp &lt;= 0 {
-
-    with other {
-    
-        // Check if the enemy is armed.
-        scrEnemyDropWeapon()
-
-        // Destroy enemy.
-        instance_destroy()
-
-        sound_ps(sndBounceKnockOut)
-        scrEnemyGetKnockedOut(object_index, 180 - direction)
-
-        // Assign a score.
-        create_points("INCAPACITATED +50")
-    }
+if (other.hp &lt;= 0)
+{
+	with (other)
+	{
+		// Check if the enemy is armed.
+		scrEnemyDropWeapon();
+		
+		// Destroy enemy.
+		instance_destroy();
+		
+		sound_ps(sndBounceKnockOut);
+		scrEnemyGetKnockedOut(object_index, 180 - direction);
+		
+		// Assign a score.
+		create_points("INCAPACITATED +50");
+	}
 }
 
 // Add to current combo.
-global.combotime = 240
-global.combo += 1
-global.myscore += 50
+global.combotime = 240;
+global.combo += 1;
+global.myscore += 50;
+
 // Bounce off.
-/*move_bounce_all(1)
+/* move_bounce_all(1)
 speed *= 0.9
 sound_ps(sndBounceReturn)
 </string>
@@ -310,9 +321,11 @@ sound_ps(sndBounceReturn)
           <argument>
             <kind>1</kind>
             <string>/// Destroy ball.
-if sprite_index = sprBallBurst {
-    instance_destroy()
-    if instance_exists(objPlayer) objPlayer.ball = 1
+if (sprite_index == sprBallBurst)
+{
+	instance_destroy();
+	if (instance_exists(objPlayer))
+		objPlayer.ball = 1;
 }
 </string>
           </argument>
@@ -336,7 +349,7 @@ if sprite_index = sprBallBurst {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrMotionBlur(speed,direction,x,y)
+            <string>scrMotionBlur(speed, direction, x, y);
 </string>
           </argument>
         </arguments>

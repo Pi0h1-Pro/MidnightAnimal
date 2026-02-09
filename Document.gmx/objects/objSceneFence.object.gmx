@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//hspeed=-0.25-random(0.25)
-image_speed=0
-index=0
+            <string>// hspeed=-0.25-random(0.25)
+image_speed = 0;
+index = 0;
 </string>
           </argument>
         </arguments>
@@ -50,9 +50,9 @@ index=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x-=17 
-if x&lt;-120 instance_destroy()
-
+            <string>x -= 17;
+if (x &lt; -120)
+	instance_destroy();
 </string>
           </argument>
         </arguments>

@@ -26,21 +26,22 @@
           <argument>
             <kind>1</kind>
             <string>/// Create raycast.
-dir = point_direction(x,y,global.mousex,global.mousey)
-raycast(x, y, dir, _SOLID)
+dir = point_direction(x, y, global.mousex, global.mousey);
+raycast(x, y, dir, _SOLID);
 
 // Spawn particles
-repeat(16) {
-    instance_create(hitX,hitY,objLaserParticle)
+repeat (16)
+{
+	instance_create(hitX, hitY, objLaserParticle);
 }
 
-my_id = instance_create(hitX, hitY, objSmokePlume)
-my_id.image_angle = dir
-my_id.direction = dir
+my_id = instance_create(hitX, hitY, objSmokePlume);
+my_id.image_angle = dir;
+my_id.direction = dir;
 
-blast = instance_create(hitX,hitY,objBlastImpact)
-blast.image_xscale = 0.2
-blast.image_yscale = 0.2
+blast = instance_create(hitX, hitY, objBlastImpact);
+blast.image_xscale = 0.2;
+blast.image_yscale = 0.2;
 
 // Laser width
 width = 15;
@@ -69,10 +70,10 @@ width = 15;
             <string>/// Decrease laser width and destroy when too thin.
 width *= 0.9;
 width -= 0.4;
-if width &lt;= 0 {
-    instance_destroy();
+if (width &lt;= 0)
+{
+	instance_destroy();
 }
-
 </string>
           </argument>
         </arguments>
@@ -96,12 +97,12 @@ if width &lt;= 0 {
           <argument>
             <kind>1</kind>
             <string>/// Draw laser.
-draw_set_alpha(0.7)
-draw_set_color(c_aqua)
-draw_line_width(x,y,hitX,hitY,width)
-draw_set_alpha(1)
-draw_set_color(c_white)
-draw_line_width(x,y,hitX,hitY,width / 2)
+draw_set_alpha(0.7);
+draw_set_color(c_aqua);
+draw_line_width(x, y, hitX, hitY, width);
+draw_set_alpha(1);
+draw_set_color(c_white);
+draw_line_width(x, y, hitX, hitY, width / 2);
 </string>
           </argument>
         </arguments>

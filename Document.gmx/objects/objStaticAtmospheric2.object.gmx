@@ -25,16 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//light sprite properties: 
-image_xscale=6
-image_yscale=6
-image_angle=0
-image_blend=c_white
-image_alpha=0.5
+            <string>// light sprite properties:
+image_xscale = 6;
+image_yscale = 6;
+image_angle = 0;
+image_blend = c_white;
+image_alpha = 0.5;
 
-//L3S_define_light(z,shadows,soft_amount,soft_inc,static)
-L3S_define_light(1,150,10,18,2,1)
-alarm[0]=1</string>
+// L3S_define_light(z,shadows,soft_amount,soft_inc,static)
+L3S_define_light(1, 150, 10, 18, 2, 1);
+alarm[0] = 1;
+</string>
           </argument>
         </arguments>
       </action>
@@ -56,8 +57,9 @@ alarm[0]=1</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//L3S_dsurface_update(shadow master)
-L3S_surface_update()</string>
+            <string>// L3S_dsurface_update(shadow master)
+L3S_surface_update();
+</string>
           </argument>
         </arguments>
       </action>
@@ -79,8 +81,9 @@ L3S_surface_update()</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(make_color_rgb(255,255,255))
-draw_text(x-string_width("Static Surface")*0.5,y,"Static Surface")</string>
+            <string>draw_set_color(make_color_rgb(255, 255, 255));
+draw_text(x - string_width("Static Surface") * 0.5, y, "Static Surface");
+</string>
           </argument>
         </arguments>
       </action>

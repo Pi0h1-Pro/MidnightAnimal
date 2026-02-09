@@ -25,43 +25,45 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>select=0
-i=0
+            <string>select = 0;
+i = 0;
 
-levelList = ds_list_create()
-ds_list_add(levelList,"rmGallery")
-ds_list_add(levelList,"rmHouseCountry")
-ds_list_add(levelList,"rmBelltowerOffices")
-//ds_list_add(levelList,"rmElectricHouse")
-ds_list_add(levelList,"rmAgroResearchLab")
-ds_list_add(levelList,"rmOfficeBuilding")
-ds_list_add(levelList,"rmYacht")
-ds_list_add(levelList,"rmManour")
-ds_list_add(levelList,"rmForest")
-ds_list_add(levelList,"rmArena")
-ds_list_add(levelList,"rmTest")
-ds_list_add(levelList,"rmShowdown")
-ds_list_add(levelList,"rmTrainstationEntrance")
-ds_list_add(levelList,"rmApartment1Entrance")
-ds_list_add(levelList,"rmApartment2Entrance")
-ds_list_add(levelList,"rmHouse1Downstairs")
-ds_list_add(levelList,"rmHouse5Downstairs")
-ds_list_add(levelList,"rmHouse2Downstairs")
-ds_list_add(levelList,"rmHotelEntrance")
-ds_list_add(levelList,"rmBuildingFloor1")
-ds_list_add(levelList,"rmHouse3Downstairs")
-ds_list_add(levelList,"rmSwatDownstairs")
-ds_list_add(levelList,"rmHouse4Middle")
-ds_list_add(levelList,"rmOfficeEntrance")
-ds_list_add(levelList,"rmHospitalCutscene")
-ds_list_add(levelList,"rmPoliceHQFloor1")
-ds_list_add(levelList,"rmBossClubFloor1")
-ds_list_add(levelList,"rmMansionEntrance")
-ds_list_add(levelList,"rmNoodleShop")
-ds_list_add(levelList,"rmArcadeDownstairs")
-ds_list_add(levelList,"rmPhoneHomEntranceBiker")
-ds_list_add(levelList,"rmJanitors")
-//ds_list_add(levelList,"rmCharacterSelect")
+levelList = ds_list_create();
+ds_list_add(levelList, "rmGallery");
+ds_list_add(levelList, "rmHouseCountry");
+ds_list_add(levelList, "rmBelltowerOffices");
+
+// ds_list_add(levelList,"rmElectricHouse")
+ds_list_add(levelList, "rmAgroResearchLab");
+ds_list_add(levelList, "rmOfficeBuilding");
+ds_list_add(levelList, "rmYacht");
+ds_list_add(levelList, "rmManour");
+ds_list_add(levelList, "rmForest");
+ds_list_add(levelList, "rmArena");
+ds_list_add(levelList, "rmTest");
+ds_list_add(levelList, "rmShowdown");
+ds_list_add(levelList, "rmTrainstationEntrance");
+ds_list_add(levelList, "rmApartment1Entrance");
+ds_list_add(levelList, "rmApartment2Entrance");
+ds_list_add(levelList, "rmHouse1Downstairs");
+ds_list_add(levelList, "rmHouse5Downstairs");
+ds_list_add(levelList, "rmHouse2Downstairs");
+ds_list_add(levelList, "rmHotelEntrance");
+ds_list_add(levelList, "rmBuildingFloor1");
+ds_list_add(levelList, "rmHouse3Downstairs");
+ds_list_add(levelList, "rmSwatDownstairs");
+ds_list_add(levelList, "rmHouse4Middle");
+ds_list_add(levelList, "rmOfficeEntrance");
+ds_list_add(levelList, "rmHospitalCutscene");
+ds_list_add(levelList, "rmPoliceHQFloor1");
+ds_list_add(levelList, "rmBossClubFloor1");
+ds_list_add(levelList, "rmMansionEntrance");
+ds_list_add(levelList, "rmNoodleShop");
+ds_list_add(levelList, "rmArcadeDownstairs");
+ds_list_add(levelList, "rmPhoneHomEntranceBiker");
+ds_list_add(levelList, "rmJanitors");
+
+// ds_list_add(levelList,"rmCharacterSelect")
 </string>
           </argument>
         </arguments>
@@ -107,12 +109,19 @@ ds_list_add(levelList,"rmJanitors")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check_pressed(ord('W')){select-=1};
-if keyboard_check_pressed(ord('S')){select+=1};
+            <string>if (keyboard_check_pressed(ord('W')))
+{
+	select -= 1;
+}
+if (keyboard_check_pressed(ord('S')))
+{
+	select += 1;
+}
 
-if select&gt;ds_list_size(levelList)-1 select=0;
-if select&lt;0 select=ds_list_size(levelList)-1;
-
+if (select &gt; ds_list_size(levelList) - 1)
+	select = 0;
+if (select &lt; 0)
+	select = ds_list_size(levelList) - 1;
 </string>
           </argument>
         </arguments>
@@ -135,14 +144,14 @@ if select&lt;0 select=ds_list_size(levelList)-1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room = asset_get_index(ds_list_find_value(levelList,select));
-global.myscore = 0
-global.drawscore = 0
-global.combotime = 0
-global.combo = 0
+            <string>room = asset_get_index(ds_list_find_value(levelList, select));
+global.myscore = 0;
+global.drawscore = 0;
+global.combotime = 0;
+global.combo = 0;
 
-//random_song()
-//play_song(mscBadMoonRising)
+// random_song()
+// play_song(mscBadMoonRising)
 </string>
           </argument>
         </arguments>
@@ -189,14 +198,20 @@ global.combo = 0
           <argument>
             <kind>1</kind>
             <string>/// Draw the background.
-draw_rectangle_colour(-20, -20, display_get_gui_width() + 20, display_get_gui_height() + 20, global.nigredo, global.nigredo, global.nigredo, global.nigredo, 0)
+draw_rectangle_colour(-20, -20, display_get_gui_width() + 20, display_get_gui_height() + 20, global.nigredo, global.nigredo, global.nigredo, global.nigredo, 0);
 
-draw_set_font(fntTiny); draw_set_halign(fa_left);
-draw_set_colour(c_ltgray);draw_text(64,16,"///DEBUG LEVEL SELECT///");
-for (var i = ds_list_size(levelList) - 1; i &gt; -1; i--;){
-    if select=i draw_set_colour(global.rubedo) else draw_set_colour(global.albedo);
-    draw_text(64,64+(32*i),ds_list_find_value(levelList,i));
-};
+draw_set_font(fntTiny);
+draw_set_halign(fa_left);
+draw_set_colour(c_ltgray);
+draw_text(64, 16, "///DEBUG LEVEL SELECT///");
+for (var i = ds_list_size(levelList) - 1; i &gt; -1; i--)
+{
+	if (select == i)
+		draw_set_colour(global.rubedo);
+	else
+		draw_set_colour(global.albedo);
+	draw_text(64, 64 + (32 * i), ds_list_find_value(levelList, i));
+}
 </string>
           </argument>
         </arguments>
@@ -220,7 +235,7 @@ for (var i = ds_list_size(levelList) - 1; i &gt; -1; i--;){
           <argument>
             <kind>1</kind>
             <string>/// Return to menu.
-room = rmMenu
+room = rmMenu;
 </string>
           </argument>
         </arguments>

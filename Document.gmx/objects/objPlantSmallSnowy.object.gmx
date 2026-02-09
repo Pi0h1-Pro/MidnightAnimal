@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_index = random(3)
+            <string>image_speed = 0;
+image_index = random(3);
 </string>
           </argument>
         </arguments>
@@ -50,8 +50,9 @@ image_index = random(3)
           <argument>
             <kind>1</kind>
             <string>/// Draw self and shadow.
-draw_self()
-//draw_self_shadow(1)
+draw_self();
+
+// draw_self_shadow(1)
 </string>
           </argument>
         </arguments>

@@ -1,7 +1,8 @@
-// MOVEMENT // 
+// MOVEMENT //
 // scrPlayerMoveKeyboard determines keyboard-based input.
 // scrGetPlayerSpeed determines the player's mobility.
-if global.active = 1 scrPlayerMove()
+if (global.active == 1)
+	scrPlayerMove();
 
 /*
 // ABILITIES //

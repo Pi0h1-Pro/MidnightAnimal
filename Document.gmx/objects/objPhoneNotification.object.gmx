@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Set some variables.
-image_speed = 0.5
-image_xscale = 0.2
-image_yscale = 0.2
-x = view_wview / 2
-y = view_hview / 2
+image_speed = 0.5;
+image_xscale = 0.2;
+image_yscale = 0.2;
+x = view_wview / 2;
+y = view_hview / 2;
 </string>
           </argument>
         </arguments>
@@ -54,9 +54,8 @@ y = view_hview / 2
           <argument>
             <kind>1</kind>
             <string>/// Stop playing.
-image_speed = 0
-image_index = 29
-
+image_speed = 0;
+image_index = 29;
 </string>
           </argument>
         </arguments>

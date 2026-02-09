@@ -18,17 +18,17 @@ var i_dir = argument2;
 var obj = argument3;
 
 // Find surface normal
-n = collision_normal(cx, cy, objWall, 7.5, 1); // http://www.gmlscripts.com/script/collision_normal 
+n = collision_normal(cx, cy, objWall, 7.5, 1); // http://www.gmlscripts.com/script/collision_normal
 nx = lengthdir_x(1, n);
 ny = lengthdir_y(1, n);
-    
+
 // Find incident vector
 ix = lengthdir_x(1, i_dir);
 iy = lengthdir_y(1, i_dir);
-    
+
 // Find reflection vector
 rx = ix - 2 * nx * dot_product(ix, iy, nx, ny);
 ry = iy - 2 * ny * dot_product(ix, iy, nx, ny);
-    
+
 // Find reflection angle
 return point_direction(0, 0, rx, ry);

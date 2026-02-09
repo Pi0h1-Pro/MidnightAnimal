@@ -1,4 +1,4 @@
-/******XBOX 360 CONTROLLER FIGURED OUT*********\
+/****** XBOX 360 CONTROLLER FIGURED OUT*********\
 /**BY INDIEDEVAUSTIN/LEMON FLAVOR/PLANCECRANE**\
 /********GM8 PRO or NEWER**********************\
 /* XBOX 360 Controller in GM uses joytsick ****\

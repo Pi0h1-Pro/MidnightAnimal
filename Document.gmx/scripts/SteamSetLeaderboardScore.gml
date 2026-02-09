@@ -1,1 +1,2 @@
-if global.steamon return external_call(iSteamUploadLeaderboardScore, argument0);
+if (global.steamon)
+	return external_call(iSteamUploadLeaderboardScore, argument0);

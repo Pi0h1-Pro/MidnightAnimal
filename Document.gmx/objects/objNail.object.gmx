@@ -26,14 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>/// Properties.
-image_speed=0.5
-image_blend=merge_color(c_white,c_silver,random(1))
-init_projectile()
+image_speed = 0.5;
+image_blend = merge_color(c_white, c_silver, random(1));
+init_projectile();
 
 // Create grid for trail.
-trail_init()
-slim = 0
-alarm[0] = 240
+trail_init();
+slim = 0;
+alarm[0] = 240;
 </string>
           </argument>
         </arguments>
@@ -57,7 +57,7 @@ alarm[0] = 240
           <argument>
             <kind>1</kind>
             <string>/// Destroy trail.
-trail_destroy()
+trail_destroy();
 </string>
           </argument>
         </arguments>
@@ -81,7 +81,7 @@ trail_destroy()
           <argument>
             <kind>1</kind>
             <string>/// Calculate trail.
-trail_calculate(32)
+trail_calculate(32);
 </string>
           </argument>
         </arguments>
@@ -105,16 +105,19 @@ trail_calculate(32)
           <argument>
             <kind>1</kind>
             <string>/// Kill enemy.
-if speed &gt; 0 {
-    mask_index = sprite_index
-    global.my_id = id
-    with objEnemy {
-            if place_meeting(x, y, global.my_id) {
-                scrKnifeThrowHits()
-                global.combotime = 240
-            }
-    }
-    mask_index = sprWeaponMask
+if (speed &gt; 0)
+{
+	mask_index = sprite_index;
+	global.my_id = id;
+	with (objEnemy)
+	{
+		if (place_meeting(x, y, global.my_id))
+		{
+			scrKnifeThrowHits();
+			global.combotime = 240;
+		}
+	}
+	mask_index = sprWeaponMask;
 }
 </string>
           </argument>
@@ -138,121 +141,113 @@ if speed &gt; 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if other.object_index = objGlassPanelH {
-    if vspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x + i * 1.5, y, objShard)
-            my_id.speed = random(5)
-            my_id.direction = add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objGlassPanelHBroken)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+            <string>if (other.object_index == objGlassPanelH)
+{
+	if (vspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x + i * 1.5, y, objShard);
+			my_id.speed = random(5);
+			my_id.direction = add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objGlassPanelHBroken);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
-if other.object_index = objWindowV {
-    if hspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x, y + i * 1.5, objShard)
-            my_id.speed = random(5)
-            my_id.direction = 90 + add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objBrokenWindowV)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objWindowV)
+{
+	if (hspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x, y + i * 1.5, objShard);
+			my_id.speed = random(5);
+			my_id.direction = 90 + add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objBrokenWindowV);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
-if other.object_index = objWindowH {
-    if vspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x + i * 1.5, y, objShard)
-            my_id.speed = random(5)
-            my_id.direction = add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objBrokenWindowH)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objWindowH)
+{
+	if (vspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x + i * 1.5, y, objShard);
+			my_id.speed = random(5);
+			my_id.direction = add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objBrokenWindowH);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
 
-if other.object_index = objGlassPanelV {
-    if hspeed &gt; 0 {
-        other.add = -1
-    } else {
-        other.add = 1
-    }
-    with other {
-        i = 0
-        repeat(24) {
-            my_id = instance_create(x, y + i * 1.5, objShard)
-            my_id.speed = random(5)
-            my_id.direction = 90 + add * 90 - 8 + random(16)
-            i += 1
-        }
-        instance_create(x, y, objGlassPanelVBroken)
-        instance_destroy()
-        sound_ps(choose(sndGlass1, sndGlass2))
-    }
-    exit
+if (other.object_index == objGlassPanelV)
+{
+	if (hspeed &gt; 0)
+	{
+		other.add = -1;
+	}
+	else
+	{
+		other.add = 1;
+	}
+	with (other)
+	{
+		i = 0;
+		repeat (24)
+		{
+			my_id = instance_create(x, y + i * 1.5, objShard);
+			my_id.speed = random(5);
+			my_id.direction = 90 + add * 90 - 8 + random(16);
+			i += 1;
+		}
+		instance_create(x, y, objGlassPanelVBroken);
+		instance_destroy();
+		sound_ps(choose(sndGlass1, sndGlass2));
+	}
+	exit;
 }
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objWall">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Impact.
-scrBulletImpact()
-
-if hit = 0 {
-    hit = 1
-    sound_ps(sndWallImpact)
-}
-
 </string>
           </argument>
         </arguments>
@@ -276,13 +271,43 @@ if hit = 0 {
           <argument>
             <kind>1</kind>
             <string>/// Impact.
-scrBulletImpact()
+scrBulletImpact();
 
-if hit = 0 {
-    hit = 1
-    sound_ps(sndWallImpact)
+if (hit == 0)
+{
+	hit = 1;
+	sound_ps(sndWallImpact);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objWall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Impact.
+scrBulletImpact();
 
+if (hit == 0)
+{
+	hit = 1;
+	sound_ps(sndWallImpact);
+}
 </string>
           </argument>
         </arguments>
@@ -306,13 +331,13 @@ if hit = 0 {
           <argument>
             <kind>1</kind>
             <string>/// Impact.
-scrBulletImpact()
+scrBulletImpact();
 
-if hit = 0 {
-    hit = 1
-    sound_ps(sndWallImpact)
+if (hit == 0)
+{
+	hit = 1;
+	sound_ps(sndWallImpact);
 }
-
 </string>
           </argument>
         </arguments>
@@ -335,7 +360,8 @@ if hit = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()</string>
+            <string>instance_destroy();
+</string>
           </argument>
         </arguments>
       </action>
@@ -358,9 +384,8 @@ if hit = 0 {
           <argument>
             <kind>1</kind>
             <string>/// Draw projectile.
-draw_trail_ext(1,c_white,-1,slim,0.5);
-scrMotionBlur(speed,direction,x,y)
-
+draw_trail_ext(1, c_white, -1, slim, 0.5);
+scrMotionBlur(speed, direction, x, y);
 </string>
           </argument>
         </arguments>

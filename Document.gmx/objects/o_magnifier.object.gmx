@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///this object works like a magnifying glass
-//it is similar to a shockwave except it doesn't fade out
-radius=room_height/2;
-texture=surface_get_texture(application_surface);
-segments=16;
-spin=choose(-1,1);
-debug=0;
-c1=random_color();
-c2=random_color();
-c3=random_color();
+            <string>/// this object works like a magnifying glass
+// it is similar to a shockwave except it doesn't fade out
+radius = room_height / 2;
+texture = surface_get_texture(application_surface);
+segments = 16;
+spin = choose(-1, 1);
+debug = 0;
+c1 = random_color();
+c2 = random_color();
+c3 = random_color();
 </string>
           </argument>
         </arguments>
@@ -57,10 +57,10 @@ c3=random_color();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x=mouse_x;
-y=mouse_y;
-image_angle+=spin;
-texture=surface_get_texture(application_surface);
+            <string>x = mouse_x;
+y = mouse_y;
+image_angle += spin;
+texture = surface_get_texture(application_surface);
 </string>
           </argument>
         </arguments>
@@ -83,7 +83,7 @@ texture=surface_get_texture(application_surface);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>segments-=1;
+            <string>segments -= 1;
 </string>
           </argument>
         </arguments>
@@ -106,7 +106,7 @@ texture=surface_get_texture(application_surface);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>segments+=1;
+            <string>segments += 1;
 </string>
           </argument>
         </arguments>
@@ -129,7 +129,7 @@ texture=surface_get_texture(application_surface);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_shockwave(x,y,0,100+random(400),2,.04,60,beam_tolerance(90),random_color(),random_color(),random_color(),1)
+            <string>create_shockwave(x, y, 0, 100 + random(400), 2, .04, 60, beam_tolerance(90), random_color(), random_color(), random_color(), 1);
 </string>
           </argument>
         </arguments>
@@ -152,10 +152,10 @@ texture=surface_get_texture(application_surface);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_magnify(x-view_xview,y-view_yview,radius,segments,texture,view_wview,view_hview,segments,0)
+            <string>draw_magnify(x - view_xview, y - view_yview, radius, segments, texture, view_wview, view_hview, segments, 0);
 
-//draw_text(x,y,string(segments))
-//draw_text(x,y+32,string(radius))
+// draw_text(x,y,string(segments))
+// draw_text(x,y+32,string(radius))
 </string>
           </argument>
         </arguments>

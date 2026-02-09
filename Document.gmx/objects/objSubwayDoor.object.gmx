@@ -25,11 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-spawned=0
-wait=100
-wait2=100
-global.opensound=0</string>
+            <string>image_speed = 0;
+spawned = 0;
+wait = 100;
+wait2 = 100;
+global.opensound = 0;
+</string>
           </argument>
         </arguments>
       </action>
@@ -51,12 +52,13 @@ global.opensound=0</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if on = 0 {
-    on = 1
-    if global.opensound = 0 sound_ps(sndSubwayDoor)
-    global.opensound = 1
+            <string>if (on == 0)
+{
+	on = 1;
+	if (global.opensound == 0)
+		sound_ps(sndSubwayDoor);
+	global.opensound = 1;
 }
-
 </string>
           </argument>
         </arguments>
@@ -79,27 +81,38 @@ global.opensound=0</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if visible = 0 exit
-if wait &gt; 0 {
-    wait -= 1 exit
+            <string>if (visible == 0)
+	exit;
+if (wait &gt; 0)
+{
+	wait -= 1;
+	exit;
 }
-if on = 1 {
-    if image_index &lt; 12 image_index += 0.5
-    else {
-        if spawned &lt; 2 {
-            with objTrain solid = 0
-            my_id = instance_create(x - 20, y, obj50BMelee)
-            spawned = 2
-            scrInitPathFinding()
-        }
-        if wait2 &gt; 0 wait2 -= 1
-        else on = 2
-    }
+if (on == 1)
+{
+	if (image_index &lt; 12)
+		image_index += 0.5;
+	else
+	{
+		if (spawned &lt; 2)
+		{
+			with (objTrain)
+				solid = 0;
+			my_id = instance_create(x - 20, y, obj50BMelee);
+			spawned = 2;
+			scrInitPathFinding();
+		}
+		if (wait2 &gt; 0)
+			wait2 -= 1;
+		else
+			on = 2;
+	}
 }
-if on = 2 {
-    if image_index &gt; 0 image_index -= 0.5
+if (on == 2)
+{
+	if (image_index &gt; 0)
+		image_index -= 0.5;
 }
-
 </string>
           </argument>
         </arguments>

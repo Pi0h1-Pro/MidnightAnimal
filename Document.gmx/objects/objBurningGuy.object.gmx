@@ -25,20 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction=random(360)
-speed=2
-image_speed=0.15
-/*repeat (30) {
+            <string>direction = random(360);
+speed = 2;
+image_speed = 0.15;
+
+/* repeat (30) {
 my_id=instance_create(x,y,objFlameParticle)
 my_id.direction=random(360)
 my_id.speed=2+random(3)
 my_id.friction=0.15
 }
 */
-sound_play(sndMolotov)
-diradd=8-random(16)
-alarm[0]=100+random(100)
-image_speed=0.25
+sound_play(sndMolotov);
+diradd = 8 - random(16);
+alarm[0] = 100 + random(100);
+image_speed = 0.25;
 </string>
           </argument>
         </arguments>
@@ -61,11 +62,10 @@ image_speed=0.25
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>my_id=instance_create(x,y,objBurningBody)
-my_id.sprite_index=choose(sprEDeadBurn4,sprEDeadBurn5,sprEDeadBurn6)
-my_id.image_angle=direction
-instance_destroy()
-
+            <string>my_id = instance_create(x, y, objBurningBody);
+my_id.sprite_index = choose(sprEDeadBurn4, sprEDeadBurn5, sprEDeadBurn6);
+my_id.image_angle = direction;
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -88,26 +88,32 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrMoveSolidOn()
-if !place_free(x + hspeed * 4, y) hspeed = -hspeed
-if !place_free(x, y + vspeed) vspeed = -vspeed
-scrMoveSolidOff()
+            <string>scrMoveSolidOn();
+if (!place_free(x + hspeed * 4, y))
+	hspeed = -hspeed;
+if (!place_free(x, y + vspeed))
+	vspeed = -vspeed;
+scrMoveSolidOff();
 
-direction += diradd
-if round(random(20)) = 2 diradd = 8 - random(16)
-if round(random(4)) = 2 {
-    my_id = instance_create(x - 8 + random(16), y - 8 + random(16), objFireBall)
-    my_id.direction = random(360)
-    my_id.speed = 1 + random(1)
+direction += diradd;
+if (round(random(20)) == 2)
+	diradd = 8 - random(16);
+if (round(random(4)) == 2)
+{
+	my_id = instance_create(x - 8 + random(16), y - 8 + random(16), objFireBall);
+	my_id.direction = random(360);
+	my_id.speed = 1 + random(1);
 }
-if round(random(3)) = 2 {
-    my_id = instance_create(x - 8 + random(16), y - 8 + random(16), objFlameSmoke)
-    my_id.direction = random(360)
-    my_id.speed = 0.5 + random(1)
+if (round(random(3)) == 2)
+{
+	my_id = instance_create(x - 8 + random(16), y - 8 + random(16), objFlameSmoke);
+	my_id.direction = random(360);
+	my_id.speed = 0.5 + random(1);
 }
-if !place_free(x + hspeed, y) hspeed = -hspeed
-if !place_free(x, y + vspeed) vspeed = -vspeed
-
+if (!place_free(x + hspeed, y))
+	hspeed = -hspeed;
+if (!place_free(x, y + vspeed))
+	vspeed = -vspeed;
 </string>
           </argument>
         </arguments>
@@ -130,7 +136,7 @@ if !place_free(x, y + vspeed) vspeed = -vspeed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -153,7 +159,7 @@ if !place_free(x, y + vspeed) vspeed = -vspeed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -176,10 +182,11 @@ if !place_free(x, y + vspeed) vspeed = -vspeed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprBurningLegs,image_index,x+1,y+1,image_xscale,image_yscale,direction,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,direction,c_black,0.5)
-draw_sprite_ext(sprBurningLegs,image_index,x,y,image_xscale,image_yscale,direction,image_blend,image_alpha)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,direction,image_blend,image_alpha)</string>
+            <string>draw_sprite_ext(sprBurningLegs, image_index, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, direction, c_black, 0.5);
+draw_sprite_ext(sprBurningLegs, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, direction, image_blend, image_alpha);
+</string>
           </argument>
         </arguments>
       </action>

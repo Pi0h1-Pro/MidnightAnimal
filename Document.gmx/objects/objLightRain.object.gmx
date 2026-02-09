@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Loop rain sound.
-audio_play_sound(sndRain,0,1);
+            <string>/// Loop rain sound.
+audio_play_sound(sndRain, 0, 1);
 </string>
           </argument>
         </arguments>
@@ -49,15 +49,17 @@ audio_play_sound(sndRain,0,1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>edge = 30
-number = 5
+            <string>edge = 30;
+number = 5;
 
-repeat(number) {
-    my_id = instance_create(view_xview - edge + random(view_wview + edge * 2), view_yview - edge + random(view_hview + edge * 2), objRainDrop)
+repeat (number)
+{
+	my_id = instance_create(view_xview - edge + random(view_wview + edge * 2), view_yview - edge + random(view_hview + edge * 2), objRainDrop);
 }
-if irandom(90) = 5 {
-    sound_ps(sndThunder)
-    objEffector.whitealpha = 1
+if (irandom(90) == 5)
+{
+	sound_ps(sndThunder);
+	objEffector.whitealpha = 1;
 }
 </string>
           </argument>
@@ -82,7 +84,8 @@ if irandom(90) = 5 {
           <argument>
             <kind>1</kind>
             <string>/// Stop sound.
-if audio_is_playing(sndRain) audio_stop_sound(sndRain);
+if (audio_is_playing(sndRain))
+	audio_stop_sound(sndRain);
 </string>
           </argument>
         </arguments>

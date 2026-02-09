@@ -26,15 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise shader.
-uni_time = shader_get_uniform(shdGreyscale,"time")
-var_time_var = 0
+uni_time = shader_get_uniform(shdGreyscale, "time");
+var_time_var = 0;
 
 // Set fade amount. The closer var_greyscale_fade is to 1,
 // the more desaturated the image gets.
-uni_greyscale_fade = shader_get_uniform(shdGreyscale,"fade")
-global.var_greyscale_fade = 0.4
-
-
+uni_greyscale_fade = shader_get_uniform(shdGreyscale, "fade");
+global.var_greyscale_fade = 0.4;
 </string>
           </argument>
         </arguments>
@@ -58,9 +56,14 @@ global.var_greyscale_fade = 0.4
           <argument>
             <kind>1</kind>
             <string>/// Change amount based on room.
-if room = rmYacht global.var_greyscale_fade = 0.1 else global.var_greyscale_fade = 0.5
-if global.var_greyscale_fade &lt; 0.1 global.var_greyscale_fade = 0.1
-if global.var_greyscale_fade &gt; 1 global.var_greyscale_fade = 1
+if (room == rmYacht)
+	global.var_greyscale_fade = 0.1;
+else
+	global.var_greyscale_fade = 0.5;
+if (global.var_greyscale_fade &lt; 0.1)
+	global.var_greyscale_fade = 0.1;
+if (global.var_greyscale_fade &gt; 1)
+	global.var_greyscale_fade = 1;
 </string>
           </argument>
         </arguments>
@@ -84,11 +87,12 @@ if global.var_greyscale_fade &gt; 1 global.var_greyscale_fade = 1
           <argument>
             <kind>1</kind>
             <string>/// Draw filter.
-shader_set(shdGreyscale)
-shader_set_uniform_f(uni_greyscale_fade, global.var_greyscale_fade)
-draw_surface_stretched(application_surface,view_xview[0],view_yview[0],view_wview[0],view_hview[0])
-//draw_surface_stretched(application_surface,view_xview[0],view_yview[0],surface_get_width(application_surface), surface_get_height(application_surface))
-shader_reset()
+shader_set(shdGreyscale);
+shader_set_uniform_f(uni_greyscale_fade, global.var_greyscale_fade);
+draw_surface_stretched(application_surface, view_xview[0], view_yview[0], view_wview[0], view_hview[0]);
+
+// draw_surface_stretched(application_surface,view_xview[0],view_yview[0],surface_get_width(application_surface), surface_get_height(application_surface))
+shader_reset();
 </string>
           </argument>
         </arguments>

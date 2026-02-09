@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string>// Variables
 dir = random(360);
-spd = random_range(2,5.5);
-alarm[0] = 12+random(5);
+spd = random_range(2, 5.5);
+alarm[0] = 12 + random(5);
 image_alpha = 0.5;
 fade = false;
-image_blend = c_white
+image_blend = c_white;
 </string>
           </argument>
         </arguments>
@@ -79,23 +79,26 @@ fade = true;
           <argument>
             <kind>1</kind>
             <string>// Move
-dir += random_range(-0.2,0.2);
+dir += random_range(-0.2, 0.2);
 spd *= 0.98;
-x += lengthdir_x(spd,dir);
-y += lengthdir_y(spd,dir);
+x += lengthdir_x(spd, dir);
+y += lengthdir_y(spd, dir);
 
 // Fade
-if fade {
-    image_alpha *= 0.95;
-    image_alpha -= 0.05;
-    if image_alpha &lt;= 0 {
-        instance_destroy();
-    }
+if (fade)
+{
+	image_alpha *= 0.95;
+	image_alpha -= 0.05;
+	if (image_alpha &lt;= 0)
+	{
+		instance_destroy();
+	}
 }
 
 // Stop when hitting a wall
-if collision_point(x,y,_SOLID,true,false) {
-    spd *= 0.6;
+if (collision_point(x, y, _SOLID, true, false))
+{
+	spd *= 0.6;
 }
 </string>
           </argument>
@@ -122,9 +125,9 @@ if collision_point(x,y,_SOLID,true,false) {
             <string>// Draw particles.
 draw_set_color(image_blend);
 draw_set_alpha(image_alpha);
-pDist = point_distance(x,y,xprevious,yprevious)*2.25;
-pDir = point_direction(x,y,xprevious,yprevious);
-draw_line_width(x,y,x+lengthdir_x(pDist,pDir),y+lengthdir_y(pDist,pDir),2);
+pDist = point_distance(x, y, xprevious, yprevious) * 2.25;
+pDir = point_direction(x, y, xprevious, yprevious);
+draw_line_width(x, y, x + lengthdir_x(pDist, pDir), y + lengthdir_y(pDist, pDir), 2);
 draw_set_alpha(1);
 </string>
           </argument>

@@ -1,38 +1,38 @@
-if room = rmSequence1
-or room = rmSequence1Downstairs  
-or room = rmSequence2
-or room = rmSequence2Downstairs   
-or room = rmSequence3
-or room = rmSequence3Downstairs   
-or room = rmSequence4
-or room = rmSequence4Downstairs   
-or room = rmSequence5
-or room = rmSequence5Downstairs   
-or room = rmSequence6
-or room = rmSequence6Downstairs   
-or room = rmSequence7
-or room = rmSequence7Downstairs   
-or room = rmSequence8
-or room = rmSequence8Downstairs   
-or room = rmSequence9
-or room = rmSequence9Downstairs   
-or room = rmSequence10
-or room = rmSequence10Downstairs   
-or room = rmSequence11
-or room = rmSequence11Downstairs   
-or room = rmSequence12
-or room = rmSequence12bDownstairs 
-or room = rmSequence13
-or room = rmSequence13Downstairs   
-or room = rmSequence14
-or room = rmSequence14Downstairs   
-or room = rmMCBar 
-or room = rmMCSequence2
-or room = rmMCSequence2Downstairs   
-or room = rmMCSequence3
-or room = rmMCSequence3Downstairs   
-or room = rmMCSequence4
-or room = rmMCSequence4Downstairs   
-return true
+if (room == rmSequence1
+	|| room == rmSequence1Downstairs
+	|| room == rmSequence2
+	|| room == rmSequence2Downstairs
+	|| room == rmSequence3
+	|| room == rmSequence3Downstairs
+	|| room == rmSequence4
+	|| room == rmSequence4Downstairs
+	|| room == rmSequence5
+	|| room == rmSequence5Downstairs
+	|| room == rmSequence6
+	|| room == rmSequence6Downstairs
+	|| room == rmSequence7
+	|| room == rmSequence7Downstairs
+	|| room == rmSequence8
+	|| room == rmSequence8Downstairs
+	|| room == rmSequence9
+	|| room == rmSequence9Downstairs
+	|| room == rmSequence10
+	|| room == rmSequence10Downstairs
+	|| room == rmSequence11
+	|| room == rmSequence11Downstairs
+	|| room == rmSequence12
+	|| room == rmSequence12bDownstairs
+	|| room == rmSequence13
+	|| room == rmSequence13Downstairs
+	|| room == rmSequence14
+	|| room == rmSequence14Downstairs
+	|| room == rmMCBar
+	|| room == rmMCSequence2
+	|| room == rmMCSequence2Downstairs
+	|| room == rmMCSequence3
+	|| room == rmMCSequence3Downstairs
+	|| room == rmMCSequence4
+	|| room == rmMCSequence4Downstairs)
+	return true;
 
-return false
+return false;

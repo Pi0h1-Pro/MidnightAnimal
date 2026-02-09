@@ -19,6 +19,6 @@
 
 var ret;
 ret = external_call(global._bgm_Load, argument0, argument1, false);
-if (ret==false && global._bgm_showErrors != false)
-  show_error(external_call(global._bgm_Error), false);
+if (ret == false && global._bgm_showErrors != false)
+	show_error(external_call(global._bgm_Error), false);
 return ret;

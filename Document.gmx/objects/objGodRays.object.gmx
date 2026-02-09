@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Get Shader Uniforms
+            <string>/// Get Shader Uniforms
 
 u_resolution = shader_get_uniform(shdGodRays, "iResolution");
 u_seconds = shader_get_uniform(shdGodRays, "iGlobalTime");
@@ -51,7 +51,7 @@ sec = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Stop Automated Drawing of Application Surface in PostDraw Event
+            <string>/// Stop Automated Drawing of Application Surface in PostDraw Event
 
 application_surface_draw_enable(false);
 </string>
@@ -76,7 +76,7 @@ application_surface_draw_enable(false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Increase Time
+            <string>/// Increase Time
 
 sec += 1 / room_speed;
 </string>
@@ -101,32 +101,32 @@ sec += 1 / room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw Shaders
+            <string>/// Draw Shaders
 
-//draw wave distortion effect
-//shader_set(sh_underwater);
+// draw wave distortion effect
+// shader_set(sh_underwater);
 
-//shader_set_uniform_f(u_resolution_water,display_get_gui_width().0,display_get_gui_height().0);
+// shader_set_uniform_f(u_resolution_water,display_get_gui_width().0,display_get_gui_height().0);
 
-//shader_set_uniform_f(u_seconds_water,sec);
+// shader_set_uniform_f(u_seconds_water,sec);
 
-//texture_set_stage(u_texture_water, surface_get_texture(application_surface)); //feed application surface into shader
+// texture_set_stage(u_texture_water, surface_get_texture(application_surface)); //feed application surface into shader
 
-//draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),false);
+// draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),false);
 
-//shader_reset();
+// shader_reset();
 
 
-//draw godray effect
-draw_surface(application_surface, 0, 0)
+// draw godray effect
+draw_surface(application_surface, 0, 0);
 
 shader_set(shdGodRays);
 
-shader_set_uniform_f(u_resolution,display_get_gui_width(),display_get_gui_height());
+shader_set_uniform_f(u_resolution, display_get_gui_width(), display_get_gui_height());
 
-shader_set_uniform_f(u_seconds,sec);
+shader_set_uniform_f(u_seconds, sec);
 
-draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),false);
+draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
 
 shader_reset();
 </string>

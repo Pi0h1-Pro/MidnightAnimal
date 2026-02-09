@@ -25,15 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=random(360)
-image_speed=0
-friction=0.15+random(0.1)
-diradd=-1+round(random(1))*2
-maxspeed=1
-life=3+round(random(4))
-image_index=floor(random(sprite_get_number(sprite_index)))
-wait=180
-bled = 0
+            <string>image_angle = random(360);
+image_speed = 0;
+friction = 0.15 + random(0.1);
+diradd = -1 + round(random(1)) * 2;
+maxspeed = 1;
+life = 3 + round(random(4));
+image_index = floor(random(sprite_get_number(sprite_index)));
+wait = 180;
+bled = 0;
 </string>
           </argument>
         </arguments>
@@ -56,30 +56,35 @@ bled = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle += speed * diradd * 2
-if instance_exists(objBloodPool) {
-    if wait &lt; 3 wait += 1
+            <string>image_angle += speed * diradd * 2;
+if (instance_exists(objBloodPool))
+{
+	if (wait &lt; 3)
+		wait += 1;
 }
-if speed &gt; 0 {
-    surface_set_target(objSurfacer.surf)
-    repeat(2) {
-        dir = random(360)
-        length = random(4)
-        myx = x + lengthdir_x(length, dir)
-        myy = y + lengthdir_y(length, dir)
-        draw_sprite_ext(sprBloodSpeck, random(10), myx * 2, myy * 2, 2, 2, dir, merge_color(c_red,c_maroon,0.7), 0.8)
-    }
-    surface_reset_target()
-}
-
-if speed = 0 {
-    if bled = 0 {   
-        my_id = instance_create(x, y, objBloodPool)
-        my_id.image_angle = random(360)
-        bled = 1 
-    }
+if (speed &gt; 0)
+{
+	surface_set_target(objSurfacer.surf);
+	repeat (2)
+	{
+		dir = random(360);
+		length = random(4);
+		myx = x + lengthdir_x(length, dir);
+		myy = y + lengthdir_y(length, dir);
+		draw_sprite_ext(sprBloodSpeck, random(10), myx * 2, myy * 2, 2, 2, dir, merge_color(c_red, c_maroon, 0.7), 0.8);
+	}
+	surface_reset_target();
 }
 
+if (speed == 0)
+{
+	if (bled == 0)
+	{
+		my_id = instance_create(x, y, objBloodPool);
+		my_id.image_angle = random(360);
+		bled = 1;
+	}
+}
 </string>
           </argument>
         </arguments>
@@ -102,7 +107,7 @@ if speed = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -125,7 +130,7 @@ if speed = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -148,7 +153,7 @@ if speed = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -171,7 +176,7 @@ if speed = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_bounce_all(1)
+            <string>move_bounce_all(1);
 </string>
           </argument>
         </arguments>
@@ -194,7 +199,7 @@ if speed = 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

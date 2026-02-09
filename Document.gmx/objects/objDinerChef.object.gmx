@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.125
+            <string>image_speed = 0.125;
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.125
+            <string>image_speed = 0.125;
 </string>
           </argument>
         </arguments>
@@ -71,8 +71,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-alarm[0]=100+random(360)
+            <string>image_speed = 0;
+alarm[0] = 100 + random(360);
 </string>
           </argument>
         </arguments>

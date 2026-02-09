@@ -25,11 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 1.5
-image_xscale = 0.5
-image_yscale = 0.5
-global.shake = 10
-
+            <string>image_speed = 1.5;
+image_xscale = 0.5;
+image_yscale = 0.5;
+global.shake = 10;
 </string>
           </argument>
         </arguments>
@@ -53,7 +52,7 @@ global.shake = 10
           <argument>
             <kind>1</kind>
             <string>/// Destroy.
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>

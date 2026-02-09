@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>texture_set_interpolation(true)
-draw_self()
-texture_set_interpolation(false)
+            <string>texture_set_interpolation(true);
+draw_self();
+texture_set_interpolation(false);
 </string>
           </argument>
         </arguments>

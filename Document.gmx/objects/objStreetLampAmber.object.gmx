@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
-image_index = 0
+            <string>image_speed = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -49,20 +49,21 @@ image_index = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy light.
-image_index = 1
-sound_ps(choose(sndGlass1, sndGlass2))
+            <string>/// Destroy light.
+image_index = 1;
+sound_ps(choose(sndGlass1, sndGlass2));
 
-repeat(64) {
-    my_id = instance_create(x, y + 4, objShard)
-    my_id.direction = random(360)
-    my_id.image_speed = 2 + random(3)
-    my_id.image_angle = random(360)
-    my_id.image_index = ceil(random(8)) * random(1)
+repeat (64)
+{
+	my_id = instance_create(x, y + 4, objShard);
+	my_id.direction = random(360);
+	my_id.image_speed = 2 + random(3);
+	my_id.image_angle = random(360);
+	my_id.image_index = ceil(random(8)) * random(1);
 }
 
-with other scrBulletImpact()
-
+with (other)
+	scrBulletImpact();
 </string>
           </argument>
         </arguments>
@@ -85,12 +86,13 @@ with other scrBulletImpact()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+2,y+3,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_self()
+            <string>draw_sprite_ext(sprite_index, image_index, x + 2, y + 3, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_self();
 
-if image_index = 0 {
-    draw_set_color(merge_color(merge_color(c_yellow,c_white,0.6),c_black,0.3))
-    draw_lens_flare(x,y,255,2,2,3,4,0.7)
+if (image_index == 0)
+{
+	draw_set_color(merge_color(merge_color(c_yellow, c_white, 0.6), c_black, 0.3));
+	draw_lens_flare(x, y, 255, 2, 2, 3, 4, 0.7);
 }
 </string>
           </argument>

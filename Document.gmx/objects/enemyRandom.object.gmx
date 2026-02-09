@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index=scrChooseGun()
-init_enemy(150)
-ammo = scrGetAmmoEnemy(sprite_index)
+            <string>sprite_index = scrChooseGun();
+init_enemy(150);
+ammo = scrGetAmmoEnemy(sprite_index);
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ ammo = scrGetAmmoEnemy(sprite_index)
           <argument>
             <kind>1</kind>
             <string>/// Turn.
-scrERandomTurn()
+scrERandomTurn();
 </string>
           </argument>
         </arguments>
@@ -75,8 +75,8 @@ scrERandomTurn()
           <argument>
             <kind>1</kind>
             <string>/// AI behaviour.
-step_enemy()
-aiRandom()
+step_enemy();
+aiRandom();
 </string>
           </argument>
         </arguments>
@@ -100,7 +100,7 @@ aiRandom()
           <argument>
             <kind>1</kind>
             <string>/// End animation.
-scrEnemyAnimationEnd()
+scrEnemyAnimationEnd();
 </string>
           </argument>
         </arguments>

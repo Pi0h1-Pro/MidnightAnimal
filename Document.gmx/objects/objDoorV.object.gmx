@@ -26,14 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise some variables.
-locked = 0
-open = 0
-swingspeed=0
-x+=4
-swinger=0
-life =  3 + random (3)
-image_speed = 0
-image_index = 0
+locked = 0;
+open = 0;
+swingspeed = 0;
+x += 4;
+swinger = 0;
+life = 3 + random(3);
+image_speed = 0;
+image_index = 0;
+
 /*
 mesh = glr_mesh_create(x,y, false);
 glr_mesh_submesh_add_json(mesh, "[[-2,0],[2,0],[2,32],[-2,32]]", 0, 0); 
@@ -62,95 +63,140 @@ glr_mesh_set_rotation(mesh, image_angle);
           <argument>
             <kind>1</kind>
             <string>/// Open/close door.
-if !scrMovingPlayerExists() exit
-if locked = 1 or abs(swingspeed) &gt; 3.5 nothing = 1
-else {
-    global.my_id = id
-
-    // Enemy collision. 
-    with objEnemy {
-        if place_meeting(x, y, global.my_id) {
-            global.my_id.target = id
-            with global.my_id {
-                swinger = 2
-                if abs(swingspeed) &lt; 2 sound_ps(choose(sndDoorOpen1, sndDoorOpen2))
-                if y &gt; target.y and target.x &lt; x {
-                    swingspeed = 16 exit
-                }
-                if y &gt; target.y and target.x &gt; x {
-                    swingspeed = -16 exit
-                }
-                if target.x &lt; x + lengthdir_x(32, image_angle + 270) swingspeed = 16
-                else swingspeed = -16
-            }
-        }
-    }
-
-    // Player collision.
-    if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32 {
-        if keyboard_check_pressed(global.interactkey) {
-            // Open door.
-            if locked = 1 exit
-            swinger = 1
-            if abs(swingspeed) &gt; 3.5 exit
-            if abs(swingspeed) &lt; 2 sound_ps(choose(sndDoorOpen1, sndDoorOpen2))
-            if y &gt; objPlayer.y and objPlayer.x &lt; x {
-                swingspeed = 16 exit
-            }
-            if y &gt; objPlayer.y and objPlayer.x &gt; x {
-                swingspeed = -16 exit
-            }
-            if objPlayer.x &lt; x + lengthdir_x(32, image_angle + 270) swingspeed = 16
-            else swingspeed = -16
-        }
-
-        // Destroy with melee.
-        if place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlayer.dir), objPlayer) {
-            if (scrIsSwinging(objPlayer.sprite_index) and scrCurrentWeaponExt(objPlayer.sprite_index) = 19)
-                or objPlayer.sprite_index = pierretteBashShield {
-                    //if objPlayer.image_index = 5 {
-                        repeat(16) {
-                            my_id = instance_create(x, y, objDebrisLarge)
-                            my_id.speed = random(4)
-                        }
-
-                        if image_angle != 0 image_angle = 0
-                        my_id = instance_create(x, y + 17, objDestroyedDoor)
-                        my_id.speed = 2 + random(1)
-                        if objPlayer.x &gt; x {
-                            my_id.image_angle = 180 - random_range(-20, 20)
-                            my_id.direction = my_id.image_angle
-                        } else my_id.image_angle = random_range(-20, 20)
-                        instance_destroy()
-                        sound_ps(sndBreakDoor)
-                        global.shake = 16
-                    }
-               // }
-        }
-    }
+if (!scrMovingPlayerExists())
+	exit;
+if (locked == 1 || abs(swingspeed) &gt; 3.5)
+	nothing = 1;
+else
+{
+	global.my_id = id;
+	
+	// Enemy collision.
+	with (objEnemy)
+	{
+		if (place_meeting(x, y, global.my_id))
+		{
+			global.my_id.target = id;
+			with (global.my_id)
+			{
+				swinger = 2;
+				if (abs(swingspeed) &lt; 2)
+					sound_ps(choose(sndDoorOpen1, sndDoorOpen2));
+				if (y &gt; target.y &amp;&amp; target.x &lt; x)
+				{
+					swingspeed = 16;
+					exit;
+				}
+				if (y &gt; target.y &amp;&amp; target.x &gt; x)
+				{
+					swingspeed = -16;
+					exit;
+				}
+				if (target.x &lt; x + lengthdir_x(32, image_angle + 270))
+					swingspeed = 16;
+				else
+					swingspeed = -16;
+			}
+		}
+	}
+	
+	// Player collision.
+	if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32)
+	{
+		if (keyboard_check_pressed(global.interactkey))
+		{
+			// Open door.
+			if (locked == 1)
+				exit;
+			swinger = 1;
+			if (abs(swingspeed) &gt; 3.5)
+				exit;
+			if (abs(swingspeed) &lt; 2)
+				sound_ps(choose(sndDoorOpen1, sndDoorOpen2));
+			if (y &gt; objPlayer.y &amp;&amp; objPlayer.x &lt; x)
+			{
+				swingspeed = 16;
+				exit;
+			}
+			if (y &gt; objPlayer.y &amp;&amp; objPlayer.x &gt; x)
+			{
+				swingspeed = -16;
+				exit;
+			}
+			if (objPlayer.x &lt; x + lengthdir_x(32, image_angle + 270))
+				swingspeed = 16;
+			else
+				swingspeed = -16;
+		}
+		
+		// Destroy with melee.
+		if (place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlayer.dir), objPlayer))
+		{
+			if ((scrIsSwinging(objPlayer.sprite_index) &amp;&amp; scrCurrentWeaponExt(objPlayer.sprite_index) == 19)
+				|| objPlayer.sprite_index == pierretteBashShield)
+			{
+				// if objPlayer.image_index = 5 {
+				repeat (16)
+				{
+					my_id = instance_create(x, y, objDebrisLarge);
+					my_id.speed = random(4);
+				}
+				
+				if (image_angle != 0)
+					image_angle = 0;
+				my_id = instance_create(x, y + 17, objDestroyedDoor);
+				my_id.speed = 2 + random(1);
+				if (objPlayer.x &gt; x)
+				{
+					my_id.image_angle = 180 - random_range(-20, 20);
+					my_id.direction = my_id.image_angle;
+				}
+				else
+					my_id.image_angle = random_range(-20, 20);
+				instance_destroy();
+				sound_ps(sndBreakDoor);
+				global.shake = 16;
+			}
+			
+			// }
+		}
+	}
 }
 
-if abs(swingspeed) &gt; 0 {
-    image_angle += swingspeed
-    if image_angle &lt; -135 {
-        image_angle = -135 swingspeed = 0 //abs(swingspeed)
-    }
-    if image_angle &gt; 135 {
-        image_angle = 135 swingspeed = 0 //-abs(swingspeed)
-    }
-    swingdir = sign(swingspeed)
-        //glr_mesh_set_rotation(mesh, image_angle);
-    if image_angle &gt; -6 and image_angle &lt; 6 {
-        swingspeed = 0 image_angle = 0
-    }
-
-    if swingspeed &gt; 0.25 swingspeed -= 0.25
-    else {
-        if swingspeed &lt; 0 swingspeed += 0.25
-        else {
-            swinger = 0 swingspeed = 0
-        }
-    }
+if (abs(swingspeed) &gt; 0)
+{
+	image_angle += swingspeed;
+	if (image_angle &lt; -135)
+	{
+		image_angle = -135;
+		swingspeed = 0; // abs(swingspeed)
+	}
+	if (image_angle &gt; 135)
+	{
+		image_angle = 135;
+		swingspeed = 0; //- abs(swingspeed)
+	}
+	swingdir = sign(swingspeed);
+	
+	// glr_mesh_set_rotation(mesh, image_angle);
+	if (image_angle &gt; -6 &amp;&amp; image_angle &lt; 6)
+	{
+		swingspeed = 0;
+		image_angle = 0;
+	}
+	
+	if (swingspeed &gt; 0.25)
+		swingspeed -= 0.25;
+	else
+	{
+		if (swingspeed &lt; 0)
+			swingspeed += 0.25;
+		else
+		{
+			swinger = 0;
+			swingspeed = 0;
+		}
+	}
 }
 </string>
           </argument>
@@ -174,17 +220,20 @@ if abs(swingspeed) &gt; 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw door.
-if !scrMovingPlayerExists() exit
+            <string>/// Draw door.
+if (!scrMovingPlayerExists())
+	exit;
 
-if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32 {
-    draw_sprite_ext(sprite_index,0,x+1,y+1,image_xscale,image_yscale,image_angle,c_black, 0.3)
-    draw_sprite_ext(sprite_index,1,x+1,y+1,image_xscale,image_yscale,image_angle,image_blend, 1)
-} else {
-    draw_sprite_ext(sprite_index,0,x+1,y+1,image_xscale,image_yscale,image_angle,c_black, 0.3)
-    draw_sprite_ext(sprite_index,0,x+1,y+1,image_xscale,image_yscale,image_angle,image_blend, 1)
+if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 32)
+{
+	draw_sprite_ext(sprite_index, 0, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.3);
+	draw_sprite_ext(sprite_index, 1, x + 1, y + 1, image_xscale, image_yscale, image_angle, image_blend, 1);
 }
-
+else
+{
+	draw_sprite_ext(sprite_index, 0, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.3);
+	draw_sprite_ext(sprite_index, 0, x + 1, y + 1, image_xscale, image_yscale, image_angle, image_blend, 1);
+}
 </string>
           </argument>
         </arguments>

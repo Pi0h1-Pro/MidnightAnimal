@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-teleport = false
+            <string>event_inherited();
+teleport = false;
 </string>
           </argument>
         </arguments>
@@ -50,7 +50,7 @@ teleport = false
           <argument>
             <kind>1</kind>
             <string>/// Pan camera.
-camera_pan(x,y)
+camera_pan(x, y);
 </string>
           </argument>
         </arguments>

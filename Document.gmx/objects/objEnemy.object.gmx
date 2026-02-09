@@ -25,12 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>init_enemy(150)
-energie = 2
-direction = image_angle
-angle = direction 
+            <string>init_enemy(150);
+energie = 2;
+direction = image_angle;
+angle = direction;
 alertwait = 0;
-
 </string>
           </argument>
         </arguments>
@@ -54,8 +53,8 @@ alertwait = 0;
           <argument>
             <kind>1</kind>
             <string>/// Regulate hit effects.
-eflash = false
-hit_enemy = false
+eflash = false;
+hit_enemy = false;
 </string>
           </argument>
         </arguments>
@@ -79,7 +78,7 @@ hit_enemy = false
           <argument>
             <kind>1</kind>
             <string>/// Push away.
-/*if !scrMovingPlayerExists() exit
+/* if !scrMovingPlayerExists() exit
 
 dir = point_direction(other.x, other.y, x, y)
 if point_distance(x, y, other.x, other.y) &lt; 32 {
@@ -111,9 +110,9 @@ if point_distance(x, y, other.x, other.y) &lt; 32 {
           <argument>
             <kind>1</kind>
             <string>/// Get hit.
-//if global.gibfest = 0 scrEnemyDieShot(objNail) else scrEnemyDieExplode()
+// if global.gibfest = 0 scrEnemyDieShot(objNail) else scrEnemyDieExplode()
 
-register_enemy_hit(objNail)
+register_enemy_hit(objNail);
 </string>
           </argument>
         </arguments>
@@ -137,23 +136,27 @@ register_enemy_hit(objNail)
           <argument>
             <kind>1</kind>
             <string>/// Burn.
-if hp &lt; max_hp * 0.5 {
-    if burning = 0 {
-        create_damage_general(random(3), global.c_fire, "BURNING!", 1, x + choose(-random(24), random(24)), y - 5)
-        affected = 1
-        burning = 1
-    }
+if (hp &lt; max_hp * 0.5)
+{
+	if (burning == 0)
+	{
+		create_damage_general(random(3), global.c_fire, "BURNING!", 1, x + choose(-random(24), random(24)), y - 5);
+		affected = 1;
+		burning = 1;
+	}
 }
-if round(random(5)) = 2 { 
-    objEffector.hitalpha = 1
-    sound_ps(sndHitMarker)
-    global.combo += 1
-    global.combotime = 240
-    hp -= 2
-    create_damage_general(random(3), global.c_fire, "2", "1", x + choose(-random(24), random(24)), y - 5)
+if (round(random(5)) == 2)
+{
+	objEffector.hitalpha = 1;
+	sound_ps(sndHitMarker);
+	global.combo += 1;
+	global.combotime = 240;
+	hp -= 2;
+	create_damage_general(random(3), global.c_fire, "2", "1", x + choose(-random(24), random(24)), y - 5);
 }
 
-if hp &lt; 0 scrEnemyGetBurned()
+if (hp &lt; 0)
+	scrEnemyGetBurned();
 </string>
           </argument>
         </arguments>
@@ -177,7 +180,7 @@ if hp &lt; 0 scrEnemyGetBurned()
           <argument>
             <kind>1</kind>
             <string>/// Get hit.
-register_enemy_hit(objBullet)
+register_enemy_hit(objBullet);
 </string>
           </argument>
         </arguments>
@@ -201,8 +204,7 @@ register_enemy_hit(objBullet)
           <argument>
             <kind>1</kind>
             <string>/// Death by slicing.
-scrEnemyDieSlice()
-
+scrEnemyDieSlice();
 </string>
           </argument>
         </arguments>
@@ -226,8 +228,7 @@ scrEnemyDieSlice()
           <argument>
             <kind>1</kind>
             <string>/// Death.
-scrEnemyDieExplode()
-
+scrEnemyDieExplode();
 </string>
           </argument>
         </arguments>
@@ -251,8 +252,10 @@ scrEnemyDieExplode()
           <argument>
             <kind>1</kind>
             <string>/// Death.
-if global.gibfest = 0 scrEnemyDieShot(objArrow) else scrEnemyDieExplode()
-
+if (global.gibfest == 0)
+	scrEnemyDieShot(objArrow);
+else
+	scrEnemyDieExplode();
 </string>
           </argument>
         </arguments>
@@ -276,10 +279,11 @@ if global.gibfest = 0 scrEnemyDieShot(objArrow) else scrEnemyDieExplode()
           <argument>
             <kind>1</kind>
             <string>/// Push away from other enemies.
-dir = point_direction(other.x, other.y, x, y)
-if scrPlaceFree(x + lengthdir_x(2, dir), y + lengthdir_y(2, dir)) {
-    x += lengthdir_x(4, dir)
-    y += lengthdir_y(4, dir)
+dir = point_direction(other.x, other.y, x, y);
+if (scrPlaceFree(x + lengthdir_x(2, dir), y + lengthdir_y(2, dir)))
+{
+	x += lengthdir_x(4, dir);
+	y += lengthdir_y(4, dir);
 }
 </string>
           </argument>
@@ -303,8 +307,8 @@ if scrPlaceFree(x + lengthdir_x(2, dir), y + lengthdir_y(2, dir)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw enemy.
-draw_enemy(sprELegs, c_white)
+            <string>/// Draw enemy.
+draw_enemy(sprELegs, c_white);
 </string>
           </argument>
         </arguments>

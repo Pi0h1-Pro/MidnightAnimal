@@ -25,14 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-friction=0.15
-alarm[0]=120+random(100)
-image_index = 1
-startx=x
-starty=y
+            <string>image_speed = 0;
+friction = 0.15;
+alarm[0] = 120 + random(100);
+image_index = 1;
+startx = x;
+starty = y;
 
-/*image_speed=0.02
+/* image_speed=0.02
 friction=0.1
 image_index=1
 
@@ -61,7 +61,7 @@ starty=y
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.25
+            <string>image_speed = 0.25;
 </string>
           </argument>
         </arguments>
@@ -84,46 +84,70 @@ starty=y
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_speed &gt; 0 exit
-scrMoveSolidOn()
-if !place_free(x, y) {
-    if speed &gt; 0 {
-        move_outside_solid(direction - 180, 8)
-    } else {
-        if place_free(x + lengthdir_x(7, direction - 180), y + lengthdir_y(7, direction - 180)) {
-            dir = direction
-            if sprite_index = sprEGangGetUp sprite_index = sprEGangGetUpLean
-            if sprite_index = sprEGetUp sprite_index = sprEGetUpLean
-            if sprite_index = sprPoliceGetUp sprite_index = sprPoliceGetUpLean
-            direction = round(direction * (1 / 90)) * 90
-            image_angle = direction - 180
-            if place_free(x + lengthdir_x(5, direction), y + lengthdir_y(5, direction)) {
-                direction = dir
-                if sprite_index = sprEGangGetUpLean sprite_index = sprEGangGetUp
-                if sprite_index = sprEGetUpLean sprite_index = sprEGetUp
-                if sprite_index = sprPoliceGetUpLean sprite_index = sprPoliceGetUp
-            }
-        }
-    }
-    speed = 0
-} else {
-    if !place_free(x + lengthdir_x(5, direction), y + lengthdir_y(5, direction)) {
-        move_contact_solid(direction, 8)
-        dir = direction
-        if sprite_index = sprEGangGetUp sprite_index = sprEGangGetUpLean
-        if sprite_index = sprEGetUp sprite_index = sprEGetUpLean
-        if sprite_index = sprPoliceGetUp sprite_index = sprPoliceGetUpLean
-        direction = round(direction * (1 / 90)) * 90
-        image_angle = direction - 180
-        if place_free(x + lengthdir_x(5, direction), y + lengthdir_y(5, direction)) {
-            direction = dir
-            if sprite_index = sprEGangGetUpLean sprite_index = sprEGangGetUp
-            if sprite_index = sprEGetUpLean sprite_index = sprEGetUp
-            if sprite_index = sprPoliceGetUpLean sprite_index = sprPoliceGetUp
-        }
-    }
+            <string>if (image_speed &gt; 0)
+	exit;
+scrMoveSolidOn();
+if (!place_free(x, y))
+{
+	if (speed &gt; 0)
+	{
+		move_outside_solid(direction - 180, 8);
+	}
+	else
+	{
+		if (place_free(x + lengthdir_x(7, direction - 180), y + lengthdir_y(7, direction - 180)))
+		{
+			dir = direction;
+			if (sprite_index == sprEGangGetUp)
+				sprite_index = sprEGangGetUpLean;
+			if (sprite_index == sprEGetUp)
+				sprite_index = sprEGetUpLean;
+			if (sprite_index == sprPoliceGetUp)
+				sprite_index = sprPoliceGetUpLean;
+			direction = round(direction * (1 / 90)) * 90;
+			image_angle = direction - 180;
+			if (place_free(x + lengthdir_x(5, direction), y + lengthdir_y(5, direction)))
+			{
+				direction = dir;
+				if (sprite_index == sprEGangGetUpLean)
+					sprite_index = sprEGangGetUp;
+				if (sprite_index == sprEGetUpLean)
+					sprite_index = sprEGetUp;
+				if (sprite_index == sprPoliceGetUpLean)
+					sprite_index = sprPoliceGetUp;
+			}
+		}
+	}
+	speed = 0;
 }
-scrMoveSolidOff()
+else
+{
+	if (!place_free(x + lengthdir_x(5, direction), y + lengthdir_y(5, direction)))
+	{
+		move_contact_solid(direction, 8);
+		dir = direction;
+		if (sprite_index == sprEGangGetUp)
+			sprite_index = sprEGangGetUpLean;
+		if (sprite_index == sprEGetUp)
+			sprite_index = sprEGetUpLean;
+		if (sprite_index == sprPoliceGetUp)
+			sprite_index = sprPoliceGetUpLean;
+		direction = round(direction * (1 / 90)) * 90;
+		image_angle = direction - 180;
+		if (place_free(x + lengthdir_x(5, direction), y + lengthdir_y(5, direction)))
+		{
+			direction = dir;
+			if (sprite_index == sprEGangGetUpLean)
+				sprite_index = sprEGangGetUp;
+			if (sprite_index == sprEGetUpLean)
+				sprite_index = sprEGetUp;
+			if (sprite_index == sprPoliceGetUpLean)
+				sprite_index = sprPoliceGetUp;
+		}
+	}
+}
+scrMoveSolidOff();
+
 /*
 if speed = 0 {
     if reload &gt; 0 reload -= 1
@@ -266,7 +290,6 @@ image_speed=0.35
 }
 
 angle=direction
-
 </string>
           </argument>
         </arguments>
@@ -289,27 +312,29 @@ angle=direction
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if sprite_index = sprEFatGetUp {
-    my_id = instance_create(x, y, objEnemyFat) 
-    my_id.sprite_index = sprEFatWalk
-    instance_destroy()
+            <string>if (sprite_index == sprEFatGetUp)
+{
+	my_id = instance_create(x, y, objEnemyFat);
+	my_id.sprite_index = sprEFatWalk;
+	instance_destroy();
 }
 
-my_id.angle=image_angle-180
-my_id.direction = image_angle
-my_id.risen = 1
-my_id.startx = startx
-my_id.starty = starty
+my_id.angle = image_angle - 180;
+my_id.direction = image_angle;
+my_id.risen = 1;
+my_id.startx = startx;
+my_id.starty = starty;
 
-with my_id {
-    scrMoveSolidOn()
-    if !place_free(x, y) {
-        x = startx
-        y = starty
-    }
-    scrMoveSolidOff()
+with (my_id)
+{
+	scrMoveSolidOn();
+	if (!place_free(x, y))
+	{
+		x = startx;
+		y = starty;
+	}
+	scrMoveSolidOff();
 }
-
 </string>
           </argument>
         </arguments>
@@ -332,8 +357,8 @@ with my_id {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,angle,image_blend,image_alpha)
+            <string>draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

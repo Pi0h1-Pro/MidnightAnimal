@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text=""
-alpha = 1
-vspeed = -2
-gravity = 0.1
-gravity_direction = 270
+            <string>text = "";
+alpha = 1;
+vspeed = -2;
+gravity = 0.1;
+gravity_direction = 270;
 </string>
           </argument>
         </arguments>
@@ -51,10 +51,10 @@ gravity_direction = 270
           <argument>
             <kind>1</kind>
             <string>/// Miscellaneous effects.
-objEffector.scratch = 100
-create_thought(make_color_rgb(irandom(255),irandom(255),irandom(255)), global.albedo, random_range(0.1, 0.3), random_range(50, 60), choose(0, 0, 0, 180, 180, 10, -10))
-if floor(random(12)) = 2 sound_ps(choose(laugh0,laugh1,laugh2,laugh3,laugh4,laugh5,laugh6,laugh7,laugh8,laugh9))
-
+objEffector.scratch = 100;
+create_thought(make_color_rgb(irandom(255), irandom(255), irandom(255)), global.albedo, random_range(0.1, 0.3), random_range(50, 60), choose(0, 0, 0, 180, 180, 10, -10));
+if (floor(random(12)) == 2)
+	sound_ps(choose(laugh0, laugh1, laugh2, laugh3, laugh4, laugh5, laugh6, laugh7, laugh8, laugh9));
 </string>
           </argument>
         </arguments>
@@ -77,8 +77,9 @@ if floor(random(12)) = 2 sound_ps(choose(laugh0,laugh1,laugh2,laugh3,laugh4,laug
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alpha -= 0.01
-if alpha &lt;= 0 instance_destroy()
+            <string>alpha -= 0.01;
+if (alpha &lt;= 0)
+	instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -101,11 +102,11 @@ if alpha &lt;= 0 instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(alpha)
-draw_set_font(fntCombo)
-draw_set_halign(fa_center)
-draw_text_outline(x, y, text, 0.15, 0, c_white, global.nigredo)
-draw_reset()
+            <string>draw_set_alpha(alpha);
+draw_set_font(fntCombo);
+draw_set_halign(fa_center);
+draw_text_outline(x, y, text, 0.15, 0, c_white, global.nigredo);
+draw_reset();
 </string>
           </argument>
         </arguments>

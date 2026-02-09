@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>papers = 24 + random(16)
+            <string>papers = 24 + random(16);
 </string>
           </argument>
         </arguments>
@@ -49,7 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Destroy paper stack.
-/*if scrMovingPlayerExists() {
+/* if scrMovingPlayerExists() {
     if place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlayer.dir), objPlayer) {
         if scrIsSwinging(objPlayer.sprite_index) and test = 0 {
             if place_meeting(x, y, objEnemy) exit
@@ -70,7 +70,6 @@
         }
     }
 }
-
 </string>
           </argument>
         </arguments>
@@ -93,20 +92,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Scatter papers.
-sound_ps(choose(sndPaperBurst1, sndPaperBurst2, sndPaperBurst3))
-repeat(papers) {
-    my_id = instance_create(x, y, objFlyingPapers)
-    my_id.direction = random(360)
-    my_id.image_angle = random(360)
-    my_id.speed = 2 + random(2)
-    my_id.friction = 0.15
+            <string>/// Scatter papers.
+sound_ps(choose(sndPaperBurst1, sndPaperBurst2, sndPaperBurst3));
+repeat (papers)
+{
+	my_id = instance_create(x, y, objFlyingPapers);
+	my_id.direction = random(360);
+	my_id.image_angle = random(360);
+	my_id.speed = 2 + random(2);
+	my_id.friction = 0.15;
 }
 
-my_id = instance_create(x, y, objMuzzleSmoke)
-my_id.image_angle = irandom(360)
+my_id = instance_create(x, y, objMuzzleSmoke);
+my_id.image_angle = irandom(360);
 
-instance_destroy()
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -129,8 +129,8 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_black, 0.3)
-draw_self()
+            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_black, 0.3);
+draw_self();
 </string>
           </argument>
         </arguments>

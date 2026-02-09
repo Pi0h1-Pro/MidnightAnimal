@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0
-active=0
-state=0
-wait=180
-dir=0
-talked=0
+            <string>image_speed = 0;
+active = 0;
+state = 0;
+wait = 180;
+dir = 0;
+talked = 0;
 </string>
           </argument>
         </arguments>
@@ -53,72 +53,104 @@ talked=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if active = 0 or!instance_exists(objPlayer) exit
-if instance_exists(objBoss1Die) exit
+            <string>if (active == 0 || !instance_exists(objPlayer))
+	exit;
+if (instance_exists(objBoss1Die))
+	exit;
 
-if wait &gt; 0 {
-    wait -= 1 exit
+if (wait &gt; 0)
+{
+	wait -= 1;
+	exit;
 }
 
-if instance_number(objEnemy) + instance_number(objKnockedOut) = 0 {
-    with objDoorH //instance_nearest(x, y, objDoorH) 
-    solid = 0
+if (instance_number(objEnemy) + instance_number(objKnockedOut) == 0)
+{
+	with (objDoorH) // instance_nearest(x, y, objDoorH)
+		solid = 0;
 }
 
-if state = 0 {
-    if objPlayer.y &lt; y + 64 and objPlayer.y &gt; y and objPlayer.x &gt; x - 32 and objPlayer.x &lt; x + 32 {
-        //image_angle = scrRotate(image_angle, point_direction(x, y, objPlayer.x, objPlayer.y) + 90, 10)
-        //objPlayer.active = 0
-        //objPlayer.aimon = 0
-        objPlayer.dir = point_direction(objProstitute.x, objProstitute.y, x, y)
-        if talked = 0 {
-            if sprite_index = sprPWalkUnarmed or sprite_index = sprPWalkUnarmedLSD or sprite_index = sprPAttackPunch or sprite_index = sprPAttackUnarmed1 noweapon = 1
-                    else noweapon = 0
-                    if noweapon = 0 {
-                            my_id = instance_create(x, y, objWeaponThrow)
-                            my_id.direction = direction - 45
-                            my_id.speed = 1 + random(1)
-                            my_id.friction = 0.2
-                            my_id.image_index = scrCurrentWeapon()
-                        }
-            objPlayer.sprite_index = sprPWalkUnarmed
-            if !instance_exists(objPhoneConversation) scrGetMessage(3)
-            talked = 1
-            state = 1
-        }
-    }
+if (state == 0)
+{
+	if (objPlayer.y &lt; y + 64 &amp;&amp; objPlayer.y &gt; y &amp;&amp; objPlayer.x &gt; x - 32 &amp;&amp; objPlayer.x &lt; x + 32)
+	{
+		// image_angle = scrRotate(image_angle, point_direction(x, y, objPlayer.x, objPlayer.y) + 90, 10)
+		// objPlayer.active = 0
+		// objPlayer.aimon = 0
+		objPlayer.dir = point_direction(objProstitute.x, objProstitute.y, x, y);
+		if (talked == 0)
+		{
+			if (sprite_index == sprPWalkUnarmed || sprite_index == sprPWalkUnarmedLSD || sprite_index == sprPAttackPunch || sprite_index == sprPAttackUnarmed1)
+				noweapon = 1;
+			else
+				noweapon = 0;
+			if (noweapon == 0)
+			{
+				my_id = instance_create(x, y, objWeaponThrow);
+				my_id.direction = direction - 45;
+				my_id.speed = 1 + random(1);
+				my_id.friction = 0.2;
+				my_id.image_index = scrCurrentWeapon();
+			}
+			objPlayer.sprite_index = sprPWalkUnarmed;
+			if (!instance_exists(objPhoneConversation))
+				scrGetMessage(3);
+			talked = 1;
+			state = 1;
+		}
+	}
 }
 
-if state = 1 {
-    if !instance_exists(objPhoneConversation) {
-        image_speed = 0 state = 2 image_index = 0 with objPlayer active = 1
-    } else {
-        image_speed = 0.1 sprite_index = sprGirlfriendTalk
-    }
+if (state == 1)
+{
+	if (!instance_exists(objPhoneConversation))
+	{
+		image_speed = 0;
+		state = 2;
+		image_index = 0;
+		with (objPlayer)
+			active = 1;
+	}
+	else
+	{
+		image_speed = 0.1;
+		sprite_index = sprGirlfriendTalk;
+	}
 }
 
-if state = 2 {
-    global.test = 0
-    pickup = 0
-    if global.xbox = 1 {
-        if gettrigger_r(0) &gt; 100 or gettrigger_l(0) &gt; 100 pickup = 1
-    } else {
-        if mouse_check_button_pressed(mb_right) or mouse_check_button(mb_left) pickup = 1
-    }
-    if pickup = 1 {
-        with objPlayer {
-            if place_meeting(x + lengthdir_x(12, dir), y + lengthdir_y(12, dir), objProstitute) {
-                sprite_index = sprPWalkGirlfriend
-                    //instance_create(x, y, objGoToCar)
-                scrUpdateMaskPos(sprite_index)
-                with objDoorV solid = 0
-                global.test = 1
-            }
-        }
-    }
-    if global.test = 1 instance_destroy()
+if (state == 2)
+{
+	global.test = 0;
+	pickup = 0;
+	if (global.xbox == 1)
+	{
+		if (gettrigger_r(0) &gt; 100 || gettrigger_l(0) &gt; 100)
+			pickup = 1;
+	}
+	else
+	{
+		if (mouse_check_button_pressed(mb_right) || mouse_check_button(mb_left))
+			pickup = 1;
+	}
+	if (pickup == 1)
+	{
+		with (objPlayer)
+		{
+			if (place_meeting(x + lengthdir_x(12, dir), y + lengthdir_y(12, dir), objProstitute))
+			{
+				sprite_index = sprPWalkGirlfriend;
+				
+				// instance_create(x, y, objGoToCar)
+				scrUpdateMaskPos(sprite_index);
+				with (objDoorV)
+					solid = 0;
+				global.test = 1;
+			}
+		}
+	}
+	if (global.test == 1)
+		instance_destroy();
 }
-
 </string>
           </argument>
         </arguments>
@@ -141,12 +173,13 @@ if state = 2 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if instance_exists(objBoss1Die) 
-active=1
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-if state=2 draw_sprite_ext(sprArrow,0,x-20+lengthdir_x(4,dir),y,1,1,90,c_white,1)
-dir+=8
+            <string>// if instance_exists(objBoss1Die)
+active = 1;
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_black, 0.5);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+if (state == 2)
+	draw_sprite_ext(sprArrow, 0, x - 20 + lengthdir_x(4, dir), y, 1, 1, 90, c_white, 1);
+dir += 8;
 </string>
           </argument>
         </arguments>

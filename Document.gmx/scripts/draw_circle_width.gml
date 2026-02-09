@@ -1,4 +1,4 @@
-///draw_circle_width(x, y, radius, outline width, level of detail)
+/// draw_circle_width(x, y, radius, outline width, level of detail)
 //@tehwave
 
 /*  ARGUMENT            DESCRIPTION
@@ -10,20 +10,20 @@
 4   level of detail     The precision of the circle outline drawn. 
 */
 
-//init & assign variables
+// init & assign variables
 var xx = argument0, yy = argument1,
-    r = argument2, lod = argument4, 
-    i;
-    
-//use foor loop to draw the circle with draw_line_width
-for (i=0; i<360; i+=360/lod)
+	r = argument2, lod = argument4,
+	i;
+
+// use foor loop to draw the circle with draw_line_width
+for (i = 0; i < 360; i += 360 / lod)
 {
-    draw_line_width(xx+lengthdir_x(r,i),yy+lengthdir_y(r,i),xx+lengthdir_x(r,i+360/lod),yy+lengthdir_y(r,i+360/lod),argument3)
-};
+	draw_line_width(xx + lengthdir_x(r, i), yy + lengthdir_y(r, i), xx + lengthdir_x(r, i + 360 / lod), yy + lengthdir_y(r, i + 360 / lod), argument3);
+}
 
-//Obs.
-//A large outline width can cause artifacts, especially on low resolutions.
-//Experiment with different values, or alternatively try increasing the size of the application surface.
+// Obs.
+// A large outline width can cause artifacts, especially on low resolutions.
+// Experiment with different values, or alternatively try increasing the size of the application surface.
 
-//Find the latest version of draw_circle_width at:
-//https://marketplace.yoyogames.com/assets/304/draw-circle-width
+// Find the latest version of draw_circle_width at:
+// https://marketplace.yoyogames.com/assets/304/draw-circle-width
