@@ -57,6 +57,43 @@ scrPlayerDieMelee()
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="objSolid">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if speed&lt;=0 exit
+if other.object_index=objWallHeavyV {
+if x&gt;room_width/2 image_angle=0 else image_angle=180
+}
+if other.object_index=objWallHeavyH {
+if y&lt;room_height/2 image_angle=90 else image_angle=270
+}
+move_contact_solid(image_angle,speed*5)
+mask_index=sprBoss2PryMask
+if !place_free(x,y) {audio_play_sound(sndKnifeWall,0,false) move_bounce_solid(0) speed*=0.5 friction=0.5 bounced=1} else {
+audio_play_sound(sndHitWall,0,false)
+speed=0
+global.shake=2
+}
+mask_index=sprite_index
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="objDoorH2">
       <action>
         <libid>1</libid>
@@ -81,7 +118,8 @@ x+=lengthdir_x(2,image_angle)
 y+=lengthdir_y(2,image_angle)
 speed=0
 global.shake=2
-sound_play(sndHitWall)</string>
+audio_play_sound(sndHitWall,0,false)
+</string>
           </argument>
         </arguments>
       </action>
@@ -110,43 +148,7 @@ x+=lengthdir_x(2,image_angle)
 y+=lengthdir_y(2,image_angle)
 speed=0
 global.shake=2
-sound_play(sndHitWall)</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objSolid">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if speed&lt;=0 exit
-if other.object_index=objWallHeavyV {
-if x&gt;room_width/2 image_angle=0 else image_angle=180
-}
-if other.object_index=objWallHeavyH {
-if y&lt;room_height/2 image_angle=90 else image_angle=270
-}
-move_contact_solid(image_angle,speed*5)
-mask_index=sprBoss2PryMask
-if !place_free(x,y) {sound_play(sndKnifeWall) move_bounce_solid(0) speed*=0.5 friction=0.5 bounced=1} else {
-sound_play(sndHitWall)
-speed=0
-global.shake=4
-}
-mask_index=sprite_index
+audio_play_sound(sndHitWall,0,false)
 </string>
           </argument>
         </arguments>

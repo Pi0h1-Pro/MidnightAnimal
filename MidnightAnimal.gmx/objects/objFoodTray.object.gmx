@@ -51,8 +51,9 @@ on=0</string>
           <argument>
             <kind>1</kind>
             <string>on=1
-sound_play(sndHitWall)
-speed=0</string>
+audio_play_sound(sndHitWall,0,false)
+speed=0
+</string>
           </argument>
         </arguments>
       </action>

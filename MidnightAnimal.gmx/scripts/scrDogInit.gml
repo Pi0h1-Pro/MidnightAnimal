@@ -16,4 +16,3 @@ findwall=0
 diradd=-1
 alertwait=-1
 dir=0
-

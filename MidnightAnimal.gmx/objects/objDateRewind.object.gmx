@@ -102,8 +102,9 @@ screen_refresh()
             <kind>1</kind>
             <string>on=1
 reload=60
-sound_play(sndRewind)
-alarm[0]=270</string>
+audio_play_sound(sndRewind,0,false)
+alarm[0]=270
+</string>
           </argument>
         </arguments>
       </action>
@@ -127,8 +128,7 @@ alarm[0]=270</string>
             <kind>1</kind>
             <string>on=0
 alarm[2]=60
-scrPlaySong("ItsSafeNow.mp3")
-</string>
+sxeasy_play("ItsSafeNow.mp3")</string>
           </argument>
         </arguments>
       </action>

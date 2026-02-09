@@ -3,9 +3,9 @@
   <spriteName>sprPBrickKill</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
-  <parentName>objPlayer</parentName>
+  <parentName>objPlayerKill</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -71,8 +71,8 @@ my_id.image_index=15
 my_id.image_angle=image_angle
 
 instance_destroy()
-//my_id=instance_create(x,y-12,objScore)
-//my_id.text="+"+string((1000)+400*(global.factor))+"pts"
+my_id=instance_create(x,y-12,objScore)
+my_id.text="+"+string((1000)+400*(global.factor))+"pts"
 global.myscore+=(1000)+400*(global.factor)
 global.killscore+=200
 global.boldscore+=800+400*global.factor
@@ -84,8 +84,7 @@ global.kills+=1
 ds_list_add(global.bonuslist,"Execution")
 if global.combotime&lt;12 global.combotime=12
 }
-}
-</string>
+}</string>
           </argument>
         </arguments>
       </action>
@@ -115,13 +114,18 @@ if targetindex=4 targetindex=8
 if targetindex=0 targetindex=4
 hurtindex+=1
 image_index=7
-if instance_exists(objLSD) sound_play(sndLSDSplat) else sound_play(choose(sndHit, sndHit2, sndHit3, sndHit1))
-sound_play(sndPunch)
+audio_play_sound(sndHit,0,false)
+audio_play_sound(sndPunch,0,false)
 global.shake=5
 repeat (1+random(3)) {
 instance_create(x+lengthdir_x(18,image_angle-1+random(2)),y+lengthdir_y(18,image_angle-1+random(2)),objBloodSquirt)
 }
-
+repeat (4) {
+my_id=instance_create(x+lengthdir_x(18,image_angle),y+lengthdir_y(18,image_angle),objBloodSmoke)
+my_id.direction=random(360)
+my_id.image_angle=my_id.direction
+my_id.speed=random(2)
+}
 }
 </string>
           </argument>

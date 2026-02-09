@@ -3,7 +3,7 @@
   <spriteName>sprPalmTreeTop</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-101</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -49,8 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>x-=17 
-if x&lt;-48 {x+=496+random(200) image_angle=random(360) y=-random(32)}
-</string>
+if x&lt;-48 {x+=496+random(200) image_angle=random(360) y=-random(32)}</string>
           </argument>
         </arguments>
       </action>

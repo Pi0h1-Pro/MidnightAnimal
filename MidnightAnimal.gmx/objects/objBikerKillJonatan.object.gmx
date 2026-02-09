@@ -26,9 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed=0
-bled=0
-ammo=objPlayer.ammo
-</string>
+bled=0</string>
           </argument>
         </arguments>
       </action>
@@ -65,8 +63,8 @@ my_id2.speed=2+random(1)
 if image_index&gt;=3 {
 if bled=0 {
 bled=1
-sound_play(sndHit)
-sound_play(sndCut1)
+audio_play_sound(sndHit,0,false)
+audio_play_sound(sndCut1,0,false)
 repeat (5) {
 my_id=instance_create(x+lengthdir_x(11,image_angle-10),y+lengthdir_y(11,image_angle-10),objBloodSquirt)
 my_id.image_angle=image_angle-120+random(60)
@@ -80,7 +78,8 @@ my_id.speed=2=random(1)
 }
 
 }
-}</string>
+}
+</string>
           </argument>
         </arguments>
       </action>

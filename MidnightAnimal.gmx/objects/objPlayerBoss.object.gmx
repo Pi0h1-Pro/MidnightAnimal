@@ -37,16 +37,15 @@ maskon=1
 global.maskon=1
 legindex=0
 
-scrStopSong(0)
-scrPlaySong(working_directory+"\Redline.mp3");
+sxeasy_stop(0)
+sxeasy_play(working_directory+"\Release.mp3");
 test=objPlayer.persistent
 objPlayer.persistent=0
 global.loaded=1
 game_save(working_directory+"\tempsave.sav")
 //if !instance_exists(objMaskMenu) instance_create(x,y,objCheckpoint)
 global.loaded=0
-objPlayer.persistent=test
-</string>
+objPlayer.persistent=test</string>
           </argument>
         </arguments>
       </action>
@@ -112,7 +111,7 @@ direction=point_direction(x,y,objGolfBag.x,objGolfBag.y)
 if speed&lt;3 speed+=0.5 else speed=3
 image_index+=speed*0.1
 } else {
-sound_play(sndPickupWeapon)
+audio_play_sound(sndPickupWeapon,0,false)
 objGolfBag.image_index=1
 sprite_index=sprPWalkClub
 image_index+=speed*0.1
@@ -141,7 +140,7 @@ if point_distance(x,y,objPlayer.x,objPlayer.y)&lt;12 {
 if sprite_index=sprPWalkClub {
 sprite_index=sprPAttackClub
 image_speed=0.5
-sound_play(choose(sndSwing1,sndSwing2))
+audio_play_sound(choose(sndSwing1,sndSwing2),0,false)
 }
 global.my_id=id
 scrPlayerDieMelee()
@@ -159,22 +158,47 @@ image_speed=speed*0.1
 if state=2 or state=3 {
 global.my_id=id
 with objPlayer {
-if sprite_index=sprNicoleAttackCleaver {
+if sprite_index=sprBoss2AttackCleaver {
 if place_meeting(x+lengthdir_x(16,dir),y+lengthdir_y(16,dir),global.my_id) global.test=1
 }
 }
 if global.test&gt;0 {
 pdir=point_direction(objPlayer.x,objPlayer.y,x,y)
-scrMeleeBlood(x,y)
+repeat (8) {
+my_id=instance_create(x-3+random(6)+lengthdir_x(8,pdir),y-3+random(6)+lengthdir_y(8,pdir),objBloodDrop)
+my_id.image_xscale=1-random(0.2)
+my_id.image_yscale=my_id.image_xscale
+my_id.image_angle=point_direction(x+lengthdir_x(8,pdir),y+lengthdir_y(8,pdir),my_id.x,my_id.y)
+my_id.sprite_index=sprBloodSplatSmall
+my_id.direction=my_id.image_angle
+my_id.speed=2+random(4)
+}
+repeat (2+random(3)) {
+my_id=instance_create(x-3+random(6)+lengthdir_x(8,pdir),y-3+random(6)+lengthdir_y(8,pdir),objBloodDrop)
+my_id.image_xscale=1-random(0.2)
+my_id.image_yscale=my_id.image_xscale
+my_id.image_angle=point_direction(x+lengthdir_x(8,pdir),y+lengthdir_y(8,pdir),my_id.x,my_id.y)
+my_id.direction=my_id.image_angle
+my_id.speed=1+random(5)
+}
+repeat (4) {
+my_id=instance_create(x-3+random(6)+lengthdir_x(16,pdir),y-3+random(6)+lengthdir_y(16,pdir),objBloodSmoke)
+my_id.image_xscale=1.2-random(0.2)
+my_id.image_yscale=my_id.image_xscale
+my_id.image_angle=pdir-20+random(40)
+my_id.direction=my_id.image_angle
+my_id.speed=2+random(1)
+my_id.friction=0.15
+}
 direction=point_direction(objPlayer.x,objPlayer.y,x,y)
 sprite_index=sprPKneel
 speed=3
 image_index=0
 friction=0.25
-sound_play(choose(sndCut1,sndCut2))
+audio_play_sound(choose(sndCut1,sndCut2),0,false)
 image_angle=direction-180
-sound_play(sndDoorHit)
-sound_play(sndHit)
+audio_play_sound(sndDoorHit,0,false)
+audio_play_sound(sndHit,0,false)
 with objPlayerBiker {
 my_id=instance_create(x,y,objPlayerBikerHouse)
 my_id.active=0
@@ -193,8 +217,8 @@ image_speed=0
 if speed&gt;0 exit
 if image_index&lt;4 image_index+=0.15 else {
 with objPlayerBikerHouse active=1
-if place_meeting(x,y,objPlayerBikerHouse) {
-with objPlayerBikerHouse {instance_create(x,y,objPlayerBikerKick) instance_destroy()}
+if place_meeting(x,y,objPlayerBiker) {
+with objPlayerBiker {instance_create(x,y,objPlayerBikerKick) instance_destroy()}
 }
 }
 }

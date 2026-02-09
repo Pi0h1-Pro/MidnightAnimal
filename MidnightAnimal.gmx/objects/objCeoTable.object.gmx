@@ -3,7 +3,7 @@
   <spriteName>sprCeoTable</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-3</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>objFurniture</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -106,7 +106,6 @@ if room=rmPhoneHomUpstairsBiker and state=0 and !instance_exists(objCEO) with ob
           <argument>
             <kind>1</kind>
             <string>if active=0 or instance_exists(objCEO) exit
-
 if place_meeting(x,y-8,objPlayerBikerHouse) {
 if objPlayer.x&gt;x+6 and objPlayer.x&lt;x+18 {
 with objPlayer instance_destroy()
@@ -114,8 +113,7 @@ instance_create(x+12,y-26,objPlayerBikerHack)
 alarm[0]=120
 active=0
 }
-}
-</string>
+}</string>
           </argument>
         </arguments>
       </action>

@@ -1,2 +1,2 @@
-bgm_Init();
+/*bgm_Init();*/
 global.currentsong=""

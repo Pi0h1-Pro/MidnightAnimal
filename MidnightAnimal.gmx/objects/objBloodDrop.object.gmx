@@ -3,7 +3,7 @@
   <spriteName>sprBloodDrop</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,9 +27,7 @@
             <kind>1</kind>
             <string>image_speed=0
 image_yscale=-1+round(random(1))*2
-friction=0.2
-image_blend=merge_color(c_red,c_maroon,0.4)
-</string>
+friction=0.2</string>
           </argument>
         </arguments>
       </action>
@@ -53,12 +51,11 @@ image_blend=merge_color(c_red,c_maroon,0.4)
             <kind>1</kind>
             <string>image_index=speed*2
 if speed&lt;=0 {
-my_id=instance_create(x,y,choose(objSplat,objSmudge))
+my_id=instance_create(x,y,objBloodSplat)
 my_id.image_xscale=image_xscale
 my_id.image_yscale=image_yscale
 instance_destroy()
-}
-</string>
+}</string>
           </argument>
         </arguments>
       </action>
@@ -81,8 +78,7 @@ instance_destroy()
           <argument>
             <kind>1</kind>
             <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
-</string>
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)</string>
           </argument>
         </arguments>
       </action>

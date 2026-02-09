@@ -3,7 +3,7 @@
   <spriteName>sprWindowOpen</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-5</depth>
+  <depth>-4</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -48,12 +48,9 @@ wait=15</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if wait &gt; 0 {
-    wait -= 1 exit
-}
-if image_index &lt; 6 image_index += 1
-image_alpha = 1 - image_index * 0.1
-</string>
+            <string>if wait&gt;0 {wait-=1 exit}
+if image_index&lt;6 image_index+=1
+image_alpha=1-image_index*0.1</string>
           </argument>
         </arguments>
       </action>

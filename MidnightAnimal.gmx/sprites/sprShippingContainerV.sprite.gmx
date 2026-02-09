@@ -25,5 +25,7 @@
     <frame index="2">images\sprShippingContainerV_2.png</frame>
     <frame index="3">images\sprShippingContainerV_3.png</frame>
     <frame index="4">images\sprShippingContainerV_4.png</frame>
+    <frame index="5">images\sprShippingContainerV_5.png</frame>
+    <frame index="6">images\sprShippingContainerV_6.png</frame>
   </frames>
 </sprite>

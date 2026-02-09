@@ -69,7 +69,7 @@ global.killy[global.kills]=y
 global.kills+=1
 ds_list_add(global.bonuslist,"Execution")
 if global.combotime&lt;12 global.combotime=12
-my_id=instance_create(myx,myy,objBigBlood)
+my_id=instance_create(myx,myy,objBloodPool)
 my_id=instance_create(x,y,objDeadBody)
 my_id.sprite_index=sprEBackHeadbutt
 my_id.image_angle=image_angle

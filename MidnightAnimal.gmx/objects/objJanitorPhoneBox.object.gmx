@@ -3,7 +3,7 @@
   <spriteName>sprJanitorPhoneBox</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-3</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>objFurniture</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,9 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0
-image_index = random(1)
-</string>
+            <string>image_speed=0</string>
           </argument>
         </arguments>
       </action>

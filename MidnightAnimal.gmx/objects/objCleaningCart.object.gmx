@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>image_speed=0
-image_angle=random(10)
 </string>
           </argument>
         </arguments>

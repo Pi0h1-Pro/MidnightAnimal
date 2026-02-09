@@ -17,7 +17,7 @@ instance_create(x,y,objWindowOpen)
 if place_meeting(x,y,objToken) {
 with objToken {
 instance_destroy()
-sound_play(sndToken)
+audio_play_sound(sndToken,0,false)
 my_id=instance_create(x,y,objLetterFound)
 my_id.text='"'+scrGetTokenLetter(letter)+'"'
 global.letter[letter]=1

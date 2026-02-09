@@ -116,7 +116,7 @@ state=2
 if state=2 {
 if point_distance(x,y,objPlayer.x,objPlayer.y)&lt;6 {
 with objPlayer {
-if sprite_index=sprPWalkUnarmed or sprite_index=sprPAttackPunch or sprite_index = sprPAttackUnarmed1 nothing=1 else {
+if sprite_index=sprPWalkUnarmed or sprite_index=sprPAttackPunch nothing=1 else {
 global.executionx=objPlayer.x
 global.executiony=objPlayer.y
 my_id=instance_create(objPlayer.x+lengthdir_x(8,objPlayer.dir+90),objPlayer.y+lengthdir_y(8,objPlayer.dir+90),objWeaponThrow)
@@ -132,8 +132,7 @@ my_id.image_angle=image_angle
 if sprite_index=sprAssassinTalk my_id.shot=0 else my_id.shot=1
 instance_destroy()
 }
-}
-</string>
+}</string>
           </argument>
         </arguments>
       </action>

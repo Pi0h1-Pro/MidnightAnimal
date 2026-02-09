@@ -3,7 +3,7 @@
   <spriteName>sprTableStriped</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-5</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>objFurniture</parentName>
   <maskName>&lt;undefined&gt;</maskName>

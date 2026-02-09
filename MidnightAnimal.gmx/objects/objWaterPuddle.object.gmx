@@ -3,9 +3,9 @@
   <spriteName>sprWaterPuddle</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>3</depth>
+  <depth>10</depth>
   <persistent>0</persistent>
-  <parentName>objWater</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,16 +27,12 @@
             <kind>1</kind>
             <string>image_index=floor(random(12))
 image_speed=0
-image_alpha=0.5
-image_angle=random(360)
-image_xscale=0.8+random(0.4)
-image_yscale=image_xscale
-</string>
+image_alpha=0.5</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -53,8 +49,7 @@ image_yscale=image_xscale
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
-</string>
+            <string>addToSurface(global.surf3,0)</string>
           </argument>
         </arguments>
       </action>

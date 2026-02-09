@@ -1,86 +1,69 @@
+if global.selectmask=0 {
+var color1,color2,targety,i,amount;
 with objMaskMenu {
-    draw_set_blend_mode(bm_subtract)
-    draw_circle_color(view_wview[0] / 2, view_hview[0] / 2, 280, c_black, merge_color(c_black, c_white, alpha), 0)
-    draw_set_blend_mode(bm_normal)
-    draw_set_color(c_black)
-    if on = 1 {
-        if alpha < 0.9 alpha += 0.1
-        else alpha = 1
-        i = 0
+dir+=1
+draw_set_color(c_black)
+draw_rectangle(-1,-1,view_wview[0]+1,blacky*2,0)
+draw_rectangle(-1,view_hview[0]+1,view_wview[0]+1,view_hview[0]-blacky*2,0)
+color1=merge_color(merge_color(c_orange,c_yellow,0.5+lengthdir_x(0.5,dir*1.6436)),c_red,0.25+lengthdir_y(0.25,dir*2.3234))
+color2=merge_color(merge_color(c_fuchsia,c_purple,0.5+lengthdir_x(0.5,dir*2.55)),c_maroon,0.4+lengthdir_x(0.4,dir*1.567))
+draw_rectangle_color(-48+maskx*4-32,-2,-48+maskx*4+32,view_hview[0]+2,color1,color2,color2,color1,0)
 
-        repeat(8) {
-            if i = 0 {
-                if line[0] < 1 line[0] += 0.05
-            } else {
-                if line[i - 1] > 0.25 {
-                    if line[i] < 1 line[i] += 0.05
-                }
-            }
+draw_sprite(sprPhoneLine,0,-48+maskx*4-32,0)
+draw_sprite(sprPhoneLine,0,-48+maskx*4+32,0)
+if on=1 {
+if maskx<32 maskx+=8 else {
+targety=view_hview[0]/2-select*80
+masky+=((targety)-masky)*0.1
+}
+}
+i=0
+starty=0
+repeat (masks) {
+if select=i draw_sprite_ext(sprite_index,i,81,masky+starty+22,1.5,1.5,lengthdir_x(5,starty*1.765+dir*2),c_black,0.5) else draw_sprite_ext(sprite_index,i,80+1,masky+starty+2,1,1,0,c_black,0.5)
+color=c_ltgray
+if global.masks[i]=0 color=c_black
+if select=i drawy=starty else draw_sprite_ext(sprite_index,i,80,masky+starty,1,1,0,color,1)
+if select=i starty+=80*1.5 else starty+=80
+i+=1
+}
+if global.masks[select]=0 color=c_black else color=c_white
+draw_sprite_ext(sprite_index,select,80,masky+drawy+20,1.5,1.5,lengthdir_x(5,starty*1.765+dir*2),color,1)
+if on=0 {
+if masky<room_height+40 {masky+=maskspeed maskspeed+=0.5} else {
+if maskx>-10 maskx-=2 else {
+if blacky>0 blacky-=2 else instance_destroy()
+}
+}
+}
 
-            //Draw lines.
-            draw_set_blend_mode(bm_normal)
-            if line[i] > 0 draw_rectangle(view_wview[0] / 2 - line[i] * view_wview[0], view_hview[0] / 2 - 34 + i * 8, view_wview[0], view_hview[0] / 2 - 34 + i * 8 + 10, 0)
-            draw_set_blend_mode(bm_add)
-            if line[i] > 0 draw_line_width_color(view_wview[0] / 2 - line[i] * view_wview[0], view_hview[0] / 2 - 31 + i * 8, view_wview[0], view_hview[0] / 2 - 31 + i * 8, 2, merge_color(c_fuchsia, c_white, 0.5 + lengthdir_x(0.5, dir)), merge_color(c_aqua, c_white, 0.5 + lengthdir_x(0.5, dir - 45)))
-            if line[i] > 0 draw_rectangle_color(view_wview[0] / 2 - line[i] * view_wview[0], view_hview[0] / 2 - 32 + i * 8, view_wview[0], view_hview[0] / 2 - 32 + i * 8 + 6, merge_color(c_white, merge_color(c_orange, c_yellow, 0.5 + lengthdir_x(0.5, dir * 2)), alpha), c_white, c_white, merge_color(c_white, c_fuchsia, 0.5 + lengthdir_x(0.5, dir * 2)), 0)
-            i += 1
-        }
-    } else {
-        if alpha > 0.1 alpha -= 0.1
-        else alpha = 0
-        i = 0
-
-        repeat(8) {
-            if i = 0 {
-                if line[0] > 0 line[0] -= 0.1
-            } else {
-                if line[i - 1] < 0.75 {
-                    if line[i] > 0 line[i] -= 0.1
-                }
-            }
-            draw_set_blend_mode(bm_normal)
-            if line[i] > 0 draw_rectangle(-2, view_hview[0] / 2 - 34 + i * 8, line[i] * view_wview[0] + 2, view_hview[0] / 2 - 34 + i * 8 + 10, 0)
-            draw_set_blend_mode(bm_add)
-
-            if line[i] > 0 draw_line_width_color(0, view_hview[0] / 2 - 31 + i * 8, line[i] * view_wview[0], view_hview[0] / 2 - 31 + i * 8, 2,
-                merge_color(c_yellow, c_white, 0.5 + lengthdir_x(0.5, dir)), merge_color(c_orange, c_white, 0.5 + lengthdir_x(0.5, dir - 45)))
-
-            if line[i] > 0 draw_rectangle_color(0, view_hview[0] / 2 - 32 + i * 8, line[i] * view_wview[0], view_hview[0] / 2 - 32 + i * 8 + 6,
-                merge_color(c_white, merge_color(c_yellow, c_orange, 0.5 + lengthdir_x(0.5, dir * 2)), alpha), c_black, c_black, merge_color(c_aqua, c_white, 0.5 + lengthdir_x(0.5, dir * 2)), 0)
-            i += 1
-        }
-
-        if line[7] <= 0 instance_destroy()
-    }
-
-    draw_set_blend_mode(bm_normal)
-
-    i = 0
-
-    //Draw masks.
-    repeat(26) {
-    
-        //Scale the mask currently selected.
-        if current = i scale = 1.45
-        
-        //Scale down the unselected masks.
-        else scale = .9
-        if global.masks[i] = 1 color = c_white
-        else color = c_black
-        draw_sprite_ext(sprMasksBig, i, view_wview[0] / 2 + addx + i * 80, view_hview[0] / 2, scale, scale, lengthdir_x(5, dir + i * 45), color, 1)
-        i += 1
-    }
-
-    if on = 1 targetx = -current * 80
-    else targetx = 480
-    addx += ((targetx) - addx) * 0.1
-    dir += 2
-
-    if surface_exists(surf) {
-        draw_surface_ext(surf, 0, -1, 1, 1, 0, c_black, 1)
-        draw_surface_ext(surf, 0, 1, 1, 1, 0, c_black, 1)
-        draw_surface_ext(surf, 1, 0, 1, 1, 0, c_black, 1)
-        draw_surface_ext(surf, -1, 0, 1, 1, 0, c_black, 1)
-        draw_surface_ext(surf, 0, 0, 1, 1, 0, c_white, 1)
-    }
+draw_set_blend_mode(bm_subtract)
+draw_rectangle_color(-1,-1,view_wview[0]+1,maskx+random(4),c_white,c_white,c_black,c_black,0)
+draw_rectangle_color(-1,view_hview[0]+1,view_wview[0]+1,view_hview[0]-maskx-random(4),c_black,c_black,c_white,c_white,0)
+draw_rectangle_color(view_wview[0]-maskx*7,view_hview[0]+1,view_wview[0]+1,-2,c_black,c_white,c_white,c_black,0)
+color1=merge_color(c_aqua,c_white,0.5+lengthdir_x(0.5,dir*4))
+color2=merge_color(c_white,c_aqua,0.5+lengthdir_x(0.5,dir*4))
+draw_set_blend_mode(bm_normal)
+draw_set_font(fntMenu)
+draw_set_halign(fa_left)
+draw_set_valign(fa_center)
+draw_set_color(c_black)
+draw_text(150+32*9-maskx*9-1,view_hview[0]/2+12,name[select])
+draw_text(150+32*9-maskx*9+1,view_hview[0]/2+12,name[select])
+draw_text(150+32*9-maskx*9+2,view_hview[0]/2+12,name[select])
+draw_text(150+32*9-maskx*9,view_hview[0]/2+12-1,name[select])
+draw_text(150+32*9-maskx*9,view_hview[0]/2+12+1,name[select])
+draw_text(150+32*9-maskx*9,view_hview[0]/2+12+2,name[select])
+draw_set_color(color1)
+draw_text(150+32*9-maskx*9+1,view_hview[0]/2+12+1,name[select])
+draw_set_color(color2)
+draw_text(150+32*9-maskx*9,view_hview[0]/2+12,name[select])
+if global.masks[select]=1 {
+draw_set_font(fntDescription)
+draw_set_color(c_black)
+draw_text(150+32*9-maskx*9+2,view_hview[0]/2+29+1,string_upper(description[select]))
+draw_set_color(c_white)
+draw_text(150+32*9-maskx*9+1,view_hview[0]/2+29,string_upper(description[select]))
+}
+}
 }

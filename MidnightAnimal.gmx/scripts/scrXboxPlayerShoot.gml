@@ -33,4 +33,4 @@ quit=1
 }
 }
 }
-if quit=0 scrPlayerAttack()
+if quit=0 scrPlayerShoot()

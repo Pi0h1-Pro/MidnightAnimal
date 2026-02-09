@@ -6,15 +6,6 @@ if argument0=sprEWalkBat return sprESearchBat
 if argument0=sprEWalkClub return sprESearchClub
 if argument0=sprEWalkPipe return sprESearchPipe
 if argument0=sprEWalkSilencer return sprESearchSilencer
-
-if argument0=sprEGangWalk9mm return sprEGangSearch9mm
-if argument0=sprEGangWalkBat return sprEGangSearchBat
-if argument0=sprEGangWalkChain return sprEGangSearchChain
-if argument0=sprEGangWalkKnife return sprEGangSearchKnife
-if argument0=sprEGangWalkPipe return sprEGangSearchPipe
-if argument0=sprEGangWalkShotgun return sprEGangSearchShotgun
-if argument0=sprEGangWalkUzi return sprEGangSearchUzi
-
 if argument0=sprPoliceWalkGun return sprPoliceSearchGun
 if argument0=sprPoliceWalkM16 return sprPoliceSearchM16
 if argument0=sprPoliceWalkShotgun return sprPoliceSearchShotgun

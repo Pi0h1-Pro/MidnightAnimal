@@ -10,7 +10,7 @@ alert=0
 findwall=1
 direction=round(direction*(1/10))*10
 image_index=0 
-image_speed=0.2
+image_speed=0.2 
 //sprite_index=scrSearchSprite(sprite_index)
 //path_end()
 }

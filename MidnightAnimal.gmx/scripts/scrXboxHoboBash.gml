@@ -3,14 +3,14 @@ if pressrtrig=0 {
 pressrtrig=1
 
 if image_index=3 {
-sound_play(sndWeaponHit)
+audio_play_sound(sndWeaponHit,0,false)
 global.shake=3
 if energie>0 {
 energie-=1
 image_index=0
 } else {
-sound_play(sndHit)
-sound_play(sndPunch)
+audio_play_sound(sndHit,0,false)
+audio_play_sound(sndPunch,0,false)
 global.shake=5
 my_id=instance_create(x,y-12,objScore)
 my_id.text="+"+string((200)+400*(global.factor))+"pts"
@@ -22,7 +22,7 @@ global.combo+=1
 global.killx[global.kills]=x
 global.killy[global.kills]=y
 global.kills+=1
-scrPlaySong(working_directory+"\Static.mp3")
+sxeasy_play(working_directory+"\Static.mp3")
 instance_create(x,y,objLevelComplete)
 global.done=1
 myx=x+lengthdir_x(20,image_angle)

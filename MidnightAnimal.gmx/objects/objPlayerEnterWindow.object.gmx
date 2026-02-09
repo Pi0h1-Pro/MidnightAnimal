@@ -3,7 +3,7 @@
   <spriteName>sprEnterWindow</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>objPlayer</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -48,19 +48,17 @@ image_angle=180</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &lt; 12 image_index += 0.15
-else {
-    viewx = view_xview[0]
-    viewy = view_yview[0]
-    my_id = instance_create(x + 3, y, objPlayerMouse)
-    my_id.xview = viewx
-    my_id.yview = viewy
-    instance_destroy()
-    view_xview[0] = viewx
-    view_yview[0] = viewy
+            <string>if image_index&lt;12 image_index+=0.15 else {
+viewx=view_xview[0]
+viewy=view_yview[0]
+my_id=instance_create(x+3,y,objPlayerHospital)
+my_id.xview=viewx
+my_id.yview=viewy
+instance_destroy() 
+view_xview[0]=viewx
+view_yview[0]=viewy
 
-}
-</string>
+}</string>
           </argument>
         </arguments>
       </action>

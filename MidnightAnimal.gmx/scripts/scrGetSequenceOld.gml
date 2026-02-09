@@ -9,4 +9,4 @@ if argument0=rmSequence8 {global.parttitle[0]="PART THREE" global.parttitle[1]="
 if argument0=rmSequence9 {global.sequence=rmSequence12 return global.sequence}
 if argument0=rmSequence12 {song=working_directory+"\Static.mp3" global.sequence=rmSequence12bDownstairs return global.sequence}
 if argument0=rmSequence12bDownstairs {global.sequence=rmSequence13Downstairs return global.sequence}
-if argument0=rmSequence13 {global.sequence=rmMenu song=working_directory+"\Main.mp3" return global.sequence}
+if argument0=rmSequence13 {global.sequence=rmMenu song=working_directory+"\HorseSteppin.mp3" return global.sequence}

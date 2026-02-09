@@ -3,7 +3,7 @@
   <spriteName>sprPDeadExploded</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>objPlayerDead</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -48,8 +48,7 @@ bled=0</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if speed=0 {if bled=0 {bled=1 instance_create(x,y,objBigBlood)}}
-</string>
+            <string>if speed=0 {if bled=0 {bled=1 instance_create(x,y,objBloodPool)}}</string>
           </argument>
         </arguments>
       </action>

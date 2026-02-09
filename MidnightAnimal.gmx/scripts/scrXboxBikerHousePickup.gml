@@ -3,7 +3,7 @@ with objSecretMask {
 global.masks[image_index]=1
 global.newmask[global.newmasks]=image_index
 global.newmasks+=1
-sound_play(sndToken)
+audio_play_sound(sndToken,0,false)
 my_id=instance_create(x,y,objLetterFound)
 my_id.text='"'+scrMaskGetName(image_index)+'"'
 instance_destroy()

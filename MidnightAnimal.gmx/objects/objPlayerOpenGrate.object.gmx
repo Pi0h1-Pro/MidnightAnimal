@@ -3,7 +3,7 @@
   <spriteName>sprPOpenSewer</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>objPlayer</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -55,21 +55,20 @@ i+=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &lt; 27 image_index += 0.25
-else {
-    instance_create(x, y, objPlayerMouse)
-    instance_destroy()
+            <string>if image_index&lt;27 image_index+=0.25 else {
+instance_create(x,y,objPlayerMouse)
+instance_destroy()
 }
 
-if image_index &gt;= 20 {
-    with objSecretSewer {
-        if open = 0 {
-            open = 1
-            sound_play(sndManhole)
-            my_id = instance_create(x, y, objSewerGrate)
-            my_id.hspeed = -2.5
-        }
-    }
+if image_index&gt;=20 {
+with objSecretSewer {
+if open=0 {
+open=1
+audio_play_sound(sndManhole,0,false)
+my_id=instance_create(x,y,objSewerGrate)
+my_id.hspeed=-2.5
+}
+}
 }
 </string>
           </argument>

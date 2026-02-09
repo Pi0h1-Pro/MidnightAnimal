@@ -1,11 +1,9 @@
 angle=direction
 if speed>0 image_speed=speed*0.1
-
 if sprite_index=sprEWalkUnarmed {
 scrGoGetWeapon()
 alert=0
 } else {
-
 if alert=0 {
     if instance_exists(objPlayer) scrMeleeSearch(objPlayer.x,objPlayer.y,4)
     if alertwait>-1 {alertwait-=1 if alertwait=0 {path_end() alert=1}}

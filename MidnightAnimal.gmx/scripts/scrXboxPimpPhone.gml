@@ -9,6 +9,6 @@ scrGetMessage(0)
 global.talked=1
 global.done=1
 global.phone=1
-sound_play(sndPhone)
+audio_play_sound(sndPhone,0,false)
 }
 }

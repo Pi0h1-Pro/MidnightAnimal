@@ -1,6 +1,6 @@
 /*Shaltif's Xtreme Music and Sound
 --The Fmod / WinAmp Wrapper for Game Maker
---Brandon Rohrer ? 2003-2006
+--Brandon Rohrer � 2003-2006
 ============================================
 sxeasy_stop();
 ===
@@ -11,7 +11,7 @@ return = REAL - Successful (1) or failure (0)
 // Com:
        Stops the currently playing audio
 */
-bgm_Stop(global.currentsong)
+audio_stop_sound(global.currentsong)
 
 //if (!sxms.easyPlay) { return 0; };
 //sxfmod_channel_stop()

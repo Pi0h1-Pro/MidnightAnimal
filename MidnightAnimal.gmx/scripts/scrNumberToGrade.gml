@@ -14,5 +14,5 @@ if argument0=12 return "B+"
 if argument0=13 return "A-" 
 if argument0=14 return "A" 
 if argument0=15 return "A+" 
-if argument0=16 return "S"
+
 return ""

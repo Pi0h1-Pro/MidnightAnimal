@@ -3,9 +3,9 @@
   <spriteName>sprBodyguardFinish1</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
-  <parentName>objPlayer</parentName>
+  <parentName>objPlayerKill</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -59,10 +59,10 @@ my_id.image_angle=image_angle
 instance_destroy()
 exit
 }
-if image_index&gt;4.85 and image_index&lt;5.1 {sound_play(sndWeaponHit) global.shake=5}
-if image_index&gt;7.85 and image_index&lt;8.1 {sound_play(sndWeaponHit) global.shake=5}
-if image_index&gt;20.85 and image_index&lt;21.1 {sound_play(sndWeaponHit) global.shake=5}
-if image_index&gt;24.85 and image_index&lt;25.1 {sound_play(sndWeaponHit) global.shake=5}
+if image_index&gt;4.85 and image_index&lt;5.1 {audio_play_sound(sndWeaponHit,0,false) global.shake=5}
+if image_index&gt;7.85 and image_index&lt;8.1 {audio_play_sound(sndWeaponHit,0,false) global.shake=5}
+if image_index&gt;20.85 and image_index&lt;21.1 {audio_play_sound(sndWeaponHit,0,false) global.shake=5}
+if image_index&gt;24.85 and image_index&lt;25.1 {audio_play_sound(sndWeaponHit,0,false) global.shake=5}
 
 if image_index&gt;=33 {
 if !instance_exists(objPlayerMouse) {
@@ -110,7 +110,7 @@ view_angle[0]=lengthdir_y(vdist*(1/160),vdir*2)
           <argument>
             <kind>1</kind>
             <string>with other {
-if place_meeting(x,y,objSolid) or place_meeting(x,y,objSolidCaster) or place_meeting(x, y, objWall) {
+if place_meeting(x,y,objSolid) {
 move_outside_solid(direction-180,speed*2) 
 if !place_meeting(x,y,objPlayer) exit
 }
@@ -180,8 +180,7 @@ if sprite_index=sprPAttackBashPolice {
 my_id.sprite_index=sprPoliceGetUp
 my_id.type=objPolice
 } else my_id.type=objEnemy
-instance_destroy()
-</string>
+instance_destroy()</string>
           </argument>
         </arguments>
       </action>

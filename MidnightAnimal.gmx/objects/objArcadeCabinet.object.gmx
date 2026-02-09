@@ -3,7 +3,7 @@
   <spriteName>sprArcadeCabinet1</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>objSolid</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed=0.5+random(0.1)
-image_index=choose(sprArcadeCabinet1,sprArcadeCabinet2,sprArcadeCabinet3,sprArcadeCabinet4,sprArcadeCabinet5,sprArcadeCabinet6,sprArcadeCabinet7,sprArcadeCabinet8,sprArcadeCabinet9,sprArcadeCabinet10,sprArcadeCabinet11)</string>
+image_index=random(3)
+if room=rmArcadeUpstairs sprite_index=choose(sprArcadeCabinet1,sprArcadeCabinet2,sprArcadeCabinet3,sprArcadeCabinet4,sprArcadeCabinet5,sprArcadeCabinet6,sprArcadeCabinet7,sprArcadeCabinet8,sprArcadeCabinet9,sprArcadeCabinet10,sprArcadeCabinet11)</string>
           </argument>
         </arguments>
       </action>

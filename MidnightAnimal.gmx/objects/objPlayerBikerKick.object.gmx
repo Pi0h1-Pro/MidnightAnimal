@@ -30,9 +30,7 @@ state=0
 legindex=0
 image_speed=0
 global.executionx=x
-global.executiony=y
-ammo=objPlayer.ammo
-</string>
+global.executiony=y</string>
           </argument>
         </arguments>
       </action>
@@ -55,12 +53,12 @@ ammo=objPlayer.ammo
           <argument>
             <kind>1</kind>
             <string>if state=0 {
-if image_index&lt;9 image_index+=0.2 else {state=1 sprite_index=sprNicoleWalk}
+if image_index&lt;9 image_index+=0.2 else {state=1 sprite_index=sprBoss2Walk}
 if image_index&gt;=5 {
 with objPlayerBoss {
 if state=5 {
 sprite_index=sprPStomped
-sound_play(sndDoorHit)
+audio_play_sound(sndDoorHit,0,false)
 image_angle=point_direction(objPlayerBikerKick.x,objPlayerBikerKick.y,x,y)
 direction=image_angle
 speed=3
@@ -90,27 +88,26 @@ legindex=0
 
 if state=2 {
 if !instance_exists(objPhoneConversation) {
-if sprite_index=sprNicoleWalk {
-sprite_index=sprNicoleKick
+if sprite_index=sprBoss2Walk {
+sprite_index=sprBikerKick
 image_index=0
 }
-if image_index&lt;9 image_index+=0.25 else {global.done=1 
-my_id=instance_create(x,y,objLevelComplete)
-my_id.text="LEVEL COMPLETE"
-
-with objElevator valid=1 
-my_id=instance_create(x,y,objPlayerBikerHouse) 
-with objDoorH solid=0 
-with objDoorH2 solid=0 instance_destroy()}
+if image_index&lt;9 image_index+=0.25 else {global.done=1 instance_create(x,y,objLevelComplete) with objElevator valid=1 my_id=instance_create(x,y,objPlayerBiker) with objDoorH solid=0 with objDoorH2 solid=0 instance_destroy()}
 if image_index&gt;=5 {
 if objPlayerBoss.image_index=0 {
 objPlayerBoss.image_index=1
-sound_play(sndPunch)
-sound_play(sndHit)
+audio_play_sound(sndPunch,0,false)
+audio_play_sound(sndHit,0,false)
 with objPlayerBoss {
 global.shake=8
 repeat (3+random(3)) {
 instance_create(x+lengthdir_x(21,image_angle)-1+random(2),y+lengthdir_y(21,image_angle)-1+random(2),objBloodSquirt)
+}
+repeat (4) {
+my_id=instance_create(x+lengthdir_x(21,image_angle)-1+random(2),y+lengthdir_y(21,image_angle)-1+random(2),objBloodSmoke)
+my_id.direction=random(360)
+my_id.speed=random(3)
+my_id.image_angle=my_id.direction
 }
 }
 }

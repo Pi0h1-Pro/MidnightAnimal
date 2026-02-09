@@ -25,7 +25,6 @@ global.combo=0
 global.kills=0
 global.gunkill=0
 global.time=0
-global.timer=0
 i=0 
 repeat (39) {
 global.flexibility[i]=0

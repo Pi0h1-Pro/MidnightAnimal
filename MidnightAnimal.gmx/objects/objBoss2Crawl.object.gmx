@@ -59,13 +59,11 @@ if image_angle=180 {x+=10 y+=10}
 if image_angle=270 {x+=10 y-=10}
 sprite_index=sprBoss2Crawl
 image_index=0
-if global.maskindex=2 or global.maskindex=0 objEffector.brus=10
 talked=1
 with objPlayer {
 my_id=instance_create(x,y,objPlayerMouseHouse)
 my_id.maskindex=maskindex
 my_id.maskon=1
-if global.maskindex != 2
 my_id.sprite_index=sprPWalkClub
 my_id.ammo=ammo
 my_id.active=0
@@ -81,7 +79,6 @@ with objPlayerMouseHouse {
 my_id=instance_create(x,y,objPlayerMouse)
 my_id.maskindex=maskindex
 my_id.maskon=1
-if global.maskindex != 2
 my_id.sprite_index=sprPWalkClub
 my_id.ammo=ammo
 instance_destroy()
@@ -98,18 +95,15 @@ if !place_free(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction)) image_an
 
 if wait&gt;-100 exit
 if point_distance(x,y,objPlayer.x,objPlayer.y)&lt;14 {
-if global.maskindex=2 or global.maskindex=0
-{
-objEffector.brus=10
-}
-if objPlayer.sprite_index=sprPWalkClub or global.maskindex=2 or global.maskindex=0 {
+if objPlayer.sprite_index=sprPWalkClub {
 with objPlayer instance_destroy()
 my_id=instance_create(x,y,objPClubBoss2)
 my_id.image_angle=image_angle+90
 instance_destroy()
-sxms.easyFile=working_directory+"\Lemuria.mp3"
+//sxms.easyFile=working_directory+"\Lemuria.mp3"
 }
-}</string>
+}
+</string>
           </argument>
         </arguments>
       </action>

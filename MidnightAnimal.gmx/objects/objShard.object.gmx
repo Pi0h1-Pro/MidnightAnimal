@@ -3,7 +3,7 @@
   <spriteName>sprShards</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>2</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,15 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=random(360)
+            <string>friction=0.1
+rotspeed=(-1+round(random(1))*2)*random(8)
+startspeed=0
 image_speed=0
-friction=0.15+random(0.1)
-diradd=-1+round(random(1))*2
-maxspeed=1
-image_xscale=0.4+random(0.6)
-image_yscale=image_xscale
-life=3+round(random(4))
-</string>
+image_angle=random(360)
+image_index=floor(random(10000))
+image_blend=c_aqua</string>
           </argument>
         </arguments>
       </action>
@@ -55,7 +53,11 @@ life=3+round(random(4))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=speed*diradd*6
+            <string>if startspeed=0 startspeed=speed
+image_angle+=rotspeed
+if speed=0 {
+rotspeed=0;
+}
 </string>
           </argument>
         </arguments>
@@ -78,19 +80,8 @@ life=3+round(random(4))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if speed &gt; maxspeed maxspeed = speed
-alpha = 0.5 + speed * (1 / maxspeed)
-if alpha &gt; 1 alpha = 1
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, merge_color(c_white, c_ltgray, alpha), 1)
-if speed &gt; 0 {
-    draw_set_alpha(speed * (1 / maxspeed))
-    d3d_set_fog(1, c_white, 0, 0)
-    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, speed * (1 / maxspeed))
-    draw_set_alpha(1)
-    d3d_set_fog(0, 0, 0, 0)
-}
-
-</string>
+            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.25)
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,0.5)</string>
           </argument>
         </arguments>
       </action>

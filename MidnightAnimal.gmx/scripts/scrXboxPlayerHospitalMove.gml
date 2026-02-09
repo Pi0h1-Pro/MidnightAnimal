@@ -68,7 +68,7 @@ if add>0.3 add=0.3
 if abs(myxspeed)=0 and abs(myyspeed)=0 legindex=0 else {
 legindex+=add
 with objDizzy {if dizziness<1.25 dizziness+=0.01 else {
-with objPlayer {myxspeed=0 myyspeed=0 legindex=0 image_index=0 sound_play(sndTinnitusHospital) image_speed=0.15 sprite_index=sprPHospitalHeadache}
+with objPlayer {myxspeed=0 myyspeed=0 legindex=0 image_index=0 audio_play_sound(sndTinnitusHospital,0,false) image_speed=0.15 sprite_index=sprPHospitalHeadache}
 }
 }
 image_index+=(abs(myxspeed)+abs(myyspeed))*0.05

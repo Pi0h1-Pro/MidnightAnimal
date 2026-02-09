@@ -14,8 +14,6 @@ with objDoorV {test=solid solid=1}
 scrMoveSolidOff()
 with objWallSoftH solid=1
 with objWallSoftV solid=1
-with objChainFenceV solid=1
-with objChainFenceH solid=1
 repeat round((point_distance(x,y,argument0,argument1)-8)*(1/argument2)) {
 if stop=0 {
 if scrDogCollision(lx1,ly1) {if check=0 check=2}
@@ -26,8 +24,6 @@ ly1+=yadd
 }
 with objWallSoftH solid=0
 with objWallSoftV solid=0
-with objChainFenceV solid=0
-with objChainFenceH solid=0
 scrMoveSolidOn()
 with objFurniture solid=1
 with objDoorV solid=test

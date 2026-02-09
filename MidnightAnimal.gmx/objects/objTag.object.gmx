@@ -3,7 +3,7 @@
   <spriteName>sprTag</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>3</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -47,8 +47,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//addToSurface(global.surf3,0)
-</string>
+            <string>addToSurface(global.surf3,0)</string>
           </argument>
         </arguments>
       </action>

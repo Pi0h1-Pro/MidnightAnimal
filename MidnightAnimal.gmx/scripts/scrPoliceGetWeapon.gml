@@ -10,14 +10,14 @@ while i<instance_number(objWeapon) and global.check=0 {
 target=scrInstanceNearest(objWeapon,i)
 if instance_exists(target) {
 if target.image_index<=1 {
-if !scrCollisionLineExt(x,y,target.x,target.y,4,objSolid,objWall,objShootThrough,objSolidCaster,objDoorV) {
+if !scrCollisionLineExt(x,y,target.x,target.y,4,objSolid,objShootThrough,objDoorV) {
 global.check=1
 weaponfind=1
 }
 }
 
 if target.image_index=16 {
-if !scrCollisionLineExt(x,y,target.x,target.y,4,objSolid,objWall,objShootThrough,objSolidCaster,objDoorV) {
+if !scrCollisionLineExt(x,y,target.x,target.y,4,objSolid,objShootThrough,objDoorV) {
 global.check=1
 weaponfind=1
 }
@@ -63,7 +63,7 @@ if target.image_index=16 {my_id=instance_create(x,y,objPoliceMelee) my_id.sprite
 if target.image_index=16 nothing=1 else {if target.image_index>1 exit}
 if instance_exists(target) my_id.ammo=target.ammo
 //with my_id scrChasePlayer()
-sound_play(sndPickupWeapon)
+audio_play_sound(sndPickupWeapon,0,false)
 with target instance_destroy()
 instance_destroy()
 }

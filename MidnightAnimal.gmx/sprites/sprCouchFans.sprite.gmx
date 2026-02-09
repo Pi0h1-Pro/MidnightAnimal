@@ -21,6 +21,5 @@
   <height>26</height>
   <frames>
     <frame index="0">images\sprCouchFans_0.png</frame>
-    <frame index="1">images\sprCouchFans_1.png</frame>
   </frames>
 </sprite>

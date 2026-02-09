@@ -3,7 +3,7 @@
   <spriteName>sprPVomit</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -86,8 +86,9 @@ my_id.image_angle=image_angle
 }
 if image_index&gt;25 and vomit=0 {
 vomit=1
-sound_play(sndVomit)
-}</string>
+audio_play_sound(sndVomit,0,false)
+}
+</string>
           </argument>
         </arguments>
       </action>

@@ -3,7 +3,7 @@
   <spriteName>sprPRipPoliceTape</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>objPlayer</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -78,11 +78,12 @@ instance_destroy()</string>
             <string>if image_index&gt;11 {
 if ripped=0 {
 ripped=1
-sound_play(sndBox)
+audio_play_sound(sndBox,0,false)
 }
 }
 draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)</string>
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+</string>
           </argument>
         </arguments>
       </action>

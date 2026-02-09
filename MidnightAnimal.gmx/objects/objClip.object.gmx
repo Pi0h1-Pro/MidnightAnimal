@@ -3,7 +3,7 @@
   <spriteName>sprMag</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -53,8 +53,9 @@ startspeed=0.1</string>
 image_blend=merge_color(c_ltgray,c_white,speed*(1/startspeed))
 image_angle+=rotspeed
 if speed=0 {
-if surface_exists(global.surf2) addToSurface(global.surf2,1)
-}</string>
+rotspeed=0
+}
+</string>
           </argument>
         </arguments>
       </action>

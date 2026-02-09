@@ -63,11 +63,16 @@ exit
 }
 if image_index&gt;13 and bled=0{
 bled=1
-if instance_exists(objLSD) sound_play(sndLSDSplat) else sound_play(choose(sndHit, sndHit2, sndHit3, sndHit1))
-repeat (4+random(3)) {
+audio_play_sound(sndHit,0,false)
+repeat (2+random(3)) {
 instance_create(x+lengthdir_x(24,image_angle)-1+random(2),y+lengthdir_y(24,image_angle)-1+random(2),objBloodSquirt)
 }
-
+repeat (4) {
+my_id=instance_create(x+lengthdir_x(24,image_angle)-1+random(2),y+lengthdir_y(24,image_angle)-1+random(2),objBloodSmoke)
+my_id.direction=random(360)
+my_id.speed=random(3)
+my_id.image_angle=my_id.direction
+}
 }
 </string>
           </argument>

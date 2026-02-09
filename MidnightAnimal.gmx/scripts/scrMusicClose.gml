@@ -1,2 +1,0 @@
-bgm_Close()
-

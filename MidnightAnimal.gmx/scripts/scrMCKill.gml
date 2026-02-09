@@ -1,4 +1,4 @@
-if reload>0 reload=0
+if reload>0 exit
 lastammo=ammo
 
 global.executionx=x
@@ -19,7 +19,7 @@ if sprite_index=sprEGetUpLean {//
 }*/
 global.ammo=objPlayer.ammo
 with objPlayer instance_destroy()
-my_id=instance_create(x,y,choose(objMCStompKill,objMCChopKill))//,objMCKnifeKill))
+my_id=instance_create(x,y,choose(objMCStompKill,objMCChopKill,objMCKnifeKill))
 my_id.image_angle=angle
 my_id.ammo=global.ammo
 

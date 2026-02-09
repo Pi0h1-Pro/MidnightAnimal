@@ -3,7 +3,7 @@
   <spriteName>sprJanitorClean</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -50,25 +50,24 @@ vol=1</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if smirked = 0 {
-    if point_distance(x, y, objPlayer.x, objPlayer.y) &lt; 80 {
-        scrGetMessage(0)
-        smirked = 1
-    }
+            <string>if smirked=0 {
+if point_distance(x,y,objPlayer.x,objPlayer.y)&lt;80 {
+scrGetMessage(0)
+smirked=1
+}
 }
 
-if smirked = 1 {
-    if instance_exists(objPhoneConversation) {
-        if vol &gt; 0.35 vol -= 0.01
-        scrSongVolume(vol)
-    } else {
-        if vol &lt; 1 {
-            vol += 0.05
-            scrSongVolume(vol)
-        }
-    }
+if smirked=1 {
+if instance_exists(objPhoneConversation) {
+if vol&gt;0.35 vol-=0.01
+sxeasy_setVolume(vol)
+} else {
+if vol&lt;1 {
+vol+=0.05
+sxeasy_setVolume(vol)
 }
-</string>
+}
+}</string>
           </argument>
         </arguments>
       </action>

@@ -4,7 +4,7 @@ with objSecretMask {
 global.masks[image_index]=1
 global.newmask[global.newmasks]=image_index
 global.newmasks+=1
-sound_play(sndToken)
+audio_play_sound(sndToken,0,false)
 my_id=instance_create(x,y,objLetterFound)
 my_id.text='"'+scrMaskGetName(image_index)+'"'
 instance_destroy()
@@ -25,6 +25,6 @@ move_contact_solid(global.dir,12)
 my_id.direction=dir
 my_id.image_angle=dir
 my_id.speed=12
-sound_play(sndThrow)
+audio_play_sound(sndThrow,0,false)
 }
 }

@@ -1,67 +1,74 @@
-global.gunkill = 0
-global.shake = 3
+global.gunkill=0
+global.shake=3
 
 
-edir = other.direction
-test = 0
-
-scrMeleeBlood(x, y)
+edir=other.direction
+test=0
+repeat (2) {
+my_id=instance_create(x-3+random(6)+lengthdir_x(8,edir),y-3+random(6)+lengthdir_y(8,edir),objBloodDrop)
+my_id.image_xscale=1-random(0.2)
+my_id.image_yscale=my_id.image_xscale
+my_id.image_angle=point_direction(x+lengthdir_x(8,edir),y+lengthdir_y(8,edir),my_id.x,my_id.y)
+my_id.sprite_index=sprBloodSplatSmall
+my_id.direction=my_id.image_angle
+my_id.speed=2+random(4)
+}
+repeat (1) {
+my_id=instance_create(x-3+random(6)+lengthdir_x(8,edir),y-3+random(6)+lengthdir_y(8,edir),objBloodDrop)
+my_id.image_xscale=1-random(0.2)
+my_id.image_yscale=my_id.image_xscale
+my_id.image_angle=point_direction(x+lengthdir_x(8,edir),y+lengthdir_y(8,edir),my_id.x,my_id.y)
+my_id.direction=my_id.image_angle
+my_id.speed=1+random(5)
+}
+repeat (1) {
+my_id=instance_create(x-3+random(6)+lengthdir_x(16,edir),y-3+random(6)+lengthdir_y(16,edir),objBloodSmoke)
+my_id.image_xscale=1.2-random(0.2)
+my_id.image_yscale=my_id.image_xscale
+my_id.image_angle=edir-20+random(40)
+my_id.direction=my_id.image_angle
+my_id.speed=2+random(1)
+my_id.friction=0.15
+}
 scrIdleGetEnemy()
 
-if object_index = objEnemyFat or object_index = objEnemyFatLSD or object_index = objEnemyFatStatic or object_index = objDogPatrol exit
-
-my_id = instance_create(x, y, objDeadBody)
-if scrIsGang(object_index) my_id.sprite_index = sprEGangDieThrowingKnife else my_id.sprite_index = sprEDieThrowingKnife
-//if my_id.image_index < 15 my_id.image_index += 0.15 else my_id.image_index = 15
-my_id.image_speed = 0.25
-my_id.direction = edir
-my_id.speed = 1.5 + random(1)
-my_id.image_angle = my_id.direction
-if sprite_index = sprEWalkUnarmed or sprite_index = sprEGiveUp noweapon = 1
-else noweapon = 0
-
-if noweapon = 0 {
-        global.myscore += (300) + 400 * (global.factor)
-        global.killscore += 400
-        global.boldscore += 400 * global.factor
-        global.combotime = 240
-        global.combo += 1
-        global.killx[global.kills] = x
-        global.killy[global.kills] = y
-        global.kills += 1
-        if global.combotime < 12 global.combotime = 12
-    my_id = instance_create(x, y, objWeaponThrow)
-    my_id.direction = other.direction - 70 + random(40)
-    my_id.speed = 1 + random(2)
-    my_id.image_index = scrCurrentWeaponExt(sprite_index)
-    my_id.ammo = ammo
-} else {
-        global.myscore += (600) + 400 * (global.factor)
-        global.killscore += 600
-        global.boldscore += 400 * global.factor
-        global.combotime = 240
-        global.combo += 1
-        global.killx[global.kills] = x
-        global.killy[global.kills] = y
-        global.kills += 1
-        if global.combotime < 12 global.combotime = 12
+my_id=instance_create(x,y,objDeadBody)
+my_id.sprite_index=sprEBackCut
+my_id.image_index=5+round(random(1))
+if global.my_id.object_index=objThrowingWeapon {
+if global.my_id.image_index=0 my_id.image_index=7+round(random(1))
+if global.my_id.image_index=5 my_id.image_index=9+round(random(1))
 }
-
+if global.my_id.object_index=objThrowingKnife {
+my_id.image_index=11+round(random(1))
+}
+my_id.direction=edir
+my_id.speed=1.5+random(1)
+my_id.image_angle=my_id.direction
+if sprite_index=sprEWalkUnarmed or sprite_index=sprEGiveUp noweapon=1 else noweapon=0
+my_id=instance_create(x,y-12,objScore)
+if noweapon=0 {
+my_id.text="+"+string((800)*global.factor)+"pts"
+global.myscore+=(800)*global.factor
+my_id=instance_create(x,y,objWeaponThrow)
+my_id.direction=other.direction-70+random(40)
+my_id.speed=2+random(2)
+my_id.image_index=scrCurrentWeaponExt(sprite_index)
+my_id.ammo=ammo
+} else {
+my_id.text="+"+string((300)*global.factor)+"pts"
+global.myscore+=(300)*global.factor
+global.boldscore+=300*global.factor
+}
 instance_destroy()
-sound_play(choose(sndCut1, sndCut2))
+audio_play_sound(choose(sndCut1,sndCut2),0,false)
 
 with global.my_id {
-    scrMeleeBlood(x, y)
-
-    repeat(2 + random(3)) {
-        my_id = instance_create(x + lengthdir_x(17, image_angle) - 1 + random(2), y + lengthdir_y(17, image_angle) - 1 + random(2), objBloodSquirt)
-        my_id.image_angle = -image_angle - 10 + random(20)
-    }
-    my_id = instance_create(x, y, objBloodPool)
-    my_id.direction = direction - 170 + random(10)
-    my_id.image_angle = my_id.direction
-    my_id.image_xscale = 0.8 + random(0.2)
-    my_id.image_yscale = my_id.image_xscale
-    instance_destroy()
+my_id=instance_create(x,y,objBloodSmoke)
+my_id.direction=direction-170+random(10)
+my_id.speed=1
+my_id.image_angle=my_id.direction
+my_id.image_xscale=0.8+random(0.2)
+my_id.image_yscale=my_id.image_xscale
+instance_destroy()
 }
-

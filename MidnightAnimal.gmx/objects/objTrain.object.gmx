@@ -3,9 +3,9 @@
   <spriteName>sprSubwayTrain</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-12</depth>
+  <depth>-3</depth>
   <persistent>0</persistent>
-  <parentName>objSolidCaster</parentName>
+  <parentName>objSolid</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -50,7 +50,6 @@ spawned=0</string>
             <kind>1</kind>
             <string>viewx=view_xview[0]
 viewy=view_yview[0]
-/*
 with objPlayerMouseHouse {
 my_id=instance_create(x,y,objPlayerMouse)
 my_id.sprite_index=sprite_index
@@ -62,10 +61,8 @@ my_id.maskindex=global.maskindex
 global.maskon=1
 instance_destroy()
 }
-*/
 view_xview[0]=viewx
-view_yview[0]=viewy
-</string>
+view_yview[0]=viewy</string>
           </argument>
         </arguments>
       </action>
@@ -92,7 +89,6 @@ alarm[0]=2 exit
 }
 viewx=view_xview[0]
 viewy=view_yview[0]
-/*
 with objPlayerMouse {
 my_id=instance_create(x,y,objPlayerMouseHouse)
 my_id.sprite_index=sprPWalkBag
@@ -103,11 +99,9 @@ my_id.maskon=1
 my_id.maskindex=global.maskindex
 instance_destroy()
 }
-*/
 view_xview[0]=viewx
 view_yview[0]=viewy
-alarm[1]=100
-</string>
+alarm[1]=100</string>
           </argument>
         </arguments>
       </action>
@@ -129,24 +123,19 @@ alarm[1]=100
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !place_meeting(x, y, objEnemy) solid = 1
+            <string>if !place_meeting(x,y,objEnemy) solid=1
 
-if global.done = 1 exit
-if visible = 1 {
-    global.test = 0
-    with objSubwayDoor {
-        if on = 2 global.test = 1
-    }
-    if global.test = 1 {
-        if instance_exists(objEnemy) or instance_exists(objKnockedOut) or instance_exists(objBoss) or instance_exists(objESubwayStatic) nothing = 1
-        else {
-            global.done = 1
-            instance_create(x, y, objCheckpoint)
-        }
-    }
+if global.done=1 exit
+if visible=1 {
+global.test=0 
+with objSubwayDoor {if on=2 global.test=1}
+if global.test=1 {
+if instance_exists(objEnemy) or instance_exists(objKnockedOut) or instance_exists(objBoss) or instance_exists(objESubwayStatic) nothing=1 else {
+global.done=1
+instance_create(x,y,objCheckpoint)
 }
-
-</string>
+}
+}</string>
           </argument>
         </arguments>
       </action>
@@ -168,37 +157,36 @@ if visible = 1 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if spawned = 1 exit
-visible = 0
-if x &lt; room_width / 2 {
-    visible = global.done
-    if visible and spawned = 0 {
-        spawned = 1
-        global.done = 0
-        with objSubwayDoor {
-            visible = 1
-            alarm[0] = 90
-        }
-        alarm[0] = 40
-
-        with objPlayer {
-            vdist = point_distance(x, y, room_width / 2, room_height / 2)
-            vdir = point_direction(room_width / 2, room_height / 2, x, y)
-            view_xview[0] = x + lengthdir_x(vdist * 0.2, vdir - 180) - view_wview[0] * 0.5
-            view_yview[0] = y + lengthdir_y(vdist * 0.2, vdir - 180) - view_hview[0] * 0.5
-            view_angle[0] = lengthdir_y(vdist * (1 / 160), vdir * 2)
-        }
-        test = objPlayer.persistent
-        objPlayer.persistent = 0
-        global.loaded = 1
-        game_save(working_directory + "\tempsave.sav")
-        global.loaded = 0
-        objPlayer.persistent = test
-
-    }
+            <string>if spawned=1 exit
+visible=0
+if x&lt;room_width/2 {
+visible=global.done
+if visible and spawned=0 {
+spawned=1
+global.done=0
+with objSubwayDoor {
+visible=1
+alarm[0]=90
 }
+alarm[0]=40
 
-</string>
+with objPlayer {
+vdist=point_distance(x,y,room_width/2,room_height/2)
+vdir=point_direction(room_width/2,room_height/2,x,y)
+view_xview[0]=x+lengthdir_x(vdist*0.2,vdir-180)-view_wview[0]*0.5
+view_yview[0]=y+lengthdir_y(vdist*0.2,vdir-180)-view_hview[0]*0.5
+view_angle[0]=lengthdir_y(vdist*(1/160),vdir*2)
+}
+test=objPlayer.persistent
+objPlayer.persistent=0
+global.loaded=1
+game_save(working_directory+"\tempsave.sav")
+//if !instance_exists(objMaskMenu) instance_create(x,y,objCheckpoint)
+global.loaded=0
+objPlayer.persistent=test
+
+}
+}</string>
           </argument>
         </arguments>
       </action>

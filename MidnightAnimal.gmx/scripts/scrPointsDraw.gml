@@ -1,5 +1,5 @@
-color2=merge_color(merge_color(c_aqua,c_silver,0.5+lengthdir_x(0.5,dir*2.32)),c_white,0.5+lengthdir_x(0.5,dir*3))
-color1=merge_color(c_silver,merge_color(c_aqua,c_white,0.5+lengthdir_x(0.5,dir*2.32)),0.75+lengthdir_x(0.25,dir*3))
+color2=merge_color(merge_color(c_aqua,c_fuchsia,0.5+lengthdir_x(0.5,dir*2.32)),c_white,0.5+lengthdir_x(0.5,dir*3))
+color1=merge_color(c_maroon,merge_color(c_aqua,c_fuchsia,0.5+lengthdir_x(0.5,dir*2.32)),0.75+lengthdir_x(0.25,dir*3))
 draw_set_color(c_black)
 draw_set_font(fntPointShow)
 draw_set_halign(fa_center)

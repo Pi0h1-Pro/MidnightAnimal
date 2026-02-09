@@ -30,5 +30,9 @@
     <frame index="7">images\sprPKillBeretta_7.png</frame>
     <frame index="8">images\sprPKillBeretta_8.png</frame>
     <frame index="9">images\sprPKillBeretta_9.png</frame>
+    <frame index="10">images\sprPKillBeretta_10.png</frame>
+    <frame index="11">images\sprPKillBeretta_11.png</frame>
+    <frame index="12">images\sprPKillBeretta_12.png</frame>
+    <frame index="13">images\sprPKillBeretta_13.png</frame>
   </frames>
 </sprite>

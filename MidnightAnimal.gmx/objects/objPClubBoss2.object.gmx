@@ -3,9 +3,9 @@
   <spriteName>sprPClubBoss2</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
-  <parentName>objPlayer</parentName>
+  <parentName>objPlayerKill</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -78,11 +78,16 @@ if image_index&gt;=11 and bled=0 {
 bled=1
 hurtindex=1
 targetindex=3
-sound_play(sndPunch)
-sound_play(sndNeck)
-sound_play(choose(sndHit,sndHit1,sndHit2,sndHit3))
+audio_play_sound(sndPunch,0,false)
+audio_play_sound(sndDoorHit,0,false)
+audio_play_sound(sndNeck,0,false)
+audio_play_sound(sndHit,0,false)
 global.shake=5
-
+repeat (3+random(3)) {
+my_id=instance_create(x+lengthdir_x(18,image_angle)-1+random(2),y+lengthdir_y(18,image_angle)-1+random(2),objBloodSmoke)
+my_id.direction=random(360)
+my_id.speed=0.5+random(1)
+}
 repeat (16+random(6)) {
 my_id=instance_create(x+lengthdir_x(18,image_angle)-1+random(2),y+lengthdir_y(18,image_angle)-1+random(2),objBloodDrop)
 my_id.direction=image_angle-100+random(200)

@@ -6,7 +6,7 @@ if place_meeting(x-lengthdir_x(12,objPlayer.dir),y-lengthdir_y(12,objPlayer.dir)
 instance_destroy()
 global.files=1
 instance_create(x,y,objGoToCar)
-sound_play(sndPickupWeapon)
+audio_play_sound(sndPickupWeapon,0,false)
 }
 }
 } else pressltrig=0

@@ -3,9 +3,9 @@
   <spriteName>sprShowerGlassDoor</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>objWindow</parentName>
+  <parentName>objSolid</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">

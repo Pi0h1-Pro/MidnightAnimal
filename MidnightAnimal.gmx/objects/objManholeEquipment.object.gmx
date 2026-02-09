@@ -3,7 +3,7 @@
   <spriteName>sprManholeEquipment</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-4</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>objFurniture</parentName>
   <maskName>&lt;undefined&gt;</maskName>

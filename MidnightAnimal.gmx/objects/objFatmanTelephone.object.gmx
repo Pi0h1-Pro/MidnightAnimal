@@ -3,7 +3,7 @@
   <spriteName>sprFatmanTelephone</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -141,14 +141,13 @@ my_id.direction=my_id.image_angle
 my_id.speed=2+random(1)
 my_id.friction=0.15
 }
-scrMeleeBlood(x,y)
 if bullets&gt;1 or round(random(1)) or energie&lt;0 {
 if sprite_index=sprEWalkUnarmed noweapon=1 else noweapon=0
 scrIdleGetEnemy()
 global.punchonly=0
 if noweapon=1 factor=0.5 else factor=1
-//my_id=instance_create(x,y-12,objScore)
-//my_id.text="+"+string(((100+bullets*20)+80*factor)*global.factor)+"pts"
+my_id=instance_create(x,y-12,objScore)
+my_id.text="+"+string(((100+bullets*20)+80*factor)*global.factor)+"pts"
 global.myscore+=((100+bullets*20)+80*factor)*global.factor
 global.killscore+=(100+bullets*20)
 global.boldscore+=80*factor
@@ -160,8 +159,7 @@ global.kills+=1
 global.gunkill+=1
 }
 image_index=0
-sprite_index=sprFatmanTelephoneDie
-</string>
+sprite_index=sprFatmanTelephoneDie</string>
           </argument>
         </arguments>
       </action>

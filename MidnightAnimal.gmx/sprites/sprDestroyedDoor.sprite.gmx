@@ -30,6 +30,5 @@
     <frame index="7">images\sprDestroyedDoor_7.png</frame>
     <frame index="8">images\sprDestroyedDoor_8.png</frame>
     <frame index="9">images\sprDestroyedDoor_9.png</frame>
-    <frame index="10">images\sprDestroyedDoor_10.png</frame>
   </frames>
 </sprite>

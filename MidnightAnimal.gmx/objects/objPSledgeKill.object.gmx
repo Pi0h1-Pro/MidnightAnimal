@@ -3,9 +3,9 @@
   <spriteName>sprPKillSledgeHammer</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
-  <parentName>objPlayer</parentName>
+  <parentName>objPlayerKill</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -53,7 +53,7 @@ ammo=0</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index&lt;8 image_index+=0.35 else {
+            <string>if image_index&lt;8 image_index+=0.15 else {
 instance_create(x+lengthdir_x(24,image_angle),y+lengthdir_y(24,image_angle),objBloodPool)
 my_id=instance_create(x,y,objDeadBody)
 my_id.image_angle=image_angle
@@ -85,13 +85,12 @@ if image_index&gt;=5 and bled=0 {
 bled=1
 hurtindex=1
 targetindex=3
-sound_play(choose(sndCut1,sndCut2))
-sound_play(choose(sndHit,sndHit1,sndHit2,sndHit3))
-sound_play(sndPunch)
-global.shake=18
-repeat (4+random(6)) {
-my_id=instance_create(x+lengthdir_x(17,image_angle)-1+random(2),y+lengthdir_y(17,image_angle)-1+random(2),objBloodSquirt)
-my_id.image_angle=image_angle-120+random(240)
+audio_play_sound(choose(sndCut1,sndCut2),0,false)
+audio_play_sound(sndHit,0,false)
+audio_play_sound(sndPunch,0,false)
+global.shake=8
+repeat (3+random(3)) {
+instance_create(x+lengthdir_x(24,image_angle)-1+random(2),y+lengthdir_y(24,image_angle)-1+random(2),objBloodSquirt)
 }
 repeat (4) {
 my_id=instance_create(x+lengthdir_x(24,image_angle)-1+random(2),y+lengthdir_y(24,image_angle)-1+random(2),objBloodSmoke)

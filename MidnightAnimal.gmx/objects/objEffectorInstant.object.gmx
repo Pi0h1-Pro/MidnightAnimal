@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-10000</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>objEffector</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -78,7 +78,10 @@ if global.controller=1 {
 if checkbutton(0,getid(5)) fade=1
 }
 
-</string>
+/*surface_set_target(global.surf4)
+draw_clear_alpha(c_black,0)
+scrScoreDraw()
+surface_reset_target()*/</string>
           </argument>
         </arguments>
       </action>
@@ -149,7 +152,7 @@ draw_set_blend_mode(bm_add)
 draw_sprite_ext(sprite_index,image_index,x,y,1,1,-view_angle[0],c_white,1)
 draw_set_blend_mode(bm_normal)
 
-//scrScoreDraw()
+scrScoreDraw()
 if fade=0 {
 if amount&lt;180 {
 amount+=5
@@ -165,23 +168,18 @@ if fade=1 {
 if amount&gt;0  {
 amount-=10
 if restart=1 {
-scrSongVolume(amount*(1/180)*0)
+sxeasy_setVolume(amount*(1/180)*0)
 }
 color1=merge_color(c_black,merge_color(c_aqua,c_white,0.5+lengthdir_x(0.5,amount)),0.5+lengthdir_x(0.5,amount))
 if amount&gt;90 color2=merge_color(c_black,merge_color(c_fuchsia,c_white,abs(lengthdir_y(1,amount))),abs(lengthdir_y(1,amount))) else color2=c_white
 draw_set_blend_mode(bm_subtract)
 draw_rectangle_color(-10,-10,view_wview[0]+10,view_hview[0]+10,color2,color1,color1,color2,0)
 draw_set_blend_mode(bm_normal)
-} else {fade=0 if restart=1 {scrStopSong(1) scrSongVolume(0) scrPlaySong(working_directory+"\Main.mp3"); room=rmMenu} else {if next=1 room=nextroom else room_restart()}}
+} else {fade=0 if restart=1 {sxeasy_stop(1) sxeasy_setVolume(0) sxeasy_play(working_directory+"\HorseSteppin.mp3"); room=rmMenu} else {if next=1 room=nextroom else room_restart()}}
 }
 coldir+=1
 
-draw_set_blend_mode(bm_subtract)
-draw_sprite_tiled(sprScanlines,0,0,my_y)
-my_y=random(32)
-draw_set_blend_mode(bm_subtract)
-draw_circle_color(view_wview[0]/2,view_hview[0]/2,240+random(24),c_black,merge_color(c_navy,c_aqua,0.25+random(0.25)),0)
-draw_set_blend_mode(bm_normal)
+drawVignette();
 </string>
           </argument>
         </arguments>

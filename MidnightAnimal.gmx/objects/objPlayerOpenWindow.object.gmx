@@ -3,7 +3,7 @@
   <spriteName>sprPExitWindow</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>objPlayer</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -49,14 +49,11 @@ last_sprite=sprite_index</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index &lt; 19 image_index += 0.2
-else {
-    my_id = instance_create(x, y, objPWalkWindow)
-    if sprite_index = sprPClimbWindow my_id.sprite_index = sprPWalkLedge
-    else my_id.sprite_index = sprPWalkWindow
-    instance_destroy()
-}
-</string>
+            <string>if image_index&lt;19 image_index+=0.2 else {
+my_id=instance_create(x,y,objPWalkWindow)
+if sprite_index=sprPClimbWindow my_id.sprite_index=sprPWalkLedge else my_id.sprite_index=sprPWalkWindow
+instance_destroy()
+}</string>
           </argument>
         </arguments>
       </action>
@@ -78,19 +75,17 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if sprite_index = last_sprite nothing = 1
-else {
-    scrUpdateMaskPos(sprite_index)
-    last_sprite = sprite_index
+            <string>if sprite_index=last_sprite nothing=1 else {
+scrUpdateMaskPos(sprite_index)
+last_sprite=sprite_index
 }
 
-draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, image_yscale, image_angle, c_black, 0.5)
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
+draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 
-if sprite_index = sprPClimbWindow {
-    scrDrawMask(1)
-}
-</string>
+if sprite_index=sprPClimbWindow {
+scrDrawMask(1)
+}</string>
           </argument>
         </arguments>
       </action>

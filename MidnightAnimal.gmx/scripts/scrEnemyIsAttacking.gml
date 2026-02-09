@@ -1,17 +1,5 @@
-if argument0=sprEGangAttackBat return true
-if argument0=sprEGangAttackPipe return true
-if argument0=sprEGangAttackKnife return true
-if argument0=sprEGangAttackChain return true
-
-if argument0=sprEFatAttack return true
-if argument0=sprEFatAttackLSD return true
-
-if argument0=sprEDodgerAttack return true
-
-if argument0=sprEAttackBat return true
-if argument0=sprEAttackPipe return true
-if argument0=sprEAttackKnife return true
-if argument0=sprEAttackClub return true
-if argument0=sprEAttackMachete return true
-
+if sprite_index=sprEAttackBat return true
+if sprite_index=sprEAttackKnife return true
+if sprite_index=sprEAttackPipe return true
+if sprite_index=sprEAttackClub return true
 return false

@@ -49,8 +49,7 @@ image_speed=0</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//addToSurface(global.surf3,1)
-</string>
+            <string>addToSurface(global.surf3,1)</string>
           </argument>
         </arguments>
       </action>

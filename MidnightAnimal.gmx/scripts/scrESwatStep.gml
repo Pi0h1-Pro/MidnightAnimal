@@ -1,7 +1,5 @@
 angle=direction
 if instance_exists(objEnemy) {
-
-//KILL ENEMIES
 target=instance_nearest(x,y,objEnemy)
 if point_distance(x,y,target.x,target.y)<120 {
 check=scrLook(target.x,target.y,4)
@@ -11,10 +9,10 @@ if reload>0 reload-=1 else {
 ammo-=1
 light=10
 global.shake=3
-sound_play(sndEM16)
+audio_play_sound(sndEM16,0,false)
 mask_index=sprWeaponMask
 reload=5
-if place_meeting(x+lengthdir_x(8,angle),y+lengthdir_y(8,angle),objSolid) or place_meeting(x+lengthdir_x(8,angle),y+lengthdir_y(8,angle),objWall) or place_meeting(x+lengthdir_x(8,angle),y+lengthdir_y(8,angle),objSolidCaster) {
+if place_meeting(x+lengthdir_x(8,angle),y+lengthdir_y(8,angle),objSolid) {
 my_id=instance_create(x,y,objSmokeHit)
 my_id.image_angle=image_angle
 global.dir=angle
@@ -39,8 +37,6 @@ mask_index=sprMask
 }
 }
 }
-
-
 if alert=0 {
     
     if instance_exists(objPlayer) scrSearch(objPlayer.x,objPlayer.y,4)

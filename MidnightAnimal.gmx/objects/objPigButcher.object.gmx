@@ -137,6 +137,38 @@ my_id=instance_create(x-5+random(10),y-5+random(10),objClubKeys) my_id.direction
 }
 }
 
+/*if mouse_check_button(mb_right) and persistent=0 {
+if ammo&gt;0 {
+if place_meeting(x,y,objKnockedOut) {
+if sprite_index=sprPWalkScorpion or sprite_index=sprPWalkMP5 or sprite_index=sprPWalkMagnum or sprite_index=sprPWalkDoubleBarrel or sprite_index=sprPWalkUzi or sprite_index=sprPWalkSilencer {
+shieldwait+=1
+if shieldwait&gt;=10 {
+if global.controller=0 my_id=instance_create(x,y,objPlayerShieldMouse) else my_id=instance_create(x,y,objPlayerShieldController)
+my_id.dir=dir
+my_id.ammo=ammo
+if sprite_index=sprPWalkScorpion my_id.sprite_index=sprPHumanShieldScorpion
+if sprite_index=sprPWalkMagnum my_id.sprite_index=sprPHumanShieldMagnum
+if sprite_index=sprPWalkDoubleBarrel my_id.sprite_index=sprPHumanShieldDoubleBarrel
+if sprite_index=sprPWalkSilencer my_id.sprite_index=sprPHumanShieldSilencer
+if sprite_index=sprPWalkMP5 my_id.sprite_index=sprPHumanShieldMP5
+if sprite_index=sprPWalkUzi my_id.sprite_index=sprPHumanShieldUzi
+global.test=0
+with objKnockedOut {
+if global.test=0 {
+if place_meeting(x,y,objPlayer) {
+global.test=1
+instance_destroy()
+}
+}
+}
+instance_destroy()
+}
+exit
+}
+}
+}
+}*/
+
 global.test=0
 with objWeapon {if point_distance(x,y,objPlayer.x,objPlayer.y)&lt;32 global.test=2}
 if place_meeting(x,y,objKnockedOut) global.test=1
@@ -215,9 +247,9 @@ i+=1
 instance_create(x,y,objGlassPanelHBroken)
 global.shake=4
 instance_destroy()
-sound_play(sndGlass1)
-sound_play(sndGlass2)
-sound_play(sndWeaponHit)
+audio_play_sound(sndGlass1,0,false)
+audio_play_sound(sndGlass2,0,false)
+audio_play_sound(sndWeaponHit,0,false)
 }
 }
 
@@ -238,9 +270,9 @@ i+=1
 instance_create(x,y,objGlassPanelVBroken)
 global.shake=4
 instance_destroy()
-sound_play(sndGlass1)
-sound_play(sndGlass2)
-sound_play(sndWeaponHit)
+audio_play_sound(sndGlass1,1,0)
+audio_play_sound(sndGlass2,1,0)
+audio_play_sound(sndWeaponHit,1,0)
 }
 }
 
@@ -251,7 +283,7 @@ y+=lengthdir_y(12,dir)
 with objEnemy {
 if place_meeting(x,y,objPlayer) or place_meeting(x+global.spacex,y+global.spacey,objPlayer) {
 mask_index=sprWeaponMask 
-if scrCollisionLineExt(x,y,objPlayer.lastx,objPlayer.lasty,4,objSolid, objSolidCaster,objDoorV,objWallSoftH) or object_index=objEnemyFat {mask_index=sprMask objPlayer.x=objPlayer.lastx objPlayer.y=objPlayer.lasty exit}
+if scrCollisionLineExt(x,y,objPlayer.lastx,objPlayer.lasty,4,objSolid,objDoorV,objWallSoftH) or object_index=objEnemyFat {mask_index=sprMask objPlayer.x=objPlayer.lastx objPlayer.y=objPlayer.lasty exit}
 mask_index=sprMask
 global.shake=7
 my_id=instance_create(x,y-12,objScore)
@@ -449,7 +481,7 @@ with objEnemy {
 if object_index=objDogPatrol or object_index=objEnemyFat valid=0 else valid=1
 if (place_meeting(x,y,objPlayer) or place_meeting(x+global.spacex,y+global.spacey,objPlayer)) and valid=1 {
 mask_index=sprWeaponMask 
-if scrCollisionLineExt(x,y,objPlayer.lastx,objPlayer.lasty,4,objSolid, objSolidCaster,objDoorV,objWallSoftH) {mask_index=sprMask objPlayer.x=objPlayer.lastx objPlayer.y=objPlayer.lasty exit}
+if scrCollisionLineExt(x,y,objPlayer.lastx,objPlayer.lasty,4,objSolid,objDoorV,objWallSoftH) {mask_index=sprMask objPlayer.x=objPlayer.lastx objPlayer.y=objPlayer.lasty exit}
 mask_index=sprMask
 edir=point_direction(objPlayer.lastx,objPlayer.lasty,x,y)
 sound_play(sndDoorHit)
@@ -848,7 +880,7 @@ exit
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scrPlayerAttack</script>
+            <script>scrPlayerShoot</script>
           </argument>
           <argument>
             <kind>0</kind>

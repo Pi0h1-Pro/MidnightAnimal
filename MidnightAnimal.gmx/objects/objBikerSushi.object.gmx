@@ -29,9 +29,7 @@
 alarm[0]=60
 state=0
 message=0
-wait=30
-ammo=objPlayer.knives
-</string>
+wait=30</string>
           </argument>
         </arguments>
       </action>
@@ -94,12 +92,10 @@ my_id.direction=image_angle-180
 instance_create(x,y,objPlayerBikerHouse)
 state=3
 global.done=1
-my_id=instance_create(x,y,objLevelComplete)
-my_id.text="LEVEL COMPLETE"
+instance_create(x,y,objLevelComplete)
 instance_destroy()
 }
-}
-</string>
+}</string>
           </argument>
         </arguments>
       </action>

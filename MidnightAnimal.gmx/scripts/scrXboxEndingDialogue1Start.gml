@@ -1,4 +1,4 @@
-if reload>0 reload=0
+if reload>0 exit
 reload=2
 if question=1 {
 if select>-1 {

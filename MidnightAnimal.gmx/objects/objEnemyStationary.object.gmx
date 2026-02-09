@@ -3,7 +3,7 @@
   <spriteName>sprEWalkM16</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>objEnemy</parentName>
   <maskName>sprMask</maskName>
@@ -25,13 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrEStaticInit()
+            <string>depth = -50;
+
+scrEStaticInit()
 
 image_speed=0
 image_index=random(1000)
-//angle=random(360)
+angle=random(360)
 
-//direction=angle
+direction=angle
 alarm[0]=120+random(120)
 energie=round(random(1))
 
@@ -153,13 +155,17 @@ image_speed=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if shake&gt;0 shake-=0.5
+            <string>event_inherited();
+exit;
+
+
+if shake&gt;0 shake-=0.5
 angle=direction
 
-//if light &gt; 0 light -= 1
-//draw_set_blend_mode(bm_add)
-//draw_circle_color(x, y, 48 + random(6) + light, make_color_hsv(0, 0, 30), c_black, 0)
-//draw_set_blend_mode(bm_normal)
+if light&gt;0 light-=1
+draw_set_blend_mode(bm_add)
+draw_circle_color(x,y,48+random(6)+light,make_color_hsv(0,0,30),c_black,0)
+draw_set_blend_mode(bm_normal)
 if scrIsSearching(sprite_index) nothing=1 else {
 draw_sprite_ext(sprELegs,image_index*2,x+1,y+1,image_xscale,image_yscale,angle,c_black,0.5)
 draw_sprite_ext(sprELegs,image_index*2,x,y,image_xscale,image_yscale,angle,image_blend,image_alpha)

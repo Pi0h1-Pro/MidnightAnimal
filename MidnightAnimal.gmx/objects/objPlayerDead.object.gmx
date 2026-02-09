@@ -3,7 +3,7 @@
   <spriteName>sprPBackMachinegun</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -57,33 +57,12 @@ scrMoveSolidOff()
 if speed=0 and bled=0 {
 bled=1
 length=random(24)
+if sprite_index=sprEBackBlunt repeat(1+random(2)) instance_create(x+lengthdir_x(24,image_angle)-2+random(4),y+lengthdir_y(24,image_angle)-2+random(4),objBloodPool)
+if sprite_index=sprEBackCut repeat(1+random(2)) instance_create(x+lengthdir_x(6,image_angle)-2+random(4),y+lengthdir_y(6,image_angle)-2+random(4),objBloodPool)
+if sprite_index=sprPBackShotgun or sprite_index=sprPBackCar repeat(2+random(2)) instance_create(x+lengthdir_x(length,image_angle)-2+random(4),y+lengthdir_y(length,image_angle)-2+random(4),objBloodPool)
+if sprite_index=sprPBackMachinegun repeat(2+random(2)) instance_create(x+lengthdir_x(length,image_angle)-2+random(4),y+lengthdir_y(length,image_angle)-2+random(4),objBloodPool)
 
-
-if sprite_index=sprPBackBlunt {
-instance_create(x+lengthdir_x(24,image_angle)-2+random(4),y+lengthdir_y(24,image_angle)-2+random(4),objBloodPool)
-}
-
-if sprite_index=sprPBackCut {
-repeat(1+random(2)) {
-instance_create(x+lengthdir_x(6,image_angle)-2+random(4),y+lengthdir_y(6,image_angle)-2+random(4),objBloodPool)
-}
-}
-
-if sprite_index=sprPBackShotgun 
-or sprite_index=sprPBackCar {
-repeat(2+random(2)) {
-instance_create(x+lengthdir_x(length,image_angle)-2+random(4),y+lengthdir_y(length,image_angle)-2+random(4),objBloodPool)
-}
-}
-
-if sprite_index=sprPBackMachinegun {
-repeat(2+random(2)) {
- instance_create(x+lengthdir_x(length,image_angle)-2+random(4),y+lengthdir_y(length,image_angle)-2+random(4),objBloodPool)
-}
- }
- 
 if sprite_index=sprPBackEaten {
-scrMeleeBlood(x,y)
 repeat (2+random(3)) {
 dir=image_angle+image_yscale*12
 my_id=instance_create(x+lengthdir_x(19,dir),y+lengthdir_y(19,dir),objBloodSquirt)
@@ -93,14 +72,12 @@ my_id.image_angle=random(360)
 
 
 
-if sprite_index=sprPBackBlunt {
-scrMeleeBlood(x,y)
+if sprite_index=sprEBackBlunt {
 if image_index=6 or image_angle=13 {
 repeat (2+random(3)) {
 dir=image_angle-2+random(4)
 my_id=instance_create(x+lengthdir_x(24,dir),y+lengthdir_y(24,dir),objBloodSquirt)
 my_id.image_angle=dir-35+random(70)
-
 }
 }
 
@@ -109,7 +86,6 @@ repeat (2+random(3)) {
 dir=image_angle+(2+random(4))*image_yscale
 my_id=instance_create(x+lengthdir_x(24,dir),y+lengthdir_y(24,dir),objBloodSquirt)
 my_id.image_angle=dir-random(50)
-
 }
 }
 
@@ -118,13 +94,11 @@ repeat (2+random(3)) {
 dir=image_angle-2+random(4)
 my_id=instance_create(x+lengthdir_x(24,dir),y+lengthdir_y(24,dir),objBloodSquirt)
 my_id.image_angle=dir-70+random(140)
-
 }
 }
 }
 
 if sprite_index=sprPBackShotgun {
-scrMeleeBlood(x,y)
 if image_index=2 {
 repeat (2+random(3)) {
 dir=image_angle+image_yscale*12
@@ -142,14 +116,12 @@ my_id.image_angle=dir-30+random(60)
 }
 }
 
-if sprite_index=sprPBackCut {
-scrMeleeBlood(x,y)
+if sprite_index=sprEBackCut {
 if image_index=2 {
 repeat (2+random(3)) {
 dir=image_angle+image_yscale*12
 my_id=instance_create(x+lengthdir_x(19,dir),y+lengthdir_y(19,dir),objBloodSquirt)
 my_id.image_angle=random(360)
-
 }
 }
 }
@@ -167,8 +139,7 @@ viewdir=point_direction(view_xview[0]+view_wview[0]/2,view_yview[0]+view_hview[0
 view_xview[0]+=lengthdir_x(viewspeed,viewdir)
 view_yview[0]+=lengthdir_y(viewspeed,viewdir)
 view_angle[0]=lengthdir_y(vdist*(1/100),vdir*2)
-}
-</string>
+}</string>
           </argument>
         </arguments>
       </action>
@@ -214,8 +185,22 @@ if round(random(20))=2 image_speed=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)</string>
+            <string>if ( !global.camera3D )
+{
+    draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
+    draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+    exit;
+}
+
+var z = 0;
+var height = 2;
+d3d_set_depth( -1 );
+draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,image_angle,c_black,0.5)
+d3d_set_depth( z - height );
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+
+
+</string>
           </argument>
         </arguments>
       </action>

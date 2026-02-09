@@ -3,7 +3,7 @@
   <spriteName>sprBloodSmoke</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,7 +28,6 @@
             <string>image_speed=0.25+random(0.1)
 image_xscale=0.5+random(0.3)
 image_yscale=image_xscale
-image_blend=merge_color(c_red,c_maroon,0.4)
 </string>
           </argument>
         </arguments>

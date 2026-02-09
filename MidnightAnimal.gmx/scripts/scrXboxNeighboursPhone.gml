@@ -6,7 +6,7 @@ instance_destroy()
 instance_create(x,y,objPlayerMouseHouse)
 }*/
 with objPlayer {
-if sprite_index=sprPWalkUnarmed or argument0=sprPAttackUnarmed1 or sprite_index=sprPAttackPunch or sprite_index=sprPAttackBash noweapon=1 else noweapon=0
+if sprite_index=sprPWalkUnarmed or sprite_index=sprPAttackPunch or sprite_index=sprPAttackBash noweapon=1 else noweapon=0
 if noweapon=0 {
 my_id=instance_create(x,y,objWeaponThrow)
 my_id.direction=random(360)
@@ -21,8 +21,8 @@ objPlayer.active=0
 image_index=1
 scrGetMessage(0)
 answered=1
-sound_stop(sndPhoneCall)
-sound_play(sndPhone)
+audio_stop_sound(sndPhoneCall)
+audio_play_sound(sndPhone,0,false)
 global.done=1
 }
 }

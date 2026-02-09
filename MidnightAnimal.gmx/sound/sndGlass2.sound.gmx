@@ -3,9 +3,9 @@
   <kind>0</kind>
   <extension>.wav</extension>
   <origname>sound\audio\sndGlass2.wav</origname>
-  <effects>0</effects>
+  <effects>1</effects>
   <volume>
-    <volume>1</volume>
+    <volume>0.79</volume>
   </volume>
   <pan>0</pan>
   <bitRates>

@@ -51,8 +51,7 @@ on=0</string>
           <argument>
             <kind>1</kind>
             <string>on=1
-if instance_exists(objLSD) sound_play(choose(sndGlassBreakLSD, sndGlassReverse))
-else sound_play(choose(sndGlass1, sndGlass2))
+audio_play_sound(choose(sndGlass1,sndGlass2),0,false)
 speed=0
 </string>
           </argument>

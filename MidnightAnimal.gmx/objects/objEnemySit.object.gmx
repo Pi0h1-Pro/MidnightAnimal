@@ -29,14 +29,13 @@
 image_index=0
 reload=floor(random(10))
 alert=0
-ammo=17
+image_index=floor(random(3))
+ammo=0
 path=path_add()
-type=objEnemyPatrolSilencer
-//choose(objEnemy,objEnemyMeleeStationary)
+type=choose(objEnemy,objEnemyMeleeStationary)
 if room=rmTrainstationEntrance or room=rmBossClubFloor1 type=objEnemyMeleeStationary
 if room=rmHotelEntrance type=choose(objEnemy)
-on=0
-</string>
+on=0</string>
           </argument>
         </arguments>
       </action>
@@ -83,7 +82,7 @@ on=0
             <string>if !instance_exists(objPlayer) or sprite_index=sprEnemyRise exit
 if reload&gt;0 reload-=1 else {
 if point_distance(x,y,objPlayer.x,objPlayer.y)&lt;220 {
-if !scrCollisionLineExt(x,y,objPlayer.x,objPlayer.y,3,objSolid, objWall, objSolidCaster, objDoorV,objWallSoftH) {
+if !scrCollisionLineExt(x,y,objPlayer.x,objPlayer.y,3,objSolid,objDoorV,objWallSoftH) {
 if sprite_index=sprEnemySit {
 image_index=1
 image_speed=0.5
@@ -100,8 +99,7 @@ image_index=1
 image_speed=0.5
 sprite_index=sprEnemyRise
 }
-}
-</string>
+}</string>
           </argument>
         </arguments>
       </action>
@@ -156,10 +154,13 @@ instance_destroy()</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if light &gt; 0 light -= 1
-//draw_set_blend_mode(bm_add)
-//draw_circle_color(x, y, 48 + random(6) + light, make_color_hsv(0, 0, 30), c_black, 0)
-//draw_set_blend_mode(bm_normal)
+            <string>event_inherited();
+exit;
+
+
+draw_set_blend_mode(bm_add)
+draw_circle_color(x,y,48+random(6),make_color_hsv(0,0,30),c_black,0)
+draw_set_blend_mode(bm_normal)
 angle=direction
 draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,angle,c_black,0.5)
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,angle,image_blend,image_alpha)

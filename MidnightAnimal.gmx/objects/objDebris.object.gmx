@@ -3,7 +3,7 @@
   <spriteName>sprWallDebris</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -30,32 +30,7 @@ rotspeed=(-1+round(random(1))*2)*random(8)
 startspeed=0
 image_speed=0
 image_angle=random(360)
-image_index=floor(random(10000))
-alarm[0]=15000
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>instance_destroy()
-</string>
+image_index=floor(random(10000))</string>
           </argument>
         </arguments>
       </action>
@@ -78,10 +53,10 @@ alarm[0]=15000
           <argument>
             <kind>1</kind>
             <string>if startspeed=0 startspeed=speed
-image_blend=merge_color(c_ltgray,c_white,speed*rotspeed)
-/*image_angle+=rotspeed
+image_blend=merge_color(c_ltgray,c_white,speed*(1/startspeed))
+image_angle+=rotspeed
 if speed=0 {
-//if surface_exists(global.surf2) addToSurface(global.surf2,1)
+rotspeed=0;
 }
 </string>
           </argument>

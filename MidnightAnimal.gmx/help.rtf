@@ -1,215 +1,6 @@
-{\rtf1\ansi\ansicpg1252\deff0\deflang1053{\fonttbl{\f0\fnil\fcharset0 Nirmala UI Semilight;}{\f1\fnil\fcharset2 Symbol;}}
-{\colortbl ;\red128\green128\blue128;}
-\viewkind4\uc1\pard\cf1\f0\fs24\par
-___________________________________________\par
-ERROR in\par
-action number 1\par
-of End Step Event\par
-for object obj_L3S_system:\par
-\par
-In script L3S_system_update:\par
-In script L3S_shadow_update:\par
-Error in code at line 8:\par
-           \{ds_priority_add(global.LS_ds,self.id,self.LS_z)\}\par
-                                                      ^\par
-at position 53: Unknown variable LS_z\par
-\par
-https://imgur.com/a/FoJ7X\par
-\par
-my_id.caliber = 1\par
-makes bullet pass through multiple enemies\par
-\par
-"If the day should ever come when we must go, if some day we compelled to leave the scene of history, we will slam the door so hard that the universe will shake and mankind will stand back in stupefaction.." -Joseph Goebbels\par
-http://imgur.com/a/aXR8k#0\par
-\par
-John - Zebra\par
-\par
-if argument0=0 return "John" - Every bullet eases the pain\par
-if argument0=1 return "Rasmus" - \par
-if argument0=2 return "Tony" - Killing punches, no weapons / roar\par
-if argument0=3 return "Aubrey" - \par
-if argument0=4 return "Don Juan" - lethal doors\par
-if argument0=5 return "Graham"\par
-if argument0=6 return "Nicole" - start with knife, throwing knives - move faster\par
-if argument0=7 return "George" - start with sniper rifle, increased view distance\par
-if argument0=8 return "Parker" - Blood in your eyes\par
-if argument0=9 return "Alexandra" - nonlethal: cannot pick up weapons, disarms all guns, fast executions\par
-if argument0=10 return "Rami" - start with flare gun\par
-if argument0=11 return "Willem"\par
-if argument0=12 return "Peter" - start with suppressed shotgun; all gunshots muffled\par
-if argument0=13 return "Zack"\par
-if argument0=14 return "Oscar"\par
-if argument0=15 return "Rick" - start with flamethrower/knife (switch); can't pick up weapons \par
-if argument0=16 return "Brandon" - start with katana / roll (press r)\par
-if argument0=17 return "Charlie" - start with cleaver, throwing knives?\par
-if argument0=18 return "Louie" - start with suppressed assault rifle; reduced visibility\par
-if argument0=19 return "Max" - dual wield handguns\par
-if argument0=20 return "Nigel"\par
-if argument0=21 return "Earl" \par
-if argument0=22 return "Jones" - start with chainsaw, more points for executions?/unarmed head tear on fat enemies\par
-if argument0=23 return "Carl" - start with drill\par
-if argument0=24 return "Jake" - Killing throws - attack/movement speed increased?/nailgun\par
-if argument0=25 return "Richter" - Start with suppressed Uzi\par
-\par
-___________________________________________________________\par
-\par
- ___________________________________________\par
-ERROR in\par
-action number 1\par
-of  Step Event\par
-for object objEnemy:\par
-\par
-In script scrGoGetWeapon:\par
-Error in code at line 90:\par
-   if instance_exists(target) my_id.ammo=target.ammo\par
-                              ^\par
-at position 29: Cannot assign to the variable\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
- ERROR in\par
-action number 2\par
-of Mouse Event for Glob Left Button\par
-for object objPlayerMouse:\par
-\par
-In script scrPlayerShoot:\par
-In script scrHearPlayer:\par
-Error in code at line 27:\par
-   if path_exists(path) and valid=1 \{\par
-                  ^\par
-at position 17: Unknown variable path\par
-\par
-\par
-\par
-\par
-\par
-\par
-ERROR in\par
-action number 1\par
-of Collision Event with object objThrowingKnife\par
-for object objEnemyFat:\par
-\par
-Error in code at line 9:\par
-   chasex=global.my_x\par
-                 ^\par
-at position 16: Unknown variable my_x\par
-\par
-\par
-\par
-\par
-\par
-ERROR in\par
-action number 1\par
-of  Step Event\par
-for object objDogPatrol:\par
-\par
-In script scrPlayerDieDogBite:\par
-Error in code at line 25:\par
-   my_id.ammo=ammo\par
-              ^\par
-at position 13: Unknown variable ammo\par
-\par
-Happens during a wall execution and being attacked by a dog at the same time\par
-\par
-\par
-\par
-\par
- ___________________________________________\par
-ERROR in\par
-action number 1\par
-of  Step Event\par
-for object objEnemy:\par
-\par
-In script scrGoGetWeapon:\par
-Error in code at line 90:\par
-   if instance_exists(target) my_id.ammo=target.ammo\par
-                              ^\par
-at position 29: Cannot assign to the variable\par
-\par
-\par
-\par
-\par
-\par
-- Idle enemies don't change to the walking animation when they hear you.\par
-- Swinging or shooting over a downed enemy will kill it.\par
-- Hitting an enemy that is leaning against a wall will spawn two corpses.\par
-- Shooting a gang member leaning against a wall gives him a dead mobster sprite.\par
-- Masks aren't positioned over the players head properly.\par
-- Masks dissapear during some executions.\par
-- Elevator in the second floor of Showdown is missing the floorindex value\par
-- Gang members with pipes will drop an axe\par
-- Sometimes axes dissapear on pickup.\par
-- Enemies randomly flash different colours\par
-- Idle gang members that are spinning a butterfly knife will turn into a knife wielding mobster when he sees the player. (Probably just changing to the wrong sprite_index)\par
-- Combo time is absurdly short\par
-- The subway briefcase guy is hard to hit\par
-- In some specific occasions, the player will fly at the cursor when swinging his weapon. (Nicole will fly at the crosshair when swinging after changing weapons from the starting knife)\par
-- Killing a thug with a throwing knife will bring up an unknown variable error and turn the thug into a dead mobster.\par
-- Fat guys spawn absurd amounts of blood while bleeding, and lag the game.\par
-- Katana mobsters drop an axe.\par
-- Wall debris keeps spinning after stopping\par
-- The breakable walls debris doesn't fly, instead spawns stationary in a line\par
-- Game doesn't place a checkpoint after picking a mask.\par
-- objEnemy is missing the variable shake in Clean Hit\par
-- Mobsters bodies won't move after getting shot with a shotgun and playing the flying death animation.\par
-- Ramis ability isn't properly labeled.\par
-- Killing mobsters with a nightstick plays no sounds\par
-- The game creates checkpoints at seemingly random moments\par
-- Black uniform guards legs arent properly aligned with their bodies\par
-- Killing guards with guns spawns absurd lag inducing amounts of blood\par
-- The animation of a guard getting his head stomped is bugged.\par
-- The left side stairs in Overdose will teleport you inside of a vending machine.\par
-- Knocked down gang members and guards turn into mobsters after standing up\par
-- Executing a gang member with a drill turns him into a mobster.\par
-- Melee enemies sometimes don't play their attack animations properly.\par
-- Pipe executions sprites haven't been changed.\par
-- A lot of the doors in the first floor of Hot and Heavy aren't properly aligned with the doorway.\par
-- Mobster using the vending machine next to the entrance of Full House is facing the wrong way.\par
-- Player stomping mobsters head animation isn't in sync with the animation of the mobsters head being crushed.\par
-- A mobsters headstomp execution plays a cutting sound effect.\par
-- Thugs will sometimes slide feet first towards the player when dying.\par
-- The player and enemy bullets will go into slow motion after executing an enemy with Maxs pistols.\par
-- Shift + right mouse with Max creates two bodies of the player next to the player\par
-- If you drink the coffee in Metro after picking up the briefcase, the briefcase dissapears.\par
-- The player walking wielding a chain animation doesn't play.\par
-- The player doesn't have a zebra mask on his head when entering the alley in Metro, but it magically appears on his head after putting the briefcase in the dumpster.\par
-- Katana mobsters can be knocked down with punches and by throwing your weapon\par
-- Executing while wearing the Nicole mask creates a lot of unknown variable errors.\par
-- Executions restore Nicole's throwing knives.\par
-- Thugs can be killed with Nicoles knife.\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
--Getting killed by a dog while performing a wall execution will seemingly spawn many fire axes and dogs and player corpses while creating a bright white light, lagging the game heavily \par
-\par
--Charlie's cleaver when thrown turns into a pair of scissors, then turns into a silenced pistol\par
-\par
--The military playstyle characters can pick up weapons, and when they do they can no longer throw weapons or switch, although they can pick up new weapons, making the precious disappear\par
-\par
--Rami's flaregun when emptied and thrown becomes a flamethrower, which when picked up is empty.\par
-\par
--With Jones if you throw the chainsaw, knock somebody down, pick the chainsaw back up again and attack, you start teleporting/flying through the map\par
-\par
--Fat enemies can be "killed" by any melee attack. They disappear.\par
-\par
--Tony can't execute at all, when any attempt to is made, he simply disappears \par
-\par
--Tony's roar seems unreliable.\par
-\par
-\par
-___________________________________________________________\par
-17 masker banor\par
+{\rtf1\ansi\ansicpg1252\deff0\deflang1053{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Arial;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\fs24 17 masker banor\par
 1 mask alla vapen Squid\par
 1 mask f\'f6rsta slutet Kameleont\tab x\par
 1 mask andra slutet Bat\tab\tab x\par
@@ -330,35 +121,35 @@ xx\tab Fel efter deadline\par
 \par
 \par
 \b Bonus List\b0\par
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-200\li200 Pressure Pickup\par
-{\pntext\f1\'B7\tab}Exposure\par
-{\pntext\f1\'B7\tab}Double Exposure\par
-{\pntext\f1\'B7\tab}Tripple Exposure\par
-{\pntext\f1\'B7\tab}Severe Exposure\par
-{\pntext\f1\'B7\tab}Door Slam\par
-{\pntext\f1\'B7\tab}Execution\par
-{\pntext\f1\'B7\tab}Mercy Kill\par
-{\pntext\f1\'B7\tab}Sharp Shooter\par
-{\pntext\f1\'B7\tab}Wall Penetration\par
-{\pntext\f1\'B7\tab}2x Combo\par
-{\pntext\f1\'B7\tab}3x Combo\par
-{\pntext\f1\'B7\tab}4x Combo\par
-{\pntext\f1\'B7\tab}5x Combo\par
-{\pntext\f1\'B7\tab}6x Combo\par
-{\pntext\f1\'B7\tab}7x Combo\par
-{\pntext\f1\'B7\tab}8x Combo\par
-{\pntext\f1\'B7\tab}9x Combo\par
-{\pntext\f1\'B7\tab}10x Combo\par
-{\pntext\f1\'B7\tab}11x Combo\par
-{\pntext\f1\'B7\tab}12x Combo\par
-{\pntext\f1\'B7\tab}13x Combo\par
-{\pntext\f1\'B7\tab}Melee Only\par
-{\pntext\f1\'B7\tab}Time Bonus\par
-{\pntext\f1\'B7\tab}Double Kill\par
-{\pntext\f1\'B7\tab}Tripple Kill\par
-{\pntext\f1\'B7\tab}Multi Kill\par
-{\pntext\f1\'B7\tab}Guns Only\par
-{\pntext\f1\'B7\tab}Projectile Kill\par
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-200\li200 Pressure Pickup\par
+{\pntext\f2\'B7\tab}Exposure\par
+{\pntext\f2\'B7\tab}Double Exposure\par
+{\pntext\f2\'B7\tab}Tripple Exposure\par
+{\pntext\f2\'B7\tab}Severe Exposure\par
+{\pntext\f2\'B7\tab}Door Slam\par
+{\pntext\f2\'B7\tab}Execution\par
+{\pntext\f2\'B7\tab}Mercy Kill\par
+{\pntext\f2\'B7\tab}Sharp Shooter\par
+{\pntext\f2\'B7\tab}Wall Penetration\par
+{\pntext\f2\'B7\tab}2x Combo\par
+{\pntext\f2\'B7\tab}3x Combo\par
+{\pntext\f2\'B7\tab}4x Combo\par
+{\pntext\f2\'B7\tab}5x Combo\par
+{\pntext\f2\'B7\tab}6x Combo\par
+{\pntext\f2\'B7\tab}7x Combo\par
+{\pntext\f2\'B7\tab}8x Combo\par
+{\pntext\f2\'B7\tab}9x Combo\par
+{\pntext\f2\'B7\tab}10x Combo\par
+{\pntext\f2\'B7\tab}11x Combo\par
+{\pntext\f2\'B7\tab}12x Combo\par
+{\pntext\f2\'B7\tab}13x Combo\par
+{\pntext\f2\'B7\tab}Melee Only\par
+{\pntext\f2\'B7\tab}Time Bonus\par
+{\pntext\f2\'B7\tab}Double Kill\par
+{\pntext\f2\'B7\tab}Tripple Kill\par
+{\pntext\f2\'B7\tab}Multi Kill\par
+{\pntext\f2\'B7\tab}Guns Only\par
+{\pntext\f2\'B7\tab}Projectile Kill\par
 \pard\par
 Polishuset\par
 \par
@@ -387,8 +178,8 @@ Part 3: Visitations\par
 \par
 Dr\'f6msekvens 4 \par
 Part 4: Resolutions\par
-\par
-Part 5: Revelations\par
+\f1\par
+\f0 Part 5: Revelations\f1\par
 \par
 Part 1\par
 \par
@@ -416,7 +207,7 @@ Police House\par
 Boss HQ\par
 Boss Mansion\par
 \par
-Part 5\par
+\f0 Part 5\par
 Apartment\par
 Arcade\par
 Phone Hom\par
@@ -437,7 +228,7 @@ Ha en specifik po\'e4ng\par
 \par
 -Fladdermus Reversed controls\par
 \par
-   -Kaninen en halv pixel snabbar\par
+-Kaninen en halv pixel snabbar\par
 \par
 -Panter en pixel snabbare\par
 \par
@@ -478,7 +269,7 @@ BBS:\par
 \par
 This is communist persecution!\par
 \par
-            I think it's reasonable to assume that these killings are part of a secret anti-communist organization working to rid our nation of left wing politics and supporters. If you look at the names and occupation of all the victims they have either been Russian or politically active pro coalitionists. The war clearly isn't over, anyone who hasn't been brain washed by the right wing protesters can easily make the connection here; it's fairly obvious!\par
+I think it's reasonable to assume that these killings are part of a secret anti-communist organization working to rid our nation of left wing politics and supporters. If you look at the names and occupation of all the victims they have either been Russian or politically active pro coalitionists. The war clearly isn't over, anyone who hasn't been brain washed by the right wing protesters can easily make the connection here; it's fairly obvious!\par
 \par
 \par
 Re: This is communist persecution!\par

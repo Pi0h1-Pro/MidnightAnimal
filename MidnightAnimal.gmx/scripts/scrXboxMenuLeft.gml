@@ -3,5 +3,5 @@ wait=2
 repeats=0
 
 if level=2 {
-if select=0 {if global.mvol>0 global.mvol-=0.01 scrSongVolume(1)}
+if select=0 {if global.mvol>0 global.mvol-=0.01 sxeasy_setVolume(1)}
 }

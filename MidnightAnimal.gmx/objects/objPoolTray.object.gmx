@@ -3,7 +3,7 @@
   <spriteName>sprPoolTray</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-3</depth>
+  <depth>3</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -47,10 +47,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle-=abs(hspeed)
-if !place_free(x+hspeed*20,y) hspeed=-hspeed
-if !place_free(x,y+vspeed*20) vspeed=-vspeed
-</string>
+            <string>addToSurface(global.surf3,0)</string>
           </argument>
         </arguments>
       </action>

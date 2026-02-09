@@ -3,9 +3,9 @@
   <spriteName>sprPAttackSnap</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
-  <parentName>objPlayer</parentName>
+  <parentName>objPlayerKill</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -56,8 +56,8 @@ bag=0</string>
             <string>if image_index&lt;12 image_index+=0.25 else {
 myx=x+lengthdir_x(5,image_angle)
 myy=y+lengthdir_y(5,image_angle)
-//my_id=instance_create(x,y-12,objScore)
-//my_id.text="+"+string((800)+400*(global.factor))+"pts"
+my_id=instance_create(x,y-12,objScore)
+my_id.text="+"+string((800)+400*(global.factor))+"pts"
 global.myscore+=(800)+400*(global.factor)
 global.killscore+=800
 global.boldscore+=400*global.factor
@@ -82,15 +82,7 @@ instance_destroy()
 
 if bled=0 and image_index&gt;=6 {
 bled=1
-sound_play(choose(sndCut1,sndCut2))
-if instance_exists(objLSD) sound_play(sndLSDSplat) else sound_play(choose(sndHit, sndHit2, sndHit3, sndHit1))
-sound_play(sndPunch)
-global.shake=18
-repeat (4+random(6)) {
-my_id=instance_create(x+lengthdir_x(17,image_angle)-1+random(2),y+lengthdir_y(17,image_angle)-1+random(2),objBloodSquirt)
-my_id.image_angle=image_angle-120+random(240)
-}
-repeat (3) instance_create(x+lengthdir_x(17,image_angle),y+lengthdir_y(17,image_angle),objBigBlood)
+audio_play_sound(sndBonesBreak,0,false)
 }
 vdist=point_distance(x,y,room_width/2,room_height/2)
 vdir=point_direction(room_width/2,room_height/2,x,y)

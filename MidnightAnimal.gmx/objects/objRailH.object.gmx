@@ -3,9 +3,9 @@
   <spriteName>sprRailH</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-24</depth>
   <persistent>0</persistent>
-  <parentName>objFurniture</parentName>
+  <parentName>objRailV</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
