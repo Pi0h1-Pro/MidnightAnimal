@@ -1,0 +1,39 @@
+if argument0=sprEWalkClub or sprite_index=sprEWalkClub return sprEAttackClub
+if argument0=sprEWalkPipe or sprite_index=sprEWalkPipe return sprEAttackPipe
+if argument0=sprEWalkBat or sprite_index=sprEWalkBat return sprEAttackBat
+if argument0=sprEWalkKnife or sprite_index=sprEWalkKnife return sprEAttackKnife
+if argument0=sprEGangWalkKnife return sprEGangAttackKnife
+if argument0=sprEGangWalkPipe return sprEGangAttackPipe
+if argument0=sprEGangWalkChain return sprEGangAttackChain
+if argument0=sprEGangWalkBat return sprEGangAttackBat
+
+if argument0=sprPoliceWalkNightStick return sprPoliceAttackNightStick
+if argument0=sprEWalkMachete or sprite_index=sprEWalkMachete return sprEAttackMachete
+if argument0=sprHoboWalkBat return sprHoboAttack
+
+if argument0=sprEGangWalk9mm return sprEGangAttack9mm
+if argument0=sprEGangWalkUzi return sprEGangAttackUzi
+if argument0=sprEGangWalkShotgun return sprEGangAttackShotgun
+if argument0=sprEGangIdlePipe return sprEGangAttackPipe
+if argument0=sprEGangIdleKnife return sprEGangAttackKnife
+if argument0=sprEGangIdleBat return sprEGangAttackBat
+
+if argument0=sprEWalkShotgun return sprEAttackShotgun
+if argument0=sprEWalkM16 return sprEAttackM16
+if argument0=sprEWalkAK return sprEAttackAK
+if argument0=sprEWalkThompson return sprEAttackThompson
+if argument0=sprEWalkAutomaticShotgun return sprEAttackAutomaticShotgun
+if argument0=sprEWalkSilencer return sprEAttackSilencer
+if argument0=sprEWalkUzi return sprEAttackUzi
+if argument0=sprEWalkDoubleBarrel {if ammo=2 return sprEAttackDoubleBarrel1 else return sprEAttackDoubleBarrel2}
+
+if argument0=sprEGangWalkShotgun return sprEGangAttackShotgun
+if argument0=sprEGangWalkUzi return sprEGangAttackUzi
+if argument0=sprEGangWalk9mm return sprEGangAttack9mm
+
+if argument0=sprCommandoWalk return sprCommandoAttack
+if argument0=sprEFatWalk return sprEFatAttack
+if argument0=sprEFatWalkLSD return sprEFatAttackLSD
+if argument0=sprEDodgerWalk return sprEDodgerAttack
+if argument0=sprEChainsawWalk return sprEChainsawAttack
+return argument0

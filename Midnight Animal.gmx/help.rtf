@@ -1,0 +1,662 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1053{\fonttbl{\f0\fnil\fcharset0 Nirmala UI Semilight;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red128\green128\blue128;}
+\viewkind4\uc1\pard\cf1\f0\fs24\par
+___________________________________________\par
+ERROR in\par
+action number 1\par
+of End Step Event\par
+for object obj_L3S_system:\par
+\par
+In script L3S_system_update:\par
+In script L3S_shadow_update:\par
+Error in code at line 8:\par
+           \{ds_priority_add(global.LS_ds,self.id,self.LS_z)\}\par
+                                                      ^\par
+at position 53: Unknown variable LS_z\par
+\par
+https://imgur.com/a/FoJ7X\par
+\par
+my_id.caliber = 1\par
+makes bullet pass through multiple enemies\par
+\par
+"If the day should ever come when we must go, if some day we compelled to leave the scene of history, we will slam the door so hard that the universe will shake and mankind will stand back in stupefaction.." -Joseph Goebbels\par
+http://imgur.com/a/aXR8k#0\par
+\par
+John - Zebra\par
+\par
+if argument0=0 return "John" - Every bullet eases the pain\par
+if argument0=1 return "Rasmus" - \par
+if argument0=2 return "Tony" - Killing punches, no weapons / roar\par
+if argument0=3 return "Aubrey" - \par
+if argument0=4 return "Don Juan" - lethal doors\par
+if argument0=5 return "Graham"\par
+if argument0=6 return "Nicole" - start with knife, throwing knives - move faster\par
+if argument0=7 return "George" - start with sniper rifle, increased view distance\par
+if argument0=8 return "Parker" - Blood in your eyes\par
+if argument0=9 return "Alexandra" - nonlethal: cannot pick up weapons, disarms all guns, fast executions\par
+if argument0=10 return "Rami" - start with flare gun\par
+if argument0=11 return "Willem"\par
+if argument0=12 return "Peter" - start with suppressed shotgun; all gunshots muffled\par
+if argument0=13 return "Zack"\par
+if argument0=14 return "Oscar"\par
+if argument0=15 return "Rick" - start with flamethrower/knife (switch); can't pick up weapons \par
+if argument0=16 return "Brandon" - start with katana / roll (press r)\par
+if argument0=17 return "Charlie" - start with cleaver, throwing knives?\par
+if argument0=18 return "Louie" - start with suppressed assault rifle; reduced visibility\par
+if argument0=19 return "Max" - dual wield handguns\par
+if argument0=20 return "Nigel"\par
+if argument0=21 return "Earl" \par
+if argument0=22 return "Jones" - start with chainsaw, more points for executions?/unarmed head tear on fat enemies\par
+if argument0=23 return "Carl" - start with drill\par
+if argument0=24 return "Jake" - Killing throws - attack/movement speed increased?/nailgun\par
+if argument0=25 return "Richter" - Start with suppressed Uzi\par
+\par
+___________________________________________________________\par
+\par
+ ___________________________________________\par
+ERROR in\par
+action number 1\par
+of  Step Event\par
+for object objEnemy:\par
+\par
+In script scrGoGetWeapon:\par
+Error in code at line 90:\par
+   if instance_exists(target) my_id.ammo=target.ammo\par
+                              ^\par
+at position 29: Cannot assign to the variable\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+ ERROR in\par
+action number 2\par
+of Mouse Event for Glob Left Button\par
+for object objPlayerMouse:\par
+\par
+In script scrPlayerShoot:\par
+In script scrHearPlayer:\par
+Error in code at line 27:\par
+   if path_exists(path) and valid=1 \{\par
+                  ^\par
+at position 17: Unknown variable path\par
+\par
+\par
+\par
+\par
+\par
+\par
+ERROR in\par
+action number 1\par
+of Collision Event with object objThrowingKnife\par
+for object objEnemyFat:\par
+\par
+Error in code at line 9:\par
+   chasex=global.my_x\par
+                 ^\par
+at position 16: Unknown variable my_x\par
+\par
+\par
+\par
+\par
+\par
+ERROR in\par
+action number 1\par
+of  Step Event\par
+for object objDogPatrol:\par
+\par
+In script scrPlayerDieDogBite:\par
+Error in code at line 25:\par
+   my_id.ammo=ammo\par
+              ^\par
+at position 13: Unknown variable ammo\par
+\par
+Happens during a wall execution and being attacked by a dog at the same time\par
+\par
+\par
+\par
+\par
+ ___________________________________________\par
+ERROR in\par
+action number 1\par
+of  Step Event\par
+for object objEnemy:\par
+\par
+In script scrGoGetWeapon:\par
+Error in code at line 90:\par
+   if instance_exists(target) my_id.ammo=target.ammo\par
+                              ^\par
+at position 29: Cannot assign to the variable\par
+\par
+\par
+\par
+\par
+\par
+- Idle enemies don't change to the walking animation when they hear you.\par
+- Swinging or shooting over a downed enemy will kill it.\par
+- Hitting an enemy that is leaning against a wall will spawn two corpses.\par
+- Shooting a gang member leaning against a wall gives him a dead mobster sprite.\par
+- Masks aren't positioned over the players head properly.\par
+- Masks dissapear during some executions.\par
+- Elevator in the second floor of Showdown is missing the floorindex value\par
+- Gang members with pipes will drop an axe\par
+- Sometimes axes dissapear on pickup.\par
+- Enemies randomly flash different colours\par
+- Idle gang members that are spinning a butterfly knife will turn into a knife wielding mobster when he sees the player. (Probably just changing to the wrong sprite_index)\par
+- Combo time is absurdly short\par
+- The subway briefcase guy is hard to hit\par
+- In some specific occasions, the player will fly at the cursor when swinging his weapon. (Nicole will fly at the crosshair when swinging after changing weapons from the starting knife)\par
+- Killing a thug with a throwing knife will bring up an unknown variable error and turn the thug into a dead mobster.\par
+- Fat guys spawn absurd amounts of blood while bleeding, and lag the game.\par
+- Katana mobsters drop an axe.\par
+- Wall debris keeps spinning after stopping\par
+- The breakable walls debris doesn't fly, instead spawns stationary in a line\par
+- Game doesn't place a checkpoint after picking a mask.\par
+- objEnemy is missing the variable shake in Clean Hit\par
+- Mobsters bodies won't move after getting shot with a shotgun and playing the flying death animation.\par
+- Ramis ability isn't properly labeled.\par
+- Killing mobsters with a nightstick plays no sounds\par
+- The game creates checkpoints at seemingly random moments\par
+- Black uniform guards legs arent properly aligned with their bodies\par
+- Killing guards with guns spawns absurd lag inducing amounts of blood\par
+- The animation of a guard getting his head stomped is bugged.\par
+- The left side stairs in Overdose will teleport you inside of a vending machine.\par
+- Knocked down gang members and guards turn into mobsters after standing up\par
+- Executing a gang member with a drill turns him into a mobster.\par
+- Melee enemies sometimes don't play their attack animations properly.\par
+- Pipe executions sprites haven't been changed.\par
+- A lot of the doors in the first floor of Hot and Heavy aren't properly aligned with the doorway.\par
+- Mobster using the vending machine next to the entrance of Full House is facing the wrong way.\par
+- Player stomping mobsters head animation isn't in sync with the animation of the mobsters head being crushed.\par
+- A mobsters headstomp execution plays a cutting sound effect.\par
+- Thugs will sometimes slide feet first towards the player when dying.\par
+- The player and enemy bullets will go into slow motion after executing an enemy with Maxs pistols.\par
+- Shift + right mouse with Max creates two bodies of the player next to the player\par
+- If you drink the coffee in Metro after picking up the briefcase, the briefcase dissapears.\par
+- The player walking wielding a chain animation doesn't play.\par
+- The player doesn't have a zebra mask on his head when entering the alley in Metro, but it magically appears on his head after putting the briefcase in the dumpster.\par
+- Katana mobsters can be knocked down with punches and by throwing your weapon\par
+- Executing while wearing the Nicole mask creates a lot of unknown variable errors.\par
+- Executions restore Nicole's throwing knives.\par
+- Thugs can be killed with Nicoles knife.\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+-Getting killed by a dog while performing a wall execution will seemingly spawn many fire axes and dogs and player corpses while creating a bright white light, lagging the game heavily \par
+\par
+-Charlie's cleaver when thrown turns into a pair of scissors, then turns into a silenced pistol\par
+\par
+-The military playstyle characters can pick up weapons, and when they do they can no longer throw weapons or switch, although they can pick up new weapons, making the precious disappear\par
+\par
+-Rami's flaregun when emptied and thrown becomes a flamethrower, which when picked up is empty.\par
+\par
+-With Jones if you throw the chainsaw, knock somebody down, pick the chainsaw back up again and attack, you start teleporting/flying through the map\par
+\par
+-Fat enemies can be "killed" by any melee attack. They disappear.\par
+\par
+-Tony can't execute at all, when any attempt to is made, he simply disappears \par
+\par
+-Tony's roar seems unreliable.\par
+\par
+\par
+___________________________________________________________\par
+17 masker banor\par
+1 mask alla vapen Squid\par
+1 mask f\'f6rsta slutet Kameleont\tab x\par
+1 mask andra slutet Bat\tab\tab x\par
+1 mask ladorna kloaken Fish\tab x\par
+3 masker p\'e5 lik \tab\tab\tab x\par
+1 i kloaken Crocodile\tab\tab x\par
+1 p\'e5 polisstationen Rat\tab\tab x\par
+\par
+sunset born hawaii\par
+\par
+THROWING WEAPONS (8)\par
+0=27\tab scissors\par
+1=28\tab bottle\par
+2=29\tab can\par
+3=30\tab brick\par
+4=31\tab ninja star\par
+5=32\tab hammer\par
+6=33\tab dart\par
+7=34\tab throwing knife\par
+\par
+\par
+MELEE (17)\par
+\par
+0=2\tab club\par
+1=3\tab pipe\par
+2=4\tab bat\par
+3=5\tab knife\par
+4=8\tab sword\par
+5=13\tab pool stick\par
+6=14\tab broken pool\par
+7=15\tab axe\par
+8=16\tab nightstick\par
+9=17\tab crowbar\par
+10=18\tab machete\par
+11=19\tab sledgehammer\par
+12=20\tab trophy\par
+13=21\tab drill\par
+14=22\tab frying pan\par
+15=23\tab boiling pot\par
+16=24\tab pot\par
+\par
+GUNS (8)\par
+0=0 \tab m16\par
+1=1\tab shotgun\par
+2=6\tab doublebarrel\par
+3=7\tab silenced pistol\par
+4=9\tab uzi\par
+5=10\tab magnum\par
+6=11\tab scorpion\par
+7=12\tab mp5\par
+\par
+\par
+GROUND KILLS (26)\par
+0=2\tab club\par
+1=3\tab pipe\par
+2=4\tab bat\par
+3=5\tab knife\par
+4=8\tab sword\par
+5=13\tab pool stick\par
+6=14\tab pool stick broke\par
+7=15\tab fire axe\par
+8=16\tab nightstick\par
+9=18\tab machete\par
+10=19\tab sledge hammer\par
+11=20\tab trophy\par
+12=21\tab drill\par
+13=22\tab frying pan\par
+14=23\tab boiling water\par
+15=24\tab pot\par
+16=27\tab scissors\par
+17=28\tab bottle\par
+18=30\tab brick\par
+19=33\tab dart\par
+20=\tab bag\par
+21=\tab head bash\par
+22=\tab head kick\par
+23=\tab mc blunt\par
+24=\tab mc slit\par
+25=\tab mc stomp\par
+\par
+\par
+xKolla om spelaren kolliderar med v\'e4gg n\'e4r han reser sig och i s\'e5 fall flytta till f\'f6reg\'e5ende position (innan han satte sig)\par
+Tappa vapen n\'e4r man sparkar?\par
+\par
+\par
+xx\tab f\'f6rsta bokstaven i andra delen av PART\par
+xx\tab centrerad text p\'e5 tips\par
+xx\tab vald mask ska hamna \'f6verst\par
+x\tab inte kunna dra p\'e5 sig mask flera g\'e5nger\par
+x\tab ta v\'e4skan innan fienderna \'e4r slut p\'e5 trainstation\par
+xx\tab luffaren ska f\'f6lja efter dig\par
+score system som l\'e5ser upp saker vettigt!\par
+nya levelsprites till level select\par
+xx\tab flytta ner \'f6vre undre sk\'e5pen p\'e5 underv\'e5ningen p\'e5 trainstation\par
+xx\tab r\'e4tt l\'e5t p\'e5 f\'f6rsta nicke (efter att ha l\'e5st upp mask!)s\par
+flexibility special\par
+stoppa in saker att plocka upp hos nicke\par
+fixa saker att l\'e4sa i l\'e4genheten\par
+lista \'f6ver bonus-po\'e4ngsgrejer (details)\par
+xx\tab r\'e4tt avst\'e5nd p\'e5 att sl\'e5 glas\par
+x\tab inte kasta genom v\'e4ggar\par
+fiender som kissar m\'e5ste m\'e4rka en\par
+fiender f\'e5r inte kissa p\'e5 locken\par
+sluta kissa\par
+fixa minnet s\'e5 att sparfilerna blir mindre\par
+xx\tab fixa s\'e5 att spelet sparas innan man v\'e4ljer mask\par
+x\tab saknad dialog p\'e5 telefon sequence 4\par
+xx\tab plocka upp tjejen med b\'e5da knappar\par
+toastolar p\'e5 baren\par
+xx\tab fixa dialogen p\'e5 tension (telefon)\par
+st\'e4daren kanske ska titta mot spelaren?\par
+??\tab hundar springer genom v\'e4ggar?\par
+telefon sprite med mask\par
+xx\tab BOMBD\'d6RRENN!!!!s\par
+xx\tab Fel efter deadline\par
+\par
+\par
+\par
+\par
+\b Bonus List\b0\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-200\li200 Pressure Pickup\par
+{\pntext\f1\'B7\tab}Exposure\par
+{\pntext\f1\'B7\tab}Double Exposure\par
+{\pntext\f1\'B7\tab}Tripple Exposure\par
+{\pntext\f1\'B7\tab}Severe Exposure\par
+{\pntext\f1\'B7\tab}Door Slam\par
+{\pntext\f1\'B7\tab}Execution\par
+{\pntext\f1\'B7\tab}Mercy Kill\par
+{\pntext\f1\'B7\tab}Sharp Shooter\par
+{\pntext\f1\'B7\tab}Wall Penetration\par
+{\pntext\f1\'B7\tab}2x Combo\par
+{\pntext\f1\'B7\tab}3x Combo\par
+{\pntext\f1\'B7\tab}4x Combo\par
+{\pntext\f1\'B7\tab}5x Combo\par
+{\pntext\f1\'B7\tab}6x Combo\par
+{\pntext\f1\'B7\tab}7x Combo\par
+{\pntext\f1\'B7\tab}8x Combo\par
+{\pntext\f1\'B7\tab}9x Combo\par
+{\pntext\f1\'B7\tab}10x Combo\par
+{\pntext\f1\'B7\tab}11x Combo\par
+{\pntext\f1\'B7\tab}12x Combo\par
+{\pntext\f1\'B7\tab}13x Combo\par
+{\pntext\f1\'B7\tab}Melee Only\par
+{\pntext\f1\'B7\tab}Time Bonus\par
+{\pntext\f1\'B7\tab}Double Kill\par
+{\pntext\f1\'B7\tab}Tripple Kill\par
+{\pntext\f1\'B7\tab}Multi Kill\par
+{\pntext\f1\'B7\tab}Guns Only\par
+{\pntext\f1\'B7\tab}Projectile Kill\par
+\pard\par
+Polishuset\par
+\par
+xTjockispolis\par
+xPolishatt\par
+xBarrikadm\'f6bler\par
+xFilkabinetter\par
+xChefen pratar\par
+xTar fram vapen\par
+xTelefoner\par
+xMetaldetektorer -ljud\par
+xPolisdatorer\par
+\par
+Sjukhus-start (st\'e5 vid s\'e4ngen) + datum\par
+\par
+xNickebitar\par
+\par
+xCutscene\par
+xTjejen d\'f6d\par
+xDialog\par
+xM\'f6rdare soffan\par
+xM\'f6rdare skjuter spelaren\par
+\par
+xDr\'f6msekvens 3 \par
+Part 3: Visitations\par
+\par
+Dr\'f6msekvens 4 \par
+Part 4: Resolutions\par
+\par
+Part 5: Revelations\par
+\par
+Part 1\par
+\par
+The Metro\par
+No Talk\par
+Overdose\par
+Decadence\par
+\par
+Part 2\par
+Tension\par
+Full House \par
+Hotel\par
+Neighbours\par
+\par
+Part 3\par
+Hot and Heavy\par
+The Club\par
+- - - (Swat team)\par
+Deadline\par
+\par
+\par
+Part 4\par
+Hospital\par
+Police House\par
+Boss HQ\par
+Boss Mansion\par
+\par
+Part 5\par
+Apartment\par
+Arcade\par
+Phone Hom\par
+Janitors hideout\par
+\par
+\par
+Fast po\'e4ng vart 50,000\par
+\par
+\'d6kande gr\'e4ns 50+5,000\par
+\par
+Ha en specifik po\'e4ng\par
+\par
+\par
+\par
+-Valrossen alltid ha kunna bli tr\'e4ffad av ett skott  \par
+\par
+-Elefanten + tv\'e5 skott\par
+\par
+-Fladdermus Reversed controls\par
+\par
+   -Kaninen en halv pixel snabbar\par
+\par
+-Panter en pixel snabbare\par
+\par
+-Vargen b\'f6rjar med kniv\par
+\par
+-Kobran D\'f6da fiender genom att kasta vapen\par
+\par
+-Kamelen +5 ammo\par
+\par
+-Enh\'f6rningen tyst n\'e4r man skjuter\par
+\par
+-Mullvaden, svart runt ser inget\par
+\par
+-R\'e4ven ser hints under banorna\par
+\par
+-H\'e4st f\'e5r extra po\'e4ng f\'f6r spark\par
+\par
+-Krokodilen f\'e5r extra mycket blod\par
+\par
+-Locust startar med borrmaskin\par
+\par
+-Kameleonten fiender ser en inte f\'f6rr\'e4n man \'e4r n\'e4ra\par
+\par
+-Bat Reversed controls\par
+\par
+-Apan snor vapen n\'e4r man sliter ut struphuvudet\par
+\par
+-Tiger Bash och blunt kills d\'f6r p\'e5 f\'f6rsta\par
+\par
+-Grisen startar med b\'f6ssa\par
+\par
+-Grodan har l\'e4ngre combo tid\par
+\par
+-Giraffen aimar l\'e4ngre\par
+\par
+BBS:\par
+-------\par
+\par
+This is communist persecution!\par
+\par
+            I think it's reasonable to assume that these killings are part of a secret anti-communist organization working to rid our nation of left wing politics and supporters. If you look at the names and occupation of all the victims they have either been Russian or politically active pro coalitionists. The war clearly isn't over, anyone who hasn't been brain washed by the right wing protesters can easily make the connection here; it's fairly obvious!\par
+\par
+\par
+Re: This is communist persecution!\par
+\par
+You somehow fail to mention that all the victims have been associated to organized crime, and that any politicians caught up in this mess may very well be collateral damage. I think you're trying to hard to force your own political agenda into your deduction. This place is not the place to be discussing politics, there's way better places for you if that's what you're after!\par
+\par
+\par
+Re:Re: This is communist persecution!\par
+\par
+Hey now, let's not completely rule out his theory. Failing to explain certain aspects of these cases doesn't automatically disprove anything!\par
+\par
+\par
+Re:Re:Re: This is communist persecution!\par
+\par
+"His" theory? Did you completely rule out that I could be a woman? Women are just as capable of using modern technology as men, I'll have you know. \par
+\par
+Furthermore I have heard from sources that wish to remain anonymous that at least two of the five dead dead suspects were known members of an underground anti-coalition organization tightly linked to the KUA. But go ahead, stick your head in the sand if you want!\par
+\par
+\par
+Re:Re:Re:Re: This is communist persecution!\par
+\par
+And we're supposed to trust your "anonymous sources"? Why has none of the news outlets mentioned a word about this, then? The gosh darn Russians practically own them all by now. You'd think something like that might be of interest to them, no?\par
+\par
+\par
+Re:Re:Re:Re:Re: This is communist persecution!\par
+\par
+It's quite possible they don't want to have people associate organized crime with communism, isn't it? Not that anyone could possibly have failed to notice what influence the Russian culture has had on our society anyways.\par
+\par
+Can't say I'm buying the persecution angle though... Seems a bit far fetched if you ask me.\par
+\par
+\par
+\par
+\b What are you doing here? // Who are you people?\b0\par
+\par
+-Think of it as a game...\par
+\par
+-You're one of our pawns aren't you?\par
+\par
+-I guess this means game over\par
+\par
+\b Who are you people?\b0\par
+\par
+-You don't know? Haha, that's pathetic!\par
+\par
+-I thought you had us figured out by now\par
+\par
+-Make a guess, asshole\par
+\par
+-Not that it makes any difference now, does it?\par
+\par
+\b Who are you working for? // You're the voices on the phone?\b0\par
+\par
+-No one, haha\par
+\par
+-We're independent, we did it all ourselves\par
+\par
+-Hard to believe isn't it?\par
+\par
+\b You're the voices on the phone?\b0\par
+\par
+-What a stupid question! You really need to ask?\par
+\par
+-What does it look like to you, asshole?\par
+\par
+-You don't know anything do you?\par
+\par
+\b You think this is a game? // Why are you doing this?\b0\par
+\par
+-Don't you?\par
+\par
+-You mean you haven't enjoyed it?\par
+\par
+-That's a shame, haha\par
+\par
+\b Why are you doing this?\b0\par
+\par
+-We were bored, that's why\par
+\par
+-Why would we need to justify our actions?\par
+\par
+-You've done far worse things than we have, haven't you?\par
+\par
+-Besides, Do you know how much money we're making?\par
+\par
+\b How do you justify killing people? // You mean this has all been pointless?\b0\par
+\par
+-We haven't killed anyone, you have.\par
+\par
+-They were all scum anyway, weren't they?\par
+\par
+-You think they deserved to live? Do you?\par
+\par
+\b You mean this has all been pointless?\b0\par
+\par
+-If you say so\par
+\par
+-If you don't understand why we're doing this...\par
+\par
+-Then why should we tell you?\par
+\par
+\b That's it? // Any last words?\b0\par
+\par
+-Haha, you seem dissappointed?\par
+\par
+-What were you expecting?\par
+\par
+-I think we're through with your questions\par
+\par
+-Yeah, let's get this over with\par
+\par
+\b Any last words?\b0\par
+\par
+-How about "fuck you"?\par
+\par
+-Yeah, fuck you!\par
+\par
+\par
+Why are you doing this?\par
+--------------------------------\par
+J:You wanna know why?\par
+We're bored, that's why!\par
+\par
+D:No one else seem to be doing\par
+anything interesting in this city.\par
+\par
+J:You mean you haven't enjoyed \par
+doing what we've told you to do?\par
+\par
+\par
+You think it's ok to force random \par
+people to kill strangers?\par
+--------------------------------\par
+J:Why not? It's not like we're\par
+targetting innocent people...\par
+\par
+D:We've practically erradicated\par
+organized crime in Miami.\par
+\par
+J:Yeah, we're not the real villains\par
+here. If anything we're heroes...\par
+\par
+\par
+How did this whole thing start?\par
+-----------------------------------------\par
+J:Have you never let anyone\par
+control your actions before?\par
+\par
+D:Have you never wanted to be\par
+the one controlling others?\par
+\par
+J:It's not as hard as it seems.\par
+All you need is a little pressure!\par
+\par
+D:We weren't really expecting\par
+things to go this far...\par
+\par
+J:It's amazing what a little\par
+intimidation can get people to do.\par
+\par
+\par
+Is that really all there is to it?\par
+--------------------------------------\par
+D:Well, then there's money also.\par
+You can have some if you want...\par
+\par
+J:We've got more money and drugs\par
+than we need by now, really.\par
+\par
+D:Criminals in Miami sure do seem\par
+to pack some serious pocket money.\par
+\par
+\par
+Any last words?\par
+---------------------\par
+J: Well, yeah\par
+...\par
+Fuck you!\par
+\par
+D:Yeah, up yours dude!\par
+}
+ 

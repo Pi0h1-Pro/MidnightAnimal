@@ -1,0 +1,21 @@
+if argument0=0
+or argument0=1 
+or argument0=6 
+or argument0=7
+or argument0=9
+or argument0=10
+or argument0=11
+or argument0=12
+or argument0=25
+or argument0=26 
+or argument0=27
+or argument0=29
+or argument0=30 
+or argument0=32
+or argument0=41
+or argument0=42
+or argument0=45
+or argument0=46
+return true
+
+return false

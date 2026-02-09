@@ -1,0 +1,19 @@
+with objWall solid=1
+with objWindow solid=1
+with objRenovationWallV solid=1
+with objRenovationWallH solid=1
+with objWallSoftH solid=1
+with objWallSoftV solid=1
+with objChainFenceV solid=1
+with objChainFenceH solid=1
+with objWallHeavyV solid=1
+with objWallHeavyH solid=1
+with objChainFenceV solid=1
+with objChainFenceH solid=1
+with objWallHospitalV solid=1
+with objWallHospitalH solid=1
+with objGlassPanelH solid=1
+with objGlassPanelV solid=1
+with objGlassPanelHBroken solid=1
+with objGlassPanelVBroken solid=1
+
