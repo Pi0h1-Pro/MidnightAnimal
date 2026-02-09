@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_shadowsprite_create_from_instance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_shadowsprite_create_from_instance",
+  "parent":{
+    "name":"ShadowSprite",
+    "path":"folders/Scripts/Document/Effects/Glare/ShadowSprite.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,16 @@
+sound_play(sndNav);
+
+if (on == 0)
+	exit;
+current -= 1;
+if (current < 0)
+	current = 25; // masks-.5
+exit;
+
+while (global.masks[current] == 0)
+{
+	current -= 1;
+	if (current < 0)
+		current = 25; // masks-.5
+}
+

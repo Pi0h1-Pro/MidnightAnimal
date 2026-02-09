@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"random_song",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"random_song",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Scripts/Document/System/Music.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

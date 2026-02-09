@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"lsys_caster_add_point",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"lsys_caster_add_point",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

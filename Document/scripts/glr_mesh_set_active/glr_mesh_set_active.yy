@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_mesh_set_active",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_mesh_set_active",
+  "parent":{
+    "name":"Set",
+    "path":"folders/Scripts/Document/Effects/Glare/Mesh/Set.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_shadowsprite_set_static",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_shadowsprite_set_static",
+  "parent":{
+    "name":"Set",
+    "path":"folders/Scripts/Document/Effects/Glare/ShadowSprite/Set.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

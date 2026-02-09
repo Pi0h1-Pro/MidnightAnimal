@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_mesh_get_vertex_count",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_mesh_get_vertex_count",
+  "parent":{
+    "name":"Get",
+    "path":"folders/Scripts/Document/Effects/Glare/Mesh/Get.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrDrawSun",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDrawSun",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Document/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrGetCursor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrGetCursor",
+  "parent":{
+    "name":"Interface",
+    "path":"folders/Scripts/Document/Interface.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

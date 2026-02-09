@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxPlayerHospitalMouse",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxPlayerHospitalMouse",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

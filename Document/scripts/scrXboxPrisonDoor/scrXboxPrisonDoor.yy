@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxPrisonDoor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxPrisonDoor",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

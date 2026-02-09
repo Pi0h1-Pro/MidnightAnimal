@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrThreatNeutralised",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrThreatNeutralised",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Document/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

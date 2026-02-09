@@ -1,0 +1,6 @@
+image_speed = 0.15;
+alarm[0] = 1 + random(600);
+dir = 0;
+
+// talked=4
+

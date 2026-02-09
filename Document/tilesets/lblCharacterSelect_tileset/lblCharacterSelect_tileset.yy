@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"lblCharacterSelect_tileset",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"lblCharacterSelect_tileset",
+  "out_columns":1,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Decals",
+    "path":"folders/Tile Sets/Document/Decals.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"lblCharacterSelect",
+    "path":"sprites/lblCharacterSelect/lblCharacterSelect.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Icons",
+    "path":"texturegroups/Icons",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":34,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":649,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":2,
+}

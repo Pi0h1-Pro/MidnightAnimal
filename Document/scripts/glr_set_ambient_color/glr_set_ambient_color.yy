@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_set_ambient_color",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_set_ambient_color",
+  "parent":{
+    "name":"Set",
+    "path":"folders/Scripts/Document/Effects/Glare/Engine/Set.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

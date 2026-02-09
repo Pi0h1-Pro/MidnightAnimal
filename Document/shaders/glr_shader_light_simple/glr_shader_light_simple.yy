@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"glr_shader_light_simple",
+  "name":"glr_shader_light_simple",
+  "parent":{
+    "name":"light",
+    "path":"folders/Shaders/Document/Glare/light.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

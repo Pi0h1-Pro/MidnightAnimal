@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_light_set_static",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_light_set_static",
+  "parent":{
+    "name":"Set",
+    "path":"folders/Scripts/Document/Effects/Glare/Lights/Set.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

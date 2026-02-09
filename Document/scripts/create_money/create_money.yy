@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_money",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_money",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Document/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

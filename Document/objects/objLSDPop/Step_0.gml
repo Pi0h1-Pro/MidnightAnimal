@@ -1,0 +1,33 @@
+if (!instance_exists(objPlayerDead))
+{
+	if (scrMovingPlayerExists())
+		targetamount = 5 + (abs(objPlayer.myxspeed) + abs(objPlayer.myyspeed));
+	else
+		targetamount = 5;
+}
+else
+	targetamount = 5;
+if (amount < targetamount)
+	amount += 0.025;
+else
+	amount = targetamount;
+if (amount > targetamount)
+	amount -= 0.005;
+else
+	amount = targetamount;
+
+if (round(random(100)) == 2)
+	instance_destroy();
+if (life > 0)
+	life -= 1;
+else
+	instance_destroy();
+image_blend = merge_color(merge_color(merge_color(c_red, c_yellow, random(1)), c_black, random(1)), make_color_hsv(h, random(255), 255), amount);
+if (h < 250)
+	h += 5;
+else
+	h = 0;
+image_angle = angle + dir;
+image_xscale += 0.05;
+image_yscale += 0.05;
+

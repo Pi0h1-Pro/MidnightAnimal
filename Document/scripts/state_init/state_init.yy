@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"state_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"state_init",
+  "parent":{
+    "name":"FSM",
+    "path":"folders/Scripts/Document/System/FSM.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

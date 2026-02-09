@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"wsound_add",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wsound_add",
+  "parent":{
+    "name":"WSOUND",
+    "path":"folders/Scripts/Document/WSOUND.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxHoboBlunt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxHoboBlunt",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrDrawNight",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDrawNight",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Document/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

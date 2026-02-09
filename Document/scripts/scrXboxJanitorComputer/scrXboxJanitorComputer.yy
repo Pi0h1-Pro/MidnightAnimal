@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxJanitorComputer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxJanitorComputer",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

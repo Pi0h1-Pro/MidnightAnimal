@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"gaussian_horizontal_shdr",
+  "name":"gaussian_horizontal_shdr",
+  "parent":{
+    "name":"DirtyBloom",
+    "path":"folders/Shaders/Document/DirtyBloom.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

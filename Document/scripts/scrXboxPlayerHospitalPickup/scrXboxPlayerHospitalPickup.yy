@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxPlayerHospitalPickup",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxPlayerHospitalPickup",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

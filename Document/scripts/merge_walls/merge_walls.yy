@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"merge_walls",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"merge_walls",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

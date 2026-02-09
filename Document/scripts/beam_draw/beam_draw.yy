@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"beam_draw",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"beam_draw",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

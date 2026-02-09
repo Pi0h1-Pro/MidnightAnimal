@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxMaskUnlockStart",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxMaskUnlockStart",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+hspeed = -0.25 - random(0.25);
+image_speed = 0;
+scale = 0.75 + random(0.25);
+speed = (scale * scale * scale) * 3;
+index = 0;
+
+// image_blend=c_black
+speed = (scale * scale * scale) * 3;
+if (room == rmHospitalTransition)
+	speed *= 0.2;
+image_xscale = scale;
+y = 80 - scale * 32;
+

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxEffectorHouseStart",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxEffectorHouseStart",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

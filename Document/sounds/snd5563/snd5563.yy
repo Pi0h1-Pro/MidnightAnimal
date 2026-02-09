@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd5563",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"snd5563",
+  "parent":{
+    "name":"5.56mm",
+    "path":"folders/Sounds/Document/Combat/Guns/Shells/5.56mm.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd5563",
+  "volume":0.59,
+}

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndIthaca",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"sndIthaca",
+  "parent":{
+    "name":"Guns",
+    "path":"folders/Sounds/Document/Combat/Guns.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndIthaca",
+  "volume":1.0,
+}

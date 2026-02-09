@@ -1,0 +1,1 @@
+direction = 270//point_direction(x, y, objFancyDesk.x, objFancyDesk.y)

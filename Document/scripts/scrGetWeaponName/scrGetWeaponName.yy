@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrGetWeaponName",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrGetWeaponName",
+  "parent":{
+    "name":"Interface",
+    "path":"folders/Scripts/Document/Interface.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

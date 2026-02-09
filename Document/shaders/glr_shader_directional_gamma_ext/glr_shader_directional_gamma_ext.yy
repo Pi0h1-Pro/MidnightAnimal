@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"glr_shader_directional_gamma_ext",
+  "name":"glr_shader_directional_gamma_ext",
+  "parent":{
+    "name":"directional",
+    "path":"folders/Shaders/Document/Glare/directional.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

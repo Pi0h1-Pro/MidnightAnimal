@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPoliceMeleeInit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPoliceMeleeInit",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

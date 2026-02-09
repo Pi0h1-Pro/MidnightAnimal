@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrEMobileStep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrEMobileStep",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

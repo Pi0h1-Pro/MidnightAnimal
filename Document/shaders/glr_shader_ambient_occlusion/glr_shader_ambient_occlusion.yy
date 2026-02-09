@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"glr_shader_ambient_occlusion",
+  "name":"glr_shader_ambient_occlusion",
+  "parent":{
+    "name":"others",
+    "path":"folders/Shaders/Document/Glare/others.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

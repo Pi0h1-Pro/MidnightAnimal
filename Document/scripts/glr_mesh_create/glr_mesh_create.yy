@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_mesh_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_mesh_create",
+  "parent":{
+    "name":"Mesh",
+    "path":"folders/Scripts/Document/Effects/Glare/Mesh.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

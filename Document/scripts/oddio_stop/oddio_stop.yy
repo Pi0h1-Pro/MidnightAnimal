@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"oddio_stop",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"oddio_stop",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

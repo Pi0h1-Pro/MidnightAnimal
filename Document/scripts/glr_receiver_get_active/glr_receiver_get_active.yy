@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_receiver_get_active",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_receiver_get_active",
+  "parent":{
+    "name":"Get",
+    "path":"folders/Scripts/Document/Effects/Glare/ShadowReceiver/Get.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

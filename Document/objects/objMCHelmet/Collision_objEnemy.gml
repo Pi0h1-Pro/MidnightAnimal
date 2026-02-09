@@ -1,0 +1,7 @@
+if (other.speed > 0 || other.path_index >= 0)
+{
+	direction = point_direction(objEnemy.x, objEnemy.y, x, y);
+	image_angle = direction;
+	speed = 3;
+}
+

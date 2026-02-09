@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_mesh_set_height",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_mesh_set_height",
+  "parent":{
+    "name":"Set",
+    "path":"folders/Scripts/Document/Effects/Glare/Mesh/Set.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMeleeSearch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMeleeSearch",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/Scripts/Document/Enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

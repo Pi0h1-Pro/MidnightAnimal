@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_shadowdepth_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_shadowdepth_create",
+  "parent":{
+    "name":"ShadowDepth",
+    "path":"folders/Scripts/Document/Effects/Glare/ShadowDepth.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

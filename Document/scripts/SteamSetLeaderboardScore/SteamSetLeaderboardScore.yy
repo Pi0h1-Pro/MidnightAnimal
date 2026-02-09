@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SteamSetLeaderboardScore",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SteamSetLeaderboardScore",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

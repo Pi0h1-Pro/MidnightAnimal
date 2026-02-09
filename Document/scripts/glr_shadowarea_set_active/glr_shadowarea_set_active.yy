@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_shadowarea_set_active",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_shadowarea_set_active",
+  "parent":{
+    "name":"ShadowArea",
+    "path":"folders/Scripts/Document/Effects/Glare/ShadowArea.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

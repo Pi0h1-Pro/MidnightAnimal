@@ -1,0 +1,26 @@
+/* if alert=0 image_blend=c_white
+if alert=1 image_blend=c_red
+if alert=2 image_blend=c_aqua
+if alert=3 image_blend=c_green
+if speed>0 or path_speed>0 draw_sprite_ext(sprEGangLegs,image_index,x,y,image_xscale,image_yscale,direction,image_blend,1)
+draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,left,direction,c_black,0.5)
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,left,direction,image_blend,image_alpha)
+draw_path(path,0,0,1 )*/
+
+if (x > __view_get( e__VW.XView, 0 ) - sprite_width - 10 && x < __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ) + sprite_width + 10 && y > __view_get( e__VW.YView, 0 ) - sprite_height - 10 && y < __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ) + sprite_height + 10)
+{
+	if (speed > 0 || path_index >= 0)
+	{
+		if (sprite_index == sprERadioRoll)
+			nothing = 1;
+		else
+			draw_sprite_ext(sprCommandoLegs, image_index * 2, x, y, image_xscale, image_yscale, direction, image_blend, 1);
+	}
+	draw_sprite_ext(sprite_index, image_index, x + 1, y + 1, image_xscale, left, direction, c_black, 0.5);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, left, direction, image_blend, image_alpha);
+	
+	// if path_index>=0 draw_path(path,0,0,1)
+}
+
+/* */
+/*  */

@@ -1,0 +1,1 @@
+direction=point_direction(x,y,objMCDate.x,objMCDate.y)

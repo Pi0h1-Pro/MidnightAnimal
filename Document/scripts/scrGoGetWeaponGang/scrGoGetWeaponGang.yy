@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrGoGetWeaponGang",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrGoGetWeaponGang",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

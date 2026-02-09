@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fd_rectangle_get_pressure_width",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fd_rectangle_get_pressure_width",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Document/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

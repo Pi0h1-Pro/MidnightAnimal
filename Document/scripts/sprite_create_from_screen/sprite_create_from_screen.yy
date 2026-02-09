@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sprite_create_from_screen",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sprite_create_from_screen",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

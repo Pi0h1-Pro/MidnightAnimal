@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"oddio_loadbin",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"oddio_loadbin",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

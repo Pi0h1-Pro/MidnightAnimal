@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_shadowdepth_get_depth",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_shadowdepth_get_depth",
+  "parent":{
+    "name":"Get",
+    "path":"folders/Scripts/Document/Effects/Glare/ShadowDepth/Get.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

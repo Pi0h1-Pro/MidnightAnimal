@@ -1,0 +1,2 @@
+global.paused = 0;
+

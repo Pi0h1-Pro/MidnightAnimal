@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_lens_flare",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_lens_flare",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Document/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

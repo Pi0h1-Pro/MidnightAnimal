@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"glr_shader_gamma_blur",
+  "name":"glr_shader_gamma_blur",
+  "parent":{
+    "name":"post",
+    "path":"folders/Shaders/Document/Glare/post.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

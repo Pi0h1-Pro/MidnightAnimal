@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_lightsimple_set_color",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_lightsimple_set_color",
+  "parent":{
+    "name":"Set",
+    "path":"folders/Scripts/Document/Effects/Glare/Lights/Simple/Set.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

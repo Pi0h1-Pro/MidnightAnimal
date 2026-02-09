@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"tile_set_position",
+  "isCompatibility":true,
+  "isDnD":false,
+  "name":"tile_set_position",
+  "parent":{
+    "name":"tile",
+    "path":"folders/Scripts/compatibility/tile.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

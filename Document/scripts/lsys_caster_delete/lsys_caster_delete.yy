@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"lsys_caster_delete",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"lsys_caster_delete",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_Documentation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_Documentation",
+  "parent":{
+    "name":"Glare",
+    "path":"folders/Scripts/Document/Effects/Glare.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

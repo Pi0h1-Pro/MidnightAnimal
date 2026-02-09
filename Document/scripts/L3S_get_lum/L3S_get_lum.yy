@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"L3S_get_lum",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"L3S_get_lum",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

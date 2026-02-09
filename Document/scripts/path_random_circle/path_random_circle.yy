@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"path_random_circle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"path_random_circle",
+  "parent":{
+    "name":"Path",
+    "path":"folders/Scripts/Document/Effects/Lasers/Warps/Path.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

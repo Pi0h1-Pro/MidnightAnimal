@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrIsDisarming",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrIsDisarming",
+  "parent":{
+    "name":"Combat",
+    "path":"folders/Scripts/Document/Player/Combat.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

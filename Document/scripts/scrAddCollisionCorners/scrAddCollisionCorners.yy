@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrAddCollisionCorners",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrAddCollisionCorners",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

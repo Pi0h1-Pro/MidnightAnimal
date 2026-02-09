@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_get_enabled_fxaa",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_get_enabled_fxaa",
+  "parent":{
+    "name":"Get",
+    "path":"folders/Scripts/Document/Effects/Glare/Engine/Get.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

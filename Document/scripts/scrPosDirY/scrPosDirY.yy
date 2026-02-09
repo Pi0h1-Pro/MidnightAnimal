@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPosDirY",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPosDirY",
+  "parent":{
+    "name":"Utility",
+    "path":"folders/Scripts/Document/System/Utility.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

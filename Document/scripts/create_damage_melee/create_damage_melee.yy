@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_damage_melee",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_damage_melee",
+  "parent":{
+    "name":"Interface",
+    "path":"folders/Scripts/Document/Interface.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

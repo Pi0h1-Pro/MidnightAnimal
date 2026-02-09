@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_mesh_submesh_add_box_from_sprite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_mesh_submesh_add_box_from_sprite",
+  "parent":{
+    "name":"SubMesh",
+    "path":"folders/Scripts/Document/Effects/Glare/Mesh/SubMesh.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

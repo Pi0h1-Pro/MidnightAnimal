@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_points",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_points",
+  "parent":{
+    "name":"Interface",
+    "path":"folders/Scripts/Document/Interface.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

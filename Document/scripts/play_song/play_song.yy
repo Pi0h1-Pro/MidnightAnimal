@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"play_song",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"play_song",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Scripts/Document/System/Music.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

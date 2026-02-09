@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrEnemyEndAttack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrEnemyEndAttack",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

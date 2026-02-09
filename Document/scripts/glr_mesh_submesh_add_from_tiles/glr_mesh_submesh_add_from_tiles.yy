@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_mesh_submesh_add_from_tiles",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_mesh_submesh_add_from_tiles",
+  "parent":{
+    "name":"SubMesh",
+    "path":"folders/Scripts/Document/Effects/Glare/Mesh/SubMesh.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrGetAmmoPlayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrGetAmmoPlayer",
+  "parent":{
+    "name":"Combat",
+    "path":"folders/Scripts/Document/Player/Combat.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,2 @@
+scrDropWeaponEnvironmental(8);
+

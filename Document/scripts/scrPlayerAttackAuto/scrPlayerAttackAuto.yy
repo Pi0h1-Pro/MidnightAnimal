@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerAttackAuto",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerAttackAuto",
+  "parent":{
+    "name":"Combat",
+    "path":"folders/Scripts/Document/Player/Combat.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

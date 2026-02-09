@@ -1,0 +1,6 @@
+function scrCheckCenterOn() {
+	return true;
+
+
+
+}

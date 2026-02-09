@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrMoveSolidOn",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrMoveSolidOn",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Scripts/Document/System/Other.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

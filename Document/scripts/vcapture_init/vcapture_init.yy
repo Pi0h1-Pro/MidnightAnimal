@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"vcapture_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vcapture_init",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

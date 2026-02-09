@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrScoreDrawStory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrScoreDrawStory",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

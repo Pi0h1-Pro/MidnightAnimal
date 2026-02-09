@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxEndingDialogue1Down",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxEndingDialogue1Down",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

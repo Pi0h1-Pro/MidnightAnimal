@@ -1,0 +1,1 @@
+image_angle=178+random(2)

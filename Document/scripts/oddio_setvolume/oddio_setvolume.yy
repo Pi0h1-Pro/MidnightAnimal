@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"oddio_setvolume",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"oddio_setvolume",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

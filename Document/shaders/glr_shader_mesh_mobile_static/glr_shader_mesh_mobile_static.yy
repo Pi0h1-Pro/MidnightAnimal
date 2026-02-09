@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"glr_shader_mesh_mobile_static",
+  "name":"glr_shader_mesh_mobile_static",
+  "parent":{
+    "name":"mesh",
+    "path":"folders/Shaders/Document/Glare/mesh.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

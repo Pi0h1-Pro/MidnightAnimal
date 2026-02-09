@@ -1,0 +1,6 @@
+function scrEPatrolInit() {
+	scrEnemyInitPatch();
+
+
+
+}

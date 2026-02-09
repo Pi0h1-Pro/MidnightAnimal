@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_text_hud",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_text_hud",
+  "parent":{
+    "name":"Draw",
+    "path":"folders/Scripts/Document/System/Utility/Draw.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

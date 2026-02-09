@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"cleanmem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cleanmem",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

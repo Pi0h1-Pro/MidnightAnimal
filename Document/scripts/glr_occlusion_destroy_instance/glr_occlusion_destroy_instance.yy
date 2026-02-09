@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_occlusion_destroy_instance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_occlusion_destroy_instance",
+  "parent":{
+    "name":"Occlusion",
+    "path":"folders/Scripts/Document/Effects/Glare/Occlusion.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

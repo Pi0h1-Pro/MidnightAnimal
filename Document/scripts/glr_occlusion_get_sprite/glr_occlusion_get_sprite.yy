@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_occlusion_get_sprite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_occlusion_get_sprite",
+  "parent":{
+    "name":"Get",
+    "path":"folders/Scripts/Document/Effects/Glare/Occlusion/Get.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

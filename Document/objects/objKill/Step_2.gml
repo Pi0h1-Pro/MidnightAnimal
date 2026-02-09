@@ -1,0 +1,2 @@
+scrCameraPan(x, y);
+

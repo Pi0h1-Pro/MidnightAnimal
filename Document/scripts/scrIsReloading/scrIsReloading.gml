@@ -1,0 +1,30 @@
+function scrIsReloading(argument0) {
+	if (argument0 == sprPReloadSniper
+		|| argument0 == sprPReloadWA2000
+		|| argument0 == sprPReloadSuppressedMG
+		|| argument0 == sprPReloadSilencedShotgun
+		|| argument0 == sprPReloadDoubleBarrel
+		|| argument0 == sprPReloadKSG
+		|| argument0 == sprPReloadShotgun
+		|| argument0 == sprPReloadHK417
+		|| argument0 == sprPReloadDisruptor
+		|| argument0 == sprPReloadThompson
+		|| argument0 == sprPReloadMP5
+		|| argument0 == sprPReloadM16
+		|| argument0 == sprPReloadFMG
+		|| argument0 == sprPReloadUzi
+		|| argument0 == sprPReloadScorpion
+		|| argument0 == sprPReloadSilencer
+		|| argument0 == sprPReloadIngram
+		|| argument0 == sprPReloadPistol
+		|| argument0 == sprPReloadDesertEagle
+		|| argument0 == sprPReloadAK
+		|| argument0 == simoneReload
+		|| argument0 == pierretteReload
+		|| argument0 == pierretteReloadShield
+		|| argument0 == pierretteReloadShotgun)
+		return true;
+
+
+
+}

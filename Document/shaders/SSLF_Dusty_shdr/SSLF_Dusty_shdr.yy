@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"SSLF_Dusty_shdr",
+  "name":"SSLF_Dusty_shdr",
+  "parent":{
+    "name":"DirtyBloom",
+    "path":"folders/Shaders/Document/DirtyBloom.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

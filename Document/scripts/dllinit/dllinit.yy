@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dllinit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dllinit",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

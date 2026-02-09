@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrInitGangRandom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrInitGangRandom",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

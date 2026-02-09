@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrContactDetonator",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrContactDetonator",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Document/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrERandomMeleeStep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrERandomMeleeStep",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/Scripts/Document/Enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

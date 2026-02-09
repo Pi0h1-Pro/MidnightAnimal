@@ -1,0 +1,8 @@
+image_speed = 0;
+image_index = 0;
+reload = floor(random(10));
+alert = 0;
+alarm[0] = 10 + random(100);
+ammo = 13;
+path = path_add();
+

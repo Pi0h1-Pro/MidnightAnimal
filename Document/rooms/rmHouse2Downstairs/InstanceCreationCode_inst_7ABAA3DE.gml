@@ -1,0 +1,1 @@
+direction = point_direction(x, y, objDeskBase.x, objDeskBase.y)

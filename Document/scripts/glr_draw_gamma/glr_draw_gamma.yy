@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_draw_gamma",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_draw_gamma",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Scripts/Document/Effects/Glare/Engine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

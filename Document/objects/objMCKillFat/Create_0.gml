@@ -1,0 +1,10 @@
+targetindex = 0;
+index = 0;
+image_speed = 0;
+dead = 0;
+bleed = 0;
+left = 1;
+knives = objPlayerBiker.knives;
+lastx = x;
+lasty = y;
+

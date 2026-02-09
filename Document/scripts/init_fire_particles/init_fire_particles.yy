@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"init_fire_particles",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_fire_particles",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Document/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

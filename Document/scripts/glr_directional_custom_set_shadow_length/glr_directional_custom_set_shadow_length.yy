@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_directional_custom_set_shadow_length",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_directional_custom_set_shadow_length",
+  "parent":{
+    "name":"Set",
+    "path":"folders/Scripts/Document/Effects/Glare/ShadowsDirectionalCustom/Set.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

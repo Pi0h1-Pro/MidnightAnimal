@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shdGodRays",
+  "name":"shdGodRays",
+  "parent":{
+    "name":"Document",
+    "path":"folders/Shaders/Document.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

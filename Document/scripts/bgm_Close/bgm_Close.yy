@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bgm_Close",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bgm_Close",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

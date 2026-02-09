@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_render_html5",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_render_html5",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Scripts/Document/Effects/Glare/Engine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

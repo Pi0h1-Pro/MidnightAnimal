@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxNickeTalkPizza",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxNickeTalkPizza",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

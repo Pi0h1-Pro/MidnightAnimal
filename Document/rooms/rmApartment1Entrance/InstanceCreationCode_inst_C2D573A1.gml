@@ -1,0 +1,1 @@
+direction = point_direction(x, y, objGangIdleKnife.x, objGangIdleKnife.y)

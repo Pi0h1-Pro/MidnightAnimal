@@ -1,0 +1,1 @@
+image_angle=45+random(4)

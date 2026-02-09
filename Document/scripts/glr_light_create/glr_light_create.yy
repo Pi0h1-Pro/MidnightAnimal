@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_light_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_light_create",
+  "parent":{
+    "name":"Lights",
+    "path":"folders/Scripts/Document/Effects/Glare/Lights.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

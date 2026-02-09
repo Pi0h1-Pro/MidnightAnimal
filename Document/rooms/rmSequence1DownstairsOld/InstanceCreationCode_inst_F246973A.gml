@@ -1,0 +1,3 @@
+image_angle=90
+nextroom=rmTrainstationEntrance
+nextroom=rmApartment1Entrance

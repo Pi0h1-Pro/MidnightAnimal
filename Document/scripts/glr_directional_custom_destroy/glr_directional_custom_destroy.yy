@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_directional_custom_destroy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_directional_custom_destroy",
+  "parent":{
+    "name":"ShadowsDirectionalCustom",
+    "path":"folders/Scripts/Document/Effects/Glare/ShadowsDirectionalCustom.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

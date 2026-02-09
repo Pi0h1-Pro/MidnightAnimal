@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fd_rectangle_set_material_size",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fd_rectangle_set_material_size",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Document/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

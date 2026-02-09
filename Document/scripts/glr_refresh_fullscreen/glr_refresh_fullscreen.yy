@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"glr_refresh_fullscreen",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"glr_refresh_fullscreen",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Scripts/Document/Effects/Glare/Engine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_reflected_vector",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_reflected_vector",
+  "parent":{
+    "name":"Utility",
+    "path":"folders/Scripts/Document/System/Utility.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

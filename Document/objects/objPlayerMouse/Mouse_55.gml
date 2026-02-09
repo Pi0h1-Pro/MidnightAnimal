@@ -1,0 +1,3 @@
+/// @description  Lock on.
+scrLockOn();
+

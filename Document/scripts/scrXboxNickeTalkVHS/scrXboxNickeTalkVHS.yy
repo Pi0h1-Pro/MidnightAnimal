@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrXboxNickeTalkVHS",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrXboxNickeTalkVHS",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

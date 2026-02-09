@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"camera_centre",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"camera_centre",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Scripts/Document/System/Utility/Camera.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
