@@ -37,7 +37,12 @@ if (global.character == 2)
 }
 
 /// FSM: Execute state.
+try {
 state_execute();
+}
+catch (_e) {
+    // do nothing
+}
 
 /// Player behaviour.
 

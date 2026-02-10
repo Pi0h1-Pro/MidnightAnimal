@@ -4,7 +4,7 @@ with (objEffector)
 	global.amount = amount;
 	amount = 0;
 }
-game_save(working_directory + "\\tempsave.sav");
+//game_save(working_directory + "\\tempsave.sav");
 with (objEffector)
 {
 	amount = global.amount;

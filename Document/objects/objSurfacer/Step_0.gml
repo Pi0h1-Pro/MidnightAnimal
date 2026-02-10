@@ -59,6 +59,3 @@ with (objGib)
 }*/
 
 surface_reset_target();
-
-/* */
-/*  */

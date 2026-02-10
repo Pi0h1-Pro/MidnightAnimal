@@ -65,7 +65,7 @@ if (state == 0)
 		test = objPlayer.persistent;
 		objPlayer.persistent = 0;
 		global.loaded = 1;
-		game_save(working_directory + "\\tempsave");
+		//game_save(working_directory + "\\tempsave");
 		
 		// if !instance_exists(objMaskMenu) instance_create(x,y,objCheckpoint)
 		global.loaded = 0;

@@ -254,7 +254,7 @@ if (fade == 1)
 		fade = 0;
 		if (restart == 1)
 		{
-			sxeasy_stop(1);
+			sxeasy_stop();
 			sxeasy_setVolume(0);
 			game_restart(); // sxeasy_play(working_directory+"\HorseSteppin.mp3"); room=rmMenu
 		}
@@ -264,19 +264,19 @@ if (fade == 1)
 			{
 				if (newsong == 1)
 				{
-					sxeasy_stop(1);
+					sxeasy_stop();
 					if (room == rmDream1)
 						sxeasy_setVolume(0);
 					sxeasy_play(song);
 				}
 				if (room == rmTutorial)
-					sxeasy_stop(1);
+					sxeasy_stop();
 				room = nextroom;
 			}
 			else
 			{
 				scrResetActiveSurfaces();
-				game_load(working_directory + "\\tempsave.sav");
+				//game_load(working_directory + "\\tempsave.sav");
 			}
 		}
 	}

@@ -11,4 +11,3 @@ else
 trail_init();
 slim = 0;
 alarm[0] = 60;
-

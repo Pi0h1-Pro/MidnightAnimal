@@ -1,3 +1,5 @@
+instance_destroy(); exit;
+
 /// @description  Initialise shader.
 uni_time = shader_get_uniform(shdGreyscale, "time");
 var_time_var = 0;

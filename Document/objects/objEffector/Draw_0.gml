@@ -150,6 +150,3 @@ myx = -random(32);
 myy = -random(32);
 draw_sprite_stretched_ext(sprNoise, 0, myx, myy, display_get_gui_width(), display_get_gui_height(), merge_color(c_black, c_white, 0.6), 0.3);
 draw_set_blend_mode(bm_normal);
-
-/* */
-/*  */

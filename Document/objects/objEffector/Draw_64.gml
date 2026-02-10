@@ -1,14 +1,17 @@
 /// @description  HUD effects.
 
-screenzoom = 1.33 + global.screeneffect / 200;
+var screenW = display_get_gui_width();
+var screenH = display_get_gui_height();
+
+screenzoom = 1 + global.screeneffect / 200;
 chroma = 0 + global.screeneffect / 0.6;
 
 draw_rectangle_colour(0, 0, width, height, c_black, c_black, c_black, c_black, 0);
 draw_set_blend_mode(bm_add);
 draw_set_blend_mode_ext(bm_one, bm_inv_src_color);
-draw_surface_ext(application_surface, chroma, 0, screenzoom, screenzoom, 0, c_red, 0.1);
-draw_surface_ext(application_surface, 0, 0, screenzoom, screenzoom, 0, c_lime, 0.1);
-draw_surface_ext(application_surface, chroma, 0, screenzoom, screenzoom, 0, c_blue, 0.1);
+draw_surface_stretched_ext(application_surface, chroma, 0, screenW * screenzoom, screenH * screenzoom, c_red, 0.1);
+draw_surface_stretched_ext(application_surface, 0, 0, screenW * screenzoom, screenH * screenzoom, c_lime, 0.1);
+draw_surface_stretched_ext(application_surface, chroma, 0, screenW * screenzoom, screenH * screenzoom, c_blue, 0.1);
 draw_set_blend_mode(bm_normal);
 
 draw_reset();
@@ -31,6 +34,3 @@ else
     draw_text(32, 256, "MAX HP: " + string(objPlayer.max_hp))
     draw_text(32, 288, "THROWN?: " + string(objPlayer.thrown))
 }
-
-/* */
-/*  */

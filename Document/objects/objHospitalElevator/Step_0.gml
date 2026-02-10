@@ -14,7 +14,7 @@ if (room == rmHospitalEntrance)
 				saved = 1;
 				global.loaded = 1;
 				objPlayer.persistent = 0;
-				game_save(working_directory + "\\tempsave");
+				//game_save(working_directory + "\\tempsave");
 				global.loaded = 0;
 			}
 			if (image_index < 6)

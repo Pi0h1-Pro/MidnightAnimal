@@ -134,7 +134,7 @@ if (fade == 1)
 			else
 			{
 				next = scrGetSequence(global.sequence);
-				sxeasy_stop(1);
+				sxeasy_stop();
 				sxeasy_setVolume(0);
 				sxeasy_play(song);
 				scrSaveUnlocked();

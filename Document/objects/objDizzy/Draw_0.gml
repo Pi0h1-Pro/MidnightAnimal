@@ -187,7 +187,7 @@ with (objEffectorHospital)
 				}
 				else
 				{
-					game_load(working_directory + "\\tempsave");
+					//game_load(working_directory + "\\tempsave");
 				}
 			}
 		}

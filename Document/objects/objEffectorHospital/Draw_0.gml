@@ -206,7 +206,7 @@ if (fade == 1)
 			}
 			else
 			{
-				game_load(working_directory + "\\tempsave.sav");
+				//game_load(working_directory + "\\tempsave.sav");
 			}
 		}
 	}

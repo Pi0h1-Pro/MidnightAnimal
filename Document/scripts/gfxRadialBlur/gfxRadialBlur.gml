@@ -6,6 +6,7 @@
 /// @param  Y
 /// @param  Radius
 function gfxRadialBlur(argument0, argument1, argument2, argument3, argument4, argument5) {
+    exit;
 	if (argument0 != -1 && argument2 > 0 && argument5 > 0)
 	{
 		var SHADER, uTYPE, uRESPOS, uRADIUS, i;
