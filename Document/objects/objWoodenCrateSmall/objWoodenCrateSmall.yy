@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprWoodenCrateSmall",
+    "path":"sprites/sprWoodenCrateSmall/sprWoodenCrateSmall.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

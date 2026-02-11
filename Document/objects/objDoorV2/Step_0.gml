@@ -53,7 +53,7 @@ if (abs(swingspeed) > 0)
 		swingspeed = -abs(swingspeed);
 	}
 	swingdir = sign(swingspeed);
-	glr_mesh_set_rotation(mesh, image_angle);
+	
 	if (abs(swingspeed) < 3.5)
 	{
 		if (image_angle > -6 && image_angle < 6)

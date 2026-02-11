@@ -26,8 +26,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
-  "spriteId":null,
+  "solid":true,
+  "spriteId":{
+    "name":"sprWaterCooler",
+    "path":"sprites/sprWaterCooler/sprWaterCooler.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

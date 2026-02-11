@@ -29,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"sprWallBrickV",
     "path":"sprites/sprWallBrickV/sprWallBrickV.yy",

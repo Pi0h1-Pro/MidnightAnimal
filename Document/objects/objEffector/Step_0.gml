@@ -31,7 +31,7 @@ if (instance_exists(objSunset))
 	global.lightQuantity = 0.4;
 else
 	global.lightQuantity = 0.7;
-glr_set_ambient_daytime(global.lightQuantity);
+//glr_set_ambient_daytime(global.lightQuantity);
 
 // Stabilise view.
 vlastx = __view_get( e__VW.XView, 0 );
@@ -104,6 +104,3 @@ if (input)
     if global.vol > 0 global.vol -= 0.001
     audio_master_gain(global.vol);
     }
-
-/* */
-/*  */

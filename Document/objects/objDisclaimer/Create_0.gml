@@ -9,7 +9,6 @@ fade = 0;
 alarm[0] = 120;
 scrInitKeys();
 
-audio_play_sound(mscTheManWhoSoldTheWorld, 0, 0);
 global.song = 0;
 
 // Create audio channels.

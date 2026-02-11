@@ -1,2 +1,2 @@
-glr_light_destroy(my_light);
+//glr_light_destroy(my_light);
 

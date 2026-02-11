@@ -3,8 +3,6 @@
 // lens_define(0.1, 0, 1, 4, 0.07)
 // lens_enable()
 
-init_music();
-
 // Create visual noise.
 scrInitNoise();
 

@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprWaterPuddle",
+    "path":"sprites/sprWaterPuddle/sprWaterPuddle.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
