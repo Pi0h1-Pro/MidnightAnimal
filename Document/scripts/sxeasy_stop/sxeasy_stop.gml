@@ -12,7 +12,7 @@ function sxeasy_stop() {
 	// Com:
 	       Stops the currently playing audio
 	*/
-	bgm_Stop(global.currentsong);
+	//bgm_Stop(global.currentsong);
 
 	// if (!sxms.easyPlay) { return 0; };
 	// sxfmod_channel_stop()

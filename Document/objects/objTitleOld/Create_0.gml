@@ -47,24 +47,11 @@ repeat (48)
 
 global.xbox = 0;
 scrInitXboxButtons();
-if (file_exists(working_directory + "\\xbox"))
-{
-	global.xbox = 1;
-	dllinit();
-}
 global.mvol = 1;
 global.svol = 1;
 scrLoadVol();
 wait = 0;
 global.alienware = 0;
-if (file_exists(working_directory + "\\alienware"))
-{
-	global.alienware = 1;
-	scrAlienWareInit();
-	scrAlienWarePink();
-}
-else
-	global.alienware = 0;
 global.controllertype = 1;
 global.upkey = "W";
 global.downkey = "S";

@@ -1,5 +1,5 @@
 function scrStopSong() {
-	bgm_Stop(global.currentsong);
+	//bgm_Stop(global.currentsong);
 
 
 

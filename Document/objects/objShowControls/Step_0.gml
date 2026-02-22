@@ -1,41 +1,5 @@
 if (wait > 0)
 	wait -= 1;
-if (global.xbox == 1)
-{
-	if (checkbutton(0, getid(6)))
-	{
-		if (pressback == 0)
-		{
-			pressback = 1;
-			scrXboxControlsBack();
-		}
-	}
-	else
-		pressback = 0;
-	
-	
-	if (leftthumb_x(0) > 15000)
-	{
-		if (pressright == 0)
-		{
-			pressright = 1;
-			scrXboxControlsRight();
-		}
-	}
-	else
-		pressright = 0;
-	
-	if (leftthumb_x(0) < -15000)
-	{
-		if (pressleft == 0)
-		{
-			pressleft = 1;
-			scrXboxControlsLeft();
-		}
-	}
-	else
-		pressleft = 0;
-}
 
 if (keyboard_check_pressed(ord(global.leftkey)))
 	event_perform(ev_keypress, ord("A"));

@@ -9,7 +9,7 @@ function sxeasy_setVolume(argument0) {
 	===
 	return = REAL - Successful (1) or failure (0);
 	*/
-	bgm_vol(global.currentsong, (argument0 * 100) * global.mvol);
+	//bgm_vol(global.currentsong, (argument0 * 100) * global.mvol);
 
 	// if (!sxms.easyPlay) { return 0; };
 	// sxfmod_channel_setVolume()

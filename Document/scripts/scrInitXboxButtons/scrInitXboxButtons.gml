@@ -12,7 +12,4 @@ function scrInitXboxButtons() {
 	pressrstick = 0;
 	presslstick = 0;
 	pressa = 0;
-
-
-
 }

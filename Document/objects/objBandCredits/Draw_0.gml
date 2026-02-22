@@ -90,10 +90,6 @@ if (fade == 1)
 			SteamShutdown();
 			steamdll_free();
 		}
-		if (global.xbox == 1)
-			dllfree();
-		if (global.alienware == 1)
-			scrAlienWareFree();
 		scrMusicClose();
 		
 		// sga_Free()

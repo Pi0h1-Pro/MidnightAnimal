@@ -1,5 +1,5 @@
 function scrMusicClose() {
-	bgm_Close();
+	//bgm_Close();
 
 
 

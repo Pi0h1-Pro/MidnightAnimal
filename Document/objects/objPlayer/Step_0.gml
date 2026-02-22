@@ -526,6 +526,11 @@ if (keyboard_check_pressed(ord(global.switchkey)))
 	}
 }
 
+if (keyboard_check_pressed(ord("M"))) {
+    room_restart();
+    exit;
+}
+
 /* */
 /// ABILITY: Enter berserk mode.
 

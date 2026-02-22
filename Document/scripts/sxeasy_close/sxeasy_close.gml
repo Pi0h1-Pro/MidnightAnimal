@@ -12,7 +12,7 @@ function sxeasy_close() {
 	// Com:
 	       Closes down sxms
 	*/
-	bgm_Close();
+	//bgm_Close();
 
 	// sxeasy_stop();
 	// sxfmod_system_release()

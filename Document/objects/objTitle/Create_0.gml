@@ -49,11 +49,6 @@ repeat (48)
 
 global.xbox = 0;
 scrInitXboxButtons();
-if (file_exists(working_directory + "\\xbox"))
-{
-	global.xbox = 1;
-	dllinit();
-}
 global.mvol = 1;
 global.svol = 1;
 scrLoadVol();

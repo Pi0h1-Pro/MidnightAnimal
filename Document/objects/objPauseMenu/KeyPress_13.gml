@@ -22,7 +22,7 @@ if (select == 1)
 	else
 		game_restart();
 	scrSongVolume(1);
-	bgm_Unpause(global.currentsong);
+	//bgm_Unpause(global.currentsong);
 	fade = 1;
 }
 

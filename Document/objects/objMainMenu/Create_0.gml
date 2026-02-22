@@ -7,11 +7,6 @@ global.camera3D = true;
 // Initialize Xbox Controls
 global.xbox = 0;
 scrInitXboxButtons();
-if (file_exists(working_directory + "\\xbox"))
-{
-	global.xbox = 1;
-	dllinit();
-}
 
 // Loads Volume.
 global.mvol = 1;
@@ -20,17 +15,6 @@ scrLoadVol();
 
 // Used for general Commands
 wait = 0;
-
-// Colors for Alienware systems.
-global.alienware = 0;
-if (file_exists(working_directory + "\\alienware"))
-{
-	global.alienware = 1;
-	scrAlienWareInit();
-	scrAlienWarePink();
-}
-else
-	global.alienware = 0;
 
 // Loads Keys
 global.controllertype = 1;
@@ -86,7 +70,6 @@ global.bonustime = 0;
 global.newmasks = 0;
 
 // Modifies this to be whats on screen once ''start game'' is selected
-nextlevel = rmTutorial;
 level = 0;
 select = 0;
 rdir = 0;
@@ -146,7 +129,6 @@ global.resetstory = 0;
 global.comboflash = 0;
 global.parttitle[0] = "PART ONE.";
 global.parttitle[1] = "PHONECALLS.";
-global.nextlevel = rmTutorial;
 global.sequence = rmSequence1;
 global.revisit = 0;
 global.maskon = 1;

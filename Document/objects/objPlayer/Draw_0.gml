@@ -46,3 +46,4 @@ if (light > 3)
 if (reload > 0)
 	reload -= 1;
 
+draw_text(x, y, string(persistent));

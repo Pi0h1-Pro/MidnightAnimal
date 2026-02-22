@@ -87,7 +87,7 @@ if (fade == 1)
 	{
 		sxeasy_stop(1);
 		sxeasy_setVolume(0);
-		bgm_Close();
+		//bgm_Close();
 		game_restart();
 	}
 }

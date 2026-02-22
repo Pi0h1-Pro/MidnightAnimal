@@ -1,3 +1,0 @@
-scrAlienWareInit();
-scrAlienWareYellow();
-

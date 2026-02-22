@@ -1,5 +1,3 @@
-if (global.xbox == 1)
-	scrXboxBodyguardKill();
 if (global.controller == 1)
 {
 	if (gettrigger_r(0) > 100)

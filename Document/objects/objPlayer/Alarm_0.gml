@@ -1,7 +1,5 @@
 /// @description  Floor control.
-if (persistent == 0)
-	nothing = 1;
-else
+if (persistent)
 	active = 1;
 persistent = 0;
 

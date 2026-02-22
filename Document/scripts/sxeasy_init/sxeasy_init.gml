@@ -1,5 +1,5 @@
 function sxeasy_init() {
-	bgm_Init();
+	//bgm_Init();
 	global.currentsong = "";
 
 

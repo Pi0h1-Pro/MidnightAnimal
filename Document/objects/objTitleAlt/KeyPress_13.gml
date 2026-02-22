@@ -73,9 +73,6 @@ if (level == 1)
 				alt[0] += "ON";
 			else
 				alt[0] += "OFF";
-			dllfree();
-			if (file_exists(working_directory + "\\xbox"))
-				file_delete(working_directory + "\\xbox");
 		}
 		else
 		{
@@ -182,16 +179,10 @@ if (level == 3)
 	if (global.xbox == 1)
 	{
 		alt[0] += "ON";
-		dllinit();
-		file = file_text_open_write(working_directory + "\\xbox");
-		file_text_close(file);
 	}
 	else
 	{
 		alt[0] += "OFF";
-		dllfree();
-		if (file_exists(working_directory + "\\xbox"))
-			file_delete(working_directory + "\\xbox");
 	}
 	alt[1] = "CONTROLS";
 	alt[2] = "VOLUME";

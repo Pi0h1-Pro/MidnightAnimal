@@ -25,19 +25,19 @@ function sxeasy_play(argument0) {
 	if (file_exists(working_directory + "\\restartmusic"))
 		nothing = 1;
 	else
-		bgm_Stop(global.currentsong);
+		//bgm_Stop(global.currentsong);
 	lastsong = global.currentsong;
 	thissong = string_replace(argument0, "mp3", "ogg");
-	global.currentsong = bgm_LoadStream(thissong, 1);
-	bgm_Play(global.currentsong, 1);
+	//global.currentsong = //bgm_LoadStream(thissong, 1);
+	//bgm_Play(global.currentsong, 1);
 	if (string(lastsong) == "")
 		nothing = 1;
 	else
 	{
 		if (file_exists(working_directory + "\\restartmusic"))
 			nothing = 1;
-		else
-			bgm_Unload(lastsong);
+		//else
+			//bgm_Unload(lastsong);
 	}
 
 	// if string(argument0)="-1" nothing=1 else {

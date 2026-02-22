@@ -5,8 +5,6 @@ if (global.xbox == 1)
 		if (presstart == 0)
 		{
 			presstart = 1;
-			
-			// scrXboxPauseStart()
 			event_perform(ev_keypress, vk_enter);
 		}
 	}
@@ -18,7 +16,6 @@ if (global.xbox == 1)
 		if (pressback == 0)
 		{
 			pressback = 1;
-			scrXboxPauseBack();
 		}
 	}
 	else
@@ -31,7 +28,6 @@ if (global.xbox == 1)
 		{
 			pressup = 1;
 			
-			// scrXboxPauseUp()
 			if (select > 0)
 				select -= 1;
 			else
@@ -46,8 +42,6 @@ if (global.xbox == 1)
 		if (pressdown == 0)
 		{
 			pressdown = 1;
-			
-			// scrXboxPauseDown()
 			if (select < 3)
 				select += 1;
 			else
