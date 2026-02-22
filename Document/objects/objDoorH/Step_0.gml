@@ -130,3 +130,4 @@ if (abs(swingspeed) > 0)
 	}
 }
 
+solid = image_angle == 0;

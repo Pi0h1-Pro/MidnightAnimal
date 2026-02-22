@@ -9,7 +9,10 @@
     "name":"Industrial",
     "path":"folders/Objects/Document/Items/Objects/Industrial.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objFurniture",
+    "path":"objects/objFurniture/objFurniture.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprWoodenCrateLarge",
+    "path":"sprites/sprWoodenCrateLarge/sprWoodenCrateLarge.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

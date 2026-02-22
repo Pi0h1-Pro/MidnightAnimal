@@ -9,7 +9,10 @@
     "name":"Miscellaneous",
     "path":"folders/Objects/Document/Items/Objects/Miscellaneous.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objFurniture",
+    "path":"objects/objFurniture/objFurniture.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -12,13 +12,18 @@ if (fade == 1)
 	}
 	else
 	{
-		if (file_exists("tempsave.sav"))
+		/*if (file_exists("tempsave.sav"))
 		{
 			scrLoadFloor();
 			scrResetActiveSurfaces();
 		}
 		else
-			game_restart();
+			game_restart();*/
+        
+        scrResetGore();
+        scrResetActiveSurfaces();
+        room_persistent = false;
+        room_restart();
 	}
 }
 
