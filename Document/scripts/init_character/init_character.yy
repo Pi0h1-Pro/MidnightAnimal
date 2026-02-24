@@ -6,7 +6,7 @@
   "name":"init_character",
   "parent":{
     "name":"Character",
-    "path":"folders/Scripts/Document/Player/Character.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Player/Character.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

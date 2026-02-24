@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Cursors",
-    "path":"folders/Sprites/Document/Interface/HUD/Cursors.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/HUD/Cursors.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

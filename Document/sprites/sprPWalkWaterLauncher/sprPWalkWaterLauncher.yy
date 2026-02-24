@@ -33,7 +33,7 @@
   "origin":9,
   "parent":{
     "name":"Beach",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Combat/Miscellaneous/Beach.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Combat/Miscellaneous/Beach.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

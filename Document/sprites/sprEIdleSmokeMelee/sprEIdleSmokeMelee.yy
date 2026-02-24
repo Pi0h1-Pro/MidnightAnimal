@@ -37,7 +37,7 @@
   "origin":4,
   "parent":{
     "name":"Idle",
-    "path":"folders/Sprites/Document/Enemy/Normal/Idle.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal/Idle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

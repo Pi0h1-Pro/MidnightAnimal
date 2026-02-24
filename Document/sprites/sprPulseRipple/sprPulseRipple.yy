@@ -53,7 +53,7 @@
   "origin":4,
   "parent":{
     "name":"Impacts",
-    "path":"folders/Sprites/Document/Effects/Impacts.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Impacts.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

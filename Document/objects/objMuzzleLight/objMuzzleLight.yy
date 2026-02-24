@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Specific",
-    "path":"folders/Objects/Document/Lighting/Specific.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Lighting/Specific.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -6,7 +6,7 @@
   "name":"camera_limit",
   "parent":{
     "name":"Camera",
-    "path":"folders/Scripts/Document/System/Utility/Camera.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/Utility/Camera.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

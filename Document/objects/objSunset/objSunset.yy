@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Lighting",
-    "path":"folders/Objects/Document/Effects/Weather/Lighting.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Weather/Lighting.yy",
   },
   "parentObjectId":null,
   "persistent":false,

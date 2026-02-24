@@ -63,7 +63,7 @@
   "origin":9,
   "parent":{
     "name":"Flames",
-    "path":"folders/Sprites/Document/Effects/Flames.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Flames.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

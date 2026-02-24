@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Lens Flare",
-    "path":"folders/Objects/Document/Lighting/Specific/Lens Flare.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Lighting/Specific/Lens Flare.yy",
   },
   "parentObjectId":null,
   "persistent":false,

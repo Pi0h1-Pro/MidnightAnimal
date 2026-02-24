@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Shielded",
-    "path":"folders/Sprites/Document/Player/Imperial Court/Pierrette/Shielded.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/Pierrette/Shielded.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

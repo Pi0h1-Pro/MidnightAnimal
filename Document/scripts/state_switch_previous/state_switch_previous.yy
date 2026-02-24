@@ -6,7 +6,7 @@
   "name":"state_switch_previous",
   "parent":{
     "name":"FSM",
-    "path":"folders/Scripts/Document/System/FSM.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/FSM.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

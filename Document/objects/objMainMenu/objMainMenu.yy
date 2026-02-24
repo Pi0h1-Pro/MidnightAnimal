@@ -19,7 +19,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Main Menu",
-    "path":"folders/Objects/Document/Interface/Menus/Main Menu.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Interface/Menus/Main Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -15,7 +15,7 @@ function scrEMeleeStationaryInit() {
 	turn = 0;
 	alertwait = -1;
 	hits = 4;
-
+	hp = 0;
 	energie = round(random(1));
 	my_path = path_add();
 	path_set_kind(my_path, 1);

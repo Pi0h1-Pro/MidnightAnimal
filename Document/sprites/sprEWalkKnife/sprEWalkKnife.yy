@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Walk",
-    "path":"folders/Sprites/Document/Enemy/Normal/Walk.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal/Walk.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -6,7 +6,7 @@
   "name":"trail_calculate",
   "parent":{
     "name":"Trail",
-    "path":"folders/Scripts/Document/Effects/Trail.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Trail.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

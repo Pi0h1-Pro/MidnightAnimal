@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Attacking",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Combat/Attacking.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Combat/Attacking.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

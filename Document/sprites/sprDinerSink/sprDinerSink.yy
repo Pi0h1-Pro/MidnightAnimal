@@ -38,7 +38,7 @@
   "origin":9,
   "parent":{
     "name":"Diner",
-    "path":"folders/Sprites/Document/Furniture/Diner.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/Diner.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

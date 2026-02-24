@@ -26,7 +26,7 @@
   "origin":1,
   "parent":{
     "name":"Objects",
-    "path":"folders/Sprites/Document/Effects/Objects.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Objects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

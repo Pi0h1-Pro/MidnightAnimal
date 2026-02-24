@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Tatami",
-    "path":"folders/Sprites/tilesets/Document/Indoors/Tatami.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/tilesets/Document/Indoors/Tatami.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

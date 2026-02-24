@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Effects",
-    "path":"folders/Objects/Document/Interface/Effects.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Interface/Effects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

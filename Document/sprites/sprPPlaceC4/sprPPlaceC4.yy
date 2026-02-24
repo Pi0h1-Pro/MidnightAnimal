@@ -31,7 +31,7 @@
   "origin":9,
   "parent":{
     "name":"Miscellaneous",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Combat/Miscellaneous.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Combat/Miscellaneous.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

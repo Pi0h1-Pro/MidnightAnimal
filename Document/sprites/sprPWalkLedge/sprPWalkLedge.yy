@@ -31,7 +31,7 @@
   "origin":9,
   "parent":{
     "name":"Walking",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Combat/Walking.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Combat/Walking.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

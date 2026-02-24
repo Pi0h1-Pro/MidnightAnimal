@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Roads",
-    "path":"folders/Sprites/tilesets/Document/Outdoors/Roads.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/tilesets/Document/Outdoors/Roads.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

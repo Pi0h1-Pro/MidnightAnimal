@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Walls",
-    "path":"folders/Objects/Document/Structures/Walls.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Structures/Walls.yy",
   },
   "parentObjectId":{
     "name":"objSolid",

@@ -14,7 +14,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Weapons",
-    "path":"folders/Objects/Document/Categories/Weapons.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Categories/Weapons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

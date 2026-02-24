@@ -6,7 +6,7 @@
   "name":"drop_health",
   "parent":{
     "name":"Drops",
-    "path":"folders/Scripts/Document/Effects/Drops.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Drops.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

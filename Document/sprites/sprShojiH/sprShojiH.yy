@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Doors",
-    "path":"folders/Sprites/Document/Geometry/Doors.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Geometry/Doors.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

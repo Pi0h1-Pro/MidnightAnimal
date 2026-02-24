@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Gore",
-    "path":"folders/Objects/Document/Effects/Gore.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Gore.yy",
   },
   "parentObjectId":{
     "name":"objDeadBody",

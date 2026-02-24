@@ -6,7 +6,7 @@
   "name":"__init_global",
   "parent":{
     "name":"compatibility",
-    "path":"folders/Scripts/compatibility.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

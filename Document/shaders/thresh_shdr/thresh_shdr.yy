@@ -4,7 +4,7 @@
   "name":"thresh_shdr",
   "parent":{
     "name":"DirtyBloom",
-    "path":"folders/Shaders/Document/DirtyBloom.yy",
+    "path":"folders/Midnight Animal/Document/Shaders/DirtyBloom.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

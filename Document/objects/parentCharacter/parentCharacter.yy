@@ -10,8 +10,8 @@
   "name":"parentCharacter",
   "overriddenProperties":[],
   "parent":{
-    "name":"Document",
-    "path":"folders/Objects/Document.yy",
+    "name":"Objects",
+    "path":"folders/Midnight Animal/Document/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -6,7 +6,7 @@
   "name":"check_spawn",
   "parent":{
     "name":"Spawn",
-    "path":"folders/Scripts/Document/System/Spawn.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/Spawn.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Death States",
-    "path":"folders/Objects/Document/Enemies/Death States.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Enemies/Death States.yy",
   },
   "parentObjectId":null,
   "persistent":false,

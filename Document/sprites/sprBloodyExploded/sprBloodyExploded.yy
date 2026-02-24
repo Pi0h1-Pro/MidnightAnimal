@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Gibs",
-    "path":"folders/Sprites/Document/Effects/Blood/Gore/Gibs.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Blood/Gore/Gibs.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -29,7 +29,7 @@
   "origin":9,
   "parent":{
     "name":"Blood",
-    "path":"folders/Sprites/Document/Effects/Blood/Gore/Blood.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Blood/Gore/Blood.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

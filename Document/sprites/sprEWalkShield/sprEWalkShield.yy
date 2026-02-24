@@ -33,7 +33,7 @@
   "origin":9,
   "parent":{
     "name":"Shield",
-    "path":"folders/Sprites/Document/Enemy/Shield.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Shield.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

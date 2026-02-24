@@ -27,7 +27,7 @@
   "origin":0,
   "parent":{
     "name":"Lights",
-    "path":"folders/Sprites/Document/Effects/Lights.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Lights.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

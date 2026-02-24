@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Sprite Masks",
-    "path":"folders/Sprites/Document/Misc/Sprite Masks.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Misc/Sprite Masks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

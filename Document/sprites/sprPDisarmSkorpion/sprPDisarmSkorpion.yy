@@ -36,7 +36,7 @@
   "origin":9,
   "parent":{
     "name":"Disarm",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Combat/Miscellaneous/Disarm.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Combat/Miscellaneous/Disarm.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

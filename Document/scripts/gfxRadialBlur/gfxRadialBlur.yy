@@ -6,7 +6,7 @@
   "name":"gfxRadialBlur",
   "parent":{
     "name":"Post Processing",
-    "path":"folders/Scripts/Document/Effects/Post Processing.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Post Processing.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

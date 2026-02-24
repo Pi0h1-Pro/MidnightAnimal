@@ -6,7 +6,7 @@
   "name":"texture_set_interpolation",
   "parent":{
     "name":"texture",
-    "path":"folders/Scripts/compatibility/texture.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/texture.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

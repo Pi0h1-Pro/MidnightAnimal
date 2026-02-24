@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Kitchen",
-    "path":"folders/Objects/Document/Items/Objects/Kitchen.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Objects/Kitchen.yy",
   },
   "parentObjectId":{
     "name":"objEnvironmentalDebris",

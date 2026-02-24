@@ -6,7 +6,7 @@
   "name":"joystick_check_button",
   "parent":{
     "name":"joystick",
-    "path":"folders/Scripts/compatibility/joystick.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/joystick.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Industrial",
-    "path":"folders/Objects/Document/Items/Objects/Industrial.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Objects/Industrial.yy",
   },
   "parentObjectId":{
     "name":"objSolid",

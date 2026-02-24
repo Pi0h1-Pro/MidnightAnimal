@@ -6,7 +6,7 @@
   "name":"draw_tooltip",
   "parent":{
     "name":"Draw",
-    "path":"folders/Scripts/Document/System/Utility/Draw.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/Utility/Draw.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

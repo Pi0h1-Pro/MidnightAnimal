@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Lens Flare",
-    "path":"folders/Sprites/Document/Effects/Lens Flare.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Lens Flare.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

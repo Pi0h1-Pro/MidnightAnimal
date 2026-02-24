@@ -123,8 +123,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Document",
-    "path":"folders/Sprites/Document.yy",
+    "name":"Sprites",
+    "path":"folders/Midnight Animal/Document/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

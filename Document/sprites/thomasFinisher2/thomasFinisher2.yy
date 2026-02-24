@@ -41,7 +41,7 @@
   "origin":4,
   "parent":{
     "name":"Finishers",
-    "path":"folders/Sprites/Document/Player/Imperial Court/Thomas/Finishers.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/Thomas/Finishers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Character Selection",
-    "path":"folders/Objects/Document/Interface/Menus/Character Selection.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Interface/Menus/Character Selection.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -30,7 +30,7 @@
   "origin":9,
   "parent":{
     "name":"Guns",
-    "path":"folders/Sprites/Document/Enemy/Normal/Attack/Guns.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal/Attack/Guns.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -6,7 +6,7 @@
   "name":"scrGetRestartText",
   "parent":{
     "name":"Interface",
-    "path":"folders/Scripts/Document/Interface.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Interface.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

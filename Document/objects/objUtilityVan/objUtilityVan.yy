@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Vehicles",
-    "path":"folders/Objects/Document/Items/Objects/Vehicles.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Objects/Vehicles.yy",
   },
   "parentObjectId":{
     "name":"objSolid",

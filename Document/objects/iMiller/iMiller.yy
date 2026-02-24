@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Church",
-    "path":"folders/Objects/Document/Interface/Menus/Character Selection/Church.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Interface/Menus/Character Selection/Church.yy",
   },
   "parentObjectId":{
     "name":"parentCharacter",

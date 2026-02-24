@@ -32,7 +32,7 @@
   "origin":4,
   "parent":{
     "name":"Outdoors",
-    "path":"folders/Sprites/Document/Furniture/Outdoors.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/Outdoors.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

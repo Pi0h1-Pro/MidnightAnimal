@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Amy",
-    "path":"folders/Sprites/Document/Player/Imperial Court/Amy.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/Amy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

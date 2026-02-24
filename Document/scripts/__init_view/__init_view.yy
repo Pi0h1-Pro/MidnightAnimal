@@ -6,7 +6,7 @@
   "name":"__init_view",
   "parent":{
     "name":"view",
-    "path":"folders/Scripts/compatibility/view.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/view.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

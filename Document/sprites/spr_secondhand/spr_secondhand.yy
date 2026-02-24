@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"Clock",
-    "path":"folders/Sprites/Document/Interface/HUD/Phone/Clock.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/HUD/Phone/Clock.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

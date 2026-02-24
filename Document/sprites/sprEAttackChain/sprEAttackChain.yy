@@ -35,7 +35,7 @@
   "origin":9,
   "parent":{
     "name":"Melee",
-    "path":"folders/Sprites/Document/Enemy/Normal/Attack/Melee.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal/Attack/Melee.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

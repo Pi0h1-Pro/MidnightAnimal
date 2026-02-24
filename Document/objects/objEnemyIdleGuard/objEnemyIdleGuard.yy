@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Idle",
-    "path":"folders/Objects/Document/Enemies/Old/Idle.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Enemies/Old/Idle.yy",
   },
   "parentObjectId":{
     "name":"objEnemyIdle",

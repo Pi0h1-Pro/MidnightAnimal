@@ -34,7 +34,7 @@
   "origin":9,
   "parent":{
     "name":"Normal",
-    "path":"folders/Sprites/Document/Enemy/Normal.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

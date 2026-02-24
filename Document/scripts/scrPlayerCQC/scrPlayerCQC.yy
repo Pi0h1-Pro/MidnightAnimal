@@ -6,7 +6,7 @@
   "name":"scrPlayerCQC",
   "parent":{
     "name":"Combat",
-    "path":"folders/Scripts/Document/Player/Combat.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Player/Combat.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

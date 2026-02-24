@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Decals",
-    "path":"folders/Sprites/tilesets/Document/Decals.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/tilesets/Document/Decals.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

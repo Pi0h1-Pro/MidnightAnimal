@@ -15,7 +15,7 @@
   "name":"sndDash",
   "parent":{
     "name":"Psychic",
-    "path":"folders/Sounds/Document/Combat/Psychic.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Psychic.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

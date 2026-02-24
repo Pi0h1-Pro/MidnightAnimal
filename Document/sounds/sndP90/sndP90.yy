@@ -15,7 +15,7 @@
   "name":"sndP90",
   "parent":{
     "name":"Guns",
-    "path":"folders/Sounds/Document/Combat/Guns.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Guns.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

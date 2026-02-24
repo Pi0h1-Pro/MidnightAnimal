@@ -6,7 +6,7 @@
   "name":"scrSwitchSongs",
   "parent":{
     "name":"Music",
-    "path":"folders/Scripts/Document/System/Music.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/Music.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"scrFlyThroughWindow",
   "parent":{
     "name":"Effects",
-    "path":"folders/Scripts/Document/Effects.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

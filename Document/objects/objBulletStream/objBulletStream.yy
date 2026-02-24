@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Muzzle Effects",
-    "path":"folders/Objects/Document/Effects/Muzzle Effects.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Muzzle Effects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

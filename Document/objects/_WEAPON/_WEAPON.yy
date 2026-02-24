@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Categories",
-    "path":"folders/Objects/Document/Categories.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Categories.yy",
   },
   "parentObjectId":null,
   "persistent":false,

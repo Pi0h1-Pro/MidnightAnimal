@@ -27,7 +27,7 @@
   "origin":9,
   "parent":{
     "name":"Couches",
-    "path":"folders/Sprites/Document/Furniture/Couches.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/Couches.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

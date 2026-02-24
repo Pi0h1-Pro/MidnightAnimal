@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Boat",
-    "path":"folders/Objects/Document/Items/Specific/Boat.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Specific/Boat.yy",
   },
   "parentObjectId":{
     "name":"objFurniture",
@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprSunChair",
+    "path":"sprites/sprSunChair/sprSunChair.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Debris",
-    "path":"folders/Objects/Document/Effects/Debris.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Debris.yy",
   },
   "parentObjectId":null,
   "persistent":false,

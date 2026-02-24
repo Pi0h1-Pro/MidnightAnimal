@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Waterside",
-    "path":"folders/Objects/Document/Items/Specific/Waterside.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Specific/Waterside.yy",
   },
   "parentObjectId":null,
   "persistent":false,

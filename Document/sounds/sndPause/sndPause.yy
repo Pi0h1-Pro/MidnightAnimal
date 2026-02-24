@@ -15,7 +15,7 @@
   "name":"sndPause",
   "parent":{
     "name":"Interface",
-    "path":"folders/Sounds/Document/Interface.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Interface.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

@@ -15,7 +15,7 @@
   "name":"sndReadyUp",
   "parent":{
     "name":"Pierrette",
-    "path":"folders/Sounds/Document/Combat/Miscellaneous/Pierrette.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Miscellaneous/Pierrette.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

@@ -197,7 +197,7 @@ function scrGetWeaponName(argument0) {
 		return "KAGURA Jet Stream Longshot";
 	if (argument0 == 98)
 		return "KAGURA Ultra Spray Shower Cannon";
-	return 0;
+	return "";
 
 
 

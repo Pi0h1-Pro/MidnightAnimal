@@ -6,7 +6,7 @@
   "name":"tile_get_height",
   "parent":{
     "name":"tile",
-    "path":"folders/Scripts/compatibility/tile.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/tile.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"scrReturnToStart",
   "parent":{
     "name":"Enemy",
-    "path":"folders/Scripts/Document/Enemy.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Enemy.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

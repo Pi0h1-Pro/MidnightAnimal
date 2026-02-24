@@ -6,7 +6,7 @@
   "name":"draw_background_ext",
   "parent":{
     "name":"background",
-    "path":"folders/Scripts/compatibility/background.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/background.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

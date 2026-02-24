@@ -15,7 +15,7 @@
   "name":"sndGrenadeExplosion4",
   "parent":{
     "name":"Miscellaneous",
-    "path":"folders/Sounds/Document/Combat/Miscellaneous.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Miscellaneous.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

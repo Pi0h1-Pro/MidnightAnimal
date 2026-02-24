@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Alpha",
-    "path":"folders/Sprites/tilesets/Alpha.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/tilesets/Alpha.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

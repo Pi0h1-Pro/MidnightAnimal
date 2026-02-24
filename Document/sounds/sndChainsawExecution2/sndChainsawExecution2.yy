@@ -15,7 +15,7 @@
   "name":"sndChainsawExecution2",
   "parent":{
     "name":"Melee",
-    "path":"folders/Sounds/Document/Combat/Melee.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Melee.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

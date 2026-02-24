@@ -6,7 +6,7 @@
   "name":"fsPlayerDash",
   "parent":{
     "name":"States",
-    "path":"folders/Scripts/Document/System/FSM/States.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/FSM/States.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

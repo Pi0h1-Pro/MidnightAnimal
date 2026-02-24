@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Phone",
-    "path":"folders/Sprites/Document/Interface/HUD/Phone.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/HUD/Phone.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

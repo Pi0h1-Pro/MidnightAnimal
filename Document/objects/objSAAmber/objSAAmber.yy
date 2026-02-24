@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Static",
-    "path":"folders/Objects/Document/Lighting/Static.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Lighting/Static.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Warping",
-    "path":"folders/Objects/Document/Effects/Warping.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Warping.yy",
   },
   "parentObjectId":null,
   "persistent":false,

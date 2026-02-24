@@ -30,7 +30,7 @@
   "origin":9,
   "parent":{
     "name":"FoodWall",
-    "path":"folders/Sprites/Document/Furniture/FoodWall.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/FoodWall.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

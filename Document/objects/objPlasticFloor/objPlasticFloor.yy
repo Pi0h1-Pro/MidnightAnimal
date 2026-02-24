@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Serial Killer",
-    "path":"folders/Objects/Document/Items/Objects/Industrial/Serial Killer.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Objects/Industrial/Serial Killer.yy",
   },
   "parentObjectId":{
     "name":"objEnvironmentalDebris",

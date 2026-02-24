@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Effects",
-    "path":"folders/Objects/Document/Categories/Effects.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Categories/Effects.yy",
   },
   "parentObjectId":{
     "name":"objFurniture",

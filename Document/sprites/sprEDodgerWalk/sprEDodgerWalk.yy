@@ -33,7 +33,7 @@
   "origin":9,
   "parent":{
     "name":"Dodger",
-    "path":"folders/Sprites/Document/Enemy/Dodger.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Dodger.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -30,7 +30,7 @@
   "origin":9,
   "parent":{
     "name":"Simone",
-    "path":"folders/Sprites/Document/Player/Imperial Court/Simone.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/Simone.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

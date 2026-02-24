@@ -15,7 +15,7 @@
   "name":"snd9mm1",
   "parent":{
     "name":"9mm",
-    "path":"folders/Sounds/Document/Combat/Guns/Shells/9mm.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Guns/Shells/9mm.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

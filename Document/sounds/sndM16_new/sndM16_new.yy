@@ -15,7 +15,7 @@
   "name":"sndM16_new",
   "parent":{
     "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "path":"folders/Midnight Animal/JeuxVideo/Sounds.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

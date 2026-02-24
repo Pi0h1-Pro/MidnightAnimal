@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Entities",
-    "path":"folders/Objects/Document/Categories/Entities.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Categories/Entities.yy",
   },
   "parentObjectId":{
     "name":"objPlayer",

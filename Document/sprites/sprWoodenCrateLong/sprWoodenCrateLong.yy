@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Boxes",
-    "path":"folders/Sprites/Document/Furniture/Crates/Boxes.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/Crates/Boxes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

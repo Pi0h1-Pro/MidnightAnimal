@@ -15,7 +15,7 @@
   "name":"sndWoodenBreak3",
   "parent":{
     "name":"Environmental",
-    "path":"folders/Sounds/Document/Environmental.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Environmental.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

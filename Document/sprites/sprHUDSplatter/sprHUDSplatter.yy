@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"HUD",
-    "path":"folders/Sprites/Document/Interface/HUD.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/HUD.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

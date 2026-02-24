@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Rugs",
-    "path":"folders/Objects/Document/Items/Objects/Rugs.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Objects/Rugs.yy",
   },
   "parentObjectId":{
     "name":"objEnvironmentalDebris",

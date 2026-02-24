@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Character Selection",
-    "path":"folders/Sprites/Document/Interface/Character Selection.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/Character Selection.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

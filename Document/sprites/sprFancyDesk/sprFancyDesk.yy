@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Furniture",
-    "path":"folders/Sprites/Document/Furniture.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

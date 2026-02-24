@@ -6,7 +6,7 @@
   "name":"console_draw",
   "parent":{
     "name":"Console",
-    "path":"folders/Scripts/Document/Interface/Console.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Interface/Console.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

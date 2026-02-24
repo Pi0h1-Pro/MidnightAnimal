@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Outdoors",
-    "path":"folders/Objects/Document/Items/Outdoors.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Outdoors.yy",
   },
   "parentObjectId":{
     "name":"objVegetation",

@@ -6,7 +6,7 @@
   "name":"hudJohn",
   "parent":{
     "name":"HUD",
-    "path":"folders/Scripts/Document/Interface/HUD.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Interface/HUD.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Pause Menu (OLD)",
-    "path":"folders/Objects/Document/Interface/Menus/Pause Menu (OLD).yy",
+    "path":"folders/Midnight Animal/Document/Objects/Interface/Menus/Pause Menu (OLD).yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -3,8 +3,8 @@
   "%Name":"shdGodRays",
   "name":"shdGodRays",
   "parent":{
-    "name":"Document",
-    "path":"folders/Shaders/Document.yy",
+    "name":"Shaders",
+    "path":"folders/Midnight Animal/Document/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

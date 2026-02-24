@@ -15,7 +15,7 @@
   "name":"laugh4",
   "parent":{
     "name":"Laugh Tracks",
-    "path":"folders/Sounds/Document/Interface/Laugh Tracks.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Interface/Laugh Tracks.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

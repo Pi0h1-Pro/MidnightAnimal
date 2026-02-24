@@ -15,7 +15,7 @@
   "name":"snd5562",
   "parent":{
     "name":"5.56mm",
-    "path":"folders/Sounds/Document/Combat/Guns/Shells/5.56mm.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Guns/Shells/5.56mm.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

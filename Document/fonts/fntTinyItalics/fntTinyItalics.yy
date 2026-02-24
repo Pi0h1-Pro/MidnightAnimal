@@ -119,8 +119,8 @@
   "maintainGms1Font":true,
   "name":"fntTinyItalics",
   "parent":{
-    "name":"Document",
-    "path":"folders/Fonts/Document.yy",
+    "name":"Fonts",
+    "path":"folders/Midnight Animal/Document/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

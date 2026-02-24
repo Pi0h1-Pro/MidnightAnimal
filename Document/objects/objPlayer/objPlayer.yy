@@ -28,7 +28,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Player",
-    "path":"folders/Objects/Document/Player.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

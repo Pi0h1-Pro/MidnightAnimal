@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"Water",
-    "path":"folders/Sprites/Document/Effects/Water.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Water.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

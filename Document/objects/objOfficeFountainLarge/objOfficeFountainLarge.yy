@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Office",
-    "path":"folders/Objects/Document/Items/Specific/Office.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Specific/Office.yy",
   },
   "parentObjectId":{
     "name":"objFurniture",

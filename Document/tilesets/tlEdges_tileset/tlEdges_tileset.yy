@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Other",
-    "path":"folders/Tile Sets/Document/Other.yy",
+    "path":"folders/Midnight Animal/Document/Tile Sets/Document/Other.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

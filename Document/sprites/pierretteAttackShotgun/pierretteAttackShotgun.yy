@@ -38,7 +38,7 @@
   "origin":9,
   "parent":{
     "name":"Unshielded",
-    "path":"folders/Sprites/Document/Player/Imperial Court/Pierrette/Unshielded.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/Pierrette/Unshielded.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

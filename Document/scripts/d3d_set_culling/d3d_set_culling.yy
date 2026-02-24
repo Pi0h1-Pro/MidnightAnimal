@@ -6,7 +6,7 @@
   "name":"d3d_set_culling",
   "parent":{
     "name":"d3d",
-    "path":"folders/Scripts/compatibility/d3d.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/d3d.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

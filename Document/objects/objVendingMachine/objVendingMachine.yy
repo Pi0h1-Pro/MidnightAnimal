@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Pickups",
-    "path":"folders/Objects/Document/Items/Weapons/Pickups.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Weapons/Pickups.yy",
   },
   "parentObjectId":null,
   "persistent":false,

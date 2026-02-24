@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Roads",
-    "path":"folders/Tile Sets/Document/Outdoors/Roads.yy",
+    "path":"folders/Midnight Animal/Document/Tile Sets/Document/Outdoors/Roads.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

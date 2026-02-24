@@ -30,7 +30,7 @@
   "origin":4,
   "parent":{
     "name":"Thomas",
-    "path":"folders/Sprites/Document/Player/Imperial Court/Thomas.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/Thomas.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

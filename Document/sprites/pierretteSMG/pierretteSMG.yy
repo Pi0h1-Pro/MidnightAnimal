@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Pierrette",
-    "path":"folders/Sprites/Document/Player/Imperial Court/Pierrette.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/Pierrette.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -37,7 +37,7 @@
   "origin":9,
   "parent":{
     "name":"Turn",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Combat/Miscellaneous/Turn.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Combat/Miscellaneous/Turn.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

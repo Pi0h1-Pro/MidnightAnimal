@@ -476,7 +476,7 @@
   "name":"rmMCSequence4Downstairs",
   "parent":{
     "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "path":"folders/Midnight Animal/JeuxVideo/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

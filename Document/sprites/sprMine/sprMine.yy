@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Enemy",
-    "path":"folders/Sprites/Document/Enemy.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

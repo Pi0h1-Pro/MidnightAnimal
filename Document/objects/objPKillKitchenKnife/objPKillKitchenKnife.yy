@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"John",
-    "path":"folders/Objects/Document/Player/Executions/John.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Player/Executions/John.yy",
   },
   "parentObjectId":{
     "name":"objExecution",

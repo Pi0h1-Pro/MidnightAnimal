@@ -31,7 +31,7 @@
   "origin":4,
   "parent":{
     "name":"Psychic",
-    "path":"folders/Sprites/Document/Effects/Psychic.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Psychic.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

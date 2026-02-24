@@ -30,7 +30,7 @@
   "origin":9,
   "parent":{
     "name":"Grunge",
-    "path":"folders/Sprites/Document/Furniture/Grunge.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/Grunge.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

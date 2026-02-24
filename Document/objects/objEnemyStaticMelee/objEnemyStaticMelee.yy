@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Old",
-    "path":"folders/Objects/Document/Enemies/Old.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Enemies/Old.yy",
   },
   "parentObjectId":{
     "name":"objEnemy",

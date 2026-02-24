@@ -19,7 +19,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"CRITICAL",
-    "path":"folders/Objects/Document/Interface/CRITICAL.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Interface/CRITICAL.yy",
   },
   "parentObjectId":null,
   "persistent":false,

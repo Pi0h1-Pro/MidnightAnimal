@@ -6,7 +6,7 @@
   "name":"sound_stop",
   "parent":{
     "name":"sound",
-    "path":"folders/Scripts/compatibility/sound.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/sound.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/Objects.yy",
+    "path":"folders/Midnight Animal/JeuxVideo/Objects.yy",
   },
   "parentObjectId":{
     "name":"objKnockedOut",

@@ -6,7 +6,7 @@
   "name":"scrMoveSolidOn",
   "parent":{
     "name":"Other",
-    "path":"folders/Scripts/Document/System/Other.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/Other.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

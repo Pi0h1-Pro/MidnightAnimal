@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Empire",
-    "path":"folders/Objects/Document/Interface/Menus/Character Selection/Empire.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Interface/Menus/Character Selection/Empire.yy",
   },
   "parentObjectId":{
     "name":"parentCharacter",

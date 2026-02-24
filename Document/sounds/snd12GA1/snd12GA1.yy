@@ -15,7 +15,7 @@
   "name":"snd12GA1",
   "parent":{
     "name":"12GA",
-    "path":"folders/Sounds/Document/Combat/Guns/Shells/12GA.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Guns/Shells/12GA.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

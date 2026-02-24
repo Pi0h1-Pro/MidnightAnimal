@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Shaders",
-    "path":"folders/Objects/Document/Effects/Shaders.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Shaders.yy",
   },
   "parentObjectId":null,
   "persistent":false,

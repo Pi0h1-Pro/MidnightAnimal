@@ -43,7 +43,7 @@
   "origin":0,
   "parent":{
     "name":"Pause",
-    "path":"folders/Sprites/Document/Interface/HUD/Pause.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/HUD/Pause.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

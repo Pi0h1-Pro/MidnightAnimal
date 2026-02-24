@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Decals",
-    "path":"folders/Tile Sets/Document/Decals.yy",
+    "path":"folders/Midnight Animal/Document/Tile Sets/Document/Decals.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

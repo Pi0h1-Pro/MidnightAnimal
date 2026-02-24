@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"Rectifiers",
-    "path":"folders/Sprites/Document/Player/Church of the Last Light/Rectifiers.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Church of the Last Light/Rectifiers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

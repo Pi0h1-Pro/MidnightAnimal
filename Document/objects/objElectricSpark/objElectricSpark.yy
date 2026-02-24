@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Smoke",
-    "path":"folders/Objects/Document/Effects/Flames/Explosions/Smoke.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Flames/Explosions/Smoke.yy",
   },
   "parentObjectId":null,
   "persistent":false,

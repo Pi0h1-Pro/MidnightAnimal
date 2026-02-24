@@ -99,7 +99,7 @@
   "origin":9,
   "parent":{
     "name":"Miscellaneous",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Miscellaneous.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Miscellaneous.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

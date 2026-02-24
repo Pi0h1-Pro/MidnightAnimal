@@ -35,7 +35,7 @@
   "origin":9,
   "parent":{
     "name":"Search",
-    "path":"folders/Sprites/Document/Enemy/Normal/Search.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal/Search.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

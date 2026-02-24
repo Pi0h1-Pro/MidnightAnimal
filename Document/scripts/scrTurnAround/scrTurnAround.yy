@@ -6,7 +6,7 @@
   "name":"scrTurnAround",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "path":"folders/Midnight Animal/JeuxVideo/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

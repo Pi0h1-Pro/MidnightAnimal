@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Gibs",
-    "path":"folders/Objects/Document/Effects/Gore/Gibs.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Gore/Gibs.yy",
   },
   "parentObjectId":{
     "name":"objGib",

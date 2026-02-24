@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Food Wall",
-    "path":"folders/Objects/Document/Items/Specific/Food Wall.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Specific/Food Wall.yy",
   },
   "parentObjectId":{
     "name":"objFurniture",

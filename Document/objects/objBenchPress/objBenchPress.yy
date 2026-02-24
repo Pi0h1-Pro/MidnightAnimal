@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Exercise",
-    "path":"folders/Objects/Document/Items/Objects/Miscellaneous/Exercise.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Objects/Miscellaneous/Exercise.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -43,7 +43,7 @@
   "origin":9,
   "parent":{
     "name":"Reload",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Combat/Miscellaneous/Reload.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Combat/Miscellaneous/Reload.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

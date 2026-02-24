@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Metro",
-    "path":"folders/Objects/Document/Items/Specific/Metro.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Specific/Metro.yy",
   },
   "parentObjectId":null,
   "persistent":false,

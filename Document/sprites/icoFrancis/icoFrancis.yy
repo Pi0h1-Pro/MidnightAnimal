@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Church",
-    "path":"folders/Sprites/Document/Interface/Character Selection/Church.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/Character Selection/Church.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

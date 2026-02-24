@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Ysolda",
-    "path":"folders/Sprites/Document/Player/Imperial Court/Ysolda.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/Ysolda.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

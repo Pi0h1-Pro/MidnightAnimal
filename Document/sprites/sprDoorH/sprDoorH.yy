@@ -28,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"Geometry",
-    "path":"folders/Sprites/Document/Geometry.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Geometry.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

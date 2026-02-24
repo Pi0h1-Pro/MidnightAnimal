@@ -6,7 +6,7 @@
   "name":"__joystick_2_gamepad",
   "parent":{
     "name":"joystick",
-    "path":"folders/Scripts/compatibility/joystick.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/joystick.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

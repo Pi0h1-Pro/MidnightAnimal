@@ -34,7 +34,7 @@
   "origin":9,
   "parent":{
     "name":"Hurt",
-    "path":"folders/Sprites/Document/Enemy/Normal/Hurt.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal/Hurt.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

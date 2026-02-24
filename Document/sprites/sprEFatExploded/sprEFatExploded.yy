@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Fat",
-    "path":"folders/Sprites/Document/Enemy/Fat.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Fat.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Windows",
-    "path":"folders/Objects/Document/Structures/Windows.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Structures/Windows.yy",
   },
   "parentObjectId":{
     "name":"objFurniture",

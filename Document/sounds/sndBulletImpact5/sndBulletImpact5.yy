@@ -15,7 +15,7 @@
   "name":"sndBulletImpact5",
   "parent":{
     "name":"Combat",
-    "path":"folders/Sounds/Document/Environmental/Combat.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Environmental/Combat.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

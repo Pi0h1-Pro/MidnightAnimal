@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Japanese",
-    "path":"folders/Sprites/Document/Furniture/Japanese.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/Japanese.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Empire",
-    "path":"folders/Sprites/Document/Interface/Character Selection/Empire.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/Character Selection/Empire.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

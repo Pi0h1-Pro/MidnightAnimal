@@ -54,7 +54,7 @@
   "origin":4,
   "parent":{
     "name":"Executions",
-    "path":"folders/Sprites/Document/Enemy/Normal/Executions.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal/Executions.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

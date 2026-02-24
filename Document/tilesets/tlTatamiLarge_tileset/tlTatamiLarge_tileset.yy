@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Tatami",
-    "path":"folders/Tile Sets/Document/Indoors/Tatami.yy",
+    "path":"folders/Midnight Animal/Document/Tile Sets/Document/Indoors/Tatami.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

@@ -15,7 +15,7 @@
   "name":"sndHeadshot",
   "parent":{
     "name":"Death",
-    "path":"folders/Sounds/Document/Death.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Death.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

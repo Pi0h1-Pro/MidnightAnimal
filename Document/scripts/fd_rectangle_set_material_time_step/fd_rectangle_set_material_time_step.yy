@@ -6,7 +6,7 @@
   "name":"fd_rectangle_set_material_time_step",
   "parent":{
     "name":"Effects",
-    "path":"folders/Scripts/Document/Effects.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

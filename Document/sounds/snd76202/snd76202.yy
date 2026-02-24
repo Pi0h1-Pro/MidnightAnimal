@@ -15,7 +15,7 @@
   "name":"snd76202",
   "parent":{
     "name":"7.62mm",
-    "path":"folders/Sounds/Document/Combat/Guns/Shells/7.62mm.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Guns/Shells/7.62mm.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

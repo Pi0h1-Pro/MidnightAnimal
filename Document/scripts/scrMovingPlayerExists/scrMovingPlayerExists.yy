@@ -6,7 +6,7 @@
   "name":"scrMovingPlayerExists",
   "parent":{
     "name":"Player",
-    "path":"folders/Scripts/Document/Player.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Player.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -15,7 +15,7 @@
   "name":"sndRevolverShellsIn",
   "parent":{
     "name":"Simone",
-    "path":"folders/Sounds/Document/Combat/Guns/Simone.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Guns/Simone.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

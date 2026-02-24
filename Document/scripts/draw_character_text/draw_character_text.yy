@@ -6,7 +6,7 @@
   "name":"draw_character_text",
   "parent":{
     "name":"Character Select",
-    "path":"folders/Scripts/Document/Interface/Character Select.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Interface/Character Select.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

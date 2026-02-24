@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Tables",
-    "path":"folders/Objects/Document/Items/Objects/Tables.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Objects/Tables.yy",
   },
   "parentObjectId":null,
   "persistent":false,

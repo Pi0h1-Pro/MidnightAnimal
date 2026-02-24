@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Structures",
-    "path":"folders/Objects/Document/Structures.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Structures.yy",
   },
   "parentObjectId":null,
   "persistent":false,

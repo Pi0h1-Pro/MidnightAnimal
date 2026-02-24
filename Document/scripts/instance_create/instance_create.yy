@@ -6,7 +6,7 @@
   "name":"instance_create",
   "parent":{
     "name":"instance",
-    "path":"folders/Scripts/compatibility/instance.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/compatibility/instance.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

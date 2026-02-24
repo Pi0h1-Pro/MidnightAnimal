@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Geometry",
-    "path":"folders/Objects/Document/Categories/Geometry.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Categories/Geometry.yy",
   },
   "parentObjectId":{
     "name":"objSolid",

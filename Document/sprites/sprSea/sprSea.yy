@@ -71,7 +71,7 @@
   "origin":0,
   "parent":{
     "name":"Main Menu",
-    "path":"folders/Sprites/Document/Interface/Main Menu.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/Main Menu.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

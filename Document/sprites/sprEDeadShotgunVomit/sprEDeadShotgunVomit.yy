@@ -51,7 +51,7 @@
   "origin":9,
   "parent":{
     "name":"Dead",
-    "path":"folders/Sprites/Document/Enemy/Normal/Dead.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Enemy/Normal/Dead.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

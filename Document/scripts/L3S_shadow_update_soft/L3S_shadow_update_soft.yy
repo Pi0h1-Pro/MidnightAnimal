@@ -6,7 +6,7 @@
   "name":"L3S_shadow_update_soft",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "path":"folders/Midnight Animal/JeuxVideo/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

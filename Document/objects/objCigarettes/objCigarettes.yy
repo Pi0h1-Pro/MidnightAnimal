@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Drugs",
-    "path":"folders/Objects/Document/Items/Objects/Miscellaneous/Drugs.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Items/Objects/Miscellaneous/Drugs.yy",
   },
   "parentObjectId":null,
   "persistent":false,

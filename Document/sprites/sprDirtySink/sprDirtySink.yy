@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Bathroom",
-    "path":"folders/Sprites/Document/Furniture/Bathroom.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/Bathroom.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

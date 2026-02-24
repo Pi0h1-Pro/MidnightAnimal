@@ -6,7 +6,7 @@
   "name":"scrDrawMask",
   "parent":{
     "name":"Debug",
-    "path":"folders/Scripts/Document/System/Debug.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/Debug.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

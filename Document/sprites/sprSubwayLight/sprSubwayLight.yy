@@ -27,7 +27,7 @@
   "origin":3,
   "parent":{
     "name":"Metro",
-    "path":"folders/Sprites/Document/Furniture/Metro.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Furniture/Metro.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

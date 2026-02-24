@@ -32,7 +32,7 @@
   "origin":4,
   "parent":{
     "name":"Car",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Miscellaneous/Car.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Miscellaneous/Car.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

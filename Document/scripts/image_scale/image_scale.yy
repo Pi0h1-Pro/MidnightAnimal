@@ -6,7 +6,7 @@
   "name":"image_scale",
   "parent":{
     "name":"Draw",
-    "path":"folders/Scripts/Document/Effects/Lasers/Warps/Draw.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Lasers/Warps/Draw.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

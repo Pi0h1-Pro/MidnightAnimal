@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Pickups",
-    "path":"folders/Objects/Document/Player/Pickups.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Player/Pickups.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -28,6 +28,7 @@ function scrInitEnemyRandom() {
 	weaponfind = 0;
 	flash = false;
 	light = 0;
+	hit = 0;
 
 
 

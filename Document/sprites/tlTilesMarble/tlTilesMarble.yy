@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Indoors",
-    "path":"folders/Sprites/tilesets/Document/Indoors.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/tilesets/Document/Indoors.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Phone",
-    "path":"folders/Objects/Document/Interface/Menus/Phone.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Interface/Menus/Phone.yy",
   },
   "parentObjectId":null,
   "persistent":false,

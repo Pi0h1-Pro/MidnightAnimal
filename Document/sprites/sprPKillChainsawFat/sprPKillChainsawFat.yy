@@ -50,7 +50,7 @@
   "origin":9,
   "parent":{
     "name":"Executions",
-    "path":"folders/Sprites/Document/Player/Imperial Court/John/Combat/Executions.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Player/Imperial Court/John/Combat/Executions.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -6,7 +6,7 @@
   "name":"raycast",
   "parent":{
     "name":"Warps",
-    "path":"folders/Scripts/Document/Effects/Lasers/Warps.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Lasers/Warps.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

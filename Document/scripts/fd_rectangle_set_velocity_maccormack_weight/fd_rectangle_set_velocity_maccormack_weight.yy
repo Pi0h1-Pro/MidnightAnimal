@@ -6,7 +6,7 @@
   "name":"fd_rectangle_set_velocity_maccormack_weight",
   "parent":{
     "name":"Effects",
-    "path":"folders/Scripts/Document/Effects.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

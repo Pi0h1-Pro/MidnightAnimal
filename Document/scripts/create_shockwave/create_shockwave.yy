@@ -6,7 +6,7 @@
   "name":"create_shockwave",
   "parent":{
     "name":"Create",
-    "path":"folders/Scripts/Document/Effects/Lasers/Warps/Create.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Lasers/Warps/Create.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

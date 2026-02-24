@@ -6,7 +6,7 @@
   "name":"scrControllerMove",
   "parent":{
     "name":"Controller Input",
-    "path":"folders/Scripts/Document/System/Controller Input.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/System/Controller Input.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

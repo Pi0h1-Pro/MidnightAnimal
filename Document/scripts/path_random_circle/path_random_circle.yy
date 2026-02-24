@@ -6,7 +6,7 @@
   "name":"path_random_circle",
   "parent":{
     "name":"Path",
-    "path":"folders/Scripts/Document/Effects/Lasers/Warps/Path.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Lasers/Warps/Path.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

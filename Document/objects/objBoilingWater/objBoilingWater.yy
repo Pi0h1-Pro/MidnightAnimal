@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Water",
-    "path":"folders/Objects/Document/Effects/Water.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Water.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -120,7 +120,7 @@
   "name":"fntFaction",
   "parent":{
     "name":"Character Select",
-    "path":"folders/Fonts/Document/Character Select.yy",
+    "path":"folders/Midnight Animal/Document/Fonts/Character Select.yy",
   },
   "pointRounding":0,
   "ranges":[

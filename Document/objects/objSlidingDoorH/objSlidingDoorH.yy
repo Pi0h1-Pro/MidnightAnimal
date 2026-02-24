@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Doors",
-    "path":"folders/Objects/Document/Structures/Doors.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Structures/Doors.yy",
   },
   "parentObjectId":{
     "name":"objSlidingDoorV",

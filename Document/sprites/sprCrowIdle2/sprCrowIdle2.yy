@@ -49,7 +49,7 @@
   "origin":4,
   "parent":{
     "name":"Misc",
-    "path":"folders/Sprites/Document/Misc.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Misc.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

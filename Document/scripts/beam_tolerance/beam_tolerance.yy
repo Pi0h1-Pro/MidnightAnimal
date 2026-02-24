@@ -6,7 +6,7 @@
   "name":"beam_tolerance",
   "parent":{
     "name":"Random",
-    "path":"folders/Scripts/Document/Effects/Lasers/Warps/Random.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Lasers/Warps/Random.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -15,7 +15,7 @@
   "name":"sndInsertClipRifle",
   "parent":{
     "name":"Reload",
-    "path":"folders/Sounds/Document/Combat/Guns/Reload.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Guns/Reload.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

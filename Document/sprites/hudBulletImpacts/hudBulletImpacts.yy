@@ -31,7 +31,7 @@
   "origin":4,
   "parent":{
     "name":"Miscellaneous",
-    "path":"folders/Sprites/Document/Interface/Miscellaneous.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Interface/Miscellaneous.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Psychic",
-    "path":"folders/Objects/Document/Effects/Psychic.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Psychic.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -15,7 +15,7 @@
   "name":"sndBaseball",
   "parent":{
     "name":"Effects",
-    "path":"folders/Sounds/Document/Combat/Miscellaneous/Effects.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Combat/Miscellaneous/Effects.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

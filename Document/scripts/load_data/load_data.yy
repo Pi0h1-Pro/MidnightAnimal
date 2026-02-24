@@ -6,7 +6,7 @@
   "name":"load_data",
   "parent":{
     "name":"CONTROL",
-    "path":"folders/Scripts/Document/CONTROL.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/CONTROL.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

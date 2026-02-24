@@ -6,7 +6,7 @@
   "name":"L3S_post_blur_1",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "path":"folders/Midnight Animal/JeuxVideo/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

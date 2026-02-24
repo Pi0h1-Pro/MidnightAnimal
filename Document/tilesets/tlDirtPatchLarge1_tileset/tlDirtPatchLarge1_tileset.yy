@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"Dirt",
-    "path":"folders/Tile Sets/Document/Outdoors/Dirt.yy",
+    "path":"folders/Midnight Animal/Document/Tile Sets/Document/Outdoors/Dirt.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

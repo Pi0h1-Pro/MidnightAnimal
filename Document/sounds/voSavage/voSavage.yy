@@ -15,7 +15,7 @@
   "name":"voSavage",
   "parent":{
     "name":"Announcer",
-    "path":"folders/Sounds/Document/Interface/Announcer.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Interface/Announcer.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

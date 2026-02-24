@@ -6,7 +6,7 @@
   "name":"lens_enable",
   "parent":{
     "name":"Lens Effect",
-    "path":"folders/Scripts/Document/Effects/Lens Effect.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Effects/Lens Effect.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

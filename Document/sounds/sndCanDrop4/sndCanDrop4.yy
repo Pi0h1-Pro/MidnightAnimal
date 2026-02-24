@@ -15,7 +15,7 @@
   "name":"sndCanDrop4",
   "parent":{
     "name":"Character",
-    "path":"folders/Sounds/Document/Environmental/Character.yy",
+    "path":"folders/Midnight Animal/Document/Sounds/Environmental/Character.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

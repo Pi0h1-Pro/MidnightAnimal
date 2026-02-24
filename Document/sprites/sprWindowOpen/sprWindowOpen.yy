@@ -32,7 +32,7 @@
   "origin":9,
   "parent":{
     "name":"Windows",
-    "path":"folders/Sprites/Document/Geometry/Windows.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Geometry/Windows.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

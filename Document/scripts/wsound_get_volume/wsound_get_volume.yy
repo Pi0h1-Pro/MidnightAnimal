@@ -6,7 +6,7 @@
   "name":"wsound_get_volume",
   "parent":{
     "name":"WSOUND",
-    "path":"folders/Scripts/Document/WSOUND.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/WSOUND.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -39,7 +39,7 @@
   "origin":9,
   "parent":{
     "name":"Electric",
-    "path":"folders/Sprites/Document/Effects/Electric.yy",
+    "path":"folders/Midnight Animal/Document/Sprites/Effects/Electric.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

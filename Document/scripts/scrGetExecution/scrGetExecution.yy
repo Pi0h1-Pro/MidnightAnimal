@@ -6,7 +6,7 @@
   "name":"scrGetExecution",
   "parent":{
     "name":"Turning",
-    "path":"folders/Scripts/Document/Player/Combat/Turning.yy",
+    "path":"folders/Midnight Animal/Document/Scripts/Player/Combat/Turning.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

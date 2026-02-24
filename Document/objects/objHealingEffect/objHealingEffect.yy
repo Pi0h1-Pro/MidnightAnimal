@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Miscellaneous",
-    "path":"folders/Objects/Document/Effects/Miscellaneous.yy",
+    "path":"folders/Midnight Animal/Document/Objects/Effects/Miscellaneous.yy",
   },
   "parentObjectId":null,
   "persistent":false,
