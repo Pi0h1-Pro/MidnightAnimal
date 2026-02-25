@@ -30,5 +30,5 @@ function scrEMeleeStationaryInit() {
 	lastsprite=sprite_index
 
 	hp = 0;
-
+	hit = 0;
 }
