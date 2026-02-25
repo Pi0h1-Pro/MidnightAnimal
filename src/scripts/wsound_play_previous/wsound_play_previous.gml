@@ -9,8 +9,8 @@ function wsound_play_previous() {
 	    d = ds_list_find_value(listsongduration, index);
 	    audio_play_sound_on(emitter, currentsound, true, 0);
 	    show = true;
-	    alarm[1] = room_speed * showduration;
-	    alarm[0] = d * room_speed;
+	    alarm[1] = game_speed * showduration;
+	    alarm[0] = d * game_speed;
 	}
 
 

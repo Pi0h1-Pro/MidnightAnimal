@@ -14,8 +14,8 @@
     "path":"folders/Document/Objects/Structures/Doors.yy",
   },
   "parentObjectId":{
-    "name":"objDoorV",
-    "path":"objects/objDoorV/objDoorV.yy",
+    "name":"objBlockVision",
+    "path":"objects/objBlockVision/objBlockVision.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

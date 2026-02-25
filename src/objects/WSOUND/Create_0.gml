@@ -1,7 +1,7 @@
 show = false;
 width = 128;
 height = 64;
-rollspeed = (room_speed/30) * 2;
+rollspeed = (game_speed/30) * 2;
 
 x = 0
 y = display_get_gui_height() - 64

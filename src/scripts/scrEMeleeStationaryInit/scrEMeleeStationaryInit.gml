@@ -29,6 +29,5 @@ function scrEMeleeStationaryInit() {
 	weaponfind=0
 	lastsprite=sprite_index
 
-	hp = 0;
-	hit = 0;
+	missingVars();
 }

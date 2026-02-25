@@ -1,20 +1,20 @@
-if !instance_exists(objPlayer) exit
-if reload > 0 reload -= 1
-else {
+if !instance_exists(objPlayer) exit;
 
-    //If the player is farther than 120 units,
-    if point_distance(x, y, objPlayer.x, objPlayer.y) > 120
+if (reload > 0) {
+	reload -= 1;
+} else {
+var viewdir = direction;
+	x1 = x; y1 = y;
+	x2 = x+lengthdir_x(sight,viewdir + (fieldofview/2)); y2 = y+lengthdir_y(sight,viewdir + (fieldofview/2));
+	x3 = x+lengthdir_x(sight,viewdir - (fieldofview/2)); y3 = y+lengthdir_y(sight,viewdir - (fieldofview/2));
 
-    //or back is to the player, 
-    and scrCheckBack(point_direction(objPlayer.x, objPlayer.y, x, y), direction) = 1 {
-        nothing = 0
-    } else {
-        if !scrCollisionLineExt(x, y, objPlayer.x, objPlayer.y, 3) {
-            create_enemy(enemyStatic, sprEWalkHandgun, 1, 10)
-        }
-    }
-    reload = 15
+	isOpponentInSameRoom	= (!collision_line(x,y,objPlayer.x,objPlayer.y,objBlockVision,false,false));
+	isOpponentinFieldOfView = point_in_triangle(objPlayer.x,objPlayer.y,x1,y1,x2,y2,x3,y3);
+	isOpponentinSmellRange	= point_in_circle(objPlayer.x,objPlayer.y,x,y,smellrange);
+	isAlerted				= isOpponentInSameRoom && (isOpponentinFieldOfView || isOpponentinSmellRange);
+	
+	if (isAlerted) {
+		create_enemy(enemyStatic, sprEWalkHandgun, 1, 10)
+	}
+    reload = 15;
 }
-
-if on = 1 create_enemy(enemyStatic, sprEWalkHandgun, 1, 10)
-

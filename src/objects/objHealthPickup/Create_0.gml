@@ -7,5 +7,5 @@ dir=random(360)
 speed = 3
 friction = 0.15
 direction = random(360);
-alarm[0] = random_range(room_speed/2,room_speed);
+alarm[0] = random_range(game_speed/2,game_speed);
 

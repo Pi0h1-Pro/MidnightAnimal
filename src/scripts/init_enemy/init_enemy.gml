@@ -18,7 +18,7 @@ function init_enemy(argument0) {
 	flashed = 0
 	burning = 0
 	shocked = 0
-	effect_duration = room_speed * 3
+	effect_duration = game_speed * 3
 
 	reload=10
 	chasereload=-1

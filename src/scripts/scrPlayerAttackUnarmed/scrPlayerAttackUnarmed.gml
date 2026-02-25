@@ -17,8 +17,7 @@ function scrPlayerAttackUnarmed() {
 	    global.my_id = id
     
 	    // Hit enemies.
-	    with objEnemy {
-        
+	    with objEnemy {			
 	        // Check to see if the enemy can be hit.
 	        if scrCantGetHit(object_index) valid = 0 else valid = 1
         

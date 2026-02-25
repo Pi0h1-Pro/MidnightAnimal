@@ -179,7 +179,7 @@ part_type_size(steam, 0.1, 0.3, -.01, 0);
 part_type_colour2(steam, c_gray, c_white);
 part_type_blend(steam, 0);
 part_type_alpha2(steam, 0.5, 0.3);
-part_type_life(steam, room_speed * 0.2, room_speed * 0.4);
+part_type_life(steam, game_speed * 0.2, game_speed * 0.4);
 
 // Flames.
 fire = part_system_create();

@@ -14,5 +14,5 @@ s = date_get_second(t);
 //show the time
 text = string(h) + ":" + string(m) + ":" + string(s);
 
-alarm[0] = room_speed;
+alarm[0] = game_speed;
 

@@ -13,7 +13,10 @@
     "name":"Doors",
     "path":"folders/Document/Objects/Structures/Doors.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objBlockVision",
+    "path":"objects/objBlockVision/objBlockVision.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

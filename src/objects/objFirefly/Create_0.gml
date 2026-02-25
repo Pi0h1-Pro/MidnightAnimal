@@ -1,6 +1,6 @@
 vspeed = random_range(-0.1, 0.1)
 hspeed = random_range(-0.1, 0.1)
-life = random_range(0.35, 0.5) * room_speed
+life = random_range(0.35, 0.5) * game_speed
 fade = 0
 life_max = life
 

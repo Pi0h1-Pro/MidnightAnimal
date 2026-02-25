@@ -389,6 +389,7 @@
     {"id":{"name":"objBlade","path":"objects/objBlade/objBlade.yy",},},
     {"id":{"name":"objBlastImpact","path":"objects/objBlastImpact/objBlastImpact.yy",},},
     {"id":{"name":"objBlisteringSwords","path":"objects/objBlisteringSwords/objBlisteringSwords.yy",},},
+    {"id":{"name":"objBlockVision","path":"objects/objBlockVision/objBlockVision.yy",},},
     {"id":{"name":"objBlood","path":"objects/objBlood/objBlood.yy",},},
     {"id":{"name":"objBloodPool","path":"objects/objBloodPool/objBloodPool.yy",},},
     {"id":{"name":"objBloodSquirt","path":"objects/objBloodSquirt/objBloodSquirt.yy",},},

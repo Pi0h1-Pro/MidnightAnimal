@@ -49,7 +49,7 @@ if (instance_exists(objPlayer)){
             int_lookThisWay = point_direction(xprevious, yprevious, x, y) - 90 + random(180);//This is the direction that I am checking right now, switch this up every so often 
             b_aim = choose(true, false);//Am I aiming this way?
             path_speed = 3 - b_aim * .5;//Slow down on the path speed if I am aiming
-            alarm[0] = room_speed * 2;//Reset the alarm here
+            alarm[0] = game_speed * 2;//Reset the alarm here
         }
         image_angle += dsin(int_lookThisWay - image_angle) * 10;//Look this way (smoothly)
         if (b_aim){//If I am aiming, switch the sprite index to the player aiming

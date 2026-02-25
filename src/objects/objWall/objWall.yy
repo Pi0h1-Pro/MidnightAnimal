@@ -14,8 +14,8 @@
     "path":"folders/Document/Objects/Categories/Geometry.yy",
   },
   "parentObjectId":{
-    "name":"_SOLID",
-    "path":"objects/_SOLID/_SOLID.yy",
+    "name":"objBlockVision",
+    "path":"objects/objBlockVision/objBlockVision.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

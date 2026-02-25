@@ -21,6 +21,5 @@ function scrEMeleeInit() {
 	hits = 4
 	flash = false
 
-	hp = 0;
-
+	missingVars();
 }

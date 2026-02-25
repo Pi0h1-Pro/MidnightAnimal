@@ -14,7 +14,7 @@ function scrEnemyStatusEffects() {
 	        flashed = 0
 	        affected = 0
 	        accuracy = 1
-	        effect_duration = room_speed * 3
+	        effect_duration = game_speed * 3
 	        alert = 4
 	    }
 	}
@@ -52,7 +52,7 @@ function scrEnemyStatusEffects() {
 	    } else {
 	        burning = 0
 	        affected = 0
-	        effect_duration = room_speed * 3
+	        effect_duration = game_speed * 3
 	        alert = 4
 	    }
 	}
@@ -81,7 +81,7 @@ function scrEnemyStatusEffects() {
 	    } else {
 	        shocked = 0
 	        affected = 0
-	        effect_duration = room_speed * 3
+	        effect_duration = game_speed * 3
 	        alert = 4
 	        accuracy = 1
 	    }

@@ -106,6 +106,9 @@ if scrMovingPlayerExists() and global.done = 1 {
                     room_persistent = 0
                     objEffector.fade = 1
                     room = rmLevelSelect
+					with (WSOUND) {
+						instance_destroy();
+					}
                 }
             }
 

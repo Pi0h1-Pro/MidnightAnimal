@@ -166,7 +166,7 @@ function console_submit(argument0) {
 	                break;
 	                case "restart": room_restart(); break;
 	                case "fps": 
-	                    if no = 1 then room_speed = real(c[1]); 
+	                    //if no = 1 then game_speed = real(c[1]); 
 	                break;
 	                case "volume": audio_master_gain(real(c[1]) / 100); break;
 	                case "create": 
