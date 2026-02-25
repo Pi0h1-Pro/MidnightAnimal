@@ -7,5 +7,5 @@ global.combo = 0
 
 //random_song()
 //play_song(mscBadMoonRising)
-
+init_music()
 }

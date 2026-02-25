@@ -10,7 +10,7 @@
   "compression":3,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":139.97601,
   "exportDir":"",
   "name":"mscMusic",
   "parent":{
