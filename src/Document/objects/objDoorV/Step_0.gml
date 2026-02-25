@@ -1,0 +1,92 @@
+/// @description  Open/close door.
+if !scrMovingPlayerExists() exit
+if locked = 1 or abs(swingspeed) > 3.5 nothing = 1
+else {
+    global.my_id = id
+
+    // Enemy collision. 
+    with objEnemy {
+        if place_meeting(x, y, global.my_id) {
+            global.my_id.target = id
+            with global.my_id {
+                swinger = 2
+                if abs(swingspeed) < 2 sound_ps(choose(sndDoorOpen1, sndDoorOpen2))
+                if y > target.y and target.x < x {
+                    swingspeed = 16 exit
+                }
+                if y > target.y and target.x > x {
+                    swingspeed = -16 exit
+                }
+                if target.x < x + lengthdir_x(32, image_angle + 270) swingspeed = 16
+                else swingspeed = -16
+            }
+        }
+    }
+
+    // Player collision.
+    if point_distance(x, y, objPlayer.x, objPlayer.y) < 32 {
+        if keyboard_check_pressed(global.interactkey) {
+            // Open door.
+            if locked = 1 exit
+            swinger = 1
+            if abs(swingspeed) > 3.5 exit
+            if abs(swingspeed) < 2 sound_ps(choose(sndDoorOpen1, sndDoorOpen2))
+            if y > objPlayer.y and objPlayer.x < x {
+                swingspeed = 16 exit
+            }
+            if y > objPlayer.y and objPlayer.x > x {
+                swingspeed = -16 exit
+            }
+            if objPlayer.x < x + lengthdir_x(32, image_angle + 270) swingspeed = 16
+            else swingspeed = -16
+        }
+
+        // Destroy with melee.
+        if place_meeting(x - lengthdir_x(12, objPlayer.dir), y - lengthdir_y(12, objPlayer.dir), objPlayer) {
+            if (scrIsSwinging(objPlayer.sprite_index) and scrCurrentWeaponExt(objPlayer.sprite_index) = 19)
+                or objPlayer.sprite_index = pierretteBashShield {
+                    //if objPlayer.image_index = 5 {
+                        repeat(16) {
+                            my_id = instance_create(x, y, objDebrisLarge)
+                            my_id.speed = random(4)
+                        }
+
+                        if image_angle != 0 image_angle = 0
+                        my_id = instance_create(x, y + 17, objDestroyedDoor)
+                        my_id.speed = 2 + random(1)
+                        if objPlayer.x > x {
+                            my_id.image_angle = 180 - random_range(-20, 20)
+                            my_id.direction = my_id.image_angle
+                        } else my_id.image_angle = random_range(-20, 20)
+                        instance_destroy()
+                        sound_ps(sndBreakDoor)
+                        global.shake = 16
+                    }
+               // }
+        }
+    }
+}
+
+if abs(swingspeed) > 0 {
+    image_angle += swingspeed
+    if image_angle < -135 {
+        image_angle = -135 swingspeed = 0 //abs(swingspeed)
+    }
+    if image_angle > 135 {
+        image_angle = 135 swingspeed = 0 //-abs(swingspeed)
+    }
+    swingdir = sign(swingspeed)
+        ////glr_mesh_set_rotation(mesh, image_angle);
+    if image_angle > -6 and image_angle < 6 {
+        swingspeed = 0 image_angle = 0
+    }
+
+    if swingspeed > 0.25 swingspeed -= 0.25
+    else {
+        if swingspeed < 0 swingspeed += 0.25
+        else {
+            swinger = 0 swingspeed = 0
+        }
+    }
+}
+

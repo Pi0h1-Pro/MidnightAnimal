@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_thought_damaged",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_thought_damaged",
+  "parent":{
+    "name":"Interface",
+    "path":"folders/Document/Scripts/Interface.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

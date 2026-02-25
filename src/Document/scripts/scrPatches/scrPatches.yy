@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPatches",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPatches",
+  "parent":{
+    "name":"Document",
+    "path":"Document.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

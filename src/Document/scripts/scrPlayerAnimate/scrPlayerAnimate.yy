@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerAnimate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerAnimate",
+  "parent":{
+    "name":"Combat",
+    "path":"folders/Document/Scripts/Player/Combat.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

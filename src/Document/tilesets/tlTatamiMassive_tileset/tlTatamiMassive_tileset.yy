@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tlTatamiMassive_tileset",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tlTatamiMassive_tileset",
+  "out_columns":1,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tatami",
+    "path":"folders/Document/Tile Sets/Indoors/Tatami.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"tlTatamiMassive",
+    "path":"sprites/tlTatamiMassive/tlTatamiMassive.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":127,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":188,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":1,
+}

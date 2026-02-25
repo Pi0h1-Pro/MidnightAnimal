@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrGetSpecificAmmo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrGetSpecificAmmo",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Document/Scripts/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

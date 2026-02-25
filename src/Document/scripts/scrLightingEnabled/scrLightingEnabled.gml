@@ -1,0 +1,6 @@
+function scrLightingEnabled() {
+	return true
+
+
+
+}

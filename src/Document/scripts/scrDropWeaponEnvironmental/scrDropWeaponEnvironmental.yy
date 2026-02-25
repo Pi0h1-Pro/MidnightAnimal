@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrDropWeaponEnvironmental",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrDropWeaponEnvironmental",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Document/Scripts/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fd_draw_self_to_collision_mask_surface",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fd_draw_self_to_collision_mask_surface",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Document/Scripts/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

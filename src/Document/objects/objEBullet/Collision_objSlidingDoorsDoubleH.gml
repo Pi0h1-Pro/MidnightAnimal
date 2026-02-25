@@ -1,0 +1,3 @@
+/// @description  Impact. 
+scrBulletImpact()
+

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndDash",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"sndDash",
+  "parent":{
+    "name":"Psychic",
+    "path":"folders/Document/Sounds/Combat/Psychic.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndDash",
+  "volume":1.0,
+}

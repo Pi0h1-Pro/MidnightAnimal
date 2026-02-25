@@ -1,0 +1,4 @@
+/// @description  End animation.
+scrEnemyAnimationEnd()
+
+

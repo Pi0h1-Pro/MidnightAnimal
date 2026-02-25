@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"thresh_shdr",
+  "name":"thresh_shdr",
+  "parent":{
+    "name":"DirtyBloom",
+    "path":"folders/Document/Shaders/DirtyBloom.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

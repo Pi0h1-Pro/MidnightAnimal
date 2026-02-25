@@ -1,0 +1,6 @@
+event_inherited()
+image_index = 1
+image_speed = 0
+ammo = 0
+bled = 0
+

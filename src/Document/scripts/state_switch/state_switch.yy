@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"state_switch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"state_switch",
+  "parent":{
+    "name":"FSM",
+    "path":"folders/Document/Scripts/System/FSM.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

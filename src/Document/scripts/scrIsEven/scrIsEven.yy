@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrIsEven",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrIsEven",
+  "parent":{
+    "name":"Utility",
+    "path":"folders/Document/Scripts/System/Utility.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

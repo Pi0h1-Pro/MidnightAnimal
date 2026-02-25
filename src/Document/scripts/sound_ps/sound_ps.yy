@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sound_ps",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sound_ps",
+  "parent":{
+    "name":"Utility",
+    "path":"folders/Document/Scripts/System/Utility.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

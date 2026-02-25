@@ -1,0 +1,2 @@
+sound_ps(sndNuclearExplosion)
+

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"camera_limit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"camera_limit",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Document/Scripts/System/Utility/Camera.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

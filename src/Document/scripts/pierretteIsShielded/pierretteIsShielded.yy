@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"pierretteIsShielded",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"pierretteIsShielded",
+  "parent":{
+    "name":"Character",
+    "path":"folders/Document/Scripts/Player/Character.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

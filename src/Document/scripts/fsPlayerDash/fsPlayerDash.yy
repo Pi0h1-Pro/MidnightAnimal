@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fsPlayerDash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fsPlayerDash",
+  "parent":{
+    "name":"States",
+    "path":"folders/Document/Scripts/System/FSM/States.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_magnify_path",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_magnify_path",
+  "parent":{
+    "name":"Draw",
+    "path":"folders/Document/Scripts/Effects/Lasers/Warps/Draw.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

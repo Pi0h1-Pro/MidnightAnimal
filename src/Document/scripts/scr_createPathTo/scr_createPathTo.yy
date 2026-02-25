@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_createPathTo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_createPathTo",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/Document/Scripts/Enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

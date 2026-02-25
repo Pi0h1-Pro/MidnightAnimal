@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_flash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_flash",
+  "parent":{
+    "name":"Draw",
+    "path":"folders/Document/Scripts/System/Utility/Draw.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

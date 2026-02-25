@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fd_rectangle_set_shader_language",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fd_rectangle_set_shader_language",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Document/Scripts/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

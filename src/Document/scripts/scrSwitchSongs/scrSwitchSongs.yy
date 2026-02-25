@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrSwitchSongs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSwitchSongs",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Document/Scripts/System/Music.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,15 @@
+image_speed=0
+sprite_index=choose(sprSplat1,sprSplat2,sprSplat3,sprSplat4)
+target=sprite_get_number(sprite_index)
+alarm[0]=1+random(14)
+image_angle = random(360)
+friction=0.15
+image_xscale=0.9+random(0.2)
+image_yscale=image_xscale
+blood_properties()
+done=0
+
+target=sprite_get_number(sprite_index)
+alarm[0]=1+random(14)
+friction=0.15
+

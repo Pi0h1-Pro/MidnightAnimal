@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlayerAttackUnarmed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlayerAttackUnarmed",
+  "parent":{
+    "name":"Combat",
+    "path":"folders/Document/Scripts/Player/Combat.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

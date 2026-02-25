@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"warp_hud",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"warp_hud",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Document/Scripts/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,38 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"bgBoatDeck_tileset",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"bgBoatDeck_tileset",
+  "out_columns":1,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Outdoors",
+    "path":"folders/Document/Tile Sets/Outdoors.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"bgBoatDeck",
+    "path":"sprites/bgBoatDeck/bgBoatDeck.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":324,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":1545,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":1,
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_healthbar_rect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_healthbar_rect",
+  "parent":{
+    "name":"Draw",
+    "path":"folders/Document/Scripts/System/Utility/Draw.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

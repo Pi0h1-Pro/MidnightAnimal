@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"console_toggle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"console_toggle",
+  "parent":{
+    "name":"Console",
+    "path":"folders/Document/Scripts/Interface/Console.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

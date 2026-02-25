@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"state_cleanup",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"state_cleanup",
+  "parent":{
+    "name":"FSM",
+    "path":"folders/Document/Scripts/System/FSM.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
